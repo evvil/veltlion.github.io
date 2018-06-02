@@ -662,9 +662,9 @@
     <link href="https://veltlion.github.io/%E8%81%94%E9%80%9AWO-36%E5%85%89%E7%8C%AB%E6%94%B9%E6%A1%A5%E6%8E%A5/"/>
     <id>https://veltlion.github.io/联通WO-36光猫改桥接/</id>
     <published>2016-03-11T11:24:00.000Z</published>
-    <updated>2018-06-02T16:31:44.522Z</updated>
+    <updated>2018-06-02T16:32:32.145Z</updated>
     
-    <content type="html"><![CDATA[<ol><li><a href="http://192.168.18.1/logoffaccount.html" target="_blank" rel="noopener">http://192.168.18.1/logoffaccount.html</a> ，隐藏用户改为启用</li><li>登录工程帐号用户名：fiberhomehg2x0 密码：hg2x0</li><li>下载 <a href="http://192.168.1.1/backupsettings.conf" target="_blank" rel="noopener">http://192.168.1.1/backupsettings.conf</a> 或开启 FTP ，<a href="ftp://192.168.18.1/fhconf/backpresettings.conf" target="_blank" rel="noopener">ftp://192.168.18.1/fhconf/backpresettings.conf</a>  </li><li>搜索 AdminPassword ，用 base64 解码。用户名为 CUAdmin ，密码为 CUAdmin 。</li><li>打开 <a href="http://192.168.18.1/cu.html" target="_blank" rel="noopener">http://192.168.18.1/cu.html</a> 登录。</li><li>修改桥接设置，F12 查看拨号密码，记下 VID 还原用。</li></ol><p>PS：这个光猫的 LAN1 是千兆口。</p>]]></content>
+    <content type="html"><![CDATA[<ol><li><a href="http://192.168.18.1/logoffaccount.html" target="_blank" rel="noopener">http://192.168.18.1/logoffaccount.html</a> ，隐藏用户改为启用</li><li>登录工程帐号用户名：fiberhomehg2x0 密码：hg2x0</li><li>下载 <a href="http://192.168.1.1/backupsettings.conf" target="_blank" rel="noopener">http://192.168.1.1/backupsettings.conf</a> 或开启 FTP 下载 <a href="ftp://192.168.18.1/fhconf/backpresettings.conf" target="_blank" rel="noopener">ftp://192.168.18.1/fhconf/backpresettings.conf</a>  </li><li>搜索 AdminPassword ，用 base64 解码。用户名为 CUAdmin ，密码为 CUAdmin 。</li><li>打开 <a href="http://192.168.18.1/cu.html" target="_blank" rel="noopener">http://192.168.18.1/cu.html</a> 登录。</li><li>修改桥接设置，F12 查看拨号密码，记下 VID 还原用。</li></ol><p>PS：这个光猫的 LAN1 是千兆口。</p>]]></content>
     
     <summary type="html">
     
