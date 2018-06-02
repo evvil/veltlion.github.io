@@ -658,6 +658,32 @@
   </entry>
   
   <entry>
+    <title>联通 WO-36 光猫改桥接</title>
+    <link href="https://veltlion.github.io/%E8%81%94%E9%80%9AWO-36%E5%85%89%E7%8C%AB%E6%94%B9%E6%A1%A5%E6%8E%A5/"/>
+    <id>https://veltlion.github.io/联通WO-36光猫改桥接/</id>
+    <published>2016-03-11T11:24:00.000Z</published>
+    <updated>2018-06-02T16:31:44.522Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li><a href="http://192.168.18.1/logoffaccount.html" target="_blank" rel="noopener">http://192.168.18.1/logoffaccount.html</a> ，隐藏用户改为启用</li><li>登录工程帐号用户名：fiberhomehg2x0 密码：hg2x0</li><li>下载 <a href="http://192.168.1.1/backupsettings.conf" target="_blank" rel="noopener">http://192.168.1.1/backupsettings.conf</a> 或开启 FTP ，<a href="ftp://192.168.18.1/fhconf/backpresettings.conf" target="_blank" rel="noopener">ftp://192.168.18.1/fhconf/backpresettings.conf</a>  </li><li>搜索 AdminPassword ，用 base64 解码。用户名为 CUAdmin ，密码为 CUAdmin 。</li><li>打开 <a href="http://192.168.18.1/cu.html" target="_blank" rel="noopener">http://192.168.18.1/cu.html</a> 登录。</li><li>修改桥接设置，F12 查看拨号密码，记下 VID 还原用。</li></ol><p>PS：这个光猫的 LAN1 是千兆口。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;http://192.168.18.1/logoffaccount.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://192.168.18.1/logoffaccount.html&lt;/a&gt; ，隐藏用户改为启
+      
+    
+    </summary>
+    
+      <category term="瞎鼓捣" scheme="https://veltlion.github.io/categories/%E7%9E%8E%E9%BC%93%E6%8D%A3/"/>
+    
+    
+      <category term="光猫" scheme="https://veltlion.github.io/tags/%E5%85%89%E7%8C%AB/"/>
+    
+  </entry>
+  
+  <entry>
     <title>去除「十六夜のフォルトゥーナ」日本語版Windows判定</title>
     <link href="https://veltlion.github.io/%E5%8E%BB%E9%99%A4%E3%80%8C%E5%8D%81%E5%85%AD%E5%A4%9C%E3%81%AE%E3%83%95%E3%82%A9%E3%83%AB%E3%83%88%E3%82%A5%E3%83%BC%E3%83%8A%E3%80%8D%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88Windows%E5%88%A4%E5%AE%9A/"/>
     <id>https://veltlion.github.io/去除「十六夜のフォルトゥーナ」日本語版Windows判定/</id>
