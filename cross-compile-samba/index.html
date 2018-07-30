@@ -5,7 +5,7 @@
 <p>然后再写个脚本开机自动启动。<br><figure class="highlight bash"><figcaption><span>/etc/init.d/99smbd.sh</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> TMPDIR=/data/<span class="built_in">local</span>/tmp</span><br><span class="line">/system/bin/mount -o rw,remount /system</span><br><span class="line">/system/samba/sbin/smbd -D</span><br><span class="line">/system/samba/sbin/nmbd -D</span><br></pre></td></tr></table></figure></p>
 <p>脚本开机启动的时候要指定下 <code>TMPDIR</code> ，不然设置开机启动后连接不上，会报错<code>canonicalize_connect_path failed for service IPC$, path /tmp</code> 。</p>
 <p>　　编译完成的<a href="https://yadi.sk/d/BnAdR4zZ3Xzwv7" target="_blank" rel="noopener">文件</a>，默认用户名是 <code>miu</code> ，默认密码是 <code>1234</code> 。</p>
-</div></article></div></main><footer><div class="paginator"><a href="/line-sticker-download/" class="prev">上一篇</a><a href="/蛋炒饭/" class="next">下一篇</a></div><script src="https://cdnjs.cat.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="/Valine.min.js"></script><div id="comment"></div><script>new Valine({
+</div></article></div></main><footer><div class="paginator"><a href="/line-sticker-download/" class="prev">PREV</a><a href="/蛋炒饭/" class="next">NEXT</a></div><script src="https://cdnjs.cat.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="/Valine.min.js"></script><div id="comment"></div><script>new Valine({
     av: AV, 
     el: '#comment',
     notify:false, 
