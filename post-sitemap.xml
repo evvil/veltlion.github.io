@@ -7,8 +7,24 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/%E8%81%94%E9%80%9AWO-36%E5%85%89%E7%8C%AB%E6%94%B9%E6%A1%A5%E6%8E%A5/</loc>
-        <lastmod>2018-06-02T16:32:32.145Z</lastmod>
+        <loc>https://veltlion.github.io/flash-h7-4/</loc>
+        <lastmod>2018-07-30T13:46:55.888Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/ra3-start-slow/</loc>
+        <lastmod>2018-06-22T02:08:20.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/export-firefox-password/</loc>
+        <lastmod>2018-06-19T10:00:06.271Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -16,7 +32,39 @@
 
     <url>
         <loc>https://veltlion.github.io/change-uefi-boot-logo/</loc>
-        <lastmod>2018-06-02T14:47:42.123Z</lastmod>
+        <lastmod>2018-06-18T19:54:36.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/cross-compile-samba/</loc>
+        <lastmod>2018-06-17T10:14:21.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/ttl-root-h7-4/</loc>
+        <lastmod>2018-06-17T10:13:26.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/%E8%81%94%E9%80%9AWO-36%E5%85%89%E7%8C%AB%E6%94%B9%E6%A1%A5%E6%8E%A5/</loc>
+        <lastmod>2018-06-08T22:19:45.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/hexo-md-rename/</loc>
+        <lastmod>2018-06-08T22:19:32.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -24,15 +72,7 @@
 
     <url>
         <loc>https://veltlion.github.io/line-sticker-download/</loc>
-        <lastmod>2018-05-17T19:13:36.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://veltlion.github.io/%E5%92%96%E5%96%B1%E9%A5%AD/</loc>
-        <lastmod>2018-05-17T18:47:38.000Z</lastmod>
+        <lastmod>2018-06-08T21:16:49.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -55,32 +95,8 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/ttl-root-h7-4/</loc>
-        <lastmod>2018-05-17T18:17:04.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://veltlion.github.io/flash-h7-4/</loc>
-        <lastmod>2018-05-17T17:40:39.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://veltlion.github.io/cross-compile-aria2/</loc>
         <lastmod>2018-05-13T10:26:02.180Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://veltlion.github.io/ra3-start-slow-win10/</loc>
-        <lastmod>2018-05-13T10:17:59.552Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -137,14 +153,6 @@
     <url>
         <loc>https://veltlion.github.io/fix-usb-tethering-on-windows/</loc>
         <lastmod>2018-04-06T18:53:39.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://veltlion.github.io/cross-compile-samba/</loc>
-        <lastmod>2018-03-15T03:01:46.643Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -233,14 +241,6 @@
     <url>
         <loc>https://veltlion.github.io/submitting-packages-to-aur/</loc>
         <lastmod>2018-02-28T21:07:10.561Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://veltlion.github.io/hexo-md-rename/</loc>
-        <lastmod>2018-02-28T21:05:35.234Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
