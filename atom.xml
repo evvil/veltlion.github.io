@@ -590,9 +590,9 @@
       <category term="瞎鼓捣" scheme="https://veltlion.github.io/categories/%E7%9E%8E%E9%BC%93%E6%8D%A3/"/>
     
     
-      <category term="重命名" scheme="https://veltlion.github.io/tags/%E9%87%8D%E5%91%BD%E5%90%8D/"/>
-    
       <category term="Hexo" scheme="https://veltlion.github.io/tags/Hexo/"/>
+    
+      <category term="重命名" scheme="https://veltlion.github.io/tags/%E9%87%8D%E5%91%BD%E5%90%8D/"/>
     
   </entry>
   
@@ -783,9 +783,9 @@
     
       <category term="Android" scheme="https://veltlion.github.io/tags/Android/"/>
     
-      <category term="交叉编译" scheme="https://veltlion.github.io/tags/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91/"/>
-    
       <category term="redsocks" scheme="https://veltlion.github.io/tags/redsocks/"/>
+    
+      <category term="交叉编译" scheme="https://veltlion.github.io/tags/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91/"/>
     
   </entry>
   
