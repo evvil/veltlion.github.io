@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>https://veltlion.github.io/flash-h7-4/</loc>
+        <lastmod>2018-09-09T14:33:57.604Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://veltlion.github.io/21/</loc>
         <lastmod>2018-09-08T17:00:30.555Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -137,14 +145,6 @@
     <url>
         <loc>https://veltlion.github.io/cross-compile-samba/</loc>
         <lastmod>2018-08-31T16:57:52.073Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://veltlion.github.io/flash-h7-4/</loc>
-        <lastmod>2018-07-30T13:55:18.826Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
