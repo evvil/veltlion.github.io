@@ -16,13 +16,6 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/tags/C/</loc>
-        <lastmod>2018-02-28T21:14:10.679Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://veltlion.github.io/tags/%E7%A9%BA/</loc>
         <lastmod>2018-03-01T14:46:13.126Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -58,13 +51,6 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/tags/Hexo/</loc>
-        <lastmod>2018-06-08T22:19:32.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://veltlion.github.io/tags/%E9%87%8D%E5%91%BD%E5%90%8D/</loc>
         <lastmod>2018-06-08T22:19:32.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -72,8 +58,8 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/tags/%E7%AC%94%E8%AE%B0/</loc>
-        <lastmod>2018-06-18T19:05:58.929Z</lastmod>
+        <loc>https://veltlion.github.io/tags/Hexo/</loc>
+        <lastmod>2018-06-08T22:19:32.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -156,13 +142,6 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/tags/%E6%97%A5%E5%B8%B8/</loc>
-        <lastmod>2018-09-08T16:46:45.150Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://veltlion.github.io/tags/%E5%85%89%E7%8C%AB/</loc>
         <lastmod>2018-09-08T16:50:37.893Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -179,13 +158,6 @@
     <url>
         <loc>https://veltlion.github.io/tags/anmpp/</loc>
         <lastmod>2018-09-08T16:51:18.558Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://veltlion.github.io/tags/%E6%97%A5%E5%B8%B8%E4%BD%9C%E6%AD%BB/</loc>
-        <lastmod>2018-09-08T17:00:30.555Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -228,6 +200,27 @@
     <url>
         <loc>https://veltlion.github.io/tags/LibreELEC/</loc>
         <lastmod>2018-09-09T14:33:57.604Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/tags/C/</loc>
+        <lastmod>2018-09-11T16:29:59.264Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/tags/%E7%AC%94%E8%AE%B0/</loc>
+        <lastmod>2018-09-11T16:32:20.684Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/tags/%E6%97%A5%E5%B8%B8/</loc>
+        <lastmod>2018-09-11T16:40:07.210Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
