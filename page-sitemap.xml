@@ -7,6 +7,13 @@
     </url>
     
     <url>
+        <loc>https://veltlion.github.io/links/</loc>
+        <lastmod>2018-09-11T17:17:54.302Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
         <loc>https://veltlion.github.io/about/</loc>
         <lastmod>2018-09-10T01:35:27.058Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -37,13 +44,6 @@
     <url>
         <loc>https://veltlion.github.io/all-archives/</loc>
         <lastmod>2018-02-28T15:29:35.307Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://veltlion.github.io/links/</loc>
-        <lastmod>2018-02-24T03:15:38.307Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
