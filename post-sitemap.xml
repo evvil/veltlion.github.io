@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>https://veltlion.github.io/line-sticker-download/</loc>
+        <lastmod>2018-10-04T13:01:38.642Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://veltlion.github.io/21/</loc>
         <lastmod>2018-09-11T16:40:07.210Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -161,14 +169,6 @@
     <url>
         <loc>https://veltlion.github.io/23/</loc>
         <lastmod>2018-09-08T16:42:47.957Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://veltlion.github.io/line-sticker-download/</loc>
-        <lastmod>2018-09-08T16:42:11.966Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

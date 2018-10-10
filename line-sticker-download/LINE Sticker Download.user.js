@@ -24,14 +24,12 @@ var btn = '<li class="mdCMN08Li" style="list-style-type: none">';
     btn += '<span class="mdBtn01Inner">';
     btn += '<span class="mdBtn01Txt">' + btnstr + '</span>';
     btn += '</span></a></li>';
-
 if ($("div").hasClass("mdCMN08Txt")) {
     var gift = document.getElementsByClassName("mdCMN08Ul")[0];
     gift.removeChild(gift.firstElementChild);
-    gift.removeChild(gift.firstElementChild);
-    $("div.mdCMN08Txt>ul").prepend(btn);
+    $(".mdCMN08Ul").prepend(btn);
 }
 else if ($("div").hasClass("mdMN05Btn")) {
     $(".MdBtn01").remove();
-    $("div.MdMN05Error").append(btn);
+    $("div.mdMN05Btn").prepend(btn);
 }
