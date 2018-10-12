@@ -20,11 +20,11 @@ var lang = navigator.language;
 var btnstr = 'Download';
 if (lang.indexOf('zh') > -1) btnstr = '下载';
 else if (lang.indexOf('ja') > -1) btnstr = 'ダウンロード';
-var btn = '<li class="mdCMN08Li" style="list-style-type: none">';
-    btn += '<a class="MdBtn01 mdBtn01" id="download" style="background: #33b1ff">';
-    btn += '<span class="mdBtn01Inner">';
-    btn += '<span class="mdBtn01Txt">' + btnstr + '</span>';
-    btn += '</span></a></li>';
+var btn = '<li class="mdCMN08Li" style="list-style-type: none">'
+        + '<a class="MdBtn01 mdBtn01" id="download" style="background: #33b1ff">'
+        + '<span class="mdBtn01Inner">'
+        + '<span class="mdBtn01Txt">' + btnstr + '</span>'
+        + '</span></a></li>';
 if ($('div').hasClass('mdCMN08Txt')) {
     $('.mdCMN08Txt>ul').find('li:eq(0)').remove();
     $('.mdCMN08Ul').prepend(btn);
