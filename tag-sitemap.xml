@@ -114,13 +114,6 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/tags/%E9%A3%9F%E7%89%A9/</loc>
-        <lastmod>2018-09-08T16:43:21.998Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://veltlion.github.io/tags/%E5%85%89%E7%8C%AB/</loc>
         <lastmod>2018-09-08T16:50:37.893Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -199,28 +192,35 @@
 
     <url>
         <loc>https://veltlion.github.io/tags/%E6%97%A5%E5%B8%B8/</loc>
-        <lastmod>2018-09-11T16:40:07.210Z</lastmod>
+        <lastmod>2018-10-11T00:08:35.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/tags/%E9%A3%9F%E7%89%A9/</loc>
+        <lastmod>2018-10-11T00:11:59.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://veltlion.github.io/tags/LINE/</loc>
-        <lastmod>2018-10-10T23:39:22.945Z</lastmod>
+        <lastmod>2018-10-12T11:23:14.183Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://veltlion.github.io/tags/Sticker/</loc>
-        <lastmod>2018-10-10T23:39:22.945Z</lastmod>
+        <lastmod>2018-10-12T11:23:14.183Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://veltlion.github.io/tags/%E6%B2%B9%E7%8C%B4/</loc>
-        <lastmod>2018-10-10T23:39:22.945Z</lastmod>
+        <lastmod>2018-10-12T11:23:14.183Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

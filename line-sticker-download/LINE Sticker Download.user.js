@@ -3,7 +3,7 @@
 // @name:zh-CN         LINE Sticker Download
 // @namespace          https://veltlion.github.io/line-sticker-download
 // @include            https://store.line.me/stickershop/product/*
-// @version            1.4
+// @version            1.4.1
 // @description        Add download button for line sticker store
 // @description:zh-cn  在 LINE STORE Sticker 页面添加下载按钮
 // @author             空
@@ -26,12 +26,12 @@ var btn = '<li class="mdCMN08Li" style="list-style-type: none">';
     btn += '<span class="mdBtn01Txt">' + btnstr + '</span>';
     btn += '</span></a></li>';
 if ($('div').hasClass('mdCMN08Txt')) {
-    $('ul').find('li:eq(0)').remove();
+    $('.mdCMN08Txt>ul').find('li:eq(0)').remove();
     $('.mdCMN08Ul').prepend(btn);
 }
 else if ($('div').hasClass('mdMN05Btn')) {
     //$('.MdBtn01').remove();
-    $('div.mdMN05Btn').prepend(btn);
+    $('.mdMN05Btn').prepend(btn);
 }
 $('body').on('click', '#download', function(){
     var result = GM_download(file);

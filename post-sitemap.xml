@@ -8,7 +8,23 @@
 
     <url>
         <loc>https://veltlion.github.io/line-sticker-download/</loc>
-        <lastmod>2018-10-10T23:39:22.945Z</lastmod>
+        <lastmod>2018-10-12T11:23:14.183Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/%E8%9B%8B%E7%82%92%E9%A5%AD/</loc>
+        <lastmod>2018-10-11T00:11:59.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/%E6%8A%8A%E9%94%AE%E7%9B%98%E6%B4%97%E5%9D%8F%E4%BA%86%E2%80%A6/</loc>
+        <lastmod>2018-10-11T00:08:35.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -17,14 +33,6 @@
     <url>
         <loc>https://veltlion.github.io/21/</loc>
         <lastmod>2018-09-11T16:40:07.210Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://veltlion.github.io/%E6%8A%8A%E9%94%AE%E7%9B%98%E6%B4%97%E5%9D%8F%E4%BA%86%E2%80%A6/</loc>
-        <lastmod>2018-09-11T16:39:52.225Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -153,14 +161,6 @@
     <url>
         <loc>https://veltlion.github.io/ttl-root-h7-4/</loc>
         <lastmod>2018-09-08T16:44:50.470Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://veltlion.github.io/%E8%9B%8B%E7%82%92%E9%A5%AD/</loc>
-        <lastmod>2018-09-08T16:43:21.998Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
