@@ -100,20 +100,6 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/tags/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91/</loc>
-        <lastmod>2018-08-31T16:57:52.073Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://veltlion.github.io/tags/samba/</loc>
-        <lastmod>2018-08-31T16:57:52.073Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://veltlion.github.io/tags/%E5%85%89%E7%8C%AB/</loc>
         <lastmod>2018-09-08T16:50:37.893Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -130,48 +116,6 @@
     <url>
         <loc>https://veltlion.github.io/tags/anmpp/</loc>
         <lastmod>2018-09-08T16:51:18.558Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://veltlion.github.io/tags/Android/</loc>
-        <lastmod>2018-09-09T14:33:57.604Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://veltlion.github.io/tags/%E6%9C%BA%E9%A1%B6%E7%9B%92/</loc>
-        <lastmod>2018-09-09T14:33:57.604Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://veltlion.github.io/tags/S912/</loc>
-        <lastmod>2018-09-09T14:33:57.604Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://veltlion.github.io/tags/H7%E5%9B%9B%E4%BB%A3/</loc>
-        <lastmod>2018-09-09T14:33:57.604Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://veltlion.github.io/tags/ROOT/</loc>
-        <lastmod>2018-09-09T14:33:57.604Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://veltlion.github.io/tags/LibreELEC/</loc>
-        <lastmod>2018-09-09T14:33:57.604Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -221,6 +165,62 @@
     <url>
         <loc>https://veltlion.github.io/tags/%E6%B2%B9%E7%8C%B4/</loc>
         <lastmod>2018-10-12T11:37:42.673Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/tags/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91/</loc>
+        <lastmod>2018-10-23T17:11:23.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/tags/samba/</loc>
+        <lastmod>2018-10-23T17:11:23.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/tags/Android/</loc>
+        <lastmod>2018-10-28T19:47:28.613Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/tags/%E6%9C%BA%E9%A1%B6%E7%9B%92/</loc>
+        <lastmod>2018-10-28T19:47:28.613Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/tags/S912/</loc>
+        <lastmod>2018-10-28T19:47:28.613Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/tags/H7%E5%9B%9B%E4%BB%A3/</loc>
+        <lastmod>2018-10-28T19:47:28.613Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/tags/ROOT/</loc>
+        <lastmod>2018-10-28T19:47:28.613Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/tags/LibreELEC/</loc>
+        <lastmod>2018-10-28T19:47:28.613Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

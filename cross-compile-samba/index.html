@@ -1,20 +1,540 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 编译 Samba 笔记 · 空</title><meta name="description" content="编译 Samba 笔记 - 空"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/img/favicon.ico"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="https://veltlion.github.io/atom.xml" title="空"></head><body><div class="wrap"><header><script>function cPic(){var num=Math.ceil(Math.random()*40);document.getElementById("cpic").src="/img/デフォルメティッシュちゃん ("+num+").png"}</script><!--a.logo-link(href=url_for())--><!--    img(src=url_for(theme.logo) alt="logo")--><script>var num=Math.floor(40*Math.random())+1;document.write("<a class='logo-link'><img src='/img/デフォルメティッシュちゃん ("+num+").png' id='cpic' alt='logo' onclick='cPic()'></a>");</script><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="/links" target="_self" class="nav-list-link">LINKS</a></li><li class="nav-list-item"><a href="/about" target="_self" class="nav-list-link">ABOUT</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">编译 Samba 笔记</h1><div class="post-info">2018年2月26日</div><div class="post-content"><p>　　最近给机顶盒刷了第三方的 Android TV 7.1.2 ，系统不带 Samba 了，SambaDroid 也经常自己退出不太好用了，entware 里面的 smbd 也跑不起来，这就很难受。于是就想自己编译一个。（感觉最近都在搞这些东西。。。<br>　　正好看到有人做了 Samba4.1.5 的<a href="https://github.com/Jumbo88888/Samba" target="_blank" rel="noopener">编译脚本和补丁</a>，改改就能拿来用了。<br>　　如果用 WSL 的话一定要先去掉 $PATH 中 Windows 传进来的环境变量，不然碰到带空格的 Windows 变量会出错。<br><a id="more"></a>　　还有就是 <strong><font color="red">珍爱生命，不要用 WSL 编译任何东西，CPU 根本跑不满，浪费时间。</font></strong><br><figure class="highlight bash"><figcaption><span>auto.sh</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 第 42 行 </span></span><br><span class="line">    CC=aarch64-linux-gnu-gcc \</span><br><span class="line">       ./configure \</span><br><span class="line">       --host=aarch64-linux-gnu \</span><br><span class="line">       --build=x86_64-linux \</span><br><span class="line"></span><br><span class="line"><span class="comment"># 第 103 行开始直到 make</span></span><br><span class="line">    CC=aarch64-linux-gnu-gcc AR=aarch64-linux-gnu-ar LD=aarch64-linux-gnu-ld \</span><br><span class="line">        CPP=aarch64-linux-gnu-cpp RANLIB=aarch64-linux-gnu-gcc-ranlib  \</span><br><span class="line">        CFLAGS=<span class="string">"-I<span class="variable">$PYTHON_OBJ</span>/include/python2.7 -I<span class="variable">$SAMBA</span>/lib/talloc/ -I<span class="variable">$SAMBA</span>/lib/tevent -I<span class="variable">$SAMBA</span>/lib/tdb/include -I<span class="variable">$SAMBA</span>/lib/ldb/include/ -I<span class="variable">$SAMBA</span>/lib/ldb/ -I<span class="variable">$SAMBA</span>/source3/include/autoconf/ -march=armv8-a+crypto+crc -mtune=cortex-a53"</span> \</span><br><span class="line">        LDFLAGS=<span class="string">"-Wl,-dynamic-linker,/system/samba/glibc/ld-linux-aarch64.so.1 -Wl,-rpath,/system/samba/glibc"</span> \</span><br><span class="line">        LIBDIR=<span class="string">"-L<span class="variable">$PYTHON_OBJ</span>/lib/"</span> \</span><br><span class="line">        python_LDFLAGS=<span class="string">"-L<span class="variable">$PYTHON_OBJ</span>/lib/ -lpython2.7"</span> \</span><br><span class="line">        python_LIBDIR=<span class="string">"<span class="variable">$PYTHON_OBJ</span>/lib/"</span> \</span><br><span class="line">        ./buildtools/bin/waf \</span><br><span class="line">        configure \</span><br><span class="line">        --cross-compile --cross-answers=arm.txt --hostcc=gcc \</span><br><span class="line">        --without-acl-support --without-ad-dc --without-ads --without-ldap \</span><br><span class="line">        --without-pam --without-pie --without-fam --without-dmapi --without-profiling-data \</span><br><span class="line">        --without-winbind --without-regedit --without-automount --without-utmp \</span><br><span class="line">        --without-dnsupdate --without-cluster-support \</span><br><span class="line">        --<span class="built_in">disable</span>-cups --<span class="built_in">disable</span>-iprint \</span><br><span class="line">        --<span class="built_in">disable</span>-gnutls --<span class="built_in">disable</span>-glusterfs --<span class="built_in">disable</span>-avahi \</span><br><span class="line">        --<span class="built_in">enable</span>-selftest \</span><br><span class="line">        --<span class="built_in">builtin</span>-libraries=talloc,pytalloc-util \</span><br><span class="line">        --bundled-libraries=talloc,pytalloc-util,tdb,tevent,ldb \</span><br><span class="line">        --prefix=/system/samba \</span><br><span class="line"></span><br><span class="line">    make</span><br><span class="line"></span><br><span class="line"><span class="comment"># --with-aio-support \</span></span><br></pre></td></tr></table></figure></p>
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="空">
+    <title>编译 Samba 笔记 - 空</title>
+    <meta name="author" content="空">
+    
+    
+        <link rel="icon" href="https://veltlion.github.io/assets/images/favicon.ico">
+    
+    
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+    
+    <meta name="description" content="最近给机顶盒刷了第三方的 Android TV 7.1.2 ，系统不带 Samba 了，SambaDroid 也经常自己退出不太好用了，entware 里面的 smbd 也跑不起来，这就很难受。于是就想自己编译一个。（感觉最近都在搞这些东西。。。　　正好看到有人做了 Samba4.1.5 的编译脚本和补丁，改改就能拿来用了。　　如果用 WSL 的话一定要先去掉 $PATH 中 Windows">
+<meta name="keywords" content="Android,交叉编译,机顶盒,samba">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="编译 Samba 笔记">
+<meta property="og:url" content="https://veltlion.github.io/cross-compile-samba/index.html">
+<meta property="og:site_name" content="空">
+<meta property="og:description" content="最近给机顶盒刷了第三方的 Android TV 7.1.2 ，系统不带 Samba 了，SambaDroid 也经常自己退出不太好用了，entware 里面的 smbd 也跑不起来，这就很难受。于是就想自己编译一个。（感觉最近都在搞这些东西。。。　　正好看到有人做了 Samba4.1.5 的编译脚本和补丁，改改就能拿来用了。　　如果用 WSL 的话一定要先去掉 $PATH 中 Windows">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-10-23T17:11:23.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="编译 Samba 笔记">
+<meta name="twitter:description" content="最近给机顶盒刷了第三方的 Android TV 7.1.2 ，系统不带 Samba 了，SambaDroid 也经常自己退出不太好用了，entware 里面的 smbd 也跑不起来，这就很难受。于是就想自己编译一个。（感觉最近都在搞这些东西。。。　　正好看到有人做了 Samba4.1.5 的编译脚本和补丁，改改就能拿来用了。　　如果用 WSL 的话一定要先去掉 $PATH 中 Windows">
+<meta name="twitter:creator" content="@yume1001">
+    
+    
+        
+    
+    
+        <meta property="og:image" content="https://veltlion.github.io/assets/images/avatar.png"/>
+    
+    
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-m31oawwzxuth0pzphkddvz6ubcybxxygxcmxuuj4uaumuaqqrjjxdjlhtgww.min.css">
+    <!--STYLES END-->
+    
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-106826273-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+        
+            
+        
+    
+
+<header id="header" data-behavior="1">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a class="header-title-link" href="/ ">空</a>
+    </div>
+    
+        
+            <a  class="header-right-picture "
+                href="#about">
+        
+        
+            <img class="header-picture" src="/assets/images/avatar.png" alt="作者的图片"/>
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="1">
+    <div class="sidebar-container">
+        
+            <div class="sidebar-profile">
+                <a href="/#about">
+                    <img class="sidebar-profile-picture" src="/assets/images/avatar.png" alt="作者的图片"/>
+                </a>
+                <span class="sidebar-profile-name">空</span>
+                
+                    <!--h5 class="sidebar-profile-bio"><p>　</p>
+</h5-->
+                
+            </div>
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/ "
+                            
+                            title="首页"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-circle-thin" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">首页</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-archives"
+                            
+                            title="归档"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-bars" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">归档</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-tags"
+                            
+                            title="标签"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-star-o" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">标签</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/about"
+                            
+                            title="关于"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-info" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">关于</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="mailto:&#115;&#111;&#114;&#97;&#64;&#108;&#105;&#118;&#101;&#46;&#106;&#112;" target="_blank" rel="noopener" title="E-mail">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-envelope-o" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">E-mail</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://twitter.com/yume1001" target="_blank" rel="noopener" title="Twitter">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-twitter" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Twitter</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://t.me/soratan" target="_blank" rel="noopener" title="Telegram">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-paper-plane" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Telegram</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/atom.xml"
+                            
+                            title="RSS"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-rss" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+            <div id="main" data-behavior="1"
+                 style="background-color: rgba(255, 255, 255, 0.7);"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+    
+    
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title" itemprop="headline">
+            编译 Samba 笔记
+        </h1>
+    
+    
+        <div class="post-meta">
+    <time itemprop="datePublished" datetime="2018-02-26T23:57:01+08:00">
+	
+		    2018年02月26日
+    	
+    </time>
+    
+        <span>发布在 </span>
+        
+    <a class="category-link" href="/categories/瞎鼓捣/">瞎鼓捣</a>
+
+
+    
+</div>
+    
+</div>
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <p>　　最近给机顶盒刷了第三方的 Android TV 7.1.2 ，系统不带 Samba 了，SambaDroid 也经常自己退出不太好用了，entware 里面的 smbd 也跑不起来，这就很难受。于是就想自己编译一个。（感觉最近都在搞这些东西。。。<br>　　正好看到有人做了 Samba4.1.5 的<a href="https://github.com/Jumbo88888/Samba" target="_blank" rel="noopener">编译脚本和补丁</a>，改改就能拿来用了。<br>　　如果用 WSL 的话一定要先去掉 $PATH 中 Windows 传进来的环境变量，不然碰到带空格的 Windows 变量会出错。<br><a id="more"></a>　　还有就是 <strong><font color="red">珍爱生命，不要用 WSL 编译任何东西，CPU 根本跑不满，浪费时间。</font></strong><br><figure class="highlight bash"><figcaption><span>auto.sh</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 第 42 行 </span></span><br><span class="line">    CC=aarch64-linux-gnu-gcc \</span><br><span class="line">       ./configure \</span><br><span class="line">       --host=aarch64-linux-gnu \</span><br><span class="line">       --build=x86_64-linux \</span><br><span class="line"></span><br><span class="line"><span class="comment"># 第 103 行开始直到 make</span></span><br><span class="line">    CC=aarch64-linux-gnu-gcc AR=aarch64-linux-gnu-ar LD=aarch64-linux-gnu-ld \</span><br><span class="line">        CPP=aarch64-linux-gnu-cpp RANLIB=aarch64-linux-gnu-gcc-ranlib  \</span><br><span class="line">        CFLAGS=<span class="string">"-I<span class="variable">$PYTHON_OBJ</span>/include/python2.7 -I<span class="variable">$SAMBA</span>/lib/talloc/ -I<span class="variable">$SAMBA</span>/lib/tevent -I<span class="variable">$SAMBA</span>/lib/tdb/include -I<span class="variable">$SAMBA</span>/lib/ldb/include/ -I<span class="variable">$SAMBA</span>/lib/ldb/ -I<span class="variable">$SAMBA</span>/source3/include/autoconf/ -march=armv8-a+crypto+crc -mtune=cortex-a53"</span> \</span><br><span class="line">        LDFLAGS=<span class="string">"-Wl,-dynamic-linker,/system/samba/glibc/ld-linux-aarch64.so.1 -Wl,-rpath,/system/samba/glibc"</span> \</span><br><span class="line">        LIBDIR=<span class="string">"-L<span class="variable">$PYTHON_OBJ</span>/lib/"</span> \</span><br><span class="line">        python_LDFLAGS=<span class="string">"-L<span class="variable">$PYTHON_OBJ</span>/lib/ -lpython2.7"</span> \</span><br><span class="line">        python_LIBDIR=<span class="string">"<span class="variable">$PYTHON_OBJ</span>/lib/"</span> \</span><br><span class="line">        ./buildtools/bin/waf \</span><br><span class="line">        configure \</span><br><span class="line">        --cross-compile --cross-answers=arm.txt --hostcc=gcc \</span><br><span class="line">        --without-acl-support --without-ad-dc --without-ads --without-ldap \</span><br><span class="line">        --without-pam --without-pie --without-fam --without-dmapi --without-profiling-data \</span><br><span class="line">        --without-winbind --without-regedit --without-automount --without-utmp \</span><br><span class="line">        --without-dnsupdate --without-cluster-support \</span><br><span class="line">        --<span class="built_in">disable</span>-cups --<span class="built_in">disable</span>-iprint \</span><br><span class="line">        --<span class="built_in">disable</span>-gnutls --<span class="built_in">disable</span>-glusterfs --<span class="built_in">disable</span>-avahi \</span><br><span class="line">        --<span class="built_in">enable</span>-selftest \</span><br><span class="line">        --<span class="built_in">builtin</span>-libraries=talloc,pytalloc-util \</span><br><span class="line">        --bundled-libraries=talloc,pytalloc-util,tdb,tevent,ldb \</span><br><span class="line">        --prefix=/system/samba \</span><br><span class="line"></span><br><span class="line">    make</span><br><span class="line"></span><br><span class="line"><span class="comment"># --with-aio-support \</span></span><br></pre></td></tr></table></figure></p>
 <p>　　<br>　　试过静态编译，可照着<a href="https://lists.samba.org/archive/samba/2017-September/211110.html" target="_blank" rel="noopener">这个</a>加了选项后编译出来还是 dynamically linked ，后来换成动态的了。<br>　　动态编译的话要在 CFLAGS 里加 <code>-Wl,-dynamic-linker,/path/to/xx.so</code> 和 <code>-Wl,-rpath,/path/to/xxdir</code> ，不然会 <code>No such file or directory</code> 。<br>　　还有就是 <code>--enable-debug</code> 和 <code>--enable-selftest</code> 。有这两个的话万一出错会报错报的很仔细，没有的话直接中断编译除了 error 什么也不留下。<br>　　编译出来的加上编译器的 C 库有一百二十多兆字节，感觉有点太大了，我看 SambaDroid 里面自带的只有 8 MiB…因为 /data 空间很宝贵，我把东西都放到 /system/samba 里面了。<br>　　还有要手动在 /etc 建个 passwd 文件。<br><figure class="highlight c"><figcaption><span>/etc/passwd</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">root:x:<span class="number">0</span>:<span class="number">0</span>:root::/system/bin/sh</span><br><span class="line">miu:x:<span class="number">0</span>:<span class="number">0</span>:root::/system/bin/sh</span><br><span class="line">nobody:x:<span class="number">9999</span>:<span class="number">9999</span></span><br></pre></td></tr></table></figure></p>
 <p>添加用户设置密码<br><code>/system/samba/bin/smbpasswd -a miu</code></p>
 <p>配置文件<br><figure class="highlight nginx"><figcaption><span>/system/samba/etc/smb.conf</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line"><span class="attribute">guest</span> ok = <span class="literal">no</span></span><br><span class="line">interfaces = wlan0 <span class="number">192.168.1.13</span>/<span class="number">24</span></span><br><span class="line">workgroup = WORKGROUP</span><br><span class="line">server string = miu</span><br><span class="line">netbios name = miu</span><br><span class="line">security = user</span><br><span class="line">guest account = nobody</span><br><span class="line">map to guest = Bad User</span><br><span class="line">[miu]</span><br><span class="line">comment = Android /storage/emulated/<span class="number">0</span></span><br><span class="line">path = /storage/emulated/<span class="number">0</span></span><br><span class="line">read only = <span class="literal">no</span></span><br><span class="line">writable = <span class="literal">yes</span></span><br><span class="line">guest ok = <span class="literal">no</span></span><br><span class="line"></span><br><span class="line">[nyanpass]</span><br><span class="line">path = /storage/AA667397667362CD</span><br><span class="line">read only = <span class="literal">no</span></span><br><span class="line">writable = <span class="literal">yes</span></span><br><span class="line">guest ok = <span class="literal">no</span></span><br></pre></td></tr></table></figure></p>
 <p>然后再写个脚本开机自动启动。<br><figure class="highlight bash"><figcaption><span>/etc/init.d/99smbd.sh</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> TMPDIR=/data/<span class="built_in">local</span>/tmp</span><br><span class="line">/system/bin/mount -o rw,remount /system</span><br><span class="line">/system/samba/sbin/smbd -D</span><br><span class="line">/system/samba/sbin/nmbd -D</span><br></pre></td></tr></table></figure></p>
 <p>脚本开机启动的时候要指定下 <code>TMPDIR</code> ，不然设置开机启动后连接不上，会报错<code>canonicalize_connect_path failed for service IPC$, path /tmp</code> 。</p>
-<p>编译完成的<a href="https://yadi.sk/d/BnAdR4zZ3Xzwv7" target="_blank" rel="noopener">文件</a>，默认用户名是 <code>miu</code> ，默认密码是 <code>1234</code> 。</p>
-</div></article></div></main><footer><div class="paginator"><a href="/line-sticker-download/" class="prev">上一篇</a><a href="/蛋炒饭/" class="next">下一篇</a></div><script src="https://cdnjs.cat.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="/Valine.min.js"></script><div id="comment"></div><script>new Valine({
-    av: AV, 
-    el: '#comment',
-    notify:false, 
-    verify:false, 
-    appId: '4PRFCeNilpABAutJlqdmectP-gzGzoHsz',
-    appKey: 'X2snnlim2EiRUn2OcbXkPreB',
-    placeholder: ' ',
-    path:window.location.pathname, 
-    avatar:'retro' 
-});
+<!--编译完成的[文件](https://yadi.sk/d/BnAdR4zZ3Xzwv7)，默认用户名是 `miu` ，默认密码是 `1234` 。-->
+            
 
-</script><div class="copyright"><p>© 2014 - 2018 <a href="https://veltlion.github.io">空</a></p></div></footer></div><!-- script(async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous")--><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-106826273-1",'auto');ga('send','pageview');</script></body></html>
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+      
+          <div class="post-footer-tags">
+              <span class="text-color-light text-small">标签</span><br/>
+              
+    <a class="tag tag--primary tag--small t-link" href="/tags/Android/">Android</a> <a class="tag tag--primary tag--small t-link" href="/tags/samba/">samba</a> <a class="tag tag--primary tag--small t-link" href="/tags/交叉编译/">交叉编译</a> <a class="tag tag--primary tag--small t-link" href="/tags/机顶盒/">机顶盒</a>
+
+          </div>
+        
+        
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/line-sticker-download/" data-tooltip="LINE Sticker Download" aria-label="上一篇: LINE Sticker Download">
+                
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/蛋炒饭/" data-tooltip="蛋炒饭" aria-label="下一篇: 蛋炒饭">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://veltlion.github.io/cross-compile-samba/" data-tooltip="分享到 Twitter">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://veltlion.github.io/cross-compile-samba/" data-tooltip="分享到 Google+">
+                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://service.weibo.com/share/share.php?&amp;title=https://veltlion.github.io/cross-compile-samba/" data-tooltip="分享到 Weibo">
+                    <i class="fa fa-weibo" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+                <li class="post-action">
+                    <a class="post-action-btn btn btn--default" href="#comment">
+                         <i class="fa fa-comment-o"></i>
+                    </a>
+                </li>
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+        
+            
+                <div id="comment"></div>
+            
+        
+    </div>
+</article>
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2018 空. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="1">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/line-sticker-download/" data-tooltip="LINE Sticker Download" aria-label="上一篇: LINE Sticker Download">
+                
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/蛋炒饭/" data-tooltip="蛋炒饭" aria-label="下一篇: 蛋炒饭">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://veltlion.github.io/cross-compile-samba/" data-tooltip="分享到 Twitter">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://veltlion.github.io/cross-compile-samba/" data-tooltip="分享到 Google+">
+                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://service.weibo.com/share/share.php?&amp;title=https://veltlion.github.io/cross-compile-samba/" data-tooltip="分享到 Weibo">
+                    <i class="fa fa-weibo" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+                <li class="post-action">
+                    <a class="post-action-btn btn btn--default" href="#comment">
+                         <i class="fa fa-comment-o"></i>
+                    </a>
+                </li>
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="1">
+    <i id="btn-close-shareoptions" class="fa fa-close"></i>
+    <ul class="share-options">
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://veltlion.github.io/cross-compile-samba/">
+                    <i class="fa fa-twitter" aria-hidden="true"></i><span>分享到 Twitter</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://veltlion.github.io/cross-compile-samba/">
+                    <i class="fa fa-google-plus" aria-hidden="true"></i><span>分享到 Google+</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://service.weibo.com/share/share.php?&amp;title=https://veltlion.github.io/cross-compile-samba/">
+                    <i class="fa fa-weibo" aria-hidden="true"></i><span>分享到 Weibo</span>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <img id="about-card-picture" src="/assets/images/avatar.png" alt="作者的图片"/>
+        
+            <h4 id="about-card-name">空</h4>
+        
+            <div id="about-card-bio"><p>　</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>　</p>
+
+            </div>
+        
+        
+            <div id="about-card-location">
+                <i class="fa fa-map-marker"></i>
+                <br/>
+                Asia
+            </div>
+        
+    </div>
+</div>
+
+        
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg'); background-position-y: 50%;"></div>
+        <!--SCRIPTS-->
+<script src="/assets/js/script-xvtyrggoxhsrg3o8rwcskgsjnbw0xk60qhlqk3hbn5jkfmzttrnedrzorqmo.min.js"></script>
+<!--SCRIPTS END-->
+
+    
+        <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+        <script src="/assets/js/Valine.min.js"></script>
+        <script>
+            new Valine({
+                av: AV,
+                el: '#comment',
+                notify:'false', 
+                verify:'false', 
+                appId:'4PRFCeNilpABAutJlqdmectP-gzGzoHsz',
+                appKey:'X2snnlim2EiRUn2OcbXkPreB',
+                placeholder:'',
+                path:window.location.pathname, 
+                avatar:'retro' 
+            });
+        </script>
+    
+
+
+
+    </body>
+</html>

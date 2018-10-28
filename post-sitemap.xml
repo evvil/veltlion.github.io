@@ -7,6 +7,22 @@
     </url>
 
     <url>
+        <loc>https://veltlion.github.io/flash-h7-4/</loc>
+        <lastmod>2018-10-28T19:47:28.613Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/cross-compile-samba/</loc>
+        <lastmod>2018-10-23T17:11:23.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://veltlion.github.io/line-sticker-download/</loc>
         <lastmod>2018-10-12T11:37:42.673Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -73,14 +89,6 @@
     <url>
         <loc>https://veltlion.github.io/CPrime/</loc>
         <lastmod>2018-09-11T16:29:40.595Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://veltlion.github.io/flash-h7-4/</loc>
-        <lastmod>2018-09-09T14:33:57.604Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -177,14 +185,6 @@
     <url>
         <loc>https://veltlion.github.io/%E5%A4%9A%E8%AF%B4%E8%BD%ACDisqus%E7%9A%84%E5%9D%91/</loc>
         <lastmod>2018-09-08T16:40:47.126Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://veltlion.github.io/cross-compile-samba/</loc>
-        <lastmod>2018-08-31T16:57:52.073Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

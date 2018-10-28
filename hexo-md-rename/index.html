@@ -1,15 +1,538 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> Hexo 的 md 文件重命名 · 空</title><meta name="description" content="Hexo 的 md 文件重命名 - 空"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/img/favicon.ico"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="https://veltlion.github.io/atom.xml" title="空"></head><body><div class="wrap"><header><script>function cPic(){var num=Math.ceil(Math.random()*40);document.getElementById("cpic").src="/img/デフォルメティッシュちゃん ("+num+").png"}</script><!--a.logo-link(href=url_for())--><!--    img(src=url_for(theme.logo) alt="logo")--><script>var num=Math.floor(40*Math.random())+1;document.write("<a class='logo-link'><img src='/img/デフォルメティッシュちゃん ("+num+").png' id='cpic' alt='logo' onclick='cPic()'></a>");</script><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="/links" target="_self" class="nav-list-link">LINKS</a></li><li class="nav-list-item"><a href="/about" target="_self" class="nav-list-link">ABOUT</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">Hexo 的 md 文件重命名</h1><div class="post-info">2016年5月5日</div><div class="post-content"><p>　　换用 Hexo 之后发现 _post 目录里面乱乱的，比如从 WordPress 中导入的中文标题文章的文件名会变成乱乱的字符串，看着很难受。所以搞了个改名的脚本来重命名文件。<br>　　重命名之后的格式为<code>文章标题.md</code>，如果有注明<code>permalink</code>的话就是<code>PO文日期-文章标题-permalink.md</code>。<br><a id="more"></a>　　还有一件事很重要，就是<strong>不写 permalink 或没设置 config 里的 permalink 的话，Hexo 会用文件名做文章链接</strong>。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#保存系统默认的 IFS</span></span><br><span class="line">SAVEIFS=<span class="variable">$IFS</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#更改 IFS 为换行（用于处理文件名含有空格的文件</span></span><br><span class="line">IFS=$(<span class="built_in">echo</span> -en <span class="string">"\n\b"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> filename <span class="keyword">in</span> $(ls *.md)</span><br><span class="line">  <span class="keyword">do</span></span><br><span class="line">    <span class="comment">#标题</span></span><br><span class="line">    title=$(grep <span class="string">"title: "</span> <span class="variable">$filename</span> | sed -n <span class="string">'1p'</span> | sed -e <span class="string">'s/.*: //g ; s/ /_/g ; s/?//g'</span>)</span><br><span class="line">    <span class="comment">#发文日期</span></span><br><span class="line">    date=$(grep <span class="string">"date: "</span> <span class="variable">$filename</span> | sed -n <span class="string">'1p'</span> | awk <span class="string">'&#123;printf $2&#125;'</span> )</span><br><span class="line">    <span class="comment">#permalink</span></span><br><span class="line">    link=$(grep <span class="string">"permalink: "</span> <span class="variable">$filename</span> | sed -n <span class="string">'1p'</span> | awk <span class="string">'&#123;printf $2&#125;'</span> )</span><br><span class="line">    <span class="comment">#新文件名</span></span><br><span class="line">    <span class="keyword">if</span> [ -z <span class="string">"<span class="variable">$link</span>"</span> ]; <span class="keyword">then</span></span><br><span class="line">        <span class="comment">#newname="$date.$title"</span></span><br><span class="line">        newname=<span class="string">"<span class="variable">$title</span>"</span></span><br><span class="line">      <span class="keyword">else</span></span><br><span class="line">        newname=<span class="string">"<span class="variable">$date</span>-<span class="variable">$title</span>-<span class="variable">$link</span>"</span></span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line">    <span class="comment">#过滤掉名字正确的</span></span><br><span class="line">    <span class="keyword">if</span> [ <span class="string">"<span class="variable">$filename</span>"</span> != <span class="string">"<span class="variable">$newname</span>.md"</span> ]; <span class="keyword">then</span></span><br><span class="line">       <span class="comment">#开始改名</span></span><br><span class="line">       <span class="built_in">echo</span> <span class="string">"Rename <span class="variable">$filename</span> to <span class="variable">$newname</span>.md"</span></span><br><span class="line">       mv <span class="variable">$filename</span> <span class="variable">$newname</span>.md</span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#恢复 IFS</span></span><br><span class="line">IFS=<span class="variable">$SAVEIFS</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="keyword">done</span>!</span><br></pre></td></tr></table></figure></p>
-<p><img src="/img/65.png" alt="计画通り"><br>这样就舒服好多了。</p>
-</div></article></div></main><footer><div class="paginator"><a href="/网易云音乐歌词转换/" class="prev">上一篇</a><a href="/submitting-packages-to-aur/" class="next">下一篇</a></div><script src="https://cdnjs.cat.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="/Valine.min.js"></script><div id="comment"></div><script>new Valine({
-    av: AV, 
-    el: '#comment',
-    notify:false, 
-    verify:false, 
-    appId: '4PRFCeNilpABAutJlqdmectP-gzGzoHsz',
-    appKey: 'X2snnlim2EiRUn2OcbXkPreB',
-    placeholder: ' ',
-    path:window.location.pathname, 
-    avatar:'retro' 
-});
 
-</script><div class="copyright"><p>© 2014 - 2018 <a href="https://veltlion.github.io">空</a></p></div></footer></div><!-- script(async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous")--><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-106826273-1",'auto');ga('send','pageview');</script></body></html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="空">
+    <title>Hexo 的 md 文件重命名 - 空</title>
+    <meta name="author" content="空">
+    
+    
+        <link rel="icon" href="https://veltlion.github.io/assets/images/favicon.ico">
+    
+    
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+    
+    <meta name="description" content="换用 Hexo 之后发现 _post 目录里面乱乱的，比如从 WordPress 中导入的中文标题文章的文件名会变成乱乱的字符串，看着很难受。所以搞了个改名的脚本来重命名文件。　　重命名之后的格式为文章标题.md，如果有注明permalink的话就是PO文日期-文章标题-permalink.md。">
+<meta name="keywords" content="重命名,Hexo">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Hexo 的 md 文件重命名">
+<meta property="og:url" content="https://veltlion.github.io/hexo-md-rename/index.html">
+<meta property="og:site_name" content="空">
+<meta property="og:description" content="换用 Hexo 之后发现 _post 目录里面乱乱的，比如从 WordPress 中导入的中文标题文章的文件名会变成乱乱的字符串，看着很难受。所以搞了个改名的脚本来重命名文件。　　重命名之后的格式为文章标题.md，如果有注明permalink的话就是PO文日期-文章标题-permalink.md。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://veltlion.github.io/img/65.png">
+<meta property="og:updated_time" content="2018-06-08T22:19:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo 的 md 文件重命名">
+<meta name="twitter:description" content="换用 Hexo 之后发现 _post 目录里面乱乱的，比如从 WordPress 中导入的中文标题文章的文件名会变成乱乱的字符串，看着很难受。所以搞了个改名的脚本来重命名文件。　　重命名之后的格式为文章标题.md，如果有注明permalink的话就是PO文日期-文章标题-permalink.md。">
+<meta name="twitter:image" content="https://veltlion.github.io/img/65.png">
+<meta name="twitter:creator" content="@yume1001">
+    
+    
+        
+    
+    
+        <meta property="og:image" content="https://veltlion.github.io/assets/images/avatar.png"/>
+    
+    
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-m31oawwzxuth0pzphkddvz6ubcybxxygxcmxuuj4uaumuaqqrjjxdjlhtgww.min.css">
+    <!--STYLES END-->
+    
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-106826273-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+        
+            
+        
+    
+
+<header id="header" data-behavior="1">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a class="header-title-link" href="/ ">空</a>
+    </div>
+    
+        
+            <a  class="header-right-picture "
+                href="#about">
+        
+        
+            <img class="header-picture" src="/assets/images/avatar.png" alt="作者的图片"/>
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="1">
+    <div class="sidebar-container">
+        
+            <div class="sidebar-profile">
+                <a href="/#about">
+                    <img class="sidebar-profile-picture" src="/assets/images/avatar.png" alt="作者的图片"/>
+                </a>
+                <span class="sidebar-profile-name">空</span>
+                
+                    <!--h5 class="sidebar-profile-bio"><p>　</p>
+</h5-->
+                
+            </div>
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/ "
+                            
+                            title="首页"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-circle-thin" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">首页</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-archives"
+                            
+                            title="归档"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-bars" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">归档</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-tags"
+                            
+                            title="标签"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-star-o" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">标签</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/about"
+                            
+                            title="关于"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-info" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">关于</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="mailto:&#115;&#111;&#114;&#97;&#64;&#108;&#105;&#118;&#101;&#46;&#106;&#112;" target="_blank" rel="noopener" title="E-mail">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-envelope-o" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">E-mail</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://twitter.com/yume1001" target="_blank" rel="noopener" title="Twitter">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-twitter" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Twitter</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://t.me/soratan" target="_blank" rel="noopener" title="Telegram">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-paper-plane" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Telegram</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/atom.xml"
+                            
+                            title="RSS"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-rss" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+            <div id="main" data-behavior="1"
+                 style="background-color: rgba(255, 255, 255, 0.7);"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+    
+    
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title" itemprop="headline">
+            Hexo 的 md 文件重命名
+        </h1>
+    
+    
+        <div class="post-meta">
+    <time itemprop="datePublished" datetime="2016-05-05T14:29:35+08:00">
+	
+		    2016年05月05日
+    	
+    </time>
+    
+        <span>发布在 </span>
+        
+    <a class="category-link" href="/categories/瞎鼓捣/">瞎鼓捣</a>
+
+
+    
+</div>
+    
+</div>
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <p>　　换用 Hexo 之后发现 _post 目录里面乱乱的，比如从 WordPress 中导入的中文标题文章的文件名会变成乱乱的字符串，看着很难受。所以搞了个改名的脚本来重命名文件。<br>　　重命名之后的格式为<code>文章标题.md</code>，如果有注明<code>permalink</code>的话就是<code>PO文日期-文章标题-permalink.md</code>。<br><a id="more"></a>　　还有一件事很重要，就是<strong>不写 permalink 或没设置 config 里的 permalink 的话，Hexo 会用文件名做文章链接</strong>。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#保存系统默认的 IFS</span></span><br><span class="line">SAVEIFS=<span class="variable">$IFS</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#更改 IFS 为换行（用于处理文件名含有空格的文件</span></span><br><span class="line">IFS=$(<span class="built_in">echo</span> -en <span class="string">"\n\b"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> filename <span class="keyword">in</span> $(ls *.md)</span><br><span class="line">  <span class="keyword">do</span></span><br><span class="line">    <span class="comment">#标题</span></span><br><span class="line">    title=$(grep <span class="string">"title: "</span> <span class="variable">$filename</span> | sed -n <span class="string">'1p'</span> | sed -e <span class="string">'s/.*: //g ; s/ /_/g ; s/?//g'</span>)</span><br><span class="line">    <span class="comment">#发文日期</span></span><br><span class="line">    date=$(grep <span class="string">"date: "</span> <span class="variable">$filename</span> | sed -n <span class="string">'1p'</span> | awk <span class="string">'&#123;printf $2&#125;'</span> )</span><br><span class="line">    <span class="comment">#permalink</span></span><br><span class="line">    link=$(grep <span class="string">"permalink: "</span> <span class="variable">$filename</span> | sed -n <span class="string">'1p'</span> | awk <span class="string">'&#123;printf $2&#125;'</span> )</span><br><span class="line">    <span class="comment">#新文件名</span></span><br><span class="line">    <span class="keyword">if</span> [ -z <span class="string">"<span class="variable">$link</span>"</span> ]; <span class="keyword">then</span></span><br><span class="line">        <span class="comment">#newname="$date.$title"</span></span><br><span class="line">        newname=<span class="string">"<span class="variable">$title</span>"</span></span><br><span class="line">      <span class="keyword">else</span></span><br><span class="line">        newname=<span class="string">"<span class="variable">$date</span>-<span class="variable">$title</span>-<span class="variable">$link</span>"</span></span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line">    <span class="comment">#过滤掉名字正确的</span></span><br><span class="line">    <span class="keyword">if</span> [ <span class="string">"<span class="variable">$filename</span>"</span> != <span class="string">"<span class="variable">$newname</span>.md"</span> ]; <span class="keyword">then</span></span><br><span class="line">       <span class="comment">#开始改名</span></span><br><span class="line">       <span class="built_in">echo</span> <span class="string">"Rename <span class="variable">$filename</span> to <span class="variable">$newname</span>.md"</span></span><br><span class="line">       mv <span class="variable">$filename</span> <span class="variable">$newname</span>.md</span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#恢复 IFS</span></span><br><span class="line">IFS=<span class="variable">$SAVEIFS</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="keyword">done</span>!</span><br></pre></td></tr></table></figure></p>
+<p><img src="/img/65.png" alt="计画通り"><br>这样就舒服好多了。</p>
+
+            
+
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+      
+          <div class="post-footer-tags">
+              <span class="text-color-light text-small">标签</span><br/>
+              
+    <a class="tag tag--primary tag--small t-link" href="/tags/Hexo/">Hexo</a> <a class="tag tag--primary tag--small t-link" href="/tags/重命名/">重命名</a>
+
+          </div>
+        
+        
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/网易云音乐歌词转换/" data-tooltip="网易云音乐歌词转换" aria-label="上一篇: 网易云音乐歌词转换">
+                
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/submitting-packages-to-aur/" data-tooltip="向AUR提交软件包" aria-label="下一篇: 向AUR提交软件包">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://veltlion.github.io/hexo-md-rename/" data-tooltip="分享到 Twitter">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://veltlion.github.io/hexo-md-rename/" data-tooltip="分享到 Google+">
+                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://service.weibo.com/share/share.php?&amp;title=https://veltlion.github.io/hexo-md-rename/" data-tooltip="分享到 Weibo">
+                    <i class="fa fa-weibo" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+                <li class="post-action">
+                    <a class="post-action-btn btn btn--default" href="#comment">
+                         <i class="fa fa-comment-o"></i>
+                    </a>
+                </li>
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+        
+            
+                <div id="comment"></div>
+            
+        
+    </div>
+</article>
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2018 空. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="1">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/网易云音乐歌词转换/" data-tooltip="网易云音乐歌词转换" aria-label="上一篇: 网易云音乐歌词转换">
+                
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/submitting-packages-to-aur/" data-tooltip="向AUR提交软件包" aria-label="下一篇: 向AUR提交软件包">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://veltlion.github.io/hexo-md-rename/" data-tooltip="分享到 Twitter">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://veltlion.github.io/hexo-md-rename/" data-tooltip="分享到 Google+">
+                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://service.weibo.com/share/share.php?&amp;title=https://veltlion.github.io/hexo-md-rename/" data-tooltip="分享到 Weibo">
+                    <i class="fa fa-weibo" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+                <li class="post-action">
+                    <a class="post-action-btn btn btn--default" href="#comment">
+                         <i class="fa fa-comment-o"></i>
+                    </a>
+                </li>
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="1">
+    <i id="btn-close-shareoptions" class="fa fa-close"></i>
+    <ul class="share-options">
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://veltlion.github.io/hexo-md-rename/">
+                    <i class="fa fa-twitter" aria-hidden="true"></i><span>分享到 Twitter</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://veltlion.github.io/hexo-md-rename/">
+                    <i class="fa fa-google-plus" aria-hidden="true"></i><span>分享到 Google+</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://service.weibo.com/share/share.php?&amp;title=https://veltlion.github.io/hexo-md-rename/">
+                    <i class="fa fa-weibo" aria-hidden="true"></i><span>分享到 Weibo</span>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <img id="about-card-picture" src="/assets/images/avatar.png" alt="作者的图片"/>
+        
+            <h4 id="about-card-name">空</h4>
+        
+            <div id="about-card-bio"><p>　</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>　</p>
+
+            </div>
+        
+        
+            <div id="about-card-location">
+                <i class="fa fa-map-marker"></i>
+                <br/>
+                Asia
+            </div>
+        
+    </div>
+</div>
+
+        
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg'); background-position-y: 50%;"></div>
+        <!--SCRIPTS-->
+<script src="/assets/js/script-xvtyrggoxhsrg3o8rwcskgsjnbw0xk60qhlqk3hbn5jkfmzttrnedrzorqmo.min.js"></script>
+<!--SCRIPTS END-->
+
+    
+        <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+        <script src="/assets/js/Valine.min.js"></script>
+        <script>
+            new Valine({
+                av: AV,
+                el: '#comment',
+                notify:'false', 
+                verify:'false', 
+                appId:'4PRFCeNilpABAutJlqdmectP-gzGzoHsz',
+                appKey:'X2snnlim2EiRUn2OcbXkPreB',
+                placeholder:'',
+                path:window.location.pathname, 
+                avatar:'retro' 
+            });
+        </script>
+    
+
+
+
+    </body>
+</html>

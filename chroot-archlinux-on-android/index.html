@@ -1,4 +1,257 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 在 Android 手机上 chroot ArchLinux · 空</title><meta name="description" content="在 Android 手机上 chroot ArchLinux - 空"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/img/favicon.ico"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="https://veltlion.github.io/atom.xml" title="空"></head><body><div class="wrap"><header><script>function cPic(){var num=Math.ceil(Math.random()*40);document.getElementById("cpic").src="/img/デフォルメティッシュちゃん ("+num+").png"}</script><!--a.logo-link(href=url_for())--><!--    img(src=url_for(theme.logo) alt="logo")--><script>var num=Math.floor(40*Math.random())+1;document.write("<a class='logo-link'><img src='/img/デフォルメティッシュちゃん ("+num+").png' id='cpic' alt='logo' onclick='cPic()'></a>");</script><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="/links" target="_self" class="nav-list-link">LINKS</a></li><li class="nav-list-item"><a href="/about" target="_self" class="nav-list-link">ABOUT</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">在 Android 手机上 chroot ArchLinux</h1><div class="post-info">2015年4月13日</div><div class="post-content"><p>因为没有电脑，免费的 VPS 连接太慢操作不方便，就想搞个 Linux 在手机上面。<br><a id="more"></a><!-- toc --></p>
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="空">
+    <title>在 Android 手机上 chroot ArchLinux - 空</title>
+    <meta name="author" content="空">
+    
+    
+        <link rel="icon" href="https://veltlion.github.io/assets/images/favicon.ico">
+    
+    
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+    
+    <meta name="description" content="因为没有电脑，免费的 VPS 连接太慢操作不方便，就想搞个 Linux 在手机上面。">
+<meta name="keywords" content="Android,Arch Linux">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="在 Android 手机上 chroot ArchLinux">
+<meta property="og:url" content="https://veltlion.github.io/chroot-archlinux-on-android/index.html">
+<meta property="og:site_name" content="空">
+<meta property="og:description" content="因为没有电脑，免费的 VPS 连接太慢操作不方便，就想搞个 Linux 在手机上面。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://veltlion.github.io/img/%E6%A2%93%281%29.gif">
+<meta property="og:updated_time" content="2018-04-06T18:55:58.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="在 Android 手机上 chroot ArchLinux">
+<meta name="twitter:description" content="因为没有电脑，免费的 VPS 连接太慢操作不方便，就想搞个 Linux 在手机上面。">
+<meta name="twitter:image" content="https://veltlion.github.io/img/%E6%A2%93%281%29.gif">
+<meta name="twitter:creator" content="@yume1001">
+    
+    
+        
+    
+    
+        <meta property="og:image" content="https://veltlion.github.io/assets/images/avatar.png"/>
+    
+    
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-m31oawwzxuth0pzphkddvz6ubcybxxygxcmxuuj4uaumuaqqrjjxdjlhtgww.min.css">
+    <!--STYLES END-->
+    
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-106826273-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+        
+            
+        
+    
+
+<header id="header" data-behavior="1">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a class="header-title-link" href="/ ">空</a>
+    </div>
+    
+        
+            <a  class="header-right-picture "
+                href="#about">
+        
+        
+            <img class="header-picture" src="/assets/images/avatar.png" alt="作者的图片"/>
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="1">
+    <div class="sidebar-container">
+        
+            <div class="sidebar-profile">
+                <a href="/#about">
+                    <img class="sidebar-profile-picture" src="/assets/images/avatar.png" alt="作者的图片"/>
+                </a>
+                <span class="sidebar-profile-name">空</span>
+                
+                    <!--h5 class="sidebar-profile-bio"><p>　</p>
+</h5-->
+                
+            </div>
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/ "
+                            
+                            title="首页"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-circle-thin" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">首页</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-archives"
+                            
+                            title="归档"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-bars" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">归档</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-tags"
+                            
+                            title="标签"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-star-o" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">标签</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/about"
+                            
+                            title="关于"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-info" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">关于</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="mailto:&#115;&#111;&#114;&#97;&#64;&#108;&#105;&#118;&#101;&#46;&#106;&#112;" target="_blank" rel="noopener" title="E-mail">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-envelope-o" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">E-mail</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://twitter.com/yume1001" target="_blank" rel="noopener" title="Twitter">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-twitter" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Twitter</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://t.me/soratan" target="_blank" rel="noopener" title="Telegram">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-paper-plane" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Telegram</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/atom.xml"
+                            
+                            title="RSS"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-rss" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+            <div id="main" data-behavior="1"
+                 style="background-color: rgba(255, 255, 255, 0.7);"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+    
+    
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title" itemprop="headline">
+            在 Android 手机上 chroot ArchLinux
+        </h1>
+    
+    
+        <div class="post-meta">
+    <time itemprop="datePublished" datetime="2015-04-13T21:46:05+08:00">
+	
+		    2015年04月13日
+    	
+    </time>
+    
+        <span>发布在 </span>
+        
+    <a class="category-link" href="/categories/瞎鼓捣/">瞎鼓捣</a>
+
+
+    
+</div>
+    
+</div>
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <p>因为没有电脑，免费的 VPS 连接太慢操作不方便，就想搞个 Linux 在手机上面。<br><a id="more"></a><h1 id="table-of-contents">目录</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#准备"><span class="toc-text">准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开始"><span class="toc-text">开始</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建文件夹并解压"><span class="toc-text">创建文件夹并解压</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#chroot-进去"><span class="toc-text">chroot 进去</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设置"><span class="toc-text">设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配置-DNS"><span class="toc-text">配置 DNS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#换源"><span class="toc-text">换源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置主机名"><span class="toc-text">设置主机名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#source-profile"><span class="toc-text">source profile</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#更新系统"><span class="toc-text">更新系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加普通用户"><span class="toc-text">添加普通用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改-sudoers-文件"><span class="toc-text">修改 sudoers 文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装-yaourt"><span class="toc-text">安装 yaourt</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#package-query"><span class="toc-text">package-query</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#yaourt"><span class="toc-text">yaourt</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一些问题"><span class="toc-text">一些问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#data-分区权限"><span class="toc-text">data 分区权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dev-fd-62-No-such-file-or-directory"><span class="toc-text">/dev/fd/62: No such file or directory</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#网络权限"><span class="toc-text">网络权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#内置储存权限"><span class="toc-text">内置储存权限</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#完"><span class="toc-text">完</span></a></li></ol></p>
 <h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>先下载 arm 版：<code>https://archlinuxarm.org/about/downloads</code><br>然后手机里面还要有 <code>busybox</code></p>
 <h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><h3 id="创建文件夹并解压"><a href="#创建文件夹并解压" class="headerlink" title="创建文件夹并解压"></a>创建文件夹并解压</h3><p>因为 sdcard 没有办法更改权限所以放到 /data 里面。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">su</span><br><span class="line">mkdir /data/arch</span><br><span class="line">tar xvf ArchLinuxARM-armv7-latest.tar.gz -C  /data/arch/</span><br></pre></td></tr></table></figure></p>
 <h3 id="chroot-进去"><a href="#chroot-进去" class="headerlink" title="chroot 进去"></a>chroot 进去</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">unset</span> LD_PRELOAD TMPDIR</span><br><span class="line">busybox mount --rbind /dev /data/arch/dev</span><br><span class="line">busybox mount --rbind /proc /data/arch/proc</span><br><span class="line">busybox mount --rbind /sys /data/arch/sys</span><br><span class="line">busybox mount -t tmpfs tmpfs /data/arch/tmp</span><br><span class="line">chroot /data/arch /bin/bash</span><br></pre></td></tr></table></figure>
@@ -22,16 +275,286 @@
 <p>剩下还有一大堆权限，什么录音的啊，相机的啊，GPS…一大堆。不过好像都用不到。</p>
 <h2 id="完"><a href="#完" class="headerlink" title="完"></a>完</h2><p>如果手机重启后想再次进入只需要重新执行下面的命令就好啦。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">busybox mount -o,remount,suid /data</span><br><span class="line">busybox mount --rbind /dev /data/arch/dev</span><br><span class="line">busybox mount --rbind /proc /data/arch/proc</span><br><span class="line">busybox mount --rbind /sys /data/arch/sys</span><br><span class="line">busybox mount -t tmpfs tmpfs /data/arch/tmp</span><br><span class="line"><span class="built_in">unset</span> LD_PRELOAD TMPDIR</span><br><span class="line">chroot /data/arch /bin/bash</span><br></pre></td></tr></table></figure></p>
 <p><img src="/img/%E6%A2%93%281%29.gif" alt="梓(1).gif"></p>
-</div></article></div></main><footer><div class="paginator"><a href="/博客从手机挪到VPS啦/" class="prev">上一篇</a><a href="/sora…/" class="next">下一篇</a></div><script src="https://cdnjs.cat.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="/Valine.min.js"></script><div id="comment"></div><script>new Valine({
-    av: AV, 
-    el: '#comment',
-    notify:false, 
-    verify:false, 
-    appId: '4PRFCeNilpABAutJlqdmectP-gzGzoHsz',
-    appKey: 'X2snnlim2EiRUn2OcbXkPreB',
-    placeholder: ' ',
-    path:window.location.pathname, 
-    avatar:'retro' 
-});
 
-</script><div class="copyright"><p>© 2014 - 2018 <a href="https://veltlion.github.io">空</a></p></div></footer></div><!-- script(async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous")--><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-106826273-1",'auto');ga('send','pageview');</script></body></html>
+            
+
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+      
+          <div class="post-footer-tags">
+              <span class="text-color-light text-small">标签</span><br/>
+              
+    <a class="tag tag--primary tag--small t-link" href="/tags/Android/">Android</a> <a class="tag tag--primary tag--small t-link" href="/tags/Arch-Linux/">Arch Linux</a>
+
+          </div>
+        
+        
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/博客从手机挪到VPS啦/" data-tooltip="博客从手机挪到VPS啦" aria-label="上一篇: 博客从手机挪到VPS啦">
+                
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/sora…/" data-tooltip="そら…" aria-label="下一篇: そら…">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://veltlion.github.io/chroot-archlinux-on-android/" data-tooltip="分享到 Twitter">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://veltlion.github.io/chroot-archlinux-on-android/" data-tooltip="分享到 Google+">
+                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://service.weibo.com/share/share.php?&amp;title=https://veltlion.github.io/chroot-archlinux-on-android/" data-tooltip="分享到 Weibo">
+                    <i class="fa fa-weibo" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+                <li class="post-action">
+                    <a class="post-action-btn btn btn--default" href="#comment">
+                         <i class="fa fa-comment-o"></i>
+                    </a>
+                </li>
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#table-of-contents" aria-label="目录">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+        
+            
+                <div id="comment"></div>
+            
+        
+    </div>
+</article>
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2018 空. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="1">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/博客从手机挪到VPS啦/" data-tooltip="博客从手机挪到VPS啦" aria-label="上一篇: 博客从手机挪到VPS啦">
+                
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/sora…/" data-tooltip="そら…" aria-label="下一篇: そら…">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://veltlion.github.io/chroot-archlinux-on-android/" data-tooltip="分享到 Twitter">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://veltlion.github.io/chroot-archlinux-on-android/" data-tooltip="分享到 Google+">
+                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://service.weibo.com/share/share.php?&amp;title=https://veltlion.github.io/chroot-archlinux-on-android/" data-tooltip="分享到 Weibo">
+                    <i class="fa fa-weibo" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+                <li class="post-action">
+                    <a class="post-action-btn btn btn--default" href="#comment">
+                         <i class="fa fa-comment-o"></i>
+                    </a>
+                </li>
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#table-of-contents" aria-label="目录">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="1">
+    <i id="btn-close-shareoptions" class="fa fa-close"></i>
+    <ul class="share-options">
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://veltlion.github.io/chroot-archlinux-on-android/">
+                    <i class="fa fa-twitter" aria-hidden="true"></i><span>分享到 Twitter</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://veltlion.github.io/chroot-archlinux-on-android/">
+                    <i class="fa fa-google-plus" aria-hidden="true"></i><span>分享到 Google+</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://service.weibo.com/share/share.php?&amp;title=https://veltlion.github.io/chroot-archlinux-on-android/">
+                    <i class="fa fa-weibo" aria-hidden="true"></i><span>分享到 Weibo</span>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <img id="about-card-picture" src="/assets/images/avatar.png" alt="作者的图片"/>
+        
+            <h4 id="about-card-name">空</h4>
+        
+            <div id="about-card-bio"><p>　</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>　</p>
+
+            </div>
+        
+        
+            <div id="about-card-location">
+                <i class="fa fa-map-marker"></i>
+                <br/>
+                Asia
+            </div>
+        
+    </div>
+</div>
+
+        
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg'); background-position-y: 50%;"></div>
+        <!--SCRIPTS-->
+<script src="/assets/js/script-xvtyrggoxhsrg3o8rwcskgsjnbw0xk60qhlqk3hbn5jkfmzttrnedrzorqmo.min.js"></script>
+<!--SCRIPTS END-->
+
+    
+        <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+        <script src="/assets/js/Valine.min.js"></script>
+        <script>
+            new Valine({
+                av: AV,
+                el: '#comment',
+                notify:'false', 
+                verify:'false', 
+                appId:'4PRFCeNilpABAutJlqdmectP-gzGzoHsz',
+                appKey:'X2snnlim2EiRUn2OcbXkPreB',
+                placeholder:'',
+                path:window.location.pathname, 
+                avatar:'retro' 
+            });
+        </script>
+    
+
+
+
+    </body>
+</html>
