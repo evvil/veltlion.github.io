@@ -27,7 +27,7 @@
 <meta property="og:image" content="https://veltlion.github.io/flash-h7-4/f_LibreELEC.jpg">
 <meta property="og:image" content="https://veltlion.github.io/flash-h7-4/f_Armbian.png">
 <meta property="og:image" content="https://veltlion.github.io/flash-h7-4/f_抓包.png">
-<meta property="og:updated_time" content="2018-10-28T20:17:37.009Z">
+<meta property="og:updated_time" content="2018-10-29T05:53:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="给海美迪 H7 四代刷第三方固件">
 <meta name="twitter:description" content="前几天给盒子清数据，连上网就被自动装了 CIBN聚精彩 、CIBN聚体育。　　emmmmm…　　加上之前这系统用着各种不爽，像是没有通知栏啊、太丑啊、版本太低啊、刷了 Google 服务 SPMC 就打不开了之类的，所以干脆刷成别的好了。找找发现 S912 有好多包，LibreELEC、Lakka、Android 之类的。　　后来我发现这玩意还能装 Linux ，真是神奇，不过 Linux 的">
@@ -259,7 +259,7 @@
         <div class="main-content-wrap">
             <p>　　前几天给盒子清数据，连上网就被自动装了 CIBN聚精彩 、CIBN聚体育。<br>　　emmmmm…<br>　　加上之前这系统用着各种不爽，像是没有通知栏啊、太丑啊、版本太低啊、刷了 Google 服务 SPMC 就打不开了之类的，所以干脆刷成别的好了。找找发现 S912 有好多包，LibreELEC、Lakka、Android 之类的。<br>　　后来我发现这玩意还能装 Linux ，真是神奇，不过 Linux 的话还是等我这盒子退休再说吧。<br><a id="more"></a><h1 id="table-of-contents">目录</h1><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#备份"><span class="toc-text">备份</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#备份到电脑"><span class="toc-text">备份到电脑</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#备份到-SD-卡或-U-盘"><span class="toc-text">备份到 SD 卡或 U 盘</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其他-Android"><span class="toc-text">其他 Android</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#一些固件的下载地址"><span class="toc-text">一些固件的下载地址</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#一些问题和解决办法"><span class="toc-text">一些问题和解决办法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LibreELEC"><span class="toc-text">LibreELEC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux"><span class="toc-text">Linux</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#刷回官方（恢复备份）"><span class="toc-text">刷回官方（恢复备份）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#官方固件一些问题的解决方法"><span class="toc-text">官方固件一些问题的解决方法</span></a></li></ol></p>
 <h3 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h3><p>刷什么之前都应该先做好备份，因为官方根本就没提供固件，只有卡刷包。</p>
-<p>为了保险起见，推荐备份之前刷入<a href="https://veltlion.github.io/ttl-root-h7-4/">这篇文章</a>下面的 TWRP 。</p>
+<p>为了保险起见，推荐备份之前刷入<a href="https://veltlion.github.io/ttl-root-h7-4/">这篇文章</a>下面的 TWRP 。（因为官方的 rec 进去就是格式化 data 。</p>
 <h4 id="备份到电脑"><a href="#备份到电脑" class="headerlink" title="备份到电脑"></a>备份到电脑</h4><ol>
 <li>盒子执行（需要root）<br><code>/system/xbin/busybox nc -l -p 5000 -e /system/xbin/busybox dd if=/dev/block/mmcblk0</code></li>
 <li>电脑执行<br><code>nc 盒子IP 5000 | pv -i 0.5 &gt; mmcblk0</code></li>
@@ -286,10 +286,11 @@
 <li>鼠标模式：安装 <a href="https://www.allfreeapk.com/mouse-toggle-for-android-tv,12904361/" target="_blank" rel="noopener">Mouse Toggle for Android TV</a> ，启用无障碍，按音量减再快速按音量加开启，HOME 关闭。</li>
 <li>语音：换个支持 Android TV 语音的遥控器。或者在手机上装个 <a href="https://play.google.com/store/apps/details?id=com.google.android.tv.remote" target="_blank" rel="noopener">Android TV Remote Control</a> 。</li>
 <li>YouTube FC：换用旧版并关闭 Google Play 的自动更新。旧版在文章末尾的网盘里有提供。</li>
+<li>另外有些固件不能驱动有线网卡，目前还没有解决方法。</li>
 </ul>
 <p>前几天自带的蓝牙遥控器坏掉了，我脑抽花80大洋买了个原厂白的…现在想想还不如买个飞鼠。</p>
 <h3 id="LibreELEC"><a href="#LibreELEC" class="headerlink" title="LibreELEC"></a>LibreELEC</h3><p><img src="f_LibreELEC.jpg" alt="LibreELEC"><br>　　<a href="https://libreelec.tv/" target="_blank" rel="noopener">LibreELEC</a> 其实就是个 kodi ，扩展比 kodi 多点。跟 Android 版的 kodi 比起来就是多了些程序，放 H265 不会花屏了。也能装 entware 之类的。<br>　　<a href="http://www.lakka.tv/get/linux/s912/" target="_blank" rel="noopener">Lakka</a> 也已经支持 S912 了，安装和 LibreELEC 差不多。<br>　　它们都可以装到 SD 卡里面，官方的<a href="https://forum.libreelec.tv/thread/5848" target="_blank" rel="noopener">安装说明</a>写的很详细，照着做就好了。另外新版在<a href="https://forum.libreelec.tv/thread/12325" target="_blank" rel="noopener">这里</a>。<br>　　另外这两个蓝牙遥控器也是只能关机不能开机，按钮改成休眠后可休眠唤醒。</p>
-<h3 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h3><p><img src="f_Armbian.png" alt="Armbian"><br>　　装 Linux 的话可以直接用别人做好的镜像做启动卡，有 Debian、ArchLinux、openSUSE 和 AltLinux 的，可以去<a href="http://freaktab.com/forum/tv-player-support/amlogic-based-tv-players/606133" target="_blank" rel="noopener">这个帖子</a>下载。<br>　　<strong>我试了几个镜像 HDMI 都没有声音，据制作者说 4.14 内核的有声音，不过我用那个盒子开机没有信号。</strong></p>
+<h3 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h3><p><img src="f_Armbian.png" alt="Armbian"><br>　　装 Linux 的话可以直接用别人做好的镜像做启动卡，有 Debian、ArchLinux、openSUSE 和 AltLinux 的，可以去<a href="http://freaktab.com/forum/tv-player-support/amlogic-based-tv-players/606133" target="_blank" rel="noopener">这个帖子</a>下载。<br>　　<strong>我试了几个镜像 HDMI 都没有声音，据制作者说 4.14 内核的有声音，不过我用那个 HDMI 没有信号。</strong></p>
 <ol>
 <li>用 dd 或是 Win32DiskImage 之类的软件把镜像写到SD卡。</li>
 <li>修改文件。<br> a. 打开SD卡的第一分区，看看里面有没有<code>aml_autoscript</code>文件，没有就把<code>s905_autoscript</code>改名<code>aml_autoscript</code>。<br> b. 把 dtbs 里面的<code>gxm_q201_2g.dtb</code>改名<code>dtb.img</code>复制到上级目录。<br> c. 按需修改<code>hdmi.sh</code>和<code>armbian_first_run.txt</code>。</li>
@@ -329,6 +330,7 @@
 </li>
 </ul>
 <p><img src="f_抓包.png" alt="抓包"><br>还有一些<a href="https://yadi.sk/d/lyF8wTHV3Xzwnm" target="_blank" rel="noopener">有的没的</a>。</p>
+<p><strong> 在评论区评论的时候最好留下邮箱，这样可以及时收到回复提醒。 </strong></p>
 
             
 
@@ -369,7 +371,7 @@
     </nav>
     <ul class="post-actions post-action-share">
         <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
                 <i class="fa fa-share-alt" aria-hidden="true"></i>
             </a>
         </li>
@@ -462,7 +464,7 @@
     </nav>
     <ul class="post-actions post-action-share">
         <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
                 <i class="fa fa-share-alt" aria-hidden="true"></i>
             </a>
         </li>
