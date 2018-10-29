@@ -27,7 +27,7 @@
 <meta property="og:image" content="https://veltlion.github.io/flash-h7-4/f_LibreELEC.jpg">
 <meta property="og:image" content="https://veltlion.github.io/flash-h7-4/f_Armbian.png">
 <meta property="og:image" content="https://veltlion.github.io/flash-h7-4/f_抓包.png">
-<meta property="og:updated_time" content="2018-10-29T05:53:48.000Z">
+<meta property="og:updated_time" content="2018-10-29T09:22:11.012Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="给海美迪 H7 四代刷第三方固件">
 <meta name="twitter:description" content="前几天给盒子清数据，连上网就被自动装了 CIBN聚精彩 、CIBN聚体育。　　emmmmm…　　加上之前这系统用着各种不爽，像是没有通知栏啊、太丑啊、版本太低啊、刷了 Google 服务 SPMC 就打不开了之类的，所以干脆刷成别的好了。找找发现 S912 有好多包，LibreELEC、Lakka、Android 之类的。　　后来我发现这玩意还能装 Linux ，真是神奇，不过 Linux 的">
@@ -274,10 +274,10 @@
 <li>或是用双公头 USB 线连接电脑和盒子（插靠后面的 USB 口）用 USB Burning Tool 刷写。</li>
 </ul>
 <h4 id="一些固件的下载地址"><a href="#一些固件的下载地址" class="headerlink" title="一些固件的下载地址"></a>一些固件的下载地址</h4><ul>
-<li><a href="http://freaktab.com/forum/tv-player-support/beelink-aa/beelink-android-tv-box/gt1/firmware-roms-tools-cg/611261" target="_blank" rel="noopener">Android 6.1</a> 自带 Samba ，启动器带通知显示。上面的截图就是这个固件。刷完要再进 recovery 刷下帖子里的 A912(AP6255) Wifi/BT Fix ，不然 WiFi 不能用。</li>
+<li><a href="http://freaktab.com/forum/tv-player-support/beelink-aa/beelink-android-tv-box/gt1/firmware-roms-tools-cg/611261" target="_blank" rel="noopener">Android 6.1</a> 上面的截图就是这个固件。自带 Samba ，启动器带通知显示。不知道为什么 superceleron 的原帖消失了，我把固件上传到了<a href="https://yadi.sk/d/yDPOojBtPyLU_A" target="_blank" rel="noopener">网盘</a>。先刷 SCV10A-GT1.img ，再卡刷 OTA-SCV11-GT1.zip 和 SCV11-A912-AP6255-Support.zip 。</li>
 <li><a href="http://freaktab.com/forum/tv-player-support/beelink-aa/beelink-android-tv-box/gt1/firmware-roms-tools-cg/659653" target="_blank" rel="noopener">Android 7.1</a> 自带 Google 全家桶的 Android 7.1 固件。</li>
 <li><del><a href="http://freaktab.com/forum/tv-player-support/beelink-aa/beelink-android-tv-box/gt1/firmware-roms-tools-cg/659783" target="_blank" rel="noopener">Android TV 7.1.2</a> 自带 Google 全家桶的 Android TV 7.1 固件。</del>最近更新后蓝牙遥控器会失效。</li>
-<li><a href="http://freaktab.com/forum/tv-player-support/beelink-aa/beelink-android-tv-box/gt1/firmware-roms-tools-cg/657916" target="_blank" rel="noopener">Android TV 7.1.2</a> 只有 Play 服务、商店和 YouTube，data 分区比较大，钛备份看到有 12.3 GiB 。目前在用，不过精简的有点多，DocumentsUI 都没，可以从上面的包里面提取。最新版本的 YouTube 在这个 ROM 上会 FC 。解决办法是卸载更新然后禁止自动更新。</li>
+<li><a href="http://freaktab.com/forum/tv-player-support/beelink-aa/beelink-android-tv-box/gt1/firmware-roms-tools-cg/657916" target="_blank" rel="noopener">Android TV 7.1.2</a> 只有 Play 服务、商店和 YouTube，data 分区比较大，钛备份看到有 12.3 GiB 。目前在用，不过精简的有点多，DocumentsUI 都没，我放到网盘里了，可以自己添加。</li>
 <li>还可以自己 Google 搜索或是去 freaktab 、<a href="https://forum.xda-developers.com/android-stick--console-computers/amlogic" target="_blank" rel="noopener">xda</a> 这类的地方找。</li>
 </ul>
 <h4 id="一些问题和解决办法"><a href="#一些问题和解决办法" class="headerlink" title="一些问题和解决办法"></a>一些问题和解决办法</h4><ul>
@@ -285,7 +285,7 @@
 <li>红蓝按钮：修改<code>HIMEDIA.kl</code>，把红蓝键改成别的功能（<a href="https://developer.android.com/reference/android/view/KeyEvent.html" target="_blank" rel="noopener">按键参考</a>）。我这有一个<a href="HIMEDIA.kl">改好的</a>，红色是静音，蓝色是截图。</li>
 <li>鼠标模式：安装 <a href="https://www.allfreeapk.com/mouse-toggle-for-android-tv,12904361/" target="_blank" rel="noopener">Mouse Toggle for Android TV</a> ，启用无障碍，按音量减再快速按音量加开启，HOME 关闭。</li>
 <li>语音：换个支持 Android TV 语音的遥控器。或者在手机上装个 <a href="https://play.google.com/store/apps/details?id=com.google.android.tv.remote" target="_blank" rel="noopener">Android TV Remote Control</a> 。</li>
-<li>YouTube FC：换用旧版并关闭 Google Play 的自动更新。旧版在文章末尾的网盘里有提供。</li>
+<li>新版本 YouTube FC：卸载更新并关闭 Google Play 的自动更新。最新的可用版本在文章末尾的网盘里有提供。</li>
 <li>另外有些固件不能驱动有线网卡，目前还没有解决方法。</li>
 </ul>
 <p>前几天自带的蓝牙遥控器坏掉了，我脑抽花80大洋买了个原厂白的…现在想想还不如买个飞鼠。</p>
@@ -320,17 +320,16 @@
 <p>ps. 在 LibreELEC 下恢复过程也差不多，不过有一点要注意的就是用 LibreELEC 或 Linux 格式化分区的时候要指定分区名。像是这样：<code>mkfs.ext4 -L data /dev/data</code></p>
 <h3 id="官方固件一些问题的解决方法"><a href="#官方固件一些问题的解决方法" class="headerlink" title="官方固件一些问题的解决方法"></a>官方固件一些问题的解决方法</h3><ul>
 <li>没有通知栏：装 Snowball Smart Notifications 显示通知。</li>
-<li>刷了 Goolge 服务包后 SPMC 打不开：不用 Google 服务或是换用 FTMC 。因为刷非海美迪官方提供的 Google 服务包会过不了 Play 商店的验证，好多软件不能安装和更新。</li>
 <li>没有最近任务界面：插个飞鼠或者键盘 Alt + Tab 。</li>
 <li>官方固件偷偷给用户安装软件：<ul>
-<li>后台偷偷安装软件的是系统自带的启动器，可以换用第三方启动器然后直接删掉或禁用自带的启动器（其实好多自带软件都可以删）。</li>
+<li>后台偷偷安装软件的是系统自带的启动器，可以换用第三方启动器然后直接删掉或禁用自带的启动器。</li>
 <li>后来通过抓包找到推送列表地址，也可以在 hosts 里面加上一句<code>127.0.0.1 apkhome.hinavi.cp81.ott.cibntv.net</code>屏蔽。</li>
 <li>屏蔽推送和广告的 <a href="hosts">hosts</a> 。</li>
 </ul>
 </li>
 </ul>
 <p><img src="f_抓包.png" alt="抓包"><br>还有一些<a href="https://yadi.sk/d/lyF8wTHV3Xzwnm" target="_blank" rel="noopener">有的没的</a>。</p>
-<p><strong> 在评论区评论的时候最好留下邮箱，这样可以及时收到回复提醒。 </strong></p>
+<p><strong>在评论区评论的时候最好留下邮箱，这样可以及时收到回复提醒。</strong></p>
 
             
 
@@ -371,7 +370,7 @@
     </nav>
     <ul class="post-actions post-action-share">
         <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
                 <i class="fa fa-share-alt" aria-hidden="true"></i>
             </a>
         </li>
@@ -464,7 +463,7 @@
     </nav>
     <ul class="post-actions post-action-share">
         <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
                 <i class="fa fa-share-alt" aria-hidden="true"></i>
             </a>
         </li>
