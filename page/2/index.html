@@ -15,6 +15,7 @@
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"Website","@id":"https://veltlion.github.io","author":{"@type":"Person","name":"空","sameAs":["mailto","https://twitter.com/","https://t.me/soratan"],"image":"avatar.png"},"name":"空","description":"e^iπ+1=0","url":"https://veltlion.github.io"}</script>
     <meta name="description" content="e^iπ+1=0">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="空">
@@ -37,7 +38,7 @@
     
     
     <!--STYLES-->
-    <link rel="stylesheet" href="/assets/css/style-m31oawwzxuth0pzphkddvz6ubcybxxygxcmxuuj4uaumuaqqrjjxdjlhtgww.min.css">
+    <link rel="stylesheet" href="/assets/css/style-hvqhhadrwwqdjouqjpg2w6cb1equqrq590r65hnpnh3sveh3dwqnsrkeyhvk.min.css">
     <!--STYLES END-->
     
     <script type="text/javascript">
@@ -65,7 +66,7 @@
         
     
 
-<header id="header" data-behavior="1">
+<header id="header" data-behavior="2">
     <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
     <div class="header-title">
         <a class="header-title-link" href="/ ">空</a>
@@ -88,17 +89,17 @@
         
     
 
-<nav id="sidebar" data-behavior="1">
+<nav id="sidebar" data-behavior="2">
     <div class="sidebar-container">
         
             <div class="sidebar-profile">
                 <a href="/#about">
                     <img class="sidebar-profile-picture" src="/assets/images/avatar.png" alt="作者的图片">
                 </a>
-                <span class="sidebar-profile-name">空</span>
+                <h4 class="sidebar-profile-name">空</h4>
                 
-                    <!--h5 class="sidebar-profile-bio"><p>　</p>
-</h5-->
+                    <h5 class="sidebar-profile-bio"><p>author.bio</p>
+</h5>
                 
             </div>
         
@@ -109,7 +110,7 @@
                     
                         <a class="sidebar-button-link " href="/ " title="首页">
                     
-                        <i class="sidebar-button-icon fa fa-lg fa-circle-thin" aria-hidden="true"></i>
+                        <i class="sidebar-button-icon far fa-circle" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">首页</span>
                     </a>
             </li>
@@ -118,8 +119,17 @@
                     
                         <a class="sidebar-button-link " href="/all-archives" title="归档">
                     
-                        <i class="sidebar-button-icon fa fa-lg fa-bars" aria-hidden="true"></i>
+                        <i class="sidebar-button-icon fas fa-bars" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">归档</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/all-categories" title="分类">
+                    
+                        <i class="sidebar-button-icon fa fa-bookmark" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">分类</span>
                     </a>
             </li>
             
@@ -127,7 +137,7 @@
                     
                         <a class="sidebar-button-link " href="/all-tags" title="标签">
                     
-                        <i class="sidebar-button-icon fa fa-lg fa-star-o" aria-hidden="true"></i>
+                        <i class="sidebar-button-icon far fa-star" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">标签</span>
                     </a>
             </li>
@@ -136,7 +146,7 @@
                     
                         <a class="sidebar-button-link " href="/about" title="关于">
                     
-                        <i class="sidebar-button-icon fa fa-lg fa-info" aria-hidden="true"></i>
+                        <i class="sidebar-button-icon fas fa-info" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">关于</span>
                     </a>
             </li>
@@ -147,18 +157,18 @@
             
                 <li class="sidebar-button">
                     
-                        <a class="sidebar-button-link " href="mailto:&#115;&#111;&#114;&#97;&#64;&#108;&#105;&#118;&#101;&#46;&#106;&#112;" target="_blank" rel="noopener" title="E-mail">
+                        <a class="sidebar-button-link " href="/mailto" title="Email">
                     
-                        <i class="sidebar-button-icon fa fa-lg fa-envelope-o" aria-hidden="true"></i>
-                        <span class="sidebar-button-desc">E-mail</span>
+                        <i class="sidebar-button-icon fa fa-envelope" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Email</span>
                     </a>
             </li>
             
                 <li class="sidebar-button">
                     
-                        <a class="sidebar-button-link " href="https://twitter.com/yume1001" target="_blank" rel="noopener" title="Twitter">
+                        <a class="sidebar-button-link " href="https://twitter.com/" target="_blank" rel="noopener" title="Twitter">
                     
-                        <i class="sidebar-button-icon fa fa-lg fa-twitter" aria-hidden="true"></i>
+                        <i class="sidebar-button-icon fab fa-twitter" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">Twitter</span>
                     </a>
             </li>
@@ -167,7 +177,7 @@
                     
                         <a class="sidebar-button-link " href="https://t.me/soratan" target="_blank" rel="noopener" title="Telegram">
                     
-                        <i class="sidebar-button-icon fa fa-lg fa-paper-plane" aria-hidden="true"></i>
+                        <i class="sidebar-button-icon fab fa-telegram-plane" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">Telegram</span>
                     </a>
             </li>
@@ -180,7 +190,7 @@
                     
                         <a class="sidebar-button-link " href="/atom.xml" title="RSS">
                     
-                        <i class="sidebar-button-icon fa fa-lg fa-rss" aria-hidden="true"></i>
+                        <i class="sidebar-button-icon fa fa-rss" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">RSS</span>
                     </a>
             </li>
@@ -191,31 +201,26 @@
 </nav>
 
             
-            <div id="main" data-behavior="1"
-                 style="background-color: rgba(255, 255, 255, 0.7);"
+            <div id="main" data-behavior="2"
                  class="
                         hasCoverMetaIn
                         ">
-                
-<section class="postShorten-group main-content-wrap">
+                <section class="postShorten-group main-content-wrap">
     
-        
+    
+    <article class="postShorten postShorten--thumbnailimg-right">
+        <div class="postShorten-wrap">
             
-                
-            
-        
-        
-            <article class="postShorten postShorten--thumbnailimg" itemscope="" itemtype="http://schema.org/BlogPosting">
-        
-            <div class="postShorten-wrap">
-                <div class="postShorten-header">
-                    <h1 class="postShorten-title" itemprop="headline">
-                        
-                                <a class="link-unstyled" href="/ttl-root-h7-4/">ROOT 海美迪 H7 四代</a>
-                        
-                    </h1>
-                    <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2017-04-27T01:45:00+08:00">
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a class="link-unstyled" href="/ttl-root-h7-4/">
+                            ROOT 海美迪 H7 四代
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2017-04-27T01:45:00+08:00">
 	
 		    2017年04月27日
     	
@@ -228,45 +233,44 @@
 
     
 </div>
-                </div>
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    
-                        <p>　　去年过年的时候想买个盒子，买之前在小米盒子3增强版和海美迪H7四代之间犹豫好久，最后花了399大洋买了H7四代（因为听说小米盒子更新成了广告盒子。（再后来发现还不如买个外贸盒子。<br>　　到手之后就想把 H7 四代 ROOT 了，adb root 没有开，试了各种工具也不行。网上也没有 root 成功的帖子。论坛的客服也说以后不会开放 root 。当时真是后悔死啦。<br>　　后来在逛海美迪论坛的时候发现有个拆机 TTL root 其他机型的帖子，想想H7四代也许也可以这样，正好手里有个ch341。就去网上找了四代的拆机图，一看还真有TTL接口。拆！保修是什么？吃了吧，Android不root能玩？（现在已经有方法不用拆机了<br>
-                        <a href="/ttl-root-h7-4/" class="postShorten-excerpt_link link ">继续阅读</a>
-                    
-                    
-                        
-                            
-                        
-                    
-                    
-                </p></div>
+
             </div>
             
+                <div class="postShorten-excerpt">
+                    <p>　　去年过年的时候想买个盒子，买之前在小米盒子3增强版和海美迪H7四代之间犹豫好久，最后花了399大洋买了H7四代（因为听说小米盒子更新成了广告盒子。（再后来发现还不如买个外贸盒子。<br>　　到手之后就想把 H7 四代 ROOT 了，adb root 没有开，试了各种工具也不行。网上也没有 root 成功的帖子。论坛的客服也说以后不会开放 root 。当时真是后悔死啦。<br>　　后来在逛海美迪论坛的时候发现有个拆机 TTL root 其他机型的帖子，想想H7四代也许也可以这样，正好手里有个ch341。就去网上找了四代的拆机图，一看还真有TTL接口。拆！保修是什么？吃了吧，Android不root能玩？（现在已经有方法不用拆机了<br>
+                    
+                        <a href="/ttl-root-h7-4/" class="postShorten-excerpt_link link">
+                            阅读全文
+                        </a>
+                        
+                    
+                </p></div>
+            
+        </div>
+        
+            <a href="/ttl-root-h7-4/">
                 <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="https://veltlion.github.io/ttl-root-h7-4/h2.png">
+                    <img alt="" src="https://veltlion.github.io/ttl-root-h7-4/h2.png">
                 </div>
-                
+            </a>
             
-        </article>
+        
+    </article>
     
-        
+    
+    <article class="postShorten postShorten--thumbnailimg-right">
+        <div class="postShorten-wrap">
             
-                
-            
-        
-        
-            <article class="postShorten postShorten--thumbnailimg" itemscope="" itemtype="http://schema.org/BlogPosting">
-        
-            <div class="postShorten-wrap">
-                <div class="postShorten-header">
-                    <h1 class="postShorten-title" itemprop="headline">
-                        
-                                <a class="link-unstyled" href="/入了个 x1s 的手柄/">入了个x1s的手柄</a>
-                        
-                    </h1>
-                    <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2017-03-05T03:15:00+08:00">
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a class="link-unstyled" href="/入了个 x1s 的手柄/">
+                            入了个x1s的手柄
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2017-03-05T03:15:00+08:00">
 	
 		    2017年03月05日
     	
@@ -279,47 +283,46 @@
 
     
 </div>
-                </div>
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    
-                        <p>然后沉迷小姐姐们不能自拔…</p>
-<p><img src="CNN 2017-03-03 15-52-46.jpg" alt="image"><br><img src="CNN 2017-03-03 15-59-14.jpg" alt="image"><br>アナス好帅啊，好想嫁给她啊</p>
-<p><img src="5546056.png" alt="没救了"><br>
-                        <a href="/入了个 x1s 的手柄/" class="postShorten-excerpt_link link ">继续阅读</a>
-                    
-                    
-                        
-                            
-                        
-                    
-                    
-                </p></div>
+
             </div>
             
+                <div class="postShorten-excerpt">
+                    <p>然后沉迷小姐姐们不能自拔…</p>
+<p><img src="CNN 2017-03-03 15-52-46.jpg" alt="image"><br><img src="CNN 2017-03-03 15-59-14.jpg" alt="image"><br>アナス好帅啊，好想嫁给她啊</p>
+<p><img src="5546056.png" alt="没救了"><br>
+                    
+                        <a href="/入了个 x1s 的手柄/" class="postShorten-excerpt_link link">
+                            阅读全文
+                        </a>
+                        
+                    
+                </p></div>
+            
+        </div>
+        
+            <a href="/入了个 x1s 的手柄/">
                 <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="https://veltlion.github.io/入了个 x1s 的手柄/CNN 2017-03-03 15-59-14.jpg">
+                    <img alt="" src="https://veltlion.github.io/入了个 x1s 的手柄/CNN 2017-03-03 15-59-14.jpg">
                 </div>
-                
+            </a>
             
-        </article>
+        
+    </article>
     
-        
+    
+    <article class="postShorten postShorten--thumbnailimg-right">
+        <div class="postShorten-wrap">
             
-                
-            
-        
-        
-            <article class="postShorten postShorten--thumbnailimg" itemscope="" itemtype="http://schema.org/BlogPosting">
-        
-            <div class="postShorten-wrap">
-                <div class="postShorten-header">
-                    <h1 class="postShorten-title" itemprop="headline">
-                        
-                                <a class="link-unstyled" href="/又把手机震动摔坏了…/">又把手机震动摔坏了…</a>
-                        
-                    </h1>
-                    <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2016-12-25T02:36:00+08:00">
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a class="link-unstyled" href="/又把手机震动摔坏了…/">
+                            又把手机震动摔坏了…
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2016-12-25T02:36:00+08:00">
 	
 		    2016年12月25日
     	
@@ -332,41 +335,44 @@
 
     
 </div>
-                </div>
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    
-                        <p><a href="/21/">历史总是惊人的相似啊…</a><br><!-- ![好痛啊](/img/86.png) --><br>我的=4T…好心疼啊…</p>
-                        <a href="/又把手机震动摔坏了…/" class="postShorten-excerpt_link link ">继续阅读</a>
-                    
-                    
-                        
-                            
-                        
-                    
-                    
-                </div>
+
             </div>
             
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="https://veltlion.github.io/又把手机震动摔坏了…/../img/86.png">
+                <div class="postShorten-excerpt">
+                    <p><a href="/21/">历史总是惊人的相似啊…</a><br><!-- ![好痛啊](/img/86.png) --><br>我的=4T…好心疼啊…</p>
+                    
+                        <a href="/又把手机震动摔坏了…/" class="postShorten-excerpt_link link">
+                            阅读全文
+                        </a>
+                        
+                    
                 </div>
-                
             
-        </article>
+        </div>
+        
+            <a href="/又把手机震动摔坏了…/">
+                <div class="postShorten-thumbnailimg">
+                    <img alt="" src="https://veltlion.github.io/又把手机震动摔坏了…/../img/86.png">
+                </div>
+            </a>
+            
+        
+    </article>
     
-        
-        
-                <article class="postShorten" itemscope="" itemtype="http://schema.org/BlogPosting">
-        
-            <div class="postShorten-wrap">
-                <div class="postShorten-header">
-                    <h1 class="postShorten-title" itemprop="headline">
-                        
-                                <a class="link-unstyled" href="/标日初级第一单元/">笔记</a>
-                        
-                    </h1>
-                    <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2016-10-21T21:55:00+08:00">
+    
+    <article class="postShorten postShorten--thumbnailimg-right">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a class="link-unstyled" href="/标日初级第一单元/">
+                            笔记
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2016-10-21T21:55:00+08:00">
 	
 		    2016年10月21日
     	
@@ -379,36 +385,37 @@
 
     
 </div>
-                </div>
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    
-                        <p>从笔记本上面重新抄一份，加强印象。<br><strong>量太大了啦，从纸上抄抄就好了</strong><br>
-                        <a href="/标日初级第一单元/" class="postShorten-excerpt_link link ">继续阅读</a>
-                    
-                    
-                        
-                            
-                        
-                    
-                    
-                </p></div>
+
             </div>
             
-        </article>
+                <div class="postShorten-excerpt">
+                    <p>从笔记本上面重新抄一份，加强印象。<br><strong>量太大了啦，从纸上抄抄就好了</strong><br>
+                    
+                        <a href="/标日初级第一单元/" class="postShorten-excerpt_link link">
+                            阅读全文
+                        </a>
+                        
+                    
+                </p></div>
+            
+        </div>
+        
+    </article>
     
-        
-        
-                <article class="postShorten" itemscope="" itemtype="http://schema.org/BlogPosting">
-        
-            <div class="postShorten-wrap">
-                <div class="postShorten-header">
-                    <h1 class="postShorten-title" itemprop="headline">
-                        
-                                <a class="link-unstyled" href="/小猫/">小猫</a>
-                        
-                    </h1>
-                    <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2016-10-09T22:57:00+08:00">
+    
+    <article class="postShorten postShorten--thumbnailimg-right">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a class="link-unstyled" href="/小猫/">
+                            小猫
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2016-10-09T22:57:00+08:00">
 	
 		    2016年10月09日
     	
@@ -421,36 +428,37 @@
 
     
 </div>
-                </div>
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    
-                        <p>　　这是三号时候的事了。<br>　　那天夜里十二点左右的时候因为失眠，出去散心。却发现院子里面来了只白色小猫，好可爱。<br>　　就用叫狗的方式叫了下他，会不会过来呐。<br>　　正在走向竹林的小猫听到声音后顿了一下，转过头看向我。（咦，这招好像真的有用！继续继续<br>　　确认声音的方向后，他转过身，迈着慵懒的步伐走了过来。在离我一米左右的地方停住，坐下来，歪着头看向我，像是在说“你要拿什么好吃的东西给我吃呢？”<br>　　激动的我急忙回头转向屋子，却失落起来。家里面连人吃的食物都没有，怎么还可能会有猫吃的…<br>　　回过头，猫猫继续歪着头，用那天真无邪的大眼睛看着我。<br>　　好尴尬啊好尴尬啊…怎么办啊…<br>　　“对不起喔，我这里没有食物给你吃。”<br>　　我只好看着他，他也望着我。<br>　　我们就这样互相望着。<br>　　（不要用那种眼神看着我啦。）<br>　　……<br>　　……<br>　　约莫两分钟左右，大概是不耐烦了。猫猫把头一扭，身子一抖，屁股一甩，走了。<br>　　冷清的月光洒在地上，望着跑向竹林的小猫，忽觉得心里空落落的，落寞起来。<br>　　“什么时候，能再来呢…”<br>
-                        <a href="/小猫/" class="postShorten-excerpt_link link ">继续阅读</a>
-                    
-                    
-                        
-                            
-                        
-                    
-                    
-                </p></div>
+
             </div>
             
-        </article>
+                <div class="postShorten-excerpt">
+                    <p>　　这是三号时候的事了。<br>　　那天夜里十二点左右的时候因为失眠，出去散心。却发现院子里面来了只白色小猫，好可爱。<br>　　就用叫狗的方式叫了下他，会不会过来呐。<br>　　正在走向竹林的小猫听到声音后顿了一下，转过头看向我。（咦，这招好像真的有用！继续继续<br>　　确认声音的方向后，他转过身，迈着慵懒的步伐走了过来。在离我一米左右的地方停住，坐下来，歪着头看向我，像是在说“你要拿什么好吃的东西给我吃呢？”<br>　　激动的我急忙回头转向屋子，却失落起来。家里面连人吃的食物都没有，怎么还可能会有猫吃的…<br>　　回过头，猫猫继续歪着头，用那天真无邪的大眼睛看着我。<br>　　好尴尬啊好尴尬啊…怎么办啊…<br>　　“对不起喔，我这里没有食物给你吃。”<br>　　我只好看着他，他也望着我。<br>　　我们就这样互相望着。<br>　　（不要用那种眼神看着我啦。）<br>　　……<br>　　……<br>　　约莫两分钟左右，大概是不耐烦了。猫猫把头一扭，身子一抖，屁股一甩，走了。<br>　　冷清的月光洒在地上，望着跑向竹林的小猫，忽觉得心里空落落的，落寞起来。<br>　　“什么时候，能再来呢…”<br>
+                    
+                        <a href="/小猫/" class="postShorten-excerpt_link link">
+                            阅读全文
+                        </a>
+                        
+                    
+                </p></div>
+            
+        </div>
+        
+    </article>
     
-        
-        
-                <article class="postShorten" itemscope="" itemtype="http://schema.org/BlogPosting">
-        
-            <div class="postShorten-wrap">
-                <div class="postShorten-header">
-                    <h1 class="postShorten-title" itemprop="headline">
-                        
-                                <a class="link-unstyled" href="/要断网了/">要断网了</a>
-                        
-                    </h1>
-                    <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2016-10-05T16:43:00+08:00">
+    
+    <article class="postShorten postShorten--thumbnailimg-right">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a class="link-unstyled" href="/要断网了/">
+                            要断网了
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2016-10-05T16:43:00+08:00">
 	
 		    2016年10月05日
     	
@@ -463,36 +471,37 @@
 
     
 </div>
-                </div>
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    
-                        <p>没有网可真是难熬啊…<br>
-                        <a href="/要断网了/" class="postShorten-excerpt_link link ">继续阅读</a>
-                    
-                    
-                        
-                            
-                        
-                    
-                    
-                </p></div>
+
             </div>
             
-        </article>
+                <div class="postShorten-excerpt">
+                    <p>没有网可真是难熬啊…<br>
+                    
+                        <a href="/要断网了/" class="postShorten-excerpt_link link">
+                            阅读全文
+                        </a>
+                        
+                    
+                </p></div>
+            
+        </div>
+        
+    </article>
     
-        
-        
-                <article class="postShorten" itemscope="" itemtype="http://schema.org/BlogPosting">
-        
-            <div class="postShorten-wrap">
-                <div class="postShorten-header">
-                    <h1 class="postShorten-title" itemprop="headline">
-                        
-                                <a class="link-unstyled" href="/hexo-on-android/">在 Android 手机上面更新 Hexo 博客</a>
-                        
-                    </h1>
-                    <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2016-09-06T22:45:00+08:00">
+    
+    <article class="postShorten postShorten--thumbnailimg-right">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a class="link-unstyled" href="/hexo-on-android/">
+                            在 Android 手机上面更新 Hexo 博客
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2016-09-06T22:45:00+08:00">
 	
 		    2016年09月06日
     	
@@ -505,37 +514,38 @@
 
     
 </div>
-                </div>
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    
-                        <pre><code>⊂彡☆))д´)你怎么就那么懒呢，开下电脑更新博客会死啊。
-</code></pre><p>　　平常都是空闲的时候在手机上面写完博客，然后 WOL 开电脑，把文章同步到电脑，SSH 连上去，再<code>hexo d -g</code>。麻烦死了。<br>　　后来想起 Termux 这个软件，抱着试试看的心情执行了下<code>apt install nodejs</code>，结果还真有。然后嘛，我的懒惰度又提高到了一个新的高度。<br>
-                        <a href="/hexo-on-android/" class="postShorten-excerpt_link link ">继续阅读</a>
-                    
-                    
-                        
-                            
-                        
-                    
-                    
-                </p></div>
+
             </div>
             
-        </article>
+                <div class="postShorten-excerpt">
+                    <pre><code>⊂彡☆))д´)你怎么就那么懒呢，开下电脑更新博客会死啊。
+</code></pre><p>　　平常都是空闲的时候在手机上面写完博客，然后 WOL 开电脑，把文章同步到电脑，SSH 连上去，再<code>hexo d -g</code>。麻烦死了。<br>　　后来想起 Termux 这个软件，抱着试试看的心情执行了下<code>apt install nodejs</code>，结果还真有。然后嘛，我的懒惰度又提高到了一个新的高度。<br>
+                    
+                        <a href="/hexo-on-android/" class="postShorten-excerpt_link link">
+                            阅读全文
+                        </a>
+                        
+                    
+                </p></div>
+            
+        </div>
+        
+    </article>
     
-        
-        
-                <article class="postShorten" itemscope="" itemtype="http://schema.org/BlogPosting">
-        
-            <div class="postShorten-wrap">
-                <div class="postShorten-header">
-                    <h1 class="postShorten-title" itemprop="headline">
-                        
-                                <a class="link-unstyled" href="/读书笔记/">看书的笔记</a>
-                        
-                    </h1>
-                    <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2016-08-29T01:29:00+08:00">
+    
+    <article class="postShorten postShorten--thumbnailimg-right">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a class="link-unstyled" href="/读书笔记/">
+                            看书的笔记
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2016-08-29T01:29:00+08:00">
 	
 		    2016年08月29日
     	
@@ -548,37 +558,38 @@
 
     
 </div>
-                </div>
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    
-                        <p>前面的话</p>
-<p>　　读书要做笔记。做笔记很重要。书中有许多许多很妙很美的词或句子值得去记。<br>　　我平时都是看网络上面的<del>盗版</del>电子书。之前 Anyview 的分享笔记功能很赞，可惜这个软件现在。又用静读天下，可之前记的几个不知道又消失到哪里去，真是靠不住。里面又有千把小时的阅读统计，不想换用。<br>　　就在这里记一下吧。<br><strong>记什么啦，好麻烦的，记这里还不如直接抄下来…</strong><br>
-                        <a href="/读书笔记/" class="postShorten-excerpt_link link ">继续阅读</a>
-                    
-                    
-                        
-                            
-                        
-                    
-                    
-                </p></div>
+
             </div>
             
-        </article>
+                <div class="postShorten-excerpt">
+                    <p>前面的话</p>
+<p>　　读书要做笔记。做笔记很重要。书中有许多许多很妙很美的词或句子值得去记。<br>　　我平时都是看网络上面的<del>盗版</del>电子书。之前 Anyview 的分享笔记功能很赞，可惜这个软件现在。又用静读天下，可之前记的几个不知道又消失到哪里去，真是靠不住。里面又有千把小时的阅读统计，不想换用。<br>　　就在这里记一下吧。<br><strong>记什么啦，好麻烦的，记这里还不如直接抄下来…</strong><br>
+                    
+                        <a href="/读书笔记/" class="postShorten-excerpt_link link">
+                            阅读全文
+                        </a>
+                        
+                    
+                </p></div>
+            
+        </div>
+        
+    </article>
     
-        
-        
-                <article class="postShorten" itemscope="" itemtype="http://schema.org/BlogPosting">
-        
-            <div class="postShorten-wrap">
-                <div class="postShorten-header">
-                    <h1 class="postShorten-title" itemprop="headline">
-                        
-                                <a class="link-unstyled" href="/把键盘洗坏了…/">把键盘洗坏了…</a>
-                        
-                    </h1>
-                    <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2016-08-21T22:47:47+08:00">
+    
+    <article class="postShorten postShorten--thumbnailimg-right">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a class="link-unstyled" href="/把键盘洗坏了…/">
+                            把键盘洗坏了…
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2016-08-21T22:47:47+08:00">
 	
 		    2016年08月21日
     	
@@ -591,36 +602,37 @@
 
     
 </div>
-                </div>
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    
-                        <p>　　昨天看到键盘里面脏脏的，就打算把键帽和壳子拆下来洗一下。可就在我把键帽拆下来打算继续拆键盘的时候发现之前辛辛苦苦找的螺丝刀不见了。<br>　　到底再那里呢？床上面、床底下、桌子底下、沙发上头、抽屉里面统统都没有！<br>　　找了有两个多小时吧，最后居然在鱼缸的边沿上面找到了。想必是之前在找到螺丝刀的时候看那个无鱼之缸看呆了，便落在了上面。真让我这通好找。<br>　　我小心翼翼地拆下键盘外壳，取出里面的薄膜和小片片，并把键帽和外壳放到小盆里面。走进浴室，一眼便瞧见那四四方方、方方正正、还会滚来滚去的物件。<br>　　脑袋灵光一闪，为何不将那手按的板子放入此物口中，洗而后快？遂将那黑块儿、板子倾入其中。<br>　　然后我就继续玩文明五去了，辣鸡德国，又谴责我，看我灭了你。<br>　　我灭了德国之后，忽然担心，就上网去问一位网友：“你说把键盘放到洗衣机里面洗会不会出问题啊？”他说：“会，准备重买吧。”<br>　　然后我赶忙跑入浴室，停了那机器，取出外壳和键帽，用水清洗。还好还好，壳子上面只是裂了一个小口。洗净之后滤干，组装。<br>　　哎哟我的 4 呢？4 跑到那里去了？又是一通好找。最后终于在洗衣机的过滤袋里面找到了。感谢国家感谢党。<br>　　重点来了，我装好键盘之后，插上电脑。想开机试试好坏，结果电脑开不开了，BIOS画面也进不去。难道BIOS又坏掉了？辣鸡微星！开机慢不说，BIOS还经常坏。又要去找人借电脑刷BIOS。砸了下键盘泄愤，电脑登时就开机了。又是那熟悉的LOGO，又是那萌萌二次元的壁纸，啧，死宅真恶心。输了下开机密码，键盘能用。咦？这是肿么回事捏？<br>　　重启了下，又是黑屏不能开机。按了下键盘，又开机了。重启，按键盘，开机。拔了键盘又重启，这次不用按键盘直接就开机了，<del>耶</del>~<br>　　看来是键盘拆坏了，等过几天想起来在拆开重新装一下吧。<br>　　跑去和那位网友诉苦：“菜，你怎么会想到用洗衣机洗键盘？”<br>　　我：“省事啊”<br>　　网友：“……<br>　　　　　　你很强<br>　　　　　　甘拜下风”<br>　　嗨呀好痛苦呀。那么多键帽拆开重装会累死我的。<br>
-                        <a href="/把键盘洗坏了…/" class="postShorten-excerpt_link link ">继续阅读</a>
-                    
-                    
-                        
-                            
-                        
-                    
-                    
-                </p></div>
+
             </div>
             
-        </article>
+                <div class="postShorten-excerpt">
+                    <p>　　昨天看到键盘里面脏脏的，就打算把键帽和壳子拆下来洗一下。可就在我把键帽拆下来打算继续拆键盘的时候发现之前辛辛苦苦找的螺丝刀不见了。<br>　　到底再那里呢？床上面、床底下、桌子底下、沙发上头、抽屉里面统统都没有！<br>　　找了有两个多小时吧，最后居然在鱼缸的边沿上面找到了。想必是之前在找到螺丝刀的时候看那个无鱼之缸看呆了，便落在了上面。真让我这通好找。<br>　　我小心翼翼地拆下键盘外壳，取出里面的薄膜和小片片，并把键帽和外壳放到小盆里面。走进浴室，一眼便瞧见那四四方方、方方正正、还会滚来滚去的物件。<br>　　脑袋灵光一闪，为何不将那手按的板子放入此物口中，洗而后快？遂将那黑块儿、板子倾入其中。<br>　　然后我就继续玩文明五去了，辣鸡德国，又谴责我，看我灭了你。<br>　　我灭了德国之后，忽然担心，就上网去问一位网友：“你说把键盘放到洗衣机里面洗会不会出问题啊？”他说：“会，准备重买吧。”<br>　　然后我赶忙跑入浴室，停了那机器，取出外壳和键帽，用水清洗。还好还好，壳子上面只是裂了一个小口。洗净之后滤干，组装。<br>　　哎哟我的 4 呢？4 跑到那里去了？又是一通好找。最后终于在洗衣机的过滤袋里面找到了。感谢国家感谢党。<br>　　重点来了，我装好键盘之后，插上电脑。想开机试试好坏，结果电脑开不开了，BIOS画面也进不去。难道BIOS又坏掉了？辣鸡微星！开机慢不说，BIOS还经常坏。又要去找人借电脑刷BIOS。砸了下键盘泄愤，电脑登时就开机了。又是那熟悉的LOGO，又是那萌萌二次元的壁纸，啧，死宅真恶心。输了下开机密码，键盘能用。咦？这是肿么回事捏？<br>　　重启了下，又是黑屏不能开机。按了下键盘，又开机了。重启，按键盘，开机。拔了键盘又重启，这次不用按键盘直接就开机了，<del>耶</del>~<br>　　看来是键盘拆坏了，等过几天想起来在拆开重新装一下吧。<br>　　跑去和那位网友诉苦：“菜，你怎么会想到用洗衣机洗键盘？”<br>　　我：“省事啊”<br>　　网友：“……<br>　　　　　　你很强<br>　　　　　　甘拜下风”<br>　　嗨呀好痛苦呀。那么多键帽拆开重装会累死我的。<br>
+                    
+                        <a href="/把键盘洗坏了…/" class="postShorten-excerpt_link link">
+                            阅读全文
+                        </a>
+                        
+                    
+                </p></div>
+            
+        </div>
+        
+    </article>
     
-        
-        
-                <article class="postShorten" itemscope="" itemtype="http://schema.org/BlogPosting">
-        
-            <div class="postShorten-wrap">
-                <div class="postShorten-header">
-                    <h1 class="postShorten-title" itemprop="headline">
-                        
-                                <a class="link-unstyled" href="/fix-usb-tethering-on-windows/">USB 网络共享</a>
-                        
-                    </h1>
-                    <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2016-08-14T19:53:00+08:00">
+    
+    <article class="postShorten postShorten--thumbnailimg-right">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a class="link-unstyled" href="/fix-usb-tethering-on-windows/">
+                            USB 网络共享
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2016-08-14T19:53:00+08:00">
 	
 		    2016年08月14日
     	
@@ -633,10 +645,11 @@
 
     
 </div>
-                </div>
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    
-                        <p>　　在 Windows 8 及以上操作系统中使用 Android 手机的 USB 网络共享 会使系统变得非常卡顿。今天无意中在 YouTube 上面看到了解决方法。</p>
+
+            </div>
+            
+                <div class="postShorten-excerpt">
+                    <p>　　在 Windows 8 及以上操作系统中使用 Android 手机的 USB 网络共享 会使系统变得非常卡顿。今天无意中在 YouTube 上面看到了解决方法。</p>
 <ol>
 <li>打开<code>设备管理器</code>。</li>
 <li>插上手机，打开 USB网络共享。</li>
@@ -646,18 +659,17 @@
 <li>取消勾选<code>显示兼容硬件</code>，双击<code>Microsoft</code>–&gt;<code>USB RNDIS6 Adapter</code>。</li>
 </ol>
 <p>-end-<br>
-                        <a href="/fix-usb-tethering-on-windows/" class="postShorten-excerpt_link link ">继续阅读</a>
                     
-                    
+                        <a href="/fix-usb-tethering-on-windows/" class="postShorten-excerpt_link link">
+                            阅读全文
+                        </a>
                         
-                            
-                        
-                    
                     
                 </p></div>
-            </div>
             
-        </article>
+        </div>
+        
+    </article>
     
     <div class="pagination-bar">
     <ul class="pagination">
@@ -703,29 +715,29 @@
 <div id="about">
     <div id="about-card">
         <div id="about-btn-close">
-            <i class="fa fa-remove"></i>
+            <i class="fa fa-times"></i>
         </div>
         
             <img id="about-card-picture" src="/assets/images/avatar.png" alt="作者的图片">
         
             <h4 id="about-card-name">空</h4>
         
-            <div id="about-card-bio"><p>　</p>
+            <div id="about-card-bio"><p>author.bio</p>
 </div>
         
         
             <div id="about-card-job">
                 <i class="fa fa-briefcase"></i>
                 <br>
-                <p>　</p>
+                <p>author.job</p>
 
             </div>
         
         
             <div id="about-card-location">
-                <i class="fa fa-map-marker"></i>
+                <i class="fa fa-map-marker-alt"></i>
                 <br>
-                　
+                test
             </div>
         
     </div>
@@ -733,9 +745,9 @@
 
         
         
-<div id="cover" style="background-image:url('/assets/images/cover.jpg'); background-position-y: 50%;"></div>
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
         <!--SCRIPTS-->
-<script src="/assets/js/script-xvtyrggoxhsrg3o8rwcskgsjnbw0xk60qhlqk3hbn5jkfmzttrnedrzorqmo.min.js"></script>
+<script src="/assets/js/script-4yxjtapdc2ieysgccqbhvtyq58zr4i545txewtgb9jinjhyp3akdaulpqujj.min.js"></script>
 <!--SCRIPTS END-->
 
 

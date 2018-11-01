@@ -15,6 +15,7 @@
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"空","sameAs":["mailto","https://twitter.com/","https://t.me/soratan"],"image":"avatar.png"},"articleBody":"⊂彡☆))д´)你怎么就那么懒呢，开下电脑更新博客会死啊。\n　　平常都是空闲的时候在手机上面写完博客，然后 WOL 开电脑，把文章同步到电脑，SSH 连上去，再hexo d -g。麻烦死了。　　后来想起 Termux 这个软件，抱着试试看的心情执行了下apt install nodejs，结果还真有。然后嘛，我的懒惰度又提高到了一个新的高度。\n安装　　首先，手机上面装一个 Termux ，然后装 Hexo 。balabala，跟在电脑上装没什么区别。　　然后把 Hexo 的主题、_config.yml 、package.json 还有 ssh key 复制到手机里。复制的时候要记得排除 node_modules 文件夹，还有传完要改一下所属用户和组。　　再在博客目录执行npm install把插件装回来。\n写文章　　装好之后要怎么写文章呢？Android 上面有好多写 Markdown 的工具，像是 neutriNote 、 易写和MarkdownX 。我用的是 MarkdownX 。不过因为这些软件的文章目录和 Termux 里面的 Hexo 目录不一样，复制来复制去很麻烦。所以我建了个软链接来解决这个问题，像是 MarkdownX ：ln -s /storage/emulated/0/Android/data/com.ryeeeeee.markdownx/files/notes /data/data/com.termux/files/home/blog/source　　这样博客的文章就在 MarkdownX 的数据目录里了。不过如果之前 Termux 的博客目录里面有 source 目录的话要先改名或删掉，不然软链接会被建到 source 里面。（多谢 xwah 提醒，说起来 xwah 刚和我说的时候我还理解错了。今天在手机上重装 Hexo 才明白这个问题Orz…　　然后把电脑上面的文章复制到手机。hexo d -g就好啦。\n和电脑同步文章　　同步文件用的是 FolderSync 。我经常用它同步些照片、图片之类的到电脑。还可以同步到 OneDrive、GoogleDrive 之类的地方。\n主题　　我现在用的主题是 Tranquilpeak ，用之前要先在主题目录跑下npm install。如果要在手机上面修改这个主题的话有几个软件要装上：apt install python2 make clang　　不过这几个装完再加上主题依赖一共要500+MiB，所以还是在电脑上改改就好了。　　还有主题的月份不知道为什么都变英文了，不管了，直接用 sed 替换一下。\n最后抱怨下\nTermux 的操作体验完全没有 JuiceSSH 好啊。我都想从上面开个 ssh 然后用 JuiceSSH 连上去了。(后来我换用 NeoTerm 了。\n还有我手机真的好慢啊，资源 minify 一下都要三分钟。\n\n","dateCreated":"2016-09-06T22:45:00+08:00","dateModified":"2018-05-18T02:24:51+08:00","datePublished":"2016-09-06T22:45:00+08:00","description":"⊂彡☆))д´)你怎么就那么懒呢，开下电脑更新博客会死啊。\n　　平常都是空闲的时候在手机上面写完博客，然后 WOL 开电脑，把文章同步到电脑，SSH 连上去，再hexo d -g。麻烦死了。　　后来想起 Termux 这个软件，抱着试试看的心情执行了下apt install nodejs，结果还真有。然后嘛，我的懒惰度又提高到了一个新的高度。","headline":"在 Android 手机上面更新 Hexo 博客","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://veltlion.github.io/hexo-on-android/"},"publisher":{"@type":"Organization","name":"空","sameAs":["mailto","https://twitter.com/","https://t.me/soratan"],"image":"avatar.png","logo":{"@type":"ImageObject","url":"avatar.png"}},"url":"https://veltlion.github.io/hexo-on-android/","keywords":"Android, Hexo, Termux"}</script>
     <meta name="description" content="⊂彡☆))д´)你怎么就那么懒呢，开下电脑更新博客会死啊。 　　平常都是空闲的时候在手机上面写完博客，然后 WOL 开电脑，把文章同步到电脑，SSH 连上去，再hexo d -g。麻烦死了。　　后来想起 Termux 这个软件，抱着试试看的心情执行了下apt install nodejs，结果还真有。然后嘛，我的懒惰度又提高到了一个新的高度。">
 <meta name="keywords" content="Android,Hexo,Termux">
 <meta property="og:type" content="blog">
@@ -39,7 +40,7 @@
     
     
     <!--STYLES-->
-    <link rel="stylesheet" href="/assets/css/style-m31oawwzxuth0pzphkddvz6ubcybxxygxcmxuuj4uaumuaqqrjjxdjlhtgww.min.css">
+    <link rel="stylesheet" href="/assets/css/style-hvqhhadrwwqdjouqjpg2w6cb1equqrq590r65hnpnh3sveh3dwqnsrkeyhvk.min.css">
     <!--STYLES END-->
     
     <script type="text/javascript">
@@ -67,7 +68,7 @@
         
     
 
-<header id="header" data-behavior="1">
+<header id="header" data-behavior="2">
     <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
     <div class="header-title">
         <a class="header-title-link" href="/ ">空</a>
@@ -90,17 +91,17 @@
         
     
 
-<nav id="sidebar" data-behavior="1">
+<nav id="sidebar" data-behavior="2">
     <div class="sidebar-container">
         
             <div class="sidebar-profile">
                 <a href="/#about">
                     <img class="sidebar-profile-picture" src="/assets/images/avatar.png" alt="作者的图片">
                 </a>
-                <span class="sidebar-profile-name">空</span>
+                <h4 class="sidebar-profile-name">空</h4>
                 
-                    <!--h5 class="sidebar-profile-bio"><p>　</p>
-</h5-->
+                    <h5 class="sidebar-profile-bio"><p>author.bio</p>
+</h5>
                 
             </div>
         
@@ -111,7 +112,7 @@
                     
                         <a class="sidebar-button-link " href="/ " title="首页">
                     
-                        <i class="sidebar-button-icon fa fa-lg fa-circle-thin" aria-hidden="true"></i>
+                        <i class="sidebar-button-icon far fa-circle" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">首页</span>
                     </a>
             </li>
@@ -120,8 +121,17 @@
                     
                         <a class="sidebar-button-link " href="/all-archives" title="归档">
                     
-                        <i class="sidebar-button-icon fa fa-lg fa-bars" aria-hidden="true"></i>
+                        <i class="sidebar-button-icon fas fa-bars" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">归档</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/all-categories" title="分类">
+                    
+                        <i class="sidebar-button-icon fa fa-bookmark" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">分类</span>
                     </a>
             </li>
             
@@ -129,7 +139,7 @@
                     
                         <a class="sidebar-button-link " href="/all-tags" title="标签">
                     
-                        <i class="sidebar-button-icon fa fa-lg fa-star-o" aria-hidden="true"></i>
+                        <i class="sidebar-button-icon far fa-star" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">标签</span>
                     </a>
             </li>
@@ -138,7 +148,7 @@
                     
                         <a class="sidebar-button-link " href="/about" title="关于">
                     
-                        <i class="sidebar-button-icon fa fa-lg fa-info" aria-hidden="true"></i>
+                        <i class="sidebar-button-icon fas fa-info" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">关于</span>
                     </a>
             </li>
@@ -149,18 +159,18 @@
             
                 <li class="sidebar-button">
                     
-                        <a class="sidebar-button-link " href="mailto:&#115;&#111;&#114;&#97;&#64;&#108;&#105;&#118;&#101;&#46;&#106;&#112;" target="_blank" rel="noopener" title="E-mail">
+                        <a class="sidebar-button-link " href="/mailto" title="Email">
                     
-                        <i class="sidebar-button-icon fa fa-lg fa-envelope-o" aria-hidden="true"></i>
-                        <span class="sidebar-button-desc">E-mail</span>
+                        <i class="sidebar-button-icon fa fa-envelope" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Email</span>
                     </a>
             </li>
             
                 <li class="sidebar-button">
                     
-                        <a class="sidebar-button-link " href="https://twitter.com/yume1001" target="_blank" rel="noopener" title="Twitter">
+                        <a class="sidebar-button-link " href="https://twitter.com/" target="_blank" rel="noopener" title="Twitter">
                     
-                        <i class="sidebar-button-icon fa fa-lg fa-twitter" aria-hidden="true"></i>
+                        <i class="sidebar-button-icon fab fa-twitter" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">Twitter</span>
                     </a>
             </li>
@@ -169,7 +179,7 @@
                     
                         <a class="sidebar-button-link " href="https://t.me/soratan" target="_blank" rel="noopener" title="Telegram">
                     
-                        <i class="sidebar-button-icon fa fa-lg fa-paper-plane" aria-hidden="true"></i>
+                        <i class="sidebar-button-icon fab fa-telegram-plane" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">Telegram</span>
                     </a>
             </li>
@@ -182,7 +192,7 @@
                     
                         <a class="sidebar-button-link " href="/atom.xml" title="RSS">
                     
-                        <i class="sidebar-button-icon fa fa-lg fa-rss" aria-hidden="true"></i>
+                        <i class="sidebar-button-icon fa fa-rss" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">RSS</span>
                     </a>
             </li>
@@ -193,24 +203,23 @@
 </nav>
 
             
-            <div id="main" data-behavior="1"
-                 style="background-color: rgba(255, 255, 255, 0.7);"
+            <div id="main" data-behavior="2"
                  class="
                         hasCoverMetaIn
                         ">
                 
-<article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+<article class="post">
     
     
         <div class="post-header main-content-wrap text-left">
     
-        <h1 class="post-title" itemprop="headline">
+        <h1 class="post-title">
             在 Android 手机上面更新 Hexo 博客
         </h1>
     
     
         <div class="post-meta">
-    <time itemprop="datePublished" datetime="2016-09-06T22:45:00+08:00">
+    <time datetime="2016-09-06T22:45:00+08:00">
 	
 		    2016年09月06日
     	
@@ -223,10 +232,12 @@
 
     
 </div>
+
     
 </div>
+
     
-    <div class="post-content markdown" itemprop="articleBody">
+    <div class="post-content markdown">
         <div class="main-content-wrap">
             <pre><code>⊂彡☆))д´)你怎么就那么懒呢，开下电脑更新博客会死啊。
 </code></pre><p>　　平常都是空闲的时候在手机上面写完博客，然后 WOL 开电脑，把文章同步到电脑，SSH 连上去，再<code>hexo d -g</code>。麻烦死了。<br>　　后来想起 Termux 这个软件，抱着试试看的心情执行了下<code>apt install nodejs</code>，结果还真有。然后嘛，我的懒惰度又提高到了一个新的高度。<br><a id="more"></a></p>
@@ -244,13 +255,13 @@
         </div>
     </div>
     <div id="post-footer" class="post-footer main-content-wrap">
-      
-          <div class="post-footer-tags">
-              <span class="text-color-light text-small">标签</span><br>
-              
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">标签</span><br>
+                
     <a class="tag tag--primary tag--small t-link" href="/tags/Android/">Android</a> <a class="tag tag--primary tag--small t-link" href="/tags/Hexo/">Hexo</a> <a class="tag tag--primary tag--small t-link" href="/tags/Termux/">Termux</a>
 
-          </div>
+            </div>
         
         
             <div class="post-actions-wrap">
@@ -287,7 +298,7 @@
             
             <li class="post-action hide-xs">
                 <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://veltlion.github.io/hexo-on-android/" data-tooltip="分享到 Twitter">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
             </li>
         
@@ -295,25 +306,19 @@
             
             <li class="post-action hide-xs">
                 <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://veltlion.github.io/hexo-on-android/" data-tooltip="分享到 Google+">
-                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
                 </a>
             </li>
         
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://service.weibo.com/share/share.php?&amp;title=https://veltlion.github.io/hexo-on-android/" data-tooltip="分享到 Weibo">
-                    <i class="fa fa-weibo" aria-hidden="true"></i>
+                <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?&amp;title=https://veltlion.github.io/hexo-on-android/" data-tooltip="分享到 Weibo">
+                    <i class="fab fa-weibo" aria-hidden="true"></i>
                 </a>
             </li>
         
         
-            
-                <li class="post-action">
-                    <a class="post-action-btn btn btn--default" href="#comment">
-                         <i class="fa fa-comment-o"></i>
-                    </a>
-                </li>
             
         
         <li class="post-action">
@@ -330,11 +335,12 @@
         
         
             
-                <div id="comment"></div>
+                <div id="valine"></div>
             
         
     </div>
 </article>
+
 
 
                 <footer id="footer" class="main-content-wrap">
@@ -345,7 +351,7 @@
 
             </div>
             
-                <div id="bottom-bar" class="post-bottom-bar" data-behavior="1">
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="2">
                     <div class="post-actions-wrap">
     <nav>
         <ul class="post-actions post-action-nav">
@@ -380,7 +386,7 @@
             
             <li class="post-action hide-xs">
                 <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://veltlion.github.io/hexo-on-android/" data-tooltip="分享到 Twitter">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
             </li>
         
@@ -388,25 +394,19 @@
             
             <li class="post-action hide-xs">
                 <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://veltlion.github.io/hexo-on-android/" data-tooltip="分享到 Google+">
-                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
                 </a>
             </li>
         
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://service.weibo.com/share/share.php?&amp;title=https://veltlion.github.io/hexo-on-android/" data-tooltip="分享到 Weibo">
-                    <i class="fa fa-weibo" aria-hidden="true"></i>
+                <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?&amp;title=https://veltlion.github.io/hexo-on-android/" data-tooltip="分享到 Weibo">
+                    <i class="fab fa-weibo" aria-hidden="true"></i>
                 </a>
             </li>
         
         
-            
-                <li class="post-action">
-                    <a class="post-action-btn btn btn--default" href="#comment">
-                         <i class="fa fa-comment-o"></i>
-                    </a>
-                </li>
             
         
         <li class="post-action">
@@ -421,15 +421,15 @@
 
 
                 </div>
-                <div id="share-options-bar" class="share-options-bar" data-behavior="1">
-    <i id="btn-close-shareoptions" class="fa fa-close"></i>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="2">
+    <i id="btn-close-shareoptions" class="fa fa-times"></i>
     <ul class="share-options">
         
             
             
             <li class="share-option">
                 <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://veltlion.github.io/hexo-on-android/">
-                    <i class="fa fa-twitter" aria-hidden="true"></i><span>分享到 Twitter</span>
+                    <i class="fab fa-twitter" aria-hidden="true"></i><span>分享到 Twitter</span>
                 </a>
             </li>
         
@@ -437,15 +437,15 @@
             
             <li class="share-option">
                 <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://veltlion.github.io/hexo-on-android/">
-                    <i class="fa fa-google-plus" aria-hidden="true"></i><span>分享到 Google+</span>
+                    <i class="fab fa-google-plus" aria-hidden="true"></i><span>分享到 Google+</span>
                 </a>
             </li>
         
             
             
             <li class="share-option">
-                <a class="share-option-btn" target="new" href="https://service.weibo.com/share/share.php?&amp;title=https://veltlion.github.io/hexo-on-android/">
-                    <i class="fa fa-weibo" aria-hidden="true"></i><span>分享到 Weibo</span>
+                <a class="share-option-btn" target="new" href="http://service.weibo.com/share/share.php?&amp;title=https://veltlion.github.io/hexo-on-android/">
+                    <i class="fab fa-weibo" aria-hidden="true"></i><span>分享到 Weibo</span>
                 </a>
             </li>
         
@@ -464,29 +464,29 @@
 <div id="about">
     <div id="about-card">
         <div id="about-btn-close">
-            <i class="fa fa-remove"></i>
+            <i class="fa fa-times"></i>
         </div>
         
             <img id="about-card-picture" src="/assets/images/avatar.png" alt="作者的图片">
         
             <h4 id="about-card-name">空</h4>
         
-            <div id="about-card-bio"><p>　</p>
+            <div id="about-card-bio"><p>author.bio</p>
 </div>
         
         
             <div id="about-card-job">
                 <i class="fa fa-briefcase"></i>
                 <br>
-                <p>　</p>
+                <p>author.job</p>
 
             </div>
         
         
             <div id="about-card-location">
-                <i class="fa fa-map-marker"></i>
+                <i class="fa fa-map-marker-alt"></i>
                 <br>
-                　
+                test
             </div>
         
     </div>
@@ -494,9 +494,9 @@
 
         
         
-<div id="cover" style="background-image:url('/assets/images/cover.jpg'); background-position-y: 50%;"></div>
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
         <!--SCRIPTS-->
-<script src="/assets/js/script-xvtyrggoxhsrg3o8rwcskgsjnbw0xk60qhlqk3hbn5jkfmzttrnedrzorqmo.min.js"></script>
+<script src="/assets/js/script-4yxjtapdc2ieysgccqbhvtyq58zr4i545txewtgb9jinjhyp3akdaulpqujj.min.js"></script>
 <!--SCRIPTS END-->
 
     
@@ -505,17 +505,17 @@
         <script>
             new Valine({
                 av: AV,
-                el: '#comment',
+                el: '#valine',
                 notify:'false', 
                 verify:'false', 
                 appId:'4PRFCeNilpABAutJlqdmectP-gzGzoHsz',
                 appKey:'X2snnlim2EiRUn2OcbXkPreB',
                 placeholder:'',
                 path:window.location.pathname, 
-                avatar:'retro' 
+                avatar:'mp' 
             });
         </script>
-    
+     
 
 
 

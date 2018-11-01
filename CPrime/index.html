@@ -15,6 +15,7 @@
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"空","sameAs":["mailto","https://twitter.com/","https://t.me/soratan"],"image":"avatar.png"},"articleBody":"放弃了。。。第一种1234567891011121314151617181920212223242526272829303132#include &lt;stdio.h&gt;int isPrime(int x, int knowPrimes[], int numberOfKnowPrimes)&#123;    int ret = 1;    int i;    for ( i=0; i&lt;numberOfKnowPrimes; i++ )        if ( x % knowPrimes[i] == 0) &#123;            ret = 0;            break;        &#125;    return ret;&#125;int main(void)&#123;    const int number = 100;    int prime[number] = &#123;2&#125;;    int count = 1;    int i = 3;    while ( count&amp;lt;number ) &#123;        if ( isPrime(i, prime, count) )            prime[count++] = i;        i++;    &#125;    for ( i=0; i &amp;lt; number; i++ ) &#123;        printf(\"%d\", prime[i]);        if ( (i+1)%5 ) printf(\"\\t\");        else printf(\"\\n\");    &#125;    return 0;&#125;\n第二种1234567891011121314151617181920#include &lt;stdio.h&gt;int main()&#123;    const int maxNumber = 25;    int isPrime[maxNumber];    int i;    int x;    for ( i=0; i&lt;maxNumber; i++ )        isPrime[i] = 1;    for ( x=2; x&lt;;maxNumber; x++ )        if ( isPrime[x] )            for ( i=2; i*x&lt;;maxNumber; i++ )                isPrime[i*x] = 0;    for ( i=2; i&lt;maxNumber; i++ )        printf(\"%d\\t\", i);    printf(\"\\n\");    return 0;&#125;\n第三种\n1234567891011121314#includ &lt;math.h&gt;int isPrime(int x);&#123;    int ret = 1;    int i;    if ( x==1 || (x%2==0 &amp;amp;&amp;amp; x!=2) )        ret = 0;    for ( i=3; i&amp;lt;sqrt(x); i+=2 )        if ( x % i == 0 ) &#123;            ret = 0;            break;        &#125;    return ret;&#125;\n","dateCreated":"2015-01-08T17:11:07+08:00","dateModified":"2018-09-12T00:29:40+08:00","datePublished":"2015-01-08T17:11:07+08:00","description":"放弃了。。。","headline":"C语言求素数的几种方法","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://veltlion.github.io/CPrime/"},"publisher":{"@type":"Organization","name":"空","sameAs":["mailto","https://twitter.com/","https://t.me/soratan"],"image":"avatar.png","logo":{"@type":"ImageObject","url":"avatar.png"}},"url":"https://veltlion.github.io/CPrime/"}</script>
     <meta name="description" content="放弃了。。。">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="C语言求素数的几种方法">
@@ -38,7 +39,7 @@
     
     
     <!--STYLES-->
-    <link rel="stylesheet" href="/assets/css/style-m31oawwzxuth0pzphkddvz6ubcybxxygxcmxuuj4uaumuaqqrjjxdjlhtgww.min.css">
+    <link rel="stylesheet" href="/assets/css/style-hvqhhadrwwqdjouqjpg2w6cb1equqrq590r65hnpnh3sveh3dwqnsrkeyhvk.min.css">
     <!--STYLES END-->
     
     <script type="text/javascript">
@@ -66,7 +67,7 @@
         
     
 
-<header id="header" data-behavior="1">
+<header id="header" data-behavior="2">
     <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
     <div class="header-title">
         <a class="header-title-link" href="/ ">空</a>
@@ -89,17 +90,17 @@
         
     
 
-<nav id="sidebar" data-behavior="1">
+<nav id="sidebar" data-behavior="2">
     <div class="sidebar-container">
         
             <div class="sidebar-profile">
                 <a href="/#about">
                     <img class="sidebar-profile-picture" src="/assets/images/avatar.png" alt="作者的图片">
                 </a>
-                <span class="sidebar-profile-name">空</span>
+                <h4 class="sidebar-profile-name">空</h4>
                 
-                    <!--h5 class="sidebar-profile-bio"><p>　</p>
-</h5-->
+                    <h5 class="sidebar-profile-bio"><p>author.bio</p>
+</h5>
                 
             </div>
         
@@ -110,7 +111,7 @@
                     
                         <a class="sidebar-button-link " href="/ " title="首页">
                     
-                        <i class="sidebar-button-icon fa fa-lg fa-circle-thin" aria-hidden="true"></i>
+                        <i class="sidebar-button-icon far fa-circle" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">首页</span>
                     </a>
             </li>
@@ -119,8 +120,17 @@
                     
                         <a class="sidebar-button-link " href="/all-archives" title="归档">
                     
-                        <i class="sidebar-button-icon fa fa-lg fa-bars" aria-hidden="true"></i>
+                        <i class="sidebar-button-icon fas fa-bars" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">归档</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/all-categories" title="分类">
+                    
+                        <i class="sidebar-button-icon fa fa-bookmark" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">分类</span>
                     </a>
             </li>
             
@@ -128,7 +138,7 @@
                     
                         <a class="sidebar-button-link " href="/all-tags" title="标签">
                     
-                        <i class="sidebar-button-icon fa fa-lg fa-star-o" aria-hidden="true"></i>
+                        <i class="sidebar-button-icon far fa-star" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">标签</span>
                     </a>
             </li>
@@ -137,7 +147,7 @@
                     
                         <a class="sidebar-button-link " href="/about" title="关于">
                     
-                        <i class="sidebar-button-icon fa fa-lg fa-info" aria-hidden="true"></i>
+                        <i class="sidebar-button-icon fas fa-info" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">关于</span>
                     </a>
             </li>
@@ -148,18 +158,18 @@
             
                 <li class="sidebar-button">
                     
-                        <a class="sidebar-button-link " href="mailto:&#115;&#111;&#114;&#97;&#64;&#108;&#105;&#118;&#101;&#46;&#106;&#112;" target="_blank" rel="noopener" title="E-mail">
+                        <a class="sidebar-button-link " href="/mailto" title="Email">
                     
-                        <i class="sidebar-button-icon fa fa-lg fa-envelope-o" aria-hidden="true"></i>
-                        <span class="sidebar-button-desc">E-mail</span>
+                        <i class="sidebar-button-icon fa fa-envelope" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Email</span>
                     </a>
             </li>
             
                 <li class="sidebar-button">
                     
-                        <a class="sidebar-button-link " href="https://twitter.com/yume1001" target="_blank" rel="noopener" title="Twitter">
+                        <a class="sidebar-button-link " href="https://twitter.com/" target="_blank" rel="noopener" title="Twitter">
                     
-                        <i class="sidebar-button-icon fa fa-lg fa-twitter" aria-hidden="true"></i>
+                        <i class="sidebar-button-icon fab fa-twitter" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">Twitter</span>
                     </a>
             </li>
@@ -168,7 +178,7 @@
                     
                         <a class="sidebar-button-link " href="https://t.me/soratan" target="_blank" rel="noopener" title="Telegram">
                     
-                        <i class="sidebar-button-icon fa fa-lg fa-paper-plane" aria-hidden="true"></i>
+                        <i class="sidebar-button-icon fab fa-telegram-plane" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">Telegram</span>
                     </a>
             </li>
@@ -181,7 +191,7 @@
                     
                         <a class="sidebar-button-link " href="/atom.xml" title="RSS">
                     
-                        <i class="sidebar-button-icon fa fa-lg fa-rss" aria-hidden="true"></i>
+                        <i class="sidebar-button-icon fa fa-rss" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">RSS</span>
                     </a>
             </li>
@@ -192,24 +202,23 @@
 </nav>
 
             
-            <div id="main" data-behavior="1"
-                 style="background-color: rgba(255, 255, 255, 0.7);"
+            <div id="main" data-behavior="2"
                  class="
                         hasCoverMetaIn
                         ">
                 
-<article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+<article class="post">
     
     
         <div class="post-header main-content-wrap text-left">
     
-        <h1 class="post-title" itemprop="headline">
+        <h1 class="post-title">
             C语言求素数的几种方法
         </h1>
     
     
         <div class="post-meta">
-    <time itemprop="datePublished" datetime="2015-01-08T17:11:07+08:00">
+    <time datetime="2015-01-08T17:11:07+08:00">
 	
 		    2015年01月08日
     	
@@ -222,10 +231,12 @@
 
     
 </div>
+
     
 </div>
+
     
-    <div class="post-content markdown" itemprop="articleBody">
+    <div class="post-content markdown">
         <div class="main-content-wrap">
             <p>放弃了。。。<br><a id="more"></a><br>第一种<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">isPrime</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> knowPrimes[], <span class="keyword">int</span> numberOfKnowPrimes)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> ret = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">for</span> ( i=<span class="number">0</span>; i&lt;numberOfKnowPrimes; i++ )</span><br><span class="line">        <span class="keyword">if</span> ( x % knowPrimes[i] == <span class="number">0</span>) &#123;</span><br><span class="line">            ret = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">int</span> number = <span class="number">100</span>;</span><br><span class="line">    <span class="keyword">int</span> prime[number] = &#123;<span class="number">2</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> count = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">3</span>;</span><br><span class="line">    <span class="keyword">while</span> ( count&amp;lt;number ) &#123;</span><br><span class="line">        <span class="keyword">if</span> ( isPrime(i, prime, count) )</span><br><span class="line">            prime[count++] = i;</span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> ( i=<span class="number">0</span>; i &amp;lt; number; i++ ) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d"</span>, prime[i]);</span><br><span class="line">        <span class="keyword">if</span> ( (i+<span class="number">1</span>)%<span class="number">5</span> ) <span class="built_in">printf</span>(<span class="string">"\t"</span>);</span><br><span class="line">        <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>第二种<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">int</span> maxNumber = <span class="number">25</span>;</span><br><span class="line">    <span class="keyword">int</span> isPrime[maxNumber];</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">int</span> x;</span><br><span class="line">    <span class="keyword">for</span> ( i=<span class="number">0</span>; i&lt;maxNumber; i++ )</span><br><span class="line">        isPrime[i] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> ( x=<span class="number">2</span>; x&lt;;maxNumber; x++ )</span><br><span class="line">        <span class="keyword">if</span> ( isPrime[x] )</span><br><span class="line">            <span class="keyword">for</span> ( i=<span class="number">2</span>; i*x&lt;;maxNumber; i++ )</span><br><span class="line">                isPrime[i*x] = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> ( i=<span class="number">2</span>; i&lt;maxNumber; i++ )</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\t"</span>, i);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -237,7 +248,7 @@
         </div>
     </div>
     <div id="post-footer" class="post-footer main-content-wrap">
-      
+        
         
             <div class="post-actions-wrap">
     <nav>
@@ -273,7 +284,7 @@
             
             <li class="post-action hide-xs">
                 <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://veltlion.github.io/CPrime/" data-tooltip="分享到 Twitter">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
             </li>
         
@@ -281,25 +292,19 @@
             
             <li class="post-action hide-xs">
                 <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://veltlion.github.io/CPrime/" data-tooltip="分享到 Google+">
-                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
                 </a>
             </li>
         
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://service.weibo.com/share/share.php?&amp;title=https://veltlion.github.io/CPrime/" data-tooltip="分享到 Weibo">
-                    <i class="fa fa-weibo" aria-hidden="true"></i>
+                <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?&amp;title=https://veltlion.github.io/CPrime/" data-tooltip="分享到 Weibo">
+                    <i class="fab fa-weibo" aria-hidden="true"></i>
                 </a>
             </li>
         
         
-            
-                <li class="post-action">
-                    <a class="post-action-btn btn btn--default" href="#comment">
-                         <i class="fa fa-comment-o"></i>
-                    </a>
-                </li>
             
         
         <li class="post-action">
@@ -316,11 +321,12 @@
         
         
             
-                <div id="comment"></div>
+                <div id="valine"></div>
             
         
     </div>
 </article>
+
 
 
                 <footer id="footer" class="main-content-wrap">
@@ -331,7 +337,7 @@
 
             </div>
             
-                <div id="bottom-bar" class="post-bottom-bar" data-behavior="1">
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="2">
                     <div class="post-actions-wrap">
     <nav>
         <ul class="post-actions post-action-nav">
@@ -366,7 +372,7 @@
             
             <li class="post-action hide-xs">
                 <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://veltlion.github.io/CPrime/" data-tooltip="分享到 Twitter">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
             </li>
         
@@ -374,25 +380,19 @@
             
             <li class="post-action hide-xs">
                 <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://veltlion.github.io/CPrime/" data-tooltip="分享到 Google+">
-                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
                 </a>
             </li>
         
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://service.weibo.com/share/share.php?&amp;title=https://veltlion.github.io/CPrime/" data-tooltip="分享到 Weibo">
-                    <i class="fa fa-weibo" aria-hidden="true"></i>
+                <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?&amp;title=https://veltlion.github.io/CPrime/" data-tooltip="分享到 Weibo">
+                    <i class="fab fa-weibo" aria-hidden="true"></i>
                 </a>
             </li>
         
         
-            
-                <li class="post-action">
-                    <a class="post-action-btn btn btn--default" href="#comment">
-                         <i class="fa fa-comment-o"></i>
-                    </a>
-                </li>
             
         
         <li class="post-action">
@@ -407,15 +407,15 @@
 
 
                 </div>
-                <div id="share-options-bar" class="share-options-bar" data-behavior="1">
-    <i id="btn-close-shareoptions" class="fa fa-close"></i>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="2">
+    <i id="btn-close-shareoptions" class="fa fa-times"></i>
     <ul class="share-options">
         
             
             
             <li class="share-option">
                 <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://veltlion.github.io/CPrime/">
-                    <i class="fa fa-twitter" aria-hidden="true"></i><span>分享到 Twitter</span>
+                    <i class="fab fa-twitter" aria-hidden="true"></i><span>分享到 Twitter</span>
                 </a>
             </li>
         
@@ -423,15 +423,15 @@
             
             <li class="share-option">
                 <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://veltlion.github.io/CPrime/">
-                    <i class="fa fa-google-plus" aria-hidden="true"></i><span>分享到 Google+</span>
+                    <i class="fab fa-google-plus" aria-hidden="true"></i><span>分享到 Google+</span>
                 </a>
             </li>
         
             
             
             <li class="share-option">
-                <a class="share-option-btn" target="new" href="https://service.weibo.com/share/share.php?&amp;title=https://veltlion.github.io/CPrime/">
-                    <i class="fa fa-weibo" aria-hidden="true"></i><span>分享到 Weibo</span>
+                <a class="share-option-btn" target="new" href="http://service.weibo.com/share/share.php?&amp;title=https://veltlion.github.io/CPrime/">
+                    <i class="fab fa-weibo" aria-hidden="true"></i><span>分享到 Weibo</span>
                 </a>
             </li>
         
@@ -450,29 +450,29 @@
 <div id="about">
     <div id="about-card">
         <div id="about-btn-close">
-            <i class="fa fa-remove"></i>
+            <i class="fa fa-times"></i>
         </div>
         
             <img id="about-card-picture" src="/assets/images/avatar.png" alt="作者的图片">
         
             <h4 id="about-card-name">空</h4>
         
-            <div id="about-card-bio"><p>　</p>
+            <div id="about-card-bio"><p>author.bio</p>
 </div>
         
         
             <div id="about-card-job">
                 <i class="fa fa-briefcase"></i>
                 <br>
-                <p>　</p>
+                <p>author.job</p>
 
             </div>
         
         
             <div id="about-card-location">
-                <i class="fa fa-map-marker"></i>
+                <i class="fa fa-map-marker-alt"></i>
                 <br>
-                　
+                test
             </div>
         
     </div>
@@ -480,9 +480,9 @@
 
         
         
-<div id="cover" style="background-image:url('/assets/images/cover.jpg'); background-position-y: 50%;"></div>
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
         <!--SCRIPTS-->
-<script src="/assets/js/script-xvtyrggoxhsrg3o8rwcskgsjnbw0xk60qhlqk3hbn5jkfmzttrnedrzorqmo.min.js"></script>
+<script src="/assets/js/script-4yxjtapdc2ieysgccqbhvtyq58zr4i545txewtgb9jinjhyp3akdaulpqujj.min.js"></script>
 <!--SCRIPTS END-->
 
     
@@ -491,17 +491,17 @@
         <script>
             new Valine({
                 av: AV,
-                el: '#comment',
+                el: '#valine',
                 notify:'false', 
                 verify:'false', 
                 appId:'4PRFCeNilpABAutJlqdmectP-gzGzoHsz',
                 appKey:'X2snnlim2EiRUn2OcbXkPreB',
                 placeholder:'',
                 path:window.location.pathname, 
-                avatar:'retro' 
+                avatar:'mp' 
             });
         </script>
-    
+     
 
 
 
