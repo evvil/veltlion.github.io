@@ -509,7 +509,8 @@ blockquote {
   background: #fff;
   transition: transform .25s ease-in-out;
   -webkit-transition: -webkit-transform .25s ease-in-out;
-  background-color: rgba(255, 255, 255, 0.7) !important; }
+  background-color: rgba(255, 255, 255, 0.7) !important;
+  overflow: hidden; }
   #main.hasCover.hasCoverCaption, #main.hasCover.hasCoverMetaOut {
     padding-top: 50px !important; }
   #main.hasCover.hasCoverMetaIn, #main.hasCover.hasCoverMetaOut.hasCoverCaption {
