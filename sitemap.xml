@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+
     <sitemap>
         <loc>https://veltlion.github.io/post-sitemap.xml</loc>
-        <lastmod>2018-10-29T12:51:51.411Z</lastmod>
+        <lastmod>2018-10-31T17:33:23.851Z</lastmod>
     </sitemap>
 
     <sitemap>
         <loc>https://veltlion.github.io/page-sitemap.xml</loc>
-        <lastmod>2018-10-10T18:00:39.525Z</lastmod>
+        <lastmod>2018-10-31T12:33:26.548Z</lastmod>
     </sitemap>
 
     <sitemap>
