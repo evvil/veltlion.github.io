@@ -33,7 +33,7 @@ body {
   font-family: "Open Sans", "Noto Sans", "Source Han Sans CN Normal", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", sans-serif;
   font-size: 1.5rem;
   line-height: 1.85em;
-  letter-spacing: 0.01em;
+  letter-spacing: 0em;
   -webkit-font-smoothing: subpixel-antialiased;
   font-smoothing: subpixel-antialiased; }
   body.pushed {
@@ -1374,7 +1374,7 @@ blockquote {
   border-radius: 5px;
   padding: 8px 15px;
   margin: 0;
-  letter-spacing: 0.01em;
+  letter-spacing: 0em;
   font-size: 1.5rem;
   cursor: pointer; }
   .btn:hover, .btn:focus, .btn:active {
@@ -2337,7 +2337,7 @@ a.tag,
   width: auto;
   height: auto;
   border-radius: 3px;
-  letter-spacing: 0.01em;
+  letter-spacing: 0em;
   cursor: pointer;
   margin: 0;
   margin-right: 4px;
