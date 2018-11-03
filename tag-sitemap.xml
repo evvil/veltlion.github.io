@@ -200,28 +200,28 @@
 
     <url>
         <loc>https://veltlion.github.io/tags/Android/</loc>
-        <lastmod>2018-11-03T14:56:07.052Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://veltlion.github.io/tags/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91/</loc>
-        <lastmod>2018-11-03T14:56:07.052Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://veltlion.github.io/tags/%E6%9C%BA%E9%A1%B6%E7%9B%92/</loc>
-        <lastmod>2018-11-03T14:56:07.052Z</lastmod>
+        <lastmod>2018-11-03T14:59:51.242Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://veltlion.github.io/tags/samba/</loc>
-        <lastmod>2018-11-03T14:56:07.052Z</lastmod>
+        <lastmod>2018-11-03T14:59:51.242Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/tags/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91/</loc>
+        <lastmod>2018-11-03T14:59:51.242Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/tags/%E6%9C%BA%E9%A1%B6%E7%9B%92/</loc>
+        <lastmod>2018-11-03T14:59:51.242Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
