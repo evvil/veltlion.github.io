@@ -15,7 +15,7 @@
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"空","sameAs":["mailto","https://twitter.com/","https://t.me/soratan"],"image":"avatar.png"},"articleBody":"　　从官网下的 Aria2 放机顶盒里一直打不开，提示 aria2c: not executable: 32-bit ELF file ，再加上官方的 Aria2 有连接数限制。所以就想自己编译个试试。　　机顶盒是 S912 的，Win10 的 WSL 挺方便的，直接装 aarch64-linux-gnu 编译器静态编译。\n123456sudo apt install gcc-aarch64-linux-gnu g++-aarch64-linux-gnu pkg-config-aarch64-linux-gnu# 因为脚本写有些东西要放在编译器目录里，所以再 sudo chown $UID -R /usr/aarch64-linux-gnu# 库目录的权限sudo mkdir -p /opt/aria2-armsudo chown $UID /opt/aria2-arm\n有人写了静态交叉编译脚本，改改就能用了。\n修改的部分12345678910# 注释掉 TOOL_BIN_DIR 和 PATHARCH=\"aarch64\"HOST=\"aarch64-linux-gnu\"PREFIX=\"/opt/aria2-arm/build_libs\"LOCAL_DIR=\"/opt/aria2-arm/build_libs\"# march 可以在盒子里用 `gcc -c -Q -march=native --help=target | grep march` 获取。CFLAGS=\"-march=armv8-a+crypto+crc -mtune=cortex-a53\"DEST=\"/usr/aarch64-linux-gnu\"# 把 linux-armv4 改成 linux-aarch64 。\naria2-arm-rbpi-gnu-linux-cross-config里面加上去除 Aria2 最大连接数限制的补丁。\naria2-arm-rbpi-gnu-linux-cross-config12wget https://aur.archlinux.org/cgit/aur.git/plain/aria2-fast.patch?h=aria2-fast -O aria2-fast.patchpatch -Np1 &lt; aria2-fast.patch\n执行完脚本再 make、strip 就完了。不过编译完之后放机顶盒里面还是打不开，又换别的编译器编译了几次，还是不行，这就很神奇。到最后本萌妹惊讶的发现，盒子上面的 aria2c 和本地的大小不一样……最后检查了 FileZilla 设置才发现传输类型是自动选择，改成二进制再传一遍，就可以跑了……就可以跑了……就可以跑了……当时我就这个表情。我浪费了这么多时间就是因为这个！？\n","dateCreated":"2017-12-07T16:51:04+08:00","dateModified":"2018-10-29T20:51:51+08:00","datePublished":"2017-12-07T16:51:04+08:00","description":"　　从官网下的 Aria2 放机顶盒里一直打不开，提示 aria2c: not executable: 32-bit ELF file ，再加上官方的 Aria2 有连接数限制。所以就想自己编译个试试。　　机顶盒是 S912 的，Win10 的 WSL 挺方便的，直接装 aarch64-linux-gnu 编译器静态编译。","headline":"编译 Aria2 笔记","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://veltlion.github.io/cross-compile-aria2/"},"publisher":{"@type":"Organization","name":"空","sameAs":["mailto","https://twitter.com/","https://t.me/soratan"],"image":"avatar.png","logo":{"@type":"ImageObject","url":"avatar.png"}},"url":"https://veltlion.github.io/cross-compile-aria2/","keywords":"Android, 交叉编译, 机顶盒, S912"}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"空","sameAs":["mailto:&#115;&#111;&#114;&#97;&#64;&#108;&#105;&#118;&#101;&#46;&#106;&#112;","https://twitter.com/yume1001","https://t.me/soratan"],"image":"avatar.png"},"articleBody":"　　从官网下的 Aria2 放机顶盒里一直打不开，提示 aria2c: not executable: 32-bit ELF file ，再加上官方的 Aria2 有连接数限制。所以就想自己编译个试试。　　机顶盒是 S912 的，Win10 的 WSL 挺方便的，直接装 aarch64-linux-gnu 编译器静态编译。\n123456sudo apt install gcc-aarch64-linux-gnu g++-aarch64-linux-gnu pkg-config-aarch64-linux-gnu# 因为脚本写有些东西要放在编译器目录里，所以再 sudo chown $UID -R /usr/aarch64-linux-gnu# 库目录的权限sudo mkdir -p /opt/aria2-armsudo chown $UID /opt/aria2-arm\n有人写了静态交叉编译脚本，改改就能用了。\n修改的部分12345678910# 注释掉 TOOL_BIN_DIR 和 PATHARCH=\"aarch64\"HOST=\"aarch64-linux-gnu\"PREFIX=\"/opt/aria2-arm/build_libs\"LOCAL_DIR=\"/opt/aria2-arm/build_libs\"# march 可以在盒子里用 `gcc -c -Q -march=native --help=target | grep march` 获取。CFLAGS=\"-march=armv8-a+crypto+crc -mtune=cortex-a53\"DEST=\"/usr/aarch64-linux-gnu\"# 把 linux-armv4 改成 linux-aarch64 。\naria2-arm-rbpi-gnu-linux-cross-config里面加上去除 Aria2 最大连接数限制的补丁。\naria2-arm-rbpi-gnu-linux-cross-config12wget https://aur.archlinux.org/cgit/aur.git/plain/aria2-fast.patch?h=aria2-fast -O aria2-fast.patchpatch -Np1 &lt; aria2-fast.patch\n执行完脚本再 make、strip 就完了。不过编译完之后放机顶盒里面还是打不开，又换别的编译器编译了几次，还是不行，这就很神奇。到最后本萌妹惊讶的发现，盒子上面的 aria2c 和本地的大小不一样……最后检查了 FileZilla 设置才发现传输类型是自动选择，改成二进制再传一遍，就可以跑了……就可以跑了……就可以跑了……当时我就这个表情。我浪费了这么多时间就是因为这个！？\n","dateCreated":"2017-12-07T16:51:04+08:00","dateModified":"2018-10-29T20:51:51+08:00","datePublished":"2017-12-07T16:51:04+08:00","description":"　　从官网下的 Aria2 放机顶盒里一直打不开，提示 aria2c: not executable: 32-bit ELF file ，再加上官方的 Aria2 有连接数限制。所以就想自己编译个试试。　　机顶盒是 S912 的，Win10 的 WSL 挺方便的，直接装 aarch64-linux-gnu 编译器静态编译。","headline":"编译 Aria2 笔记","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://veltlion.github.io/cross-compile-aria2/"},"publisher":{"@type":"Organization","name":"空","sameAs":["mailto:&#115;&#111;&#114;&#97;&#64;&#108;&#105;&#118;&#101;&#46;&#106;&#112;","https://twitter.com/yume1001","https://t.me/soratan"],"image":"avatar.png","logo":{"@type":"ImageObject","url":"avatar.png"}},"url":"https://veltlion.github.io/cross-compile-aria2/","keywords":"Android, 交叉编译, 机顶盒, S912"}</script>
     <meta name="description" content="从官网下的 Aria2 放机顶盒里一直打不开，提示 aria2c: not executable: 32-bit ELF file ，再加上官方的 Aria2 有连接数限制。所以就想自己编译个试试。　　机顶盒是 S912 的，Win10 的 WSL 挺方便的，直接装 aarch64-linux-gnu 编译器静态编译。">
 <meta name="keywords" content="Android,交叉编译,机顶盒,S912">
 <meta property="og:type" content="blog">
@@ -161,7 +161,7 @@
             
                 <li class="sidebar-button">
                     
-                        <a class="sidebar-button-link " href="/mailto" title="Email">
+                        <a class="sidebar-button-link " href="mailto:&#115;&#111;&#114;&#97;&#64;&#108;&#105;&#118;&#101;&#46;&#106;&#112;" target="_blank" rel="noopener" title="Email">
                     
                         <i class="sidebar-button-icon fa fa-envelope" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">Email</span>
@@ -170,7 +170,7 @@
             
                 <li class="sidebar-button">
                     
-                        <a class="sidebar-button-link " href="https://twitter.com/" target="_blank" rel="noopener" title="Twitter">
+                        <a class="sidebar-button-link " href="https://twitter.com/yume1001" target="_blank" rel="noopener" title="Twitter">
                     
                         <i class="sidebar-button-icon fab fa-twitter" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">Twitter</span>
@@ -288,7 +288,7 @@
     </nav>
     <ul class="post-actions post-action-share">
         <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
                 <i class="fa fa-share-alt" aria-hidden="true"></i>
             </a>
         </li>
@@ -328,7 +328,7 @@
         
         <li class="post-action">
             
-                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
             
                 <i class="fa fa-list" aria-hidden="true"></i>
             </a>
@@ -382,7 +382,7 @@
     </nav>
     <ul class="post-actions post-action-share">
         <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
                 <i class="fa fa-share-alt" aria-hidden="true"></i>
             </a>
         </li>
@@ -422,7 +422,7 @@
         
         <li class="post-action">
             
-                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
             
                 <i class="fa fa-list" aria-hidden="true"></i>
             </a>

@@ -15,7 +15,7 @@
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"空","sameAs":["mailto","https://twitter.com/","https://t.me/soratan"],"image":"avatar.png"},"articleBody":"\nfoobar2000 有网易云歌词的插件了，这个就不用了。\n\n　　在网易云音乐上面看到有首歌的歌词翻译的不错，想保存下来，翻翻缓存文件夹，发现格式不对。　　Google 百度了一下找到个可以获取云音乐歌词的软件，试试看获取结果不全。又在知乎上面看到有人发，可是全是程序源码，我这么笨哪里会编译。只好自己鼓捣了个脚本。　　后来又因为手机里面的 sed 有问题害我白折腾半天，最后用了 busybox 才解决。　　这样文件名都是数字，不过也没办法了，手动改吧。\n123456789101112131415#!/system/bin/sh#06-30-2016, Sora.#网易云音乐APP的歌词目录nd=/sdcard/netease/cloudmusic/Cache/Lyric#转换完成后的输出目录od=/sdcard/Androidfor i in `ls $nd`; do  lrc=$(cat $nd/$i | busybox sed 's/\"\\[/\\n\\[/g; s/\\\\n/\\n/g; s/]undefined/]/g' | busybox sed '/\"lyric/d; /\\[by:/d'| busybox sed 's/\".*&#125;//g')  if [ -n \"$lrc\" ]; then    echo \"$lrc\" &gt; $od/$i.lrc    echo $od/$i.lrc  fidone\n","dateCreated":"2016-06-30T07:49:00+08:00","dateModified":"2018-03-01T05:05:16+08:00","datePublished":"2016-06-30T07:49:00+08:00","description":"\nfoobar2000 有网易云歌词的插件了，这个就不用了。\n\n　　在网易云音乐上面看到有首歌的歌词翻译的不错，想保存下来，翻翻缓存文件夹，发现格式不对。　　Google 百度了一下找到个可以获取云音乐歌词的软件，试试看获取结果不全。又在知乎上面看到有人发，可是全是程序源码，我这么笨哪里会编译。只好自己鼓捣了个脚本。","headline":"网易云音乐歌词转换","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://veltlion.github.io/网易云音乐歌词转换/"},"publisher":{"@type":"Organization","name":"空","sameAs":["mailto","https://twitter.com/","https://t.me/soratan"],"image":"avatar.png","logo":{"@type":"ImageObject","url":"avatar.png"}},"url":"https://veltlion.github.io/网易云音乐歌词转换/","keywords":"lyric"}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"空","sameAs":["mailto:&#115;&#111;&#114;&#97;&#64;&#108;&#105;&#118;&#101;&#46;&#106;&#112;","https://twitter.com/yume1001","https://t.me/soratan"],"image":"avatar.png"},"articleBody":"\nfoobar2000 有网易云歌词的插件了，这个就不用了。\n\n　　在网易云音乐上面看到有首歌的歌词翻译的不错，想保存下来，翻翻缓存文件夹，发现格式不对。　　Google 百度了一下找到个可以获取云音乐歌词的软件，试试看获取结果不全。又在知乎上面看到有人发，可是全是程序源码，我这么笨哪里会编译。只好自己鼓捣了个脚本。　　后来又因为手机里面的 sed 有问题害我白折腾半天，最后用了 busybox 才解决。　　这样文件名都是数字，不过也没办法了，手动改吧。\n123456789101112131415#!/system/bin/sh#06-30-2016, Sora.#网易云音乐APP的歌词目录nd=/sdcard/netease/cloudmusic/Cache/Lyric#转换完成后的输出目录od=/sdcard/Androidfor i in `ls $nd`; do  lrc=$(cat $nd/$i | busybox sed 's/\"\\[/\\n\\[/g; s/\\\\n/\\n/g; s/]undefined/]/g' | busybox sed '/\"lyric/d; /\\[by:/d'| busybox sed 's/\".*&#125;//g')  if [ -n \"$lrc\" ]; then    echo \"$lrc\" &gt; $od/$i.lrc    echo $od/$i.lrc  fidone\n","dateCreated":"2016-06-30T07:49:00+08:00","dateModified":"2018-03-01T05:05:16+08:00","datePublished":"2016-06-30T07:49:00+08:00","description":"\nfoobar2000 有网易云歌词的插件了，这个就不用了。\n\n　　在网易云音乐上面看到有首歌的歌词翻译的不错，想保存下来，翻翻缓存文件夹，发现格式不对。　　Google 百度了一下找到个可以获取云音乐歌词的软件，试试看获取结果不全。又在知乎上面看到有人发，可是全是程序源码，我这么笨哪里会编译。只好自己鼓捣了个脚本。","headline":"网易云音乐歌词转换","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://veltlion.github.io/网易云音乐歌词转换/"},"publisher":{"@type":"Organization","name":"空","sameAs":["mailto:&#115;&#111;&#114;&#97;&#64;&#108;&#105;&#118;&#101;&#46;&#106;&#112;","https://twitter.com/yume1001","https://t.me/soratan"],"image":"avatar.png","logo":{"@type":"ImageObject","url":"avatar.png"}},"url":"https://veltlion.github.io/网易云音乐歌词转换/","keywords":"lyric"}</script>
     <meta name="description" content="foobar2000 有网易云歌词的插件了，这个就不用了。  　　在网易云音乐上面看到有首歌的歌词翻译的不错，想保存下来，翻翻缓存文件夹，发现格式不对。　　Google 百度了一下找到个可以获取云音乐歌词的软件，试试看获取结果不全。又在知乎上面看到有人发，可是全是程序源码，我这么笨哪里会编译。只好自己鼓捣了个脚本。">
 <meta name="keywords" content="lyric">
 <meta property="og:type" content="blog">
@@ -159,7 +159,7 @@
             
                 <li class="sidebar-button">
                     
-                        <a class="sidebar-button-link " href="/mailto" title="Email">
+                        <a class="sidebar-button-link " href="mailto:&#115;&#111;&#114;&#97;&#64;&#108;&#105;&#118;&#101;&#46;&#106;&#112;" target="_blank" rel="noopener" title="Email">
                     
                         <i class="sidebar-button-icon fa fa-envelope" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">Email</span>
@@ -168,7 +168,7 @@
             
                 <li class="sidebar-button">
                     
-                        <a class="sidebar-button-link " href="https://twitter.com/" target="_blank" rel="noopener" title="Twitter">
+                        <a class="sidebar-button-link " href="https://twitter.com/yume1001" target="_blank" rel="noopener" title="Twitter">
                     
                         <i class="sidebar-button-icon fab fa-twitter" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">Twitter</span>
@@ -284,7 +284,7 @@
     </nav>
     <ul class="post-actions post-action-share">
         <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
                 <i class="fa fa-share-alt" aria-hidden="true"></i>
             </a>
         </li>
@@ -324,7 +324,7 @@
         
         <li class="post-action">
             
-                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
             
                 <i class="fa fa-list" aria-hidden="true"></i>
             </a>
@@ -378,7 +378,7 @@
     </nav>
     <ul class="post-actions post-action-share">
         <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
                 <i class="fa fa-share-alt" aria-hidden="true"></i>
             </a>
         </li>
@@ -418,7 +418,7 @@
         
         <li class="post-action">
             
-                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
             
                 <i class="fa fa-list" aria-hidden="true"></i>
             </a>

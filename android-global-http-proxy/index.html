@@ -15,7 +15,7 @@
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"空","sameAs":["mailto","https://twitter.com/","https://t.me/soratan"],"image":"avatar.png"},"articleBody":"　　代理的话，试过 u2nl + dnsp 可是 u2nl 不能转发 https ，dnsp 的话太慢，后来想到了 redsocks ，不过 redsocks 的 dnstc 只能监听一个地址，被共享网络的设备不能解析 DNS 。　　因为联通免流只能通过HTTP(s)代理上网，UDP的包都会费流量。所以就决定直接放个 pdnsd 进去。pdnsd 用来做缓存和把 UDP 的 DNS 查询全部转成 TCP 通过 redsocks 代理出去。(不过这样上网会变慢，感觉得不偿失，不如直接让他通过\n本机代理redsocks 配置可以这么写redsocks.conf12345678910111213141516171819202122232425base &#123;\tlog_debug = off;\tlog_info = off;\tdaemon = on;\tredirector = iptables;&#125;redsocks &#123;\tlocal_ip = 0.0.0.0;\tlocal_port = 65;\tip = $HTTP_PROXY;\tport = $HTTP_PROXY_PORT;\ttype = http-relay;&#125;redsocks &#123;\tlocal_ip = 0.0.0.0;\tlocal_port = 56;\tip = $HTTPS_PROXY;\tport = $HTTPS_PROXY_PORT;\ttype = http-connect;&#125;dnstc &#123;\tlocal_ip = 127.0.0.1;\tlocal_port = 5353;&#125;\niptables 规则如下12345678910111213141516# 创建一个规则。iptables -t nat -N PROXY# 指定上网用的网卡并把它加到 OUTPUT 。iptables -t nat -A OUTPUT -o $interface -j PROXY# 允许代理地址和本机通过。iptables -t nat -A PROXY -d 127.0.0.1,HTTP_PROXY -j ACCEPT# 把 DNS请求 转到 redsocks 。iptables -t nat -A PROXY -p udp --dport 53 -j REDIRECT --to-port 5353# HTTP 和 HTTPS 转到 redsocks 。# iptables -t nat -A PROXY -p tcp --dport 80 -j DNAT --to-destination $HTTP_PROXY:$HTTP_PROXY_PORTiptables -t nat -A PROXY -p tcp --dport 80 -j REDIRECT --to-port 65iptables -t nat -A PROXY -p tcp --dport 443 -j REDIRECT --to-port 56# 其他 TCP 流量转到 redsocks 。iptables -t nat -A PROXY -p tcp -j REDIRECT --to-port 56# 非 TCP 的流量随便处理一下。这里是直接 DROP 掉。也可以不加这句让它通过。# iptables -t nat -A PROXY ! -p tcp -j DROP\n共享给其他设备　　这样的话就行了。但如果是用数据流量上网要共享给其它手机或电脑的话，被共享的设备不能解析 DNS 。　　这就要用到 pdnsd 了，它可以用 TCP 查询 DNS 。　　需要注意的就是不能用 53 端口，因为会和 Android 自带的 dnsmasq 冲突。　　redsocks 的配置和上面一样。\npdnsd 的配置文件pdnsd.conf123456789101112131415161718192021222324252627282930313233global &#123;\tperm_cache = 4096;\trun_as = root;\tpid_file = /data/p.pid; //pid文件的位置。\tserver_ip = any;\tserver_port = 5354;\tquery_method = tcp_only;\tstatus_ctl = on;#\ttcp_server = on;\tmin_ttl = 1m;\tmax_ttl = 1d;\tparanoid = on;\ttimeout = 30;\trandomize_recs = on;\tdaemon = on;&#125;server &#123;\tlabel = DNS;\tip = 8.8.8.8; //要填支持 TCP查询 的 DNS，多个用 , 隔开。\tport = 53;\tproxy_only = on;\tedns_query = on;&#125;source &#123;\towner=localhost;\tserve_aliases=on;\tfile=/system/etc/hosts;  //导入一下 hosts 。&#125;rr &#123; //Windows验证联网用的，右下角黄色感叹号。\tname = www.msftncsi.com;\treverse = on;\ta = 124.40.53.8;&#125;\niptables 是这样的上面的规则的后面再加上1234567891011121314iptables -t nat -N TETHER# 把来自 192.168.0.0/16 的流量加入规则。iptables -t nat -I PREROUTING -s 192.168.0.0/16 -j TETHER# 允许局域网、感叹号和代理通过。iptables -t nat -A TETHER -d 192.168.0.0/16,124.40.53.8,$HTTP_PROXY -j ACCEPT# 把 DNS 请求劫持到 pdnsd 。iptables -t nat -A TETHER -p udp --dport 53 -j REDIRECT --to-port 5354# HTTP的转到 redsocks 。iptables -t nat -A TETHER -p tcp --dport 80 -j REDIRECT --to-port 65# iptables -t nat -A TETHER -p tcp --dport 80 -j DNAT --to-destination $HTTP_PROXY:$PORT# 其它 TCP 流量还是用 redsocks 。iptables -t nat -A TETHER -p tcp -j REDIRECT --to-port 56# 非 TCP 的流量还是看着办。\n写个脚本　　然后写个启动脚本。就是下载之类的会很烫。\n关于 Android 的网卡　　因为上面的脚本也有其他人在用，每个人的移动网络网卡名都不一样。所以只好让知道作用名字的网卡直接通过，再把其他的都代理。就像这几个：\n\nWLAN：wlan0\n便携式WLAN热点：ap0\nUSB网络共享：usb0 rndis0\n蓝牙网络共享：bt-pan\nVPN：tun0 （shadowsocks VPN模式绕过中国和局域网可以用。\n\n","dateCreated":"2015-01-18T23:49:03+08:00","dateModified":"2018-04-07T03:04:01+08:00","datePublished":"2015-01-18T23:49:03+08:00","description":"　　代理的话，试过 u2nl + dnsp 可是 u2nl 不能转发 https ，dnsp 的话太慢，后来想到了 redsocks ，不过 redsocks 的 dnstc 只能监听一个地址，被共享网络的设备不能解析 DNS 。　　因为联通免流只能通过HTTP(s)代理上网，UDP的包都会费流量。所以就决定直接放个 pdnsd 进去。pdnsd 用来做缓存和把 UDP 的 DNS 查询全部转成 TCP 通过 redsocks 代理出去。(不过这样上网会变慢，感觉得不偿失，不如直接让他通过","headline":"Android全局HTTP(S)代理","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://veltlion.github.io/android-global-http-proxy/"},"publisher":{"@type":"Organization","name":"空","sameAs":["mailto","https://twitter.com/","https://t.me/soratan"],"image":"avatar.png","logo":{"@type":"ImageObject","url":"avatar.png"}},"url":"https://veltlion.github.io/android-global-http-proxy/","keywords":"Android, redsocks, 代理"}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"空","sameAs":["mailto:&#115;&#111;&#114;&#97;&#64;&#108;&#105;&#118;&#101;&#46;&#106;&#112;","https://twitter.com/yume1001","https://t.me/soratan"],"image":"avatar.png"},"articleBody":"　　代理的话，试过 u2nl + dnsp 可是 u2nl 不能转发 https ，dnsp 的话太慢，后来想到了 redsocks ，不过 redsocks 的 dnstc 只能监听一个地址，被共享网络的设备不能解析 DNS 。　　因为联通免流只能通过HTTP(s)代理上网，UDP的包都会费流量。所以就决定直接放个 pdnsd 进去。pdnsd 用来做缓存和把 UDP 的 DNS 查询全部转成 TCP 通过 redsocks 代理出去。(不过这样上网会变慢，感觉得不偿失，不如直接让他通过\n本机代理redsocks 配置可以这么写redsocks.conf12345678910111213141516171819202122232425base &#123;\tlog_debug = off;\tlog_info = off;\tdaemon = on;\tredirector = iptables;&#125;redsocks &#123;\tlocal_ip = 0.0.0.0;\tlocal_port = 65;\tip = $HTTP_PROXY;\tport = $HTTP_PROXY_PORT;\ttype = http-relay;&#125;redsocks &#123;\tlocal_ip = 0.0.0.0;\tlocal_port = 56;\tip = $HTTPS_PROXY;\tport = $HTTPS_PROXY_PORT;\ttype = http-connect;&#125;dnstc &#123;\tlocal_ip = 127.0.0.1;\tlocal_port = 5353;&#125;\niptables 规则如下12345678910111213141516# 创建一个规则。iptables -t nat -N PROXY# 指定上网用的网卡并把它加到 OUTPUT 。iptables -t nat -A OUTPUT -o $interface -j PROXY# 允许代理地址和本机通过。iptables -t nat -A PROXY -d 127.0.0.1,HTTP_PROXY -j ACCEPT# 把 DNS请求 转到 redsocks 。iptables -t nat -A PROXY -p udp --dport 53 -j REDIRECT --to-port 5353# HTTP 和 HTTPS 转到 redsocks 。# iptables -t nat -A PROXY -p tcp --dport 80 -j DNAT --to-destination $HTTP_PROXY:$HTTP_PROXY_PORTiptables -t nat -A PROXY -p tcp --dport 80 -j REDIRECT --to-port 65iptables -t nat -A PROXY -p tcp --dport 443 -j REDIRECT --to-port 56# 其他 TCP 流量转到 redsocks 。iptables -t nat -A PROXY -p tcp -j REDIRECT --to-port 56# 非 TCP 的流量随便处理一下。这里是直接 DROP 掉。也可以不加这句让它通过。# iptables -t nat -A PROXY ! -p tcp -j DROP\n共享给其他设备　　这样的话就行了。但如果是用数据流量上网要共享给其它手机或电脑的话，被共享的设备不能解析 DNS 。　　这就要用到 pdnsd 了，它可以用 TCP 查询 DNS 。　　需要注意的就是不能用 53 端口，因为会和 Android 自带的 dnsmasq 冲突。　　redsocks 的配置和上面一样。\npdnsd 的配置文件pdnsd.conf123456789101112131415161718192021222324252627282930313233global &#123;\tperm_cache = 4096;\trun_as = root;\tpid_file = /data/p.pid; //pid文件的位置。\tserver_ip = any;\tserver_port = 5354;\tquery_method = tcp_only;\tstatus_ctl = on;#\ttcp_server = on;\tmin_ttl = 1m;\tmax_ttl = 1d;\tparanoid = on;\ttimeout = 30;\trandomize_recs = on;\tdaemon = on;&#125;server &#123;\tlabel = DNS;\tip = 8.8.8.8; //要填支持 TCP查询 的 DNS，多个用 , 隔开。\tport = 53;\tproxy_only = on;\tedns_query = on;&#125;source &#123;\towner=localhost;\tserve_aliases=on;\tfile=/system/etc/hosts;  //导入一下 hosts 。&#125;rr &#123; //Windows验证联网用的，右下角黄色感叹号。\tname = www.msftncsi.com;\treverse = on;\ta = 124.40.53.8;&#125;\niptables 是这样的上面的规则的后面再加上1234567891011121314iptables -t nat -N TETHER# 把来自 192.168.0.0/16 的流量加入规则。iptables -t nat -I PREROUTING -s 192.168.0.0/16 -j TETHER# 允许局域网、感叹号和代理通过。iptables -t nat -A TETHER -d 192.168.0.0/16,124.40.53.8,$HTTP_PROXY -j ACCEPT# 把 DNS 请求劫持到 pdnsd 。iptables -t nat -A TETHER -p udp --dport 53 -j REDIRECT --to-port 5354# HTTP的转到 redsocks 。iptables -t nat -A TETHER -p tcp --dport 80 -j REDIRECT --to-port 65# iptables -t nat -A TETHER -p tcp --dport 80 -j DNAT --to-destination $HTTP_PROXY:$PORT# 其它 TCP 流量还是用 redsocks 。iptables -t nat -A TETHER -p tcp -j REDIRECT --to-port 56# 非 TCP 的流量还是看着办。\n写个脚本　　然后写个启动脚本。就是下载之类的会很烫。\n关于 Android 的网卡　　因为上面的脚本也有其他人在用，每个人的移动网络网卡名都不一样。所以只好让知道作用名字的网卡直接通过，再把其他的都代理。就像这几个：\n\nWLAN：wlan0\n便携式WLAN热点：ap0\nUSB网络共享：usb0 rndis0\n蓝牙网络共享：bt-pan\nVPN：tun0 （shadowsocks VPN模式绕过中国和局域网可以用。\n\n","dateCreated":"2015-01-18T23:49:03+08:00","dateModified":"2018-04-07T03:04:01+08:00","datePublished":"2015-01-18T23:49:03+08:00","description":"　　代理的话，试过 u2nl + dnsp 可是 u2nl 不能转发 https ，dnsp 的话太慢，后来想到了 redsocks ，不过 redsocks 的 dnstc 只能监听一个地址，被共享网络的设备不能解析 DNS 。　　因为联通免流只能通过HTTP(s)代理上网，UDP的包都会费流量。所以就决定直接放个 pdnsd 进去。pdnsd 用来做缓存和把 UDP 的 DNS 查询全部转成 TCP 通过 redsocks 代理出去。(不过这样上网会变慢，感觉得不偿失，不如直接让他通过","headline":"Android全局HTTP(S)代理","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://veltlion.github.io/android-global-http-proxy/"},"publisher":{"@type":"Organization","name":"空","sameAs":["mailto:&#115;&#111;&#114;&#97;&#64;&#108;&#105;&#118;&#101;&#46;&#106;&#112;","https://twitter.com/yume1001","https://t.me/soratan"],"image":"avatar.png","logo":{"@type":"ImageObject","url":"avatar.png"}},"url":"https://veltlion.github.io/android-global-http-proxy/","keywords":"Android, redsocks, 代理"}</script>
     <meta name="description" content="代理的话，试过 u2nl + dnsp 可是 u2nl 不能转发 https ，dnsp 的话太慢，后来想到了 redsocks ，不过 redsocks 的 dnstc 只能监听一个地址，被共享网络的设备不能解析 DNS 。　　因为联通免流只能通过HTTP(s)代理上网，UDP的包都会费流量。所以就决定直接放个 pdnsd 进去。pdnsd 用来做缓存和把 UDP 的 DNS 查询全部转成">
 <meta name="keywords" content="Android,redsocks,代理">
 <meta property="og:type" content="blog">
@@ -159,7 +159,7 @@
             
                 <li class="sidebar-button">
                     
-                        <a class="sidebar-button-link " href="/mailto" title="Email">
+                        <a class="sidebar-button-link " href="mailto:&#115;&#111;&#114;&#97;&#64;&#108;&#105;&#118;&#101;&#46;&#106;&#112;" target="_blank" rel="noopener" title="Email">
                     
                         <i class="sidebar-button-icon fa fa-envelope" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">Email</span>
@@ -168,7 +168,7 @@
             
                 <li class="sidebar-button">
                     
-                        <a class="sidebar-button-link " href="https://twitter.com/" target="_blank" rel="noopener" title="Twitter">
+                        <a class="sidebar-button-link " href="https://twitter.com/yume1001" target="_blank" rel="noopener" title="Twitter">
                     
                         <i class="sidebar-button-icon fab fa-twitter" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">Twitter</span>
@@ -294,7 +294,7 @@
     </nav>
     <ul class="post-actions post-action-share">
         <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
                 <i class="fa fa-share-alt" aria-hidden="true"></i>
             </a>
         </li>
@@ -334,7 +334,7 @@
         
         <li class="post-action">
             
-                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
             
                 <i class="fa fa-list" aria-hidden="true"></i>
             </a>
@@ -388,7 +388,7 @@
     </nav>
     <ul class="post-actions post-action-share">
         <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
                 <i class="fa fa-share-alt" aria-hidden="true"></i>
             </a>
         </li>
@@ -428,7 +428,7 @@
         
         <li class="post-action">
             
-                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
             
                 <i class="fa fa-list" aria-hidden="true"></i>
             </a>

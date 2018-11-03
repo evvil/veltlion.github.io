@@ -15,7 +15,7 @@
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"空","sameAs":["mailto","https://twitter.com/","https://t.me/soratan"],"image":"avatar.png"},"articleBody":"⊂彡☆))д´)你怎么就那么懒呢，开下电脑更新博客会死啊。\n　　平常都是空闲的时候在手机上面写完博客，然后 WOL 开电脑，把文章同步到电脑，SSH 连上去，再hexo d -g。麻烦死了。　　后来想起 Termux 这个软件，抱着试试看的心情执行了下apt install nodejs，结果还真有。然后嘛，我的懒惰度又提高到了一个新的高度。\n安装　　首先，手机上面装一个 Termux ，然后装 Hexo 。balabala，跟在电脑上装没什么区别。　　然后把 Hexo 的主题、_config.yml 、package.json 还有 ssh key 复制到手机里。复制的时候要记得排除 node_modules 文件夹，还有传完要改一下所属用户和组。　　再在博客目录执行npm install把插件装回来。\n写文章　　装好之后要怎么写文章呢？Android 上面有好多写 Markdown 的工具，像是 neutriNote 、 易写和MarkdownX 。我用的是 MarkdownX 。不过因为这些软件的文章目录和 Termux 里面的 Hexo 目录不一样，复制来复制去很麻烦。所以我建了个软链接来解决这个问题，像是 MarkdownX ：ln -s /storage/emulated/0/Android/data/com.ryeeeeee.markdownx/files/notes /data/data/com.termux/files/home/blog/source　　这样博客的文章就在 MarkdownX 的数据目录里了。不过如果之前 Termux 的博客目录里面有 source 目录的话要先改名或删掉，不然软链接会被建到 source 里面。（多谢 xwah 提醒，说起来 xwah 刚和我说的时候我还理解错了。今天在手机上重装 Hexo 才明白这个问题Orz…　　然后把电脑上面的文章复制到手机。hexo d -g就好啦。\n和电脑同步文章　　同步文件用的是 FolderSync 。我经常用它同步些照片、图片之类的到电脑。还可以同步到 OneDrive、GoogleDrive 之类的地方。\n主题　　我现在用的主题是 Tranquilpeak ，用之前要先在主题目录跑下npm install。如果要在手机上面修改这个主题的话有几个软件要装上：apt install python2 make clang　　不过这几个装完再加上主题依赖一共要500+MiB，所以还是在电脑上改改就好了。　　还有主题的月份不知道为什么都变英文了，不管了，直接用 sed 替换一下。\n最后抱怨下\nTermux 的操作体验完全没有 JuiceSSH 好啊。我都想从上面开个 ssh 然后用 JuiceSSH 连上去了。(后来我换用 NeoTerm 了。\n还有我手机真的好慢啊，资源 minify 一下都要三分钟。\n\n","dateCreated":"2016-09-06T22:45:00+08:00","dateModified":"2018-05-18T02:24:51+08:00","datePublished":"2016-09-06T22:45:00+08:00","description":"⊂彡☆))д´)你怎么就那么懒呢，开下电脑更新博客会死啊。\n　　平常都是空闲的时候在手机上面写完博客，然后 WOL 开电脑，把文章同步到电脑，SSH 连上去，再hexo d -g。麻烦死了。　　后来想起 Termux 这个软件，抱着试试看的心情执行了下apt install nodejs，结果还真有。然后嘛，我的懒惰度又提高到了一个新的高度。","headline":"在 Android 手机上面更新 Hexo 博客","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://veltlion.github.io/hexo-on-android/"},"publisher":{"@type":"Organization","name":"空","sameAs":["mailto","https://twitter.com/","https://t.me/soratan"],"image":"avatar.png","logo":{"@type":"ImageObject","url":"avatar.png"}},"url":"https://veltlion.github.io/hexo-on-android/","keywords":"Android, Hexo, Termux"}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"空","sameAs":["mailto:&#115;&#111;&#114;&#97;&#64;&#108;&#105;&#118;&#101;&#46;&#106;&#112;","https://twitter.com/yume1001","https://t.me/soratan"],"image":"avatar.png"},"articleBody":"⊂彡☆))д´)你怎么就那么懒呢，开下电脑更新博客会死啊。\n　　平常都是空闲的时候在手机上面写完博客，然后 WOL 开电脑，把文章同步到电脑，SSH 连上去，再hexo d -g。麻烦死了。　　后来想起 Termux 这个软件，抱着试试看的心情执行了下apt install nodejs，结果还真有。然后嘛，我的懒惰度又提高到了一个新的高度。\n安装　　首先，手机上面装一个 Termux ，然后装 Hexo 。balabala，跟在电脑上装没什么区别。　　然后把 Hexo 的主题、_config.yml 、package.json 还有 ssh key 复制到手机里。复制的时候要记得排除 node_modules 文件夹，还有传完要改一下所属用户和组。　　再在博客目录执行npm install把插件装回来。\n写文章　　装好之后要怎么写文章呢？Android 上面有好多写 Markdown 的工具，像是 neutriNote 、 易写和MarkdownX 。我用的是 MarkdownX 。不过因为这些软件的文章目录和 Termux 里面的 Hexo 目录不一样，复制来复制去很麻烦。所以我建了个软链接来解决这个问题，像是 MarkdownX ：ln -s /storage/emulated/0/Android/data/com.ryeeeeee.markdownx/files/notes /data/data/com.termux/files/home/blog/source　　这样博客的文章就在 MarkdownX 的数据目录里了。不过如果之前 Termux 的博客目录里面有 source 目录的话要先改名或删掉，不然软链接会被建到 source 里面。（多谢 xwah 提醒，说起来 xwah 刚和我说的时候我还理解错了。今天在手机上重装 Hexo 才明白这个问题Orz…　　然后把电脑上面的文章复制到手机。hexo d -g就好啦。\n和电脑同步文章　　同步文件用的是 FolderSync 。我经常用它同步些照片、图片之类的到电脑。还可以同步到 OneDrive、GoogleDrive 之类的地方。\n主题　　我现在用的主题是 Tranquilpeak ，用之前要先在主题目录跑下npm install。如果要在手机上面修改这个主题的话有几个软件要装上：apt install python2 make clang　　不过这几个装完再加上主题依赖一共要500+MiB，所以还是在电脑上改改就好了。　　还有主题的月份不知道为什么都变英文了，不管了，直接用 sed 替换一下。\n最后抱怨下\nTermux 的操作体验完全没有 JuiceSSH 好啊。我都想从上面开个 ssh 然后用 JuiceSSH 连上去了。(后来我换用 NeoTerm 了。\n还有我手机真的好慢啊，资源 minify 一下都要三分钟。\n\n","dateCreated":"2016-09-06T22:45:00+08:00","dateModified":"2018-05-18T02:24:51+08:00","datePublished":"2016-09-06T22:45:00+08:00","description":"⊂彡☆))д´)你怎么就那么懒呢，开下电脑更新博客会死啊。\n　　平常都是空闲的时候在手机上面写完博客，然后 WOL 开电脑，把文章同步到电脑，SSH 连上去，再hexo d -g。麻烦死了。　　后来想起 Termux 这个软件，抱着试试看的心情执行了下apt install nodejs，结果还真有。然后嘛，我的懒惰度又提高到了一个新的高度。","headline":"在 Android 手机上面更新 Hexo 博客","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://veltlion.github.io/hexo-on-android/"},"publisher":{"@type":"Organization","name":"空","sameAs":["mailto:&#115;&#111;&#114;&#97;&#64;&#108;&#105;&#118;&#101;&#46;&#106;&#112;","https://twitter.com/yume1001","https://t.me/soratan"],"image":"avatar.png","logo":{"@type":"ImageObject","url":"avatar.png"}},"url":"https://veltlion.github.io/hexo-on-android/","keywords":"Android, Hexo, Termux"}</script>
     <meta name="description" content="⊂彡☆))д´)你怎么就那么懒呢，开下电脑更新博客会死啊。 　　平常都是空闲的时候在手机上面写完博客，然后 WOL 开电脑，把文章同步到电脑，SSH 连上去，再hexo d -g。麻烦死了。　　后来想起 Termux 这个软件，抱着试试看的心情执行了下apt install nodejs，结果还真有。然后嘛，我的懒惰度又提高到了一个新的高度。">
 <meta name="keywords" content="Android,Hexo,Termux">
 <meta property="og:type" content="blog">
@@ -159,7 +159,7 @@
             
                 <li class="sidebar-button">
                     
-                        <a class="sidebar-button-link " href="/mailto" title="Email">
+                        <a class="sidebar-button-link " href="mailto:&#115;&#111;&#114;&#97;&#64;&#108;&#105;&#118;&#101;&#46;&#106;&#112;" target="_blank" rel="noopener" title="Email">
                     
                         <i class="sidebar-button-icon fa fa-envelope" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">Email</span>
@@ -168,7 +168,7 @@
             
                 <li class="sidebar-button">
                     
-                        <a class="sidebar-button-link " href="https://twitter.com/" target="_blank" rel="noopener" title="Twitter">
+                        <a class="sidebar-button-link " href="https://twitter.com/yume1001" target="_blank" rel="noopener" title="Twitter">
                     
                         <i class="sidebar-button-icon fab fa-twitter" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">Twitter</span>
@@ -289,7 +289,7 @@
     </nav>
     <ul class="post-actions post-action-share">
         <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
                 <i class="fa fa-share-alt" aria-hidden="true"></i>
             </a>
         </li>
@@ -329,7 +329,7 @@
         
         <li class="post-action">
             
-                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
             
                 <i class="fa fa-list" aria-hidden="true"></i>
             </a>
@@ -383,7 +383,7 @@
     </nav>
     <ul class="post-actions post-action-share">
         <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
                 <i class="fa fa-share-alt" aria-hidden="true"></i>
             </a>
         </li>
@@ -423,7 +423,7 @@
         
         <li class="post-action">
             
-                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
             
                 <i class="fa fa-list" aria-hidden="true"></i>
             </a>
