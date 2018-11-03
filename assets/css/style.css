@@ -918,9 +918,9 @@ body {
   padding: 0;
   background: white;
   font-family: "Open Sans", "Noto Sans", "Source Han Sans CN Normal", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", sans-serif;
-  font-size: 1.5rem;
-  line-height: 1.85em;
-  letter-spacing: 0em;
+  font-size: 1.6rem;
+  line-height: 1.9em;
+  letter-spacing: 0.01em;
   -webkit-font-smoothing: subpixel-antialiased;
   font-smoothing: subpixel-antialiased; }
   body.pushed {
@@ -1024,7 +1024,7 @@ pre > code {
   font-size: 1.3rem; }
 
 code {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   display: inline-block;
   border-radius: 5px;
   font-family: Menlo, Meslo LG M for Powerline, Consolas, monospace;
@@ -1049,7 +1049,7 @@ blockquote {
 
 @media only screen and (max-width: 767px) {
   code {
-    font-size: 1.3rem; }
+    font-size: 1.4rem; }
   h1 {
     font-size: 2.6rem; }
   h2 {
@@ -1125,8 +1125,8 @@ blockquote {
     #about #about-card #about-card-job,
     #about #about-card #about-card-location,
     #about #about-card #about-card-bio {
-      font-size: 1.5rem;
-      line-height: 1.85em;
+      font-size: 1.6rem;
+      line-height: 1.9em;
       font-weight: 400;
       color: #424242; }
 
@@ -1305,7 +1305,7 @@ blockquote {
 
 #footer {
   color: #9eabb3;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   text-align: center;
   margin-top: 70px;
   height: auto;
@@ -1350,7 +1350,7 @@ blockquote {
     color: #88909a; }
   #header .header-title {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     line-height: 55px;
     margin: 0; }
     #header .header-title .header-title-link {
@@ -2244,7 +2244,7 @@ blockquote {
     font-family: 'Font Awesome 5 Free';
     font-weight: 600;
     content: '\f0da';
-    font-size: 1.25rem; }
+    font-size: 1.3rem; }
 
 .boxes {
   margin-top: 20px; }
@@ -2261,8 +2261,8 @@ blockquote {
   border-radius: 5px;
   padding: 8px 15px;
   margin: 0;
-  letter-spacing: 0em;
-  font-size: 1.5rem;
+  letter-spacing: 0.01em;
+  font-size: 1.6rem;
   cursor: pointer; }
   .btn:hover, .btn:focus, .btn:active {
     text-decoration: none; }
@@ -2303,17 +2303,17 @@ blockquote {
     border: 1px solid #bd1908; }
 
 .btn--medium {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   padding: 8px 15px; }
 
 .btn--small {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   padding: 8px 15px; }
 
 .caption {
   display: block;
   font-family: "Open Sans", "Noto Sans", "Source Han Sans CN Normal", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   color: #81929d;
   text-align: center;
   font-style: italic;
@@ -2568,7 +2568,7 @@ figure.highlight,
     font-family: "Open Sans", "Noto Sans", "Source Han Sans CN Normal", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", sans-serif;
     font-style: italic;
     background: rgba(0, 0, 0, 0.75);
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     color: white;
     padding: 0.5em 1.5em;
     z-index: 1; }
@@ -2767,7 +2767,7 @@ a.fancybox {
       margin-right: 10px; }
     .pagination-bar .pagination .pagination-number {
       float: right;
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       color: #9eabb3; }
 
 .post {
@@ -2784,7 +2784,7 @@ a.fancybox {
   .post .post-meta {
     line-height: 1.5em;
     font-family: "Open Sans", "Noto Sans", "Source Han Sans CN Normal", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", sans-serif;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     font-weight: 400;
     color: #BDBDBD; }
     .post .post-meta a {
@@ -2924,7 +2924,7 @@ a.fancybox {
     .post-header-cover .post-header .post-meta {
       max-width: 750px;
       font-family: "Open Sans", "Noto Sans", "Source Han Sans CN Normal", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", sans-serif;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       color: white !important;
       font-weight: 400;
       letter-spacing: 0.05em;
@@ -3076,7 +3076,7 @@ a.fancybox {
   .postShorten .postShorten-readingtime,
   .postShorten .postShorten-excerpt_link {
     font-family: "Open Sans", "Noto Sans", "Source Han Sans CN Normal", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", sans-serif;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     font-weight: 400; }
   .postShorten .postShorten-excerpt,
   .postShorten .postShorten-content {
@@ -3224,7 +3224,7 @@ a.tag,
   width: auto;
   height: auto;
   border-radius: 3px;
-  letter-spacing: 0em;
+  letter-spacing: 0.01em;
   cursor: pointer;
   margin: 0;
   margin-right: 4px;
@@ -3273,12 +3273,12 @@ a.tag--danger,
 
 a.tag--default,
 .tag--default {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   padding: 4.5px 15px; }
 
 a.tag--small,
 .tag--small {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   padding: 2px 10px; }
 
 .text-left {
@@ -3309,19 +3309,19 @@ a.tag--small,
   font-size: 1rem !important; }
 
 .text-small {
-  font-size: 1.25rem !important; }
+  font-size: 1.3rem !important; }
 
 .text-medium {
-  font-size: 1.4rem !important; }
-
-.text-base {
   font-size: 1.5rem !important; }
 
-.text-large {
+.text-base {
   font-size: 1.6rem !important; }
 
-.text-xlarge {
+.text-large {
   font-size: 1.7rem !important; }
+
+.text-xlarge {
+  font-size: 1.8rem !important; }
 
 .text-strong {
   font-weight: 700 !important; }
@@ -3369,7 +3369,7 @@ a.tag--small,
     color: #fff;
     content: attr(data-tooltip);
     font-size: 0.93em;
-    line-height: 1.85em;
+    line-height: 1.9em;
     border-radius: 5px; }
   .tooltip:before, [data-tooltip]:before, .tooltip:after, [data-tooltip]:after {
     position: absolute;
