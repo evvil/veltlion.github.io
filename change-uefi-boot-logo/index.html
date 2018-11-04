@@ -15,7 +15,7 @@
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"空","sameAs":["mailto:&#115;&#111;&#114;&#97;&#64;&#108;&#105;&#118;&#101;&#46;&#106;&#112;","https://twitter.com/yume1001","https://t.me/soratan"],"image":"avatar.png"},"articleBody":"　　MSI 主板的启动图片看腻了，想换一个，可找了好多替换工具都换不到启动图。　　后来用 UEFIExtract 直接把 BIOS 全部解包，找到了图片位置。　　刷修改过的 BIOS 有可能把主板变砖。上次搞坏过一次，还好主板有 JSPI1 接口，在某宝买了个编程器刷好了。\n准备需要用到 UEFITool 和 UEFIExtract 、修图软件。\n修改BIOS解包用 UEFIExtract 解开 BIOS文件。UEFIExtract BIOSfile all\n找图打开解完后的文件夹，搜索 body.bin 。搜索完 Ctrl+A 全选这些搜索结果，拖到改名工具里面，扩展名改成 jpg 。改完把搜索结果显示为大图标，向下滚动，就很容易找到图片文件。然后发现能改的不止 LOGO 。找到后查看文件路径中的 GUID ，GUID 有两串，要后面的。可以把图片拖出来并改成前面的复制的名字备用。用文本编辑器或是十六进制编辑器打开这些图片查看文件头，把图片改回它本来的扩展名。（文件头对照，可以用 Ctrl+F 搜索。）像这种就是 JPG/JFIF 的。\n改图查看图片详细信息，把自己的图改成和BIOS里面那张一样格式、差不多大小的。如果文件太大了保存的时候会报错，所以不用太担心图片太大把 BIOS 改坏。UEFI 启动图的高度最好不要太高，不然会被 Windows 的圆圈盖住。我的启动选单背景图只有改成 1024x768 分辨率才能正常显示，其他的图片倒是没问题。还有就是有的 BIOS 只认 JFIF 文件头的图片，Photoshop CC 保存的 JPG 不带 JFIF 文件头，可换用 CS4 。\n替换改完图片之后用 UEFITool 打开BIOS文件，Ctrl+F 搜索要替换的图片的 GIUD 。展开到 Raw section 右键选择 Extract body… 保存成 jpg 看下是不是要改的那张图。是的话再右键选择 Replace body… 替换成自己改的图片。\n保存替换完 Ctrl+S 保存 BIOS 。如果保存的时候出错了，有可能是图片文件太大了，存小点试试。\n刷入最后刷进主板。\n改好的图LEGACY开机LOGO\n启动选单\nUEFI开机LOGO\n实际效果\n","dateCreated":"2017-09-25T14:50:34+08:00","dateModified":"2018-06-19T03:54:36+08:00","datePublished":"2017-09-25T14:50:34+08:00","description":"　　MSI 主板的启动图片看腻了，想换一个，可找了好多替换工具都换不到启动图。　　后来用 UEFIExtract 直接把 BIOS 全部解包，找到了图片位置。　　刷修改过的 BIOS 有可能把主板变砖。上次搞坏过一次，还好主板有 JSPI1 接口，在某宝买了个编程器刷好了。","headline":"修改 AMI BIOS 的启动 LOGO","image":["c08legacy开机logo.jpg"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://veltlion.github.io/change-uefi-boot-logo/"},"publisher":{"@type":"Organization","name":"空","sameAs":["mailto:&#115;&#111;&#114;&#97;&#64;&#108;&#105;&#118;&#101;&#46;&#106;&#112;","https://twitter.com/yume1001","https://t.me/soratan"],"image":"avatar.png","logo":{"@type":"ImageObject","url":"avatar.png"}},"url":"https://veltlion.github.io/change-uefi-boot-logo/","keywords":"BIOS, AMI, LOGO","thumbnailUrl":"c08legacy开机logo.jpg"}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"空","sameAs":["mailto:&#115;&#111;&#114;&#97;&#64;&#108;&#105;&#118;&#101;&#46;&#106;&#112;","https://twitter.com/yume1001","https://t.me/soratan"],"image":"avatar.png"},"articleBody":"　　MSI 主板的启动图片看腻了，想换一个，可找了好多替换工具都换不到启动图。　　后来用 UEFIExtract 直接把 BIOS 全部解包，找到了图片位置。　　刷修改过的 BIOS 有可能把主板变砖。上次搞坏过一次，还好主板有 JSPI1 接口，在某宝买了个编程器刷好了。\n准备需要用到 UEFITool 和 UEFIExtract 、修图软件。\n修改BIOS解包用 UEFIExtract 解开 BIOS文件。UEFIExtract BIOSfile all\n找图打开解完后的文件夹，搜索 body.bin 。搜索完 Ctrl+A 全选这些搜索结果，拖到改名工具里面，扩展名改成 jpg 。改完把搜索结果显示为大图标，向下滚动，就很容易找到图片文件。然后发现能改的不止 LOGO 。找到后查看文件路径中的 GUID ，GUID 有两串，要后面的。可以把图片拖出来并改成前面的复制的名字备用。用文本编辑器或是十六进制编辑器打开这些图片查看文件头，把图片改回它本来的扩展名。（文件头对照，可以用 Ctrl+F 搜索。）像这种就是 JPG/JFIF 的。\n改图查看图片详细信息，把自己的图改成和BIOS里面那张一样格式、差不多大小的。如果文件太大了保存的时候会报错，所以不用太担心图片太大把 BIOS 改坏。UEFI 启动图的高度最好不要太高，不然会被 Windows 的圆圈盖住。我的启动选单背景图只有改成 1024x768 分辨率才能正常显示，其他的图片倒是没问题。还有就是有的 BIOS 只认 JFIF 文件头的图片，Photoshop CC 保存的 JPG 不带 JFIF 文件头，可换用 CS4 。\n替换改完图片之后用 UEFITool 打开BIOS文件，Ctrl+F 搜索要替换的图片的 GIUD 。展开到 Raw section 右键选择 Extract body… 保存成 jpg 看下是不是要改的那张图。是的话再右键选择 Replace body… 替换成自己改的图片。\n保存替换完 Ctrl+S 保存 BIOS 。如果保存的时候出错了，有可能是图片文件太大了，存小点试试。\n刷入最后刷进主板。\n改好的图LEGACY开机LOGO\n启动选单\nUEFI开机LOGO\n实际效果\n","dateCreated":"2017-09-25T14:50:34+08:00","dateModified":"2018-11-05T06:18:40+08:00","datePublished":"2017-09-25T14:50:34+08:00","description":"　　MSI 主板的启动图片看腻了，想换一个，可找了好多替换工具都换不到启动图。　　后来用 UEFIExtract 直接把 BIOS 全部解包，找到了图片位置。　　刷修改过的 BIOS 有可能把主板变砖。上次搞坏过一次，还好主板有 JSPI1 接口，在某宝买了个编程器刷好了。","headline":"修改 AMI BIOS 的启动 LOGO","image":["c08legacy开机logo.jpg"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://veltlion.github.io/change-uefi-boot-logo/"},"publisher":{"@type":"Organization","name":"空","sameAs":["mailto:&#115;&#111;&#114;&#97;&#64;&#108;&#105;&#118;&#101;&#46;&#106;&#112;","https://twitter.com/yume1001","https://t.me/soratan"],"image":"avatar.png","logo":{"@type":"ImageObject","url":"avatar.png"}},"url":"https://veltlion.github.io/change-uefi-boot-logo/","keywords":"BIOS, AMI, LOGO","thumbnailUrl":"c08legacy开机logo.jpg"}</script>
     <meta name="description" content="MSI 主板的启动图片看腻了，想换一个，可找了好多替换工具都换不到启动图。　　后来用 UEFIExtract 直接把 BIOS 全部解包，找到了图片位置。　　刷修改过的 BIOS 有可能把主板变砖。上次搞坏过一次，还好主板有 JSPI1 接口，在某宝买了个编程器刷好了。">
 <meta name="keywords" content="BIOS,AMI,LOGO">
 <meta property="og:type" content="blog">
@@ -38,7 +38,7 @@
 <meta property="og:image" content="https://veltlion.github.io/change-uefi-boot-logo/c11uefi开机logo3.jpg">
 <meta property="og:image" content="https://veltlion.github.io/change-uefi-boot-logo/c12uefi开机图1.jpg">
 <meta property="og:image" content="https://veltlion.github.io/change-uefi-boot-logo/c13uefi开机图2.jpg">
-<meta property="og:updated_time" content="2018-06-18T19:54:36.000Z">
+<meta property="og:updated_time" content="2018-11-04T22:18:40.624Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="修改 AMI BIOS 的启动 LOGO">
 <meta name="twitter:description" content="MSI 主板的启动图片看腻了，想换一个，可找了好多替换工具都换不到启动图。　　后来用 UEFIExtract 直接把 BIOS 全部解包，找到了图片位置。　　刷修改过的 BIOS 有可能把主板变砖。上次搞坏过一次，还好主板有 JSPI1 接口，在某宝买了个编程器刷好了。">
@@ -308,7 +308,7 @@
             <li class="post-action">
                 
                     
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/多说转Disqus的坑/" data-tooltip="多说转 Disqus 的坑" aria-label="下一篇: 多说转 Disqus 的坑">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/多说转 Disqus 的坑/" data-tooltip="多说转 Disqus 的坑" aria-label="下一篇: 多说转 Disqus 的坑">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -318,7 +318,7 @@
     </nav>
     <ul class="post-actions post-action-share">
         <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
                 <i class="fa fa-share-alt" aria-hidden="true"></i>
             </a>
         </li>
@@ -402,7 +402,7 @@
             <li class="post-action">
                 
                     
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/多说转Disqus的坑/" data-tooltip="多说转 Disqus 的坑" aria-label="下一篇: 多说转 Disqus 的坑">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/多说转 Disqus 的坑/" data-tooltip="多说转 Disqus 的坑" aria-label="下一篇: 多说转 Disqus 的坑">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -412,7 +412,7 @@
     </nav>
     <ul class="post-actions post-action-share">
         <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
                 <i class="fa fa-share-alt" aria-hidden="true"></i>
             </a>
         </li>
