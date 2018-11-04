@@ -217,6 +217,85 @@
                 <section class="postShorten-group main-content-wrap">
     
     
+    <article class="postShorten postShorten--thumbnailimg-bottom">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a class="link-unstyled" href="/undefined/">
+                            (无标题)
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2018-10-12T19:36:57+08:00">
+	
+		    2018年10月12日
+    	
+    </time>
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content">
+                    // ==UserScript==
+// @name               LINE Sticker Download
+// @name:zh-CN         LINE Sticker Download
+// @namespace          https://veltlion.github.io/line-sticker-download
+// @include            https://store.line.me/stickershop/product/*
+// @version            1.4.1
+// @description        Add download button for line sticker store
+// @description:zh-cn  在 LINE STORE Sticker 页面添加下载按钮
+// @author             空
+// @grant              GM_download
+// ==/UserScript==
+
+var id = window.location.pathname.replace(/[^\d]/g, '');
+var link = 'https://sdl-stickershop.line.naver.jp/stickershop/v1/product/' + id + '/iphone/stickers@2x.zip';
+var aslink = 'https://sdl-stickershop.line.naver.jp/stickershop/v1/product/' + id + '/iphone/stickerpack@2x.zip';
+if ($('span').hasClass('MdIcoAni_b') || $('span').hasClass('MdIcoPlay_b') ||$('span').hasClass('MdIcoSound_b') ||
+    $('span').hasClass('MdIcoFlashAni_b') || $('span').hasClass('MdIcoFlash_b')) link = aslink;
+var file = { url: link, name: document.title.replace(/(.+) (-|–) .+/g, '$1') + '.zip' };
+var lang = navigator.language;
+var btnstr = 'Download';
+if (lang.indexOf('zh') > -1) btnstr = '下载';
+else if (lang.indexOf('ja') > -1) btnstr = 'ダウンロード';
+var btn = '<li class="mdCMN08Li" style="list-style-type: none">'
+        + '<a class="MdBtn01 mdBtn01" id="download" style="background: #33b1ff">'
+        + '<span class="mdBtn01Inner">'
+        + '<span class="mdBtn01Txt">' + btnstr + '</span>'
+        + '</span></a></li>';
+if ($('div').hasClass('mdCMN08Txt')) {
+    $('.mdCMN08Txt>ul').find('li:eq(0)').remove();
+    $('.mdCMN08Ul').prepend(btn);
+}
+else if ($('div').hasClass('mdMN05Btn')) {
+    //$('.MdBtn01').remove();
+    $('.mdMN05Btn').prepend(btn);
+}
+$('body').on('click', '#download', function(){
+    var result = GM_download(file);
+});
+                    
+                        
+
+                    
+                    
+                        <p>
+                            <a href="/undefined/#post-footer" class="postShorten-excerpt_link link">
+                                评论和共享
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
     <article class="postShorten postShorten--thumbnailimg-right">
         <div class="postShorten-wrap">
             
@@ -641,43 +720,6 @@
         
     </article>
     
-    
-    <article class="postShorten postShorten--thumbnailimg-right">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title">
-                    
-                        <a class="link-unstyled" href="/多说转 Disqus 的坑/">
-                            多说转 Disqus 的坑
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time datetime="2017-06-17T06:20:57+08:00">
-	
-		    2017年06月17日
-    	
-    </time>
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-excerpt">
-                    <p>url里面有<strong>中文</strong>的一定要把中文转成<strong>大写</strong>的<strong>urlcode</strong>，一定要是<strong>大写</strong>的！！！<br>Disqus后台直接导入含中文的url会被转成小写的urlcode，可浏览器直接访问是大写的，评论都不会显示，然后这就很监介了。<br>浪费好多时间。。。<br>
-                    
-                        <a href="/多说转 Disqus 的坑/" class="postShorten-excerpt_link link">
-                            阅读全文
-                        </a>
-                        
-                    
-                </p></div>
-            
-        </div>
-        
-    </article>
-    
     <div class="pagination-bar">
     <ul class="pagination">
         
@@ -689,7 +731,7 @@
             </a>
           </li>
         
-        <li class="pagination-number">第 1 页 共 4 页</li>
+        <li class="pagination-number">第 1 页 共 5 页</li>
     </ul>
 </div>
 

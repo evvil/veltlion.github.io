@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="空">
-    <title>真好看啊 - 空</title>
+    <title> - 空</title>
     <meta name="author" content="空">
     
     
@@ -15,20 +15,18 @@
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"空","sameAs":["mailto:&#115;&#111;&#114;&#97;&#64;&#108;&#105;&#118;&#101;&#46;&#106;&#112;","https://twitter.com/yume1001","https://t.me/soratan"],"image":"avatar.png"},"articleBody":"我家主子真可爱\n","dateCreated":"2017-10-08T12:08:00+08:00","dateModified":"2018-11-05T06:26:47+08:00","datePublished":"2017-10-08T12:08:00+08:00","description":"我家主子真可爱","headline":"真好看啊","image":["../img/IMG_20171008_120819.jpg"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://veltlion.github.io/真好看啊/"},"publisher":{"@type":"Organization","name":"空","sameAs":["mailto:&#115;&#111;&#114;&#97;&#64;&#108;&#105;&#118;&#101;&#46;&#106;&#112;","https://twitter.com/yume1001","https://t.me/soratan"],"image":"avatar.png","logo":{"@type":"ImageObject","url":"avatar.png"}},"url":"https://veltlion.github.io/真好看啊/","thumbnailUrl":"../img/IMG_20171008_120819.jpg"}</script>
-    <meta name="description" content="我家主子真可爱">
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"空","sameAs":["mailto:&#115;&#111;&#114;&#97;&#64;&#108;&#105;&#118;&#101;&#46;&#106;&#112;","https://twitter.com/yume1001","https://t.me/soratan"],"image":"avatar.png"},"articleBody":"// ==UserScript==\n// @name               LINE Sticker Download\n// @name:zh-CN         LINE Sticker Download\n// @namespace          https://veltlion.github.io/line-sticker-download\n// @include            https://store.line.me/stickershop/product/*\n// @version            1.4.1\n// @description        Add download button for line sticker store\n// @description:zh-cn  在 LINE STORE Sticker 页面添加下载按钮\n// @author             空\n// @grant              GM_download\n// ==/UserScript==\n\nvar id = window.location.pathname.replace(/[^\\d]/g, '');\nvar link = 'https://sdl-stickershop.line.naver.jp/stickershop/v1/product/' + id + '/iphone/stickers@2x.zip';\nvar aslink = 'https://sdl-stickershop.line.naver.jp/stickershop/v1/product/' + id + '/iphone/stickerpack@2x.zip';\nif ($('span').hasClass('MdIcoAni_b') || $('span').hasClass('MdIcoPlay_b') ||$('span').hasClass('MdIcoSound_b') ||\n    $('span').hasClass('MdIcoFlashAni_b') || $('span').hasClass('MdIcoFlash_b')) link = aslink;\nvar file = { url: link, name: document.title.replace(/(.+) (-|–) .+/g, '$1') + '.zip' };\nvar lang = navigator.language;\nvar btnstr = 'Download';\nif (lang.indexOf('zh') > -1) btnstr = '下载';\nelse if (lang.indexOf('ja') > -1) btnstr = 'ダウンロード';\nvar btn = ''\n        + ''\n        + ''\n        + '' + btnstr + ''\n        + '';\nif ($('div').hasClass('mdCMN08Txt')) {\n    $('.mdCMN08Txt>ul').find('li:eq(0)').remove();\n    $('.mdCMN08Ul').prepend(btn);\n}\nelse if ($('div').hasClass('mdMN05Btn')) {\n    //$('.MdBtn01').remove();\n    $('.mdMN05Btn').prepend(btn);\n}\n$('body').on('click', '#download', function(){\n    var result = GM_download(file);\n});","dateCreated":"2018-10-12T19:36:57+08:00","dateModified":"2018-10-12T19:36:57+08:00","datePublished":"2018-10-12T19:36:57+08:00","description":"","headline":"","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://veltlion.github.io/undefined/"},"publisher":{"@type":"Organization","name":"空","sameAs":["mailto:&#115;&#111;&#114;&#97;&#64;&#108;&#105;&#118;&#101;&#46;&#106;&#112;","https://twitter.com/yume1001","https://t.me/soratan"],"image":"avatar.png","logo":{"@type":"ImageObject","url":"avatar.png"}},"url":"https://veltlion.github.io/undefined/"}</script>
+    <meta name="description" content="// ==UserScript== // @name               LINE Sticker Download // @name:zh-CN         LINE Sticker Download // @namespace          https://veltlion.github.io/line-sticker-download // @include">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="真好看啊">
-<meta property="og:url" content="https://veltlion.github.io/真好看啊/index.html">
+<meta property="og:title" content="空">
+<meta property="og:url" content="https://veltlion.github.io/undefined/index.html">
 <meta property="og:site_name" content="空">
-<meta property="og:description" content="我家主子真可爱">
+<meta property="og:description" content="// ==UserScript== // @name               LINE Sticker Download // @name:zh-CN         LINE Sticker Download // @namespace          https://veltlion.github.io/line-sticker-download // @include">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://veltlion.github.io/img/IMG_20171008_120819.jpg">
-<meta property="og:updated_time" content="2018-11-04T22:26:47.853Z">
+<meta property="og:updated_time" content="2018-10-12T11:36:57.777Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="真好看啊">
-<meta name="twitter:description" content="我家主子真可爱">
-<meta name="twitter:image" content="https://veltlion.github.io/img/IMG_20171008_120819.jpg">
+<meta name="twitter:title" content="空">
+<meta name="twitter:description" content="// ==UserScript== // @name               LINE Sticker Download // @name:zh-CN         LINE Sticker Download // @namespace          https://veltlion.github.io/line-sticker-download // @include">
 <meta name="twitter:creator" content="@yume1001">
     
     
@@ -37,9 +35,6 @@
     
         <meta property="og:image" content="https://veltlion.github.io/assets/images/avatar.png"/>
     
-    
-        <meta property="og:image" content="https://veltlion.github.io/真好看啊/../img/IMG_20171008_120819.jpg"/>
-        <meta class="swiftype" name="image" data-type="enum" content="https://veltlion.github.io/真好看啊/../img/IMG_20171008_120819.jpg" />
     
     
     
@@ -227,22 +222,16 @@
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title">
-            真好看啊
+            (无标题)
         </h1>
     
     
         <div class="post-meta">
-    <time datetime="2017-10-08T12:08:00+08:00">
+    <time datetime="2018-10-12T19:36:57+08:00">
 	
-		    2017年10月08日
+		    2018年10月12日
     	
     </time>
-    
-        <span>发布在 </span>
-        
-    <a class="category-link" href="/categories/日常/">日常</a>
-
-
     
 </div>
 
@@ -252,8 +241,44 @@
     
     <div class="post-content markdown">
         <div class="main-content-wrap">
-            <p>我家主子真可爱<br><a id="more"></a></p>
-<center><img src="/img/IMG_20171008_120819.jpg" height="510px" alt="老婆"></center>
+            // ==UserScript==
+// @name               LINE Sticker Download
+// @name:zh-CN         LINE Sticker Download
+// @namespace          https://veltlion.github.io/line-sticker-download
+// @include            https://store.line.me/stickershop/product/*
+// @version            1.4.1
+// @description        Add download button for line sticker store
+// @description:zh-cn  在 LINE STORE Sticker 页面添加下载按钮
+// @author             空
+// @grant              GM_download
+// ==/UserScript==
+
+var id = window.location.pathname.replace(/[^\d]/g, '');
+var link = 'https://sdl-stickershop.line.naver.jp/stickershop/v1/product/' + id + '/iphone/stickers@2x.zip';
+var aslink = 'https://sdl-stickershop.line.naver.jp/stickershop/v1/product/' + id + '/iphone/stickerpack@2x.zip';
+if ($('span').hasClass('MdIcoAni_b') || $('span').hasClass('MdIcoPlay_b') ||$('span').hasClass('MdIcoSound_b') ||
+    $('span').hasClass('MdIcoFlashAni_b') || $('span').hasClass('MdIcoFlash_b')) link = aslink;
+var file = { url: link, name: document.title.replace(/(.+) (-|–) .+/g, '$1') + '.zip' };
+var lang = navigator.language;
+var btnstr = 'Download';
+if (lang.indexOf('zh') > -1) btnstr = '下载';
+else if (lang.indexOf('ja') > -1) btnstr = 'ダウンロード';
+var btn = '<li class="mdCMN08Li" style="list-style-type: none">'
+        + '<a class="MdBtn01 mdBtn01" id="download" style="background: #33b1ff">'
+        + '<span class="mdBtn01Inner">'
+        + '<span class="mdBtn01Txt">' + btnstr + '</span>'
+        + '</span></a></li>';
+if ($('div').hasClass('mdCMN08Txt')) {
+    $('.mdCMN08Txt>ul').find('li:eq(0)').remove();
+    $('.mdCMN08Ul').prepend(btn);
+}
+else if ($('div').hasClass('mdMN05Btn')) {
+    //$('.MdBtn01').remove();
+    $('.mdMN05Btn').prepend(btn);
+}
+$('body').on('click', '#download', function(){
+    var result = GM_download(file);
+});
             
 
         </div>
@@ -266,8 +291,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/cross-compile-aria2/" data-tooltip="编译 Aria2 笔记" aria-label="上一篇: 编译 Aria2 笔记">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left" aria-hidden="true"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -276,7 +300,7 @@
             <li class="post-action">
                 
                     
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/flash-h7-4/" data-tooltip="给海美迪 H7 四代刷第三方固件" aria-label="下一篇: 给海美迪 H7 四代刷第三方固件">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/export-firefox-password/" data-tooltip="导出 Firefox 密码到 KeePass" aria-label="下一篇: 导出 Firefox 密码到 KeePass">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -294,7 +318,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://veltlion.github.io/真好看啊/" data-tooltip="分享到 Twitter">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://veltlion.github.io/undefined/" data-tooltip="分享到 Twitter">
                     <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
             </li>
@@ -302,7 +326,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://veltlion.github.io/真好看啊/" data-tooltip="分享到 Google+">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://veltlion.github.io/undefined/" data-tooltip="分享到 Google+">
                     <i class="fab fa-google-plus" aria-hidden="true"></i>
                 </a>
             </li>
@@ -310,7 +334,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?&amp;title=https://veltlion.github.io/真好看啊/" data-tooltip="分享到 Weibo">
+                <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?&amp;title=https://veltlion.github.io/undefined/" data-tooltip="分享到 Weibo">
                     <i class="fab fa-weibo" aria-hidden="true"></i>
                 </a>
             </li>
@@ -360,8 +384,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/cross-compile-aria2/" data-tooltip="编译 Aria2 笔记" aria-label="上一篇: 编译 Aria2 笔记">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left" aria-hidden="true"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -370,7 +393,7 @@
             <li class="post-action">
                 
                     
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/flash-h7-4/" data-tooltip="给海美迪 H7 四代刷第三方固件" aria-label="下一篇: 给海美迪 H7 四代刷第三方固件">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/export-firefox-password/" data-tooltip="导出 Firefox 密码到 KeePass" aria-label="下一篇: 导出 Firefox 密码到 KeePass">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -388,7 +411,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://veltlion.github.io/真好看啊/" data-tooltip="分享到 Twitter">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://veltlion.github.io/undefined/" data-tooltip="分享到 Twitter">
                     <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
             </li>
@@ -396,7 +419,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://veltlion.github.io/真好看啊/" data-tooltip="分享到 Google+">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://veltlion.github.io/undefined/" data-tooltip="分享到 Google+">
                     <i class="fab fa-google-plus" aria-hidden="true"></i>
                 </a>
             </li>
@@ -404,7 +427,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?&amp;title=https://veltlion.github.io/真好看啊/" data-tooltip="分享到 Weibo">
+                <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?&amp;title=https://veltlion.github.io/undefined/" data-tooltip="分享到 Weibo">
                     <i class="fab fa-weibo" aria-hidden="true"></i>
                 </a>
             </li>
@@ -437,7 +460,7 @@
             
             
             <li class="share-option">
-                <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://veltlion.github.io/真好看啊/">
+                <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://veltlion.github.io/undefined/">
                     <i class="fab fa-twitter" aria-hidden="true"></i><span>分享到 Twitter</span>
                 </a>
             </li>
@@ -445,7 +468,7 @@
             
             
             <li class="share-option">
-                <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://veltlion.github.io/真好看啊/">
+                <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://veltlion.github.io/undefined/">
                     <i class="fab fa-google-plus" aria-hidden="true"></i><span>分享到 Google+</span>
                 </a>
             </li>
@@ -453,7 +476,7 @@
             
             
             <li class="share-option">
-                <a class="share-option-btn" target="new" href="http://service.weibo.com/share/share.php?&amp;title=https://veltlion.github.io/真好看啊/">
+                <a class="share-option-btn" target="new" href="http://service.weibo.com/share/share.php?&amp;title=https://veltlion.github.io/undefined/">
                     <i class="fab fa-weibo" aria-hidden="true"></i><span>分享到 Weibo</span>
                 </a>
             </li>

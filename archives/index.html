@@ -218,6 +218,85 @@
     <section class="postShorten-group main-content-wrap">
     
     
+    <article class="postShorten postShorten--thumbnailimg-bottom">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a class="link-unstyled" href="/undefined/">
+                            (无标题)
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2018-10-12T19:36:57+08:00">
+	
+		    2018年10月12日
+    	
+    </time>
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content">
+                    // ==UserScript==
+// @name               LINE Sticker Download
+// @name:zh-CN         LINE Sticker Download
+// @namespace          https://veltlion.github.io/line-sticker-download
+// @include            https://store.line.me/stickershop/product/*
+// @version            1.4.1
+// @description        Add download button for line sticker store
+// @description:zh-cn  在 LINE STORE Sticker 页面添加下载按钮
+// @author             空
+// @grant              GM_download
+// ==/UserScript==
+
+var id = window.location.pathname.replace(/[^\d]/g, '');
+var link = 'https://sdl-stickershop.line.naver.jp/stickershop/v1/product/' + id + '/iphone/stickers@2x.zip';
+var aslink = 'https://sdl-stickershop.line.naver.jp/stickershop/v1/product/' + id + '/iphone/stickerpack@2x.zip';
+if ($('span').hasClass('MdIcoAni_b') || $('span').hasClass('MdIcoPlay_b') ||$('span').hasClass('MdIcoSound_b') ||
+    $('span').hasClass('MdIcoFlashAni_b') || $('span').hasClass('MdIcoFlash_b')) link = aslink;
+var file = { url: link, name: document.title.replace(/(.+) (-|–) .+/g, '$1') + '.zip' };
+var lang = navigator.language;
+var btnstr = 'Download';
+if (lang.indexOf('zh') > -1) btnstr = '下载';
+else if (lang.indexOf('ja') > -1) btnstr = 'ダウンロード';
+var btn = '<li class="mdCMN08Li" style="list-style-type: none">'
+        + '<a class="MdBtn01 mdBtn01" id="download" style="background: #33b1ff">'
+        + '<span class="mdBtn01Inner">'
+        + '<span class="mdBtn01Txt">' + btnstr + '</span>'
+        + '</span></a></li>';
+if ($('div').hasClass('mdCMN08Txt')) {
+    $('.mdCMN08Txt>ul').find('li:eq(0)').remove();
+    $('.mdCMN08Ul').prepend(btn);
+}
+else if ($('div').hasClass('mdMN05Btn')) {
+    //$('.MdBtn01').remove();
+    $('.mdMN05Btn').prepend(btn);
+}
+$('body').on('click', '#download', function(){
+    var result = GM_download(file);
+});
+                    
+                        
+
+                    
+                    
+                        <p>
+                            <a href="/undefined/#post-footer" class="postShorten-excerpt_link link">
+                                评论和共享
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
     <article class="postShorten postShorten--thumbnailimg-right">
         <div class="postShorten-wrap">
             
@@ -1309,49 +1388,6 @@
                     <p>　　这个以前一直想写来着，不过免费的VPS挂掉了就一直没写。现在正好赶上有一个包需要更新加上博客也迁移成功，就事记录一下。省的以后更新包的时候忘记怎么弄。<br>
                     
                         <a href="/submitting-packages-to-aur/" class="postShorten-excerpt_link link">
-                            阅读全文
-                        </a>
-                        
-                    
-                </p></div>
-            
-        </div>
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-right">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title">
-                    
-                        <a class="link-unstyled" href="/switch-to-hexo/">
-                            换用Hexo了
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time datetime="2016-04-01T14:00:48+08:00">
-	
-		    2016年04月01日
-    	
-    </time>
-    
-        <span>发布在 </span>
-        
-    <a class="category-link" href="/categories/瞎鼓捣/">瞎鼓捣</a>
-
-
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-excerpt">
-                    <p>　　本来想记录下把 WordPress 从手机搬到 VPS 上的过程来着，可是免费的 VPS 没用几天就挂了，所以就鸽了吧。不过现在因为有好多东西想记所以想继续弄个 blog 之类的，毕竟放在手机上不好操作，外网也不能访问。VPS 又贵又麻烦，所以又在找第三方免费博客。<br>　　然后想起以前看到过有人在 Github 上面搞，就去 Google 了一下，没想到还有 GitHub Pages 这么方便的东西。<br>　　不过装起来好麻烦，虽然有 Github 的账号，但是一次也没用过。又去网上现查 Github 怎么用啊，Hexo 怎么装啊之类的。然后照着官方的文档还是叫 wiki 来着，把 WordPress 的文章也迁移过来了。虽然都是什么没有技术含量也很无聊而且没有意义的文章。<br>
-                    
-                        <a href="/switch-to-hexo/" class="postShorten-excerpt_link link">
                             阅读全文
                         </a>
                         
