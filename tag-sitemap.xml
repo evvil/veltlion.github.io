@@ -171,41 +171,6 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/tags/LibreELEC/</loc>
-        <lastmod>2018-10-31T17:33:23.851Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://veltlion.github.io/tags/H7%E5%9B%9B%E4%BB%A3/</loc>
-        <lastmod>2018-11-02T18:52:52.652Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://veltlion.github.io/tags/ROOT/</loc>
-        <lastmod>2018-11-02T18:52:52.652Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://veltlion.github.io/tags/S912/</loc>
-        <lastmod>2018-11-03T14:49:44.317Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://veltlion.github.io/tags/Android/</loc>
-        <lastmod>2018-11-03T14:59:51.242Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://veltlion.github.io/tags/samba/</loc>
         <lastmod>2018-11-03T14:59:51.242Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -220,8 +185,43 @@
     </url>
 
     <url>
+        <loc>https://veltlion.github.io/tags/Android/</loc>
+        <lastmod>2018-11-04T15:30:02.543Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://veltlion.github.io/tags/%E6%9C%BA%E9%A1%B6%E7%9B%92/</loc>
-        <lastmod>2018-11-03T14:59:51.242Z</lastmod>
+        <lastmod>2018-11-04T15:30:02.543Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/tags/S912/</loc>
+        <lastmod>2018-11-04T15:30:02.543Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/tags/H7%E5%9B%9B%E4%BB%A3/</loc>
+        <lastmod>2018-11-04T15:30:02.543Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/tags/ROOT/</loc>
+        <lastmod>2018-11-04T15:30:02.543Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/tags/LibreELEC/</loc>
+        <lastmod>2018-11-04T15:30:02.543Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
