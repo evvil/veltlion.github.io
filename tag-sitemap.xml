@@ -17,13 +17,6 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/tags/%E7%A9%BA/</loc>
-        <lastmod>2018-03-01T14:46:13.126Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://veltlion.github.io/tags/Arch-Linux/</loc>
         <lastmod>2018-04-06T18:55:58.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -87,22 +80,8 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/tags/anmpp/</loc>
-        <lastmod>2018-09-08T16:51:18.558Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://veltlion.github.io/tags/C/</loc>
         <lastmod>2018-09-11T16:29:59.264Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://veltlion.github.io/tags/%E7%AC%94%E8%AE%B0/</loc>
-        <lastmod>2018-09-11T16:32:20.684Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -171,13 +150,6 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/tags/Android/</loc>
-        <lastmod>2018-11-04T20:54:40.334Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://veltlion.github.io/tags/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91/</loc>
         <lastmod>2018-11-04T20:54:40.334Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -213,15 +185,43 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/tags/Hexo/</loc>
-        <lastmod>2018-11-04T20:55:37.705Z</lastmod>
+        <loc>https://veltlion.github.io/tags/%E9%87%8D%E5%91%BD%E5%90%8D/</loc>
+        <lastmod>2018-11-04T21:37:37.265Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/tags/%E9%87%8D%E5%91%BD%E5%90%8D/</loc>
-        <lastmod>2018-11-04T20:55:37.705Z</lastmod>
+        <loc>https://veltlion.github.io/tags/Hexo/</loc>
+        <lastmod>2018-11-04T21:37:37.265Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/tags/Android/</loc>
+        <lastmod>2018-11-04T21:42:35.622Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/tags/anmpp/</loc>
+        <lastmod>2018-11-04T21:43:55.110Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/tags/%E7%A9%BA/</loc>
+        <lastmod>2018-11-04T21:44:09.469Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/tags/%E7%AC%94%E8%AE%B0/</loc>
+        <lastmod>2018-11-04T21:45:39.308Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

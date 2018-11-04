@@ -1,0 +1,540 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="空">
+    <title>编译 Android 用的 redsocks - 空</title>
+    <meta name="author" content="空">
+    
+    
+        <link rel="icon" href="https://veltlion.github.io/assets/images/favicon.ico">
+    
+    
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+    
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"空","sameAs":["mailto:&#115;&#111;&#114;&#97;&#64;&#108;&#105;&#118;&#101;&#46;&#106;&#112;","https://twitter.com/yume1001","https://t.me/soratan"],"image":"avatar.png"},"articleBody":"　　因为手机上要用到 redsocks ，从 shadowsocks-android 里面拿出来的 redsocks 不支持 dnstc 。然后就各种 Google 编译了个。我都不知道最后怎么搞成功的。　　如果 NDK 老是出错的话换编译器吧…手机上的 termux 装个 clang 也能编译。\n装编译器因为第二次用 NDK 编译老是出错，换了个编译器。sudo apt install gcc-aarch64-linux-gnu g++-aarch64-linux-gnu pkg-config-aarch64-linux-gnu\n编译 libevent1234567wget https://github.com/libevent/libevent/releases/download/release-2.1.8-stable/libevent-2.1.8-stable.tar.gztar xvf libevent-2.1.8-stable.tar.gzcd libevent-2.1.8-stable./configure \\ --host=aarch64-linux-gnu --prefix=/home/sora/123/libeventmake &amp;&amp; make installcd ..\n编译 redsocks123456wget https://github.com/darkk/redsocks/archive/release-0.5.tar.gztar xvf release-0.5.tar.gzcd redsocks-release-0.5CC=aarch64-linux-gnu-gcc \\CFLAGS=\"-static -I /home/sora/123/libevent/include\" \\LDFLAGS=\"-L /home/sora/123/libevent/lib\" make\n最后 strip 一下减小下体积。aarch64-linux-gnu-strip redsocks\n完成编译完成的文件。redsocks&amp;pdnsd.zip\n","dateCreated":"2015-02-19T22:13:32+08:00","dateModified":"2018-04-07T02:59:17+08:00","datePublished":"2015-02-19T22:13:32+08:00","description":"　　因为手机上要用到 redsocks ，从 shadowsocks-android 里面拿出来的 redsocks 不支持 dnstc 。然后就各种 Google 编译了个。我都不知道最后怎么搞成功的。　　如果 NDK 老是出错的话换编译器吧…手机上的 termux 装个 clang 也能编译。","headline":"编译 Android 用的 redsocks","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://veltlion.github.io/编译-android-用的-redsocks/"},"publisher":{"@type":"Organization","name":"空","sameAs":["mailto:&#115;&#111;&#114;&#97;&#64;&#108;&#105;&#118;&#101;&#46;&#106;&#112;","https://twitter.com/yume1001","https://t.me/soratan"],"image":"avatar.png","logo":{"@type":"ImageObject","url":"avatar.png"}},"url":"https://veltlion.github.io/编译-android-用的-redsocks/","keywords":"Android, redsocks, 交叉编译"}</script>
+    <meta name="description" content="因为手机上要用到 redsocks ，从 shadowsocks-android 里面拿出来的 redsocks 不支持 dnstc 。然后就各种 Google 编译了个。我都不知道最后怎么搞成功的。　　如果 NDK 老是出错的话换编译器吧…手机上的 termux 装个 clang 也能编译。">
+<meta name="keywords" content="Android,redsocks,交叉编译">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="编译 Android 用的 redsocks">
+<meta property="og:url" content="https://veltlion.github.io/编译-android-用的-redsocks/index.html">
+<meta property="og:site_name" content="空">
+<meta property="og:description" content="因为手机上要用到 redsocks ，从 shadowsocks-android 里面拿出来的 redsocks 不支持 dnstc 。然后就各种 Google 编译了个。我都不知道最后怎么搞成功的。　　如果 NDK 老是出错的话换编译器吧…手机上的 termux 装个 clang 也能编译。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-04-06T18:59:17.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="编译 Android 用的 redsocks">
+<meta name="twitter:description" content="因为手机上要用到 redsocks ，从 shadowsocks-android 里面拿出来的 redsocks 不支持 dnstc 。然后就各种 Google 编译了个。我都不知道最后怎么搞成功的。　　如果 NDK 老是出错的话换编译器吧…手机上的 termux 装个 clang 也能编译。">
+<meta name="twitter:creator" content="@yume1001">
+    
+    
+        
+    
+    
+        <meta property="og:image" content="https://veltlion.github.io/assets/images/avatar.png"/>
+    
+    
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-q5gyp41mydv21foxq3qnhhksiajld8kdceohbyl8igf5bl5wvojk5yamro6w.min.css">
+    <!--STYLES END-->
+    
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-106826273-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+        
+            
+        
+    
+
+<header id="header" data-behavior="2">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a class="header-title-link" href="/ ">空</a>
+    </div>
+    
+        
+            <a class="header-right-picture " href="#about">
+        
+        
+            <img class="header-picture" src="/assets/images/avatar.png" alt="作者的图片">
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="2">
+    <div class="sidebar-container">
+        
+            <div class="sidebar-profile">
+                <a href="/#about">
+                    <img class="sidebar-profile-picture" src="/assets/images/avatar.png" alt="作者的图片">
+                </a>
+                <h4 class="sidebar-profile-name">空</h4>
+                
+                    <h5 class="sidebar-profile-bio"><p>author.bio</p>
+</h5>
+                
+            </div>
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/ " title="首页">
+                    
+                        <i class="sidebar-button-icon far fa-circle" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">首页</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/all-archives" title="归档">
+                    
+                        <i class="sidebar-button-icon fas fa-bars" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">归档</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/all-categories" title="分类">
+                    
+                        <i class="sidebar-button-icon fa fa-bookmark" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">分类</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/all-tags" title="标签">
+                    
+                        <i class="sidebar-button-icon far fa-star" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">标签</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/about" title="关于">
+                    
+                        <i class="sidebar-button-icon fas fa-info" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">关于</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="mailto:&#115;&#111;&#114;&#97;&#64;&#108;&#105;&#118;&#101;&#46;&#106;&#112;" target="_blank" rel="noopener" title="Email">
+                    
+                        <i class="sidebar-button-icon fa fa-envelope" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Email</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="https://twitter.com/yume1001" target="_blank" rel="noopener" title="Twitter">
+                    
+                        <i class="sidebar-button-icon fab fa-twitter" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Twitter</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="https://t.me/soratan" target="_blank" rel="noopener" title="Telegram">
+                    
+                        <i class="sidebar-button-icon fab fa-telegram-plane" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Telegram</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/atom.xml" title="RSS">
+                    
+                        <i class="sidebar-button-icon fa fa-rss" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/links" title="Links">
+                    
+                        <i class="sidebar-button-icon fas fa-link" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Links</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+            <div id="main" data-behavior="2"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post">
+    
+    
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title">
+            编译 Android 用的 redsocks
+        </h1>
+    
+    
+        <div class="post-meta">
+    <time datetime="2015-02-19T22:13:32+08:00">
+	
+		    2015年02月19日
+    	
+    </time>
+    
+        <span>发布在 </span>
+        
+    <a class="category-link" href="/categories/瞎鼓捣/">瞎鼓捣</a>
+
+
+    
+</div>
+
+    
+</div>
+
+    
+    <div class="post-content markdown">
+        <div class="main-content-wrap">
+            <p>　　因为手机上要用到 redsocks ，从 shadowsocks-android 里面拿出来的 redsocks 不支持 dnstc 。然后就各种 Google 编译了个。我都不知道最后怎么搞成功的。<br>　　如果 NDK 老是出错的话换编译器吧…手机上的 termux 装个 clang 也能编译。<br><a id="more"></a></p>
+<h3 id="装编译器"><a href="#装编译器" class="headerlink" title="装编译器"></a>装编译器</h3><p>因为第二次用 NDK 编译老是出错，换了个编译器。<br><code>sudo apt install gcc-aarch64-linux-gnu g++-aarch64-linux-gnu pkg-config-aarch64-linux-gnu</code></p>
+<h3 id="编译-libevent"><a href="#编译-libevent" class="headerlink" title="编译 libevent"></a>编译 libevent</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/libevent/libevent/releases/download/release-2.1.8-stable/libevent-2.1.8-stable.tar.gz</span><br><span class="line">tar xvf libevent-2.1.8-stable.tar.gz</span><br><span class="line"><span class="built_in">cd</span> libevent-2.1.8-stable</span><br><span class="line">./configure \</span><br><span class="line"> --host=aarch64-linux-gnu --prefix=/home/sora/123/libevent</span><br><span class="line">make &amp;&amp; make install</span><br><span class="line"><span class="built_in">cd</span> ..</span><br></pre></td></tr></table></figure>
+<h3 id="编译-redsocks"><a href="#编译-redsocks" class="headerlink" title="编译 redsocks"></a>编译 redsocks</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/darkk/redsocks/archive/release-0.5.tar.gz</span><br><span class="line">tar xvf release-0.5.tar.gz</span><br><span class="line"><span class="built_in">cd</span> redsocks-release-0.5</span><br><span class="line">CC=aarch64-linux-gnu-gcc \</span><br><span class="line">CFLAGS=<span class="string">"-static -I /home/sora/123/libevent/include"</span> \</span><br><span class="line">LDFLAGS=<span class="string">"-L /home/sora/123/libevent/lib"</span> make</span><br></pre></td></tr></table></figure>
+<p>最后 strip 一下减小下体积。<br><code>aarch64-linux-gnu-strip redsocks</code></p>
+<h3 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h3><p>编译完成的文件。<br><a href="/files/redsocks&amp;pdnsd.zip">redsocks&amp;pdnsd.zip</a></p>
+
+            
+
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">标签</span><br>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/Android/">Android</a> <a class="tag tag--primary tag--small t-link" href="/tags/redsocks/">redsocks</a> <a class="tag tag--primary tag--small t-link" href="/tags/交叉编译/">交叉编译</a>
+
+            </div>
+        
+        
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/そら…/" data-tooltip="そら…" aria-label="上一篇: そら…">
+                
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/android全局http-s-代理/" data-tooltip="Android全局HTTP(S)代理" aria-label="下一篇: Android全局HTTP(S)代理">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://veltlion.github.io/编译-android-用的-redsocks/" data-tooltip="分享到 Twitter">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://veltlion.github.io/编译-android-用的-redsocks/" data-tooltip="分享到 Google+">
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?&amp;title=https://veltlion.github.io/编译-android-用的-redsocks/" data-tooltip="分享到 Weibo">
+                    <i class="fab fa-weibo" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+                <li class="post-action">
+                    <a class="post-action-btn btn btn--default" href="#comments">
+                         <i class="fa fa-comment"></i>
+                    </a>
+                </li>
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+        
+            
+                <div id="comments"></div>
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2018 空. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="2">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/そら…/" data-tooltip="そら…" aria-label="上一篇: そら…">
+                
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/android全局http-s-代理/" data-tooltip="Android全局HTTP(S)代理" aria-label="下一篇: Android全局HTTP(S)代理">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://veltlion.github.io/编译-android-用的-redsocks/" data-tooltip="分享到 Twitter">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://veltlion.github.io/编译-android-用的-redsocks/" data-tooltip="分享到 Google+">
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?&amp;title=https://veltlion.github.io/编译-android-用的-redsocks/" data-tooltip="分享到 Weibo">
+                    <i class="fab fa-weibo" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+                <li class="post-action">
+                    <a class="post-action-btn btn btn--default" href="#comments">
+                         <i class="fa fa-comment"></i>
+                    </a>
+                </li>
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="2">
+    <i id="btn-close-shareoptions" class="fa fa-times"></i>
+    <ul class="share-options">
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://veltlion.github.io/编译-android-用的-redsocks/">
+                    <i class="fab fa-twitter" aria-hidden="true"></i><span>分享到 Twitter</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://veltlion.github.io/编译-android-用的-redsocks/">
+                    <i class="fab fa-google-plus" aria-hidden="true"></i><span>分享到 Google+</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="http://service.weibo.com/share/share.php?&amp;title=https://veltlion.github.io/编译-android-用的-redsocks/">
+                    <i class="fab fa-weibo" aria-hidden="true"></i><span>分享到 Weibo</span>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-times"></i>
+        </div>
+        
+            <img id="about-card-picture" src="/assets/images/avatar.png" alt="作者的图片">
+        
+            <h4 id="about-card-name">空</h4>
+        
+            <div id="about-card-bio"><p>author.bio</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br>
+                <p>author.job</p>
+
+            </div>
+        
+        
+            <div id="about-card-location">
+                <i class="fa fa-map-marker-alt"></i>
+                <br>
+                test
+            </div>
+        
+    </div>
+</div>
+
+        
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+        <!--SCRIPTS-->
+<script src="/assets/js/script-tzrybri9dq9kqb3c9293hhrcnban9piwdsez1hk3l89bvpjv2cx35v9pqnop.min.js"></script>
+<!--SCRIPTS END-->
+
+    
+        <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+        <script src="/assets/js/Valine.min.js"></script>
+        <script>
+            new Valine({
+                av: AV,
+                el: '#comments',
+                notify:'false', 
+                verify:'false', 
+                appId:'4PRFCeNilpABAutJlqdmectP-gzGzoHsz',
+                appKey:'X2snnlim2EiRUn2OcbXkPreB',
+                placeholder:'',
+                path:window.location.pathname, 
+                avatar:'mp' 
+            });
+        </script>
+     
+
+
+
+    </body>
+</html>

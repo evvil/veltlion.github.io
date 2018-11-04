@@ -18,8 +18,8 @@
   
   <entry>
     <title>导出 Firefox 密码到 KeePass</title>
-    <link href="https://veltlion.github.io/export-firefox-password/"/>
-    <id>https://veltlion.github.io/export-firefox-password/</id>
+    <link href="https://veltlion.github.io/%E5%AF%BC%E5%87%BA-firefox-%E5%AF%86%E7%A0%81%E5%88%B0-keepass/"/>
+    <id>https://veltlion.github.io/导出-firefox-密码到-keepass/</id>
     <published>2018-06-18T18:36:50.000Z</published>
     <updated>2018-11-04T20:54:58.119Z</updated>
     
@@ -51,10 +51,10 @@
   
   <entry>
     <title>唔…</title>
-    <link href="https://veltlion.github.io/2018-03-14.%E5%94%94%E2%80%A6/"/>
-    <id>https://veltlion.github.io/2018-03-14.唔…/</id>
+    <link href="https://veltlion.github.io/%E5%94%94%E2%80%A6/"/>
+    <id>https://veltlion.github.io/唔…/</id>
     <published>2018-03-13T22:42:00.000Z</published>
-    <updated>2018-09-08T16:42:47.957Z</updated>
+    <updated>2018-11-04T21:42:01.094Z</updated>
     
     <content type="html"><![CDATA[<p>换用 Hexo 之后就很少写心情之类的东西了。<br>　　以前用 WordPress 的时候编辑很方便，手机 APP 也很好用。还可以隐藏文章，可以不在主页显示。<br>　　换用 Hexo + GitHub Pages 之后，没有了隐藏文章，因为可以直接在 GitHub 上面看到。还有就是经常出现 新建文件 再填完 title 、date 之后忘记想写什么的情况。<br>　　发布就更麻烦了，WordPress 的 APP 只要写好然后按一下按钮就好了，Hexo 却要打开终端敲命令，还要忍受 nodejs 超长的加载时间，不过谁让这是免费的呢。<br>　　评论也是没有好用的，多说死了，disqus 被墙，而且不能修改 url ，改了的话整个页面的评论都会消失，再改回去也不能复原。导出来备份不能再导入。现在用的 Valine 也是，没有二级评论。<br>　　从 WordPress 转换来的和最近写的日记只能雪藏在 _drafts 里面了，就连现在这个我都不知道放 _drafts 里面还是 _post 里面。</p><p>最初我弄 blog 明明是想记日记用啊。</p><a id="more"></a>]]></content>
     
@@ -98,8 +98,8 @@
   
   <entry>
     <title>编译 Samba 笔记</title>
-    <link href="https://veltlion.github.io/cross-compile-samba/"/>
-    <id>https://veltlion.github.io/cross-compile-samba/</id>
+    <link href="https://veltlion.github.io/%E7%BC%96%E8%AF%91-samba-%E7%AC%94%E8%AE%B0/"/>
+    <id>https://veltlion.github.io/编译-samba-笔记/</id>
     <published>2018-02-26T15:57:01.000Z</published>
     <updated>2018-11-04T20:54:40.334Z</updated>
     
@@ -126,8 +126,8 @@
   
   <entry>
     <title>蛋炒饭</title>
-    <link href="https://veltlion.github.io/2018-01-10.%E8%9B%8B%E7%82%92%E9%A5%AD/"/>
-    <id>https://veltlion.github.io/2018-01-10.蛋炒饭/</id>
+    <link href="https://veltlion.github.io/%E8%9B%8B%E7%82%92%E9%A5%AD/"/>
+    <id>https://veltlion.github.io/蛋炒饭/</id>
     <published>2018-01-10T12:25:00.000Z</published>
     <updated>2018-10-11T00:11:59.000Z</updated>
     
@@ -148,8 +148,8 @@
   
   <entry>
     <title>编译 Aria2 笔记</title>
-    <link href="https://veltlion.github.io/cross-compile-aria2/"/>
-    <id>https://veltlion.github.io/cross-compile-aria2/</id>
+    <link href="https://veltlion.github.io/%E7%BC%96%E8%AF%91-aria2-%E7%AC%94%E8%AE%B0/"/>
+    <id>https://veltlion.github.io/编译-aria2-笔记/</id>
     <published>2017-12-07T08:51:04.000Z</published>
     <updated>2018-11-04T20:52:44.378Z</updated>
     
@@ -176,8 +176,8 @@
   
   <entry>
     <title>真好看啊</title>
-    <link href="https://veltlion.github.io/2017-10-08.%E7%9C%9F%E5%A5%BD%E7%9C%8B%E5%95%8A/"/>
-    <id>https://veltlion.github.io/2017-10-08.真好看啊/</id>
+    <link href="https://veltlion.github.io/%E7%9C%9F%E5%A5%BD%E7%9C%8B%E5%95%8A/"/>
+    <id>https://veltlion.github.io/真好看啊/</id>
     <published>2017-10-08T04:08:00.000Z</published>
     <updated>2018-03-01T15:30:00.274Z</updated>
     
@@ -196,8 +196,8 @@
   
   <entry>
     <title>给海美迪 H7 四代刷第三方固件</title>
-    <link href="https://veltlion.github.io/flash-h7-4/"/>
-    <id>https://veltlion.github.io/flash-h7-4/</id>
+    <link href="https://veltlion.github.io/%E7%BB%99%E6%B5%B7%E7%BE%8E%E8%BF%AA-h7-%E5%9B%9B%E4%BB%A3%E5%88%B7%E7%AC%AC%E4%B8%89%E6%96%B9%E5%9B%BA%E4%BB%B6/"/>
+    <id>https://veltlion.github.io/给海美迪-h7-四代刷第三方固件/</id>
     <published>2017-09-26T08:06:12.000Z</published>
     <updated>2018-11-04T15:30:02.543Z</updated>
     
@@ -216,11 +216,11 @@
     
       <category term="机顶盒" scheme="https://veltlion.github.io/tags/%E6%9C%BA%E9%A1%B6%E7%9B%92/"/>
     
+      <category term="S912" scheme="https://veltlion.github.io/tags/S912/"/>
+    
       <category term="H7四代" scheme="https://veltlion.github.io/tags/H7%E5%9B%9B%E4%BB%A3/"/>
     
       <category term="ROOT" scheme="https://veltlion.github.io/tags/ROOT/"/>
-    
-      <category term="S912" scheme="https://veltlion.github.io/tags/S912/"/>
     
       <category term="LibreELEC" scheme="https://veltlion.github.io/tags/LibreELEC/"/>
     
@@ -228,8 +228,8 @@
   
   <entry>
     <title>修改 AMI BIOS 的启动 LOGO</title>
-    <link href="https://veltlion.github.io/change-uefi-boot-logo/"/>
-    <id>https://veltlion.github.io/change-uefi-boot-logo/</id>
+    <link href="https://veltlion.github.io/%E4%BF%AE%E6%94%B9-ami-bios-%E7%9A%84%E5%90%AF%E5%8A%A8-logo/"/>
+    <id>https://veltlion.github.io/修改-ami-bios-的启动-logo/</id>
     <published>2017-09-25T06:50:34.000Z</published>
     <updated>2018-06-18T19:54:36.000Z</updated>
     
@@ -254,8 +254,8 @@
   
   <entry>
     <title>多说转 Disqus 的坑</title>
-    <link href="https://veltlion.github.io/2017-06-17.%E5%A4%9A%E8%AF%B4%E8%BD%ACDisqus%E7%9A%84%E5%9D%91/"/>
-    <id>https://veltlion.github.io/2017-06-17.多说转Disqus的坑/</id>
+    <link href="https://veltlion.github.io/%E5%A4%9A%E8%AF%B4%E8%BD%AC-disqus-%E7%9A%84%E5%9D%91/"/>
+    <id>https://veltlion.github.io/多说转-disqus-的坑/</id>
     <published>2017-06-16T22:20:57.000Z</published>
     <updated>2018-09-08T16:40:47.126Z</updated>
     
@@ -272,8 +272,8 @@
   
   <entry>
     <title>ROOT 海美迪 H7 四代</title>
-    <link href="https://veltlion.github.io/ttl-root-h7-4/"/>
-    <id>https://veltlion.github.io/ttl-root-h7-4/</id>
+    <link href="https://veltlion.github.io/root-%E6%B5%B7%E7%BE%8E%E8%BF%AA-h7-%E5%9B%9B%E4%BB%A3/"/>
+    <id>https://veltlion.github.io/root-海美迪-h7-四代/</id>
     <published>2017-04-26T17:45:00.000Z</published>
     <updated>2018-11-02T18:52:52.652Z</updated>
     
@@ -290,20 +290,20 @@
     
       <category term="机顶盒" scheme="https://veltlion.github.io/tags/%E6%9C%BA%E9%A1%B6%E7%9B%92/"/>
     
+      <category term="S912" scheme="https://veltlion.github.io/tags/S912/"/>
+    
       <category term="H7四代" scheme="https://veltlion.github.io/tags/H7%E5%9B%9B%E4%BB%A3/"/>
     
       <category term="ROOT" scheme="https://veltlion.github.io/tags/ROOT/"/>
     
-      <category term="S912" scheme="https://veltlion.github.io/tags/S912/"/>
-    
   </entry>
   
   <entry>
-    <title>入了个x1s的手柄</title>
-    <link href="https://veltlion.github.io/2017-03-05.%E5%85%A5%E4%BA%86%E4%B8%AAx1s%E7%9A%84%E6%89%8B%E6%9F%84/"/>
-    <id>https://veltlion.github.io/2017-03-05.入了个x1s的手柄/</id>
+    <title>入了个 x1s 的手柄</title>
+    <link href="https://veltlion.github.io/%E5%85%A5%E4%BA%86%E4%B8%AA-x1s-%E7%9A%84%E6%89%8B%E6%9F%84/"/>
+    <id>https://veltlion.github.io/入了个-x1s-的手柄/</id>
     <published>2017-03-04T19:15:00.000Z</published>
-    <updated>2018-11-03T13:36:46.772Z</updated>
+    <updated>2018-11-04T21:46:11.198Z</updated>
     
     <content type="html"><![CDATA[<p>然后沉迷小姐姐们不能自拔…</p><p><img src="CNN 2017-03-03 15-52-46.jpg" alt="image"><br><img src="CNN 2017-03-03 15-59-14.jpg" alt="image"><br>アナス好帅啊，好想嫁给她啊</p><p><img src="5546056.png" alt="image"><br><a id="more"></a></p>]]></content>
     
@@ -322,8 +322,8 @@
   
   <entry>
     <title>又把手机震动摔坏了…</title>
-    <link href="https://veltlion.github.io/2016-12-25.%E5%8F%88%E6%8A%8A%E6%89%8B%E6%9C%BA%E9%9C%87%E5%8A%A8%E6%91%94%E5%9D%8F%E4%BA%86%E2%80%A6/"/>
-    <id>https://veltlion.github.io/2016-12-25.又把手机震动摔坏了…/</id>
+    <link href="https://veltlion.github.io/%E5%8F%88%E6%8A%8A%E6%89%8B%E6%9C%BA%E9%9C%87%E5%8A%A8%E6%91%94%E5%9D%8F%E4%BA%86%E2%80%A6/"/>
+    <id>https://veltlion.github.io/又把手机震动摔坏了…/</id>
     <published>2016-12-24T18:36:00.000Z</published>
     <updated>2018-09-08T16:46:45.150Z</updated>
     
@@ -343,11 +343,11 @@
   </entry>
   
   <entry>
-    <title>笔记</title>
-    <link href="https://veltlion.github.io/2016-10-21.%E7%AC%94%E8%AE%B0/"/>
-    <id>https://veltlion.github.io/2016-10-21.笔记/</id>
+    <title>标日初级第一单元</title>
+    <link href="https://veltlion.github.io/%E6%A0%87%E6%97%A5%E5%88%9D%E7%BA%A7%E7%AC%AC%E4%B8%80%E5%8D%95%E5%85%83/"/>
+    <id>https://veltlion.github.io/标日初级第一单元/</id>
     <published>2016-10-21T13:55:00.000Z</published>
-    <updated>2018-09-11T16:32:20.684Z</updated>
+    <updated>2018-11-04T21:44:47.701Z</updated>
     
     <content type="html"><![CDATA[<p>从笔记本上面重新抄一份，加强印象。<br><strong>量太大了啦，从纸上抄抄就好了</strong><br><a id="more"></a></p><h2 id="第一課-李さんは中国人です。"><a href="#第一課-李さんは中国人です。" class="headerlink" title="第一課　李さんは中国人です。"></a>第一課　李さんは中国人です。</h2><p>　　第一课没有什么难度。</p><h3 id="文法"><a href="#文法" class="headerlink" title="文法"></a>文法</h3><ol><li><p><code>名</code>は<code>名</code>です（～是～）<br>“～は”是主语部分，“～です”是谓语部分，表示“<em>是～</em>”。助词“は”用于提示主题，读作“わ”。</p><blockquote><p>李さんは<ruby>中<rt>ちゅう</rt>国<rt>ごく</rt>人<rt>じん</rt></ruby>です。</p></blockquote></li><li><p><code>名</code>は<code>名</code>ではありません（～不是～）<br>上面的否定形式，“では”在口语中有时会发成“じゃ”。</p><blockquote><p>私は日本人ではありません。</p></blockquote></li><li><p>疑问句及问答</p><ol><li><p><code>名</code>は<code>名</code>ですか（～是～吗？）<br>助词“か”接在句尾表示疑问。日语的问句一般不使用“？”。回答用“はい”或“いいえ”。</p><blockquote><p>あなたは小野さんですか。<br>――はい、小野です。<br>――いいえ、小野ではありません。</p></blockquote></li><li><p>应答<br>回答疑问句的时候可以只用“はい”或“いいえ”。也可以用“はい、そうです”或“いいえ、違います”。不知道的时候用“分かりません”。</p><blockquote><p>森さんは学生ですか。<br>−−はい、そうです。<br>−−いいえ、違います。<br>−−分かりません。</p></blockquote></li></ol></li><li><p><code>名</code>の<code>名</code>[从属国家、机构] [属性]<br>助词“の”连接两个名词时，表示前名词是后名词从属的机构、国家和属性。</p><blockquote><p>李さんは大学の先生です。</p></blockquote></li></ol><h3 id="単語"><a href="#単語" class="headerlink" title="単語"></a>単語</h3><p>中国人<br>日本人<br>韓国人<br>アメリカ人<br>学生<br>先生<br>留学生<br>教授<br>社員<br>会社員<br>店員<br>研修生<br>企業<br>大学<br>父<br>課長<br>社長<br>出迎え<br>あの人<br>私<br>貴方<br>どうも<br>はい<br>いいえ<br>あっ<br>李<br>王<br>張<br>森<br>林<br>小野<br>吉田<br>田中<br>中村<br>太郎<br>金</p>]]></content>
     
@@ -366,8 +366,8 @@
   
   <entry>
     <title>小猫</title>
-    <link href="https://veltlion.github.io/2016-10-09.%E5%B0%8F%E7%8C%AB/"/>
-    <id>https://veltlion.github.io/2016-10-09.小猫/</id>
+    <link href="https://veltlion.github.io/%E5%B0%8F%E7%8C%AB/"/>
+    <id>https://veltlion.github.io/小猫/</id>
     <published>2016-10-09T14:57:00.000Z</published>
     <updated>2018-02-28T18:13:42.640Z</updated>
     
@@ -386,8 +386,8 @@
   
   <entry>
     <title>要断网了</title>
-    <link href="https://veltlion.github.io/2016-10-05.%E8%A6%81%E6%96%AD%E7%BD%91%E4%BA%86/"/>
-    <id>https://veltlion.github.io/2016-10-05.要断网了/</id>
+    <link href="https://veltlion.github.io/%E8%A6%81%E6%96%AD%E7%BD%91%E4%BA%86/"/>
+    <id>https://veltlion.github.io/要断网了/</id>
     <published>2016-10-05T08:43:00.000Z</published>
     <updated>2018-09-08T16:47:17.974Z</updated>
     
@@ -406,8 +406,8 @@
   
   <entry>
     <title>在 Android 手机上面更新 Hexo 博客</title>
-    <link href="https://veltlion.github.io/hexo-on-android/"/>
-    <id>https://veltlion.github.io/hexo-on-android/</id>
+    <link href="https://veltlion.github.io/%E5%9C%A8-android-%E6%89%8B%E6%9C%BA%E4%B8%8A%E9%9D%A2%E6%9B%B4%E6%96%B0-hexo-%E5%8D%9A%E5%AE%A2/"/>
+    <id>https://veltlion.github.io/在-android-手机上面更新-hexo-博客/</id>
     <published>2016-09-06T14:45:00.000Z</published>
     <updated>2018-05-17T18:24:51.000Z</updated>
     
@@ -432,11 +432,11 @@
   </entry>
   
   <entry>
-    <title>看书的笔记</title>
-    <link href="https://veltlion.github.io/2016-08-29.%E7%9C%8B%E4%B9%A6%E7%9A%84%E7%AC%94%E8%AE%B0/"/>
-    <id>https://veltlion.github.io/2016-08-29.看书的笔记/</id>
+    <title>读书笔记</title>
+    <link href="https://veltlion.github.io/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <id>https://veltlion.github.io/读书笔记/</id>
     <published>2016-08-28T17:29:00.000Z</published>
-    <updated>2018-09-11T16:30:25.484Z</updated>
+    <updated>2018-11-04T21:45:39.308Z</updated>
     
     <content type="html"><![CDATA[<p>前面的话</p><p>　　读书要做笔记。做笔记很重要。书中有许多许多很妙很美的词或句子值得去记。<br>　　我平时都是看网络上面的<del>盗版</del>电子书。之前 Anyview 的分享笔记功能很赞，可惜这个软件现在。又用静读天下，可之前记的几个不知道又消失到哪里去，真是靠不住。里面又有千把小时的阅读统计，不想换用。<br>　　就在这里记一下吧。<br><strong>记什么啦，好麻烦的，记这里还不如直接抄下来…</strong><br><a id="more"></a></p><h3 id="先是西游记"><a href="#先是西游记" class="headerlink" title="先是西游记"></a>先是西游记</h3><h4 id="关于唐僧喝酒"><a href="#关于唐僧喝酒" class="headerlink" title="关于唐僧喝酒"></a>关于唐僧喝酒</h4><blockquote><p>玄奘又谢恩，接了御酒道：“陛下，酒乃僧家头一戒，贫僧自为人，不会饮酒。”太宗道：“今日之行，比他事不同。<strong>此乃素酒</strong>，只饮此一杯，以尽朕奉饯之意。”三藏不敢不受。接了酒，方待要饮，只见太宗低头，将御指拾一撮尘土，弹入酒中。三藏不解其意。太宗笑道：“御弟呵，这一去，到西天，几时可回？”三藏道：“只在三年，径回上国。”太宗道：“日久年深，山遥路远，御弟可进此酒：宁恋本乡一捻土，莫爱他乡万两金。”三藏方悟捻土之意，<strong>复谢恩饮尽</strong>，辞谢出关而去。  ——「西游记」第十二回</p></blockquote><p>　　按说和尚应该是不能喝酒的，唐王说是“素酒”。看时纳闷了一下：酒不都是粮食做的吗？怎么还有荤素的说法。不过书里面有个注解：</p><blockquote><p>素酒——古时，酒有荤酒、素酒之分。素酒是用粮食、水果酿造。荤酒则酒中有荤腥。据《本草纲目》记载，有牛膝酒、虎骨酒、鹿头酒、鹿茸酒等。又如《本草纲目》还记载了京剧《空城计》中诸葛亮唱词提到的“羊羔美酒”的酿造法：用米一石，嫩肥羊肉七斤、麴十四两、杏仁一斤，同煮烂……可见荤酒酿造法之一般。</p></blockquote><p>　　原来还真有肉酿的酒，肉酿的酒不会是散发着肉块腐烂的气味吧。这样看来古时候的和尚喝酒应该不会犯戒，还挺有趣的。</p><blockquote><p>高老把素酒开樽，满斟一杯，奠了天地，然后奉与三藏。三藏道：“不瞒太公说，贫僧是胎里素，自幼儿不吃荤。”老高道：“因知老师清素，不曾敢动荤。此酒也是素的，请一杯不妨。”三藏道：“也不敢用酒。酒是我僧家第一戒者。”悟能慌了道：“师父，我自持斋，却不曾断酒。”悟空道：“老孙虽量窄，吃不上坛把，却也不曾断酒。”三藏道：“既如此，你兄弟们吃些素酒也罢。只是不许醉饮误事。”</p></blockquote><p>我搞不懂啦搞不懂啦</p><h4 id="古人告诉我们，有好东西要藏起来不让别人看到。"><a href="#古人告诉我们，有好东西要藏起来不让别人看到。" class="headerlink" title="古人告诉我们，有好东西要藏起来不让别人看到。"></a>古人告诉我们，有好东西要藏起来不让别人看到。</h4><blockquote><p>古人有云：‘珍奇玩好之物，不可使见贪婪奸伪之人。’倘若一经入目，必动其心；既动其心，必生其计。汝是个畏祸的，索之而必应其求，可也；不然，则殒身灭命，皆起于此，事不小矣。　　——「西游记」第十六回</p></blockquote><h4 id="悟空还吃过人"><a href="#悟空还吃过人" class="headerlink" title="悟空还吃过人"></a>悟空还吃过人</h4><blockquote><p>老孙在水帘洞里做妖魔时，若想人肉吃，便是这等：或变金银，或变庄台，或变醉人，或变女色。有那等痴心的爱上我，我就迷他到洞里，尽意随心，或蒸或煮受用；吃不了，还要晒干了防天阴哩！　　——「西游记」第二十七回</p></blockquote><h4 id="五谷轮回之所"><a href="#五谷轮回之所" class="headerlink" title="五谷轮回之所"></a>五谷轮回之所</h4><blockquote><p>行者道：“我才进来时，那右手下有一重小门儿，那里面秽气畜人，想必是个五谷轮回之所。你把他送在那里去罢。”</p></blockquote><h3 id="金瓶梅"><a href="#金瓶梅" class="headerlink" title="金瓶梅"></a>金瓶梅</h3><p>　　金瓶梅其实挺好看的，里面的诗啊词啊很不错。尤其是潘金莲被武二拒绝的时候引用的那句“落花有意随流水，流水无情恋落花。”我觉得很棒。</p><pre><code>六街箫鼓正喧阗，初月今朝一线添。睡去乌衣惊玉剪，斗来宵烛浑朱帘。香绡染处红余白，翠黛攒来苦味甜。阿姐当年曾似此，纵他戏汝不须嫌。</code></pre><p>这段查了好半天词典才懂</p><h3 id="一些词语"><a href="#一些词语" class="headerlink" title="一些词语"></a>一些词语</h3><ul><li><ruby>央<rp>(</rp><rt>yāng</rt><rp>)</rp>浼<rp>(</rp><rt>měi</rt><rp>)</rp></ruby>　——请求、央求。（不过我这里都是念yānggěi的。</li><li><ruby>薅<rp>(</rp><rt>hāo</rt><rp>)</rp>草<rp>(</rp><rt>cǎo</rt><rp>)</rp></ruby>　——拔草。薅：拔，除去。</li><li>够戗　——原来够戗的戗是这个戗</li><li><ruby>罢<rp>(</rp><rt>pí</rt><rp>)</rp></ruby>软　——软弱，形容做事没有主见，不果决</li><li>告诵</li><li>踅摸</li><li><ruby>恁<rp>(</rp><rt>nèn</rt><rp>)</rp></ruby>　——恁么大</li></ul>]]></content>
     
@@ -456,8 +456,8 @@
   
   <entry>
     <title>把键盘洗坏了…</title>
-    <link href="https://veltlion.github.io/2016-08-21.%E6%8A%8A%E9%94%AE%E7%9B%98%E6%B4%97%E5%9D%8F%E4%BA%86%E2%80%A6/"/>
-    <id>https://veltlion.github.io/2016-08-21.把键盘洗坏了…/</id>
+    <link href="https://veltlion.github.io/%E6%8A%8A%E9%94%AE%E7%9B%98%E6%B4%97%E5%9D%8F%E4%BA%86%E2%80%A6/"/>
+    <id>https://veltlion.github.io/把键盘洗坏了…/</id>
     <published>2016-08-21T14:47:47.000Z</published>
     <updated>2018-10-11T00:08:35.000Z</updated>
     
@@ -478,8 +478,8 @@
   
   <entry>
     <title>USB 网络共享</title>
-    <link href="https://veltlion.github.io/fix-usb-tethering-on-windows/"/>
-    <id>https://veltlion.github.io/fix-usb-tethering-on-windows/</id>
+    <link href="https://veltlion.github.io/usb-%E7%BD%91%E7%BB%9C%E5%85%B1%E4%BA%AB/"/>
+    <id>https://veltlion.github.io/usb-网络共享/</id>
     <published>2016-08-14T11:53:00.000Z</published>
     <updated>2018-09-08T16:48:17.558Z</updated>
     
@@ -507,10 +507,10 @@
   
   <entry>
     <title>Android 6.0 之后 wap 接入点不能解析 DNS 的解决方法</title>
-    <link href="https://veltlion.github.io/2016-08-09.Android6.0%E4%B9%8B%E5%90%8Ewap%E6%8E%A5%E5%85%A5%E7%82%B9%E4%B8%8D%E8%83%BD%E8%A7%A3%E6%9E%90DNS%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
-    <id>https://veltlion.github.io/2016-08-09.Android6.0之后wap接入点不能解析DNS的解决方法/</id>
+    <link href="https://veltlion.github.io/android-6-0-%E4%B9%8B%E5%90%8E-wap-%E6%8E%A5%E5%85%A5%E7%82%B9%E4%B8%8D%E8%83%BD%E8%A7%A3%E6%9E%90-dns-%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
+    <id>https://veltlion.github.io/android-6-0-之后-wap-接入点不能解析-dns-的解决方法/</id>
     <published>2016-08-09T13:21:00.000Z</published>
-    <updated>2018-09-08T16:49:40.630Z</updated>
+    <updated>2018-11-04T21:42:35.622Z</updated>
     
     <content type="html"><![CDATA[<p>　　Android 6.0 之后 wap 接入点不能解析 DNS 了，这查查那查查终于找到了解决方法。</p><ol><li>把手机的 boot 分区 dd 出来。</li><li>用 Image Kitchen for Android 或 bootimg 解开 boot 。</li><li>initrc 加入下面内容。</li><li>然后打包刷进手机。</li></ol><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># SetDNS</span></span><br><span class="line"><span class="keyword">on</span> <span class="keyword">property</span>:net.dns1=</span><br><span class="line">  setprop net.dns1 <span class="number">223.5</span><span class="number">.5</span><span class="number">.5</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># rmnet_data0 为移动数据网卡名。</span></span><br><span class="line"><span class="keyword">on</span> <span class="keyword">property</span>:net.rmnet_data0.dns1=</span><br><span class="line">  setprop net.rmnet_data0.dns1 <span class="number">223.5</span><span class="number">.5</span><span class="number">.5</span></span><br></pre></td></tr></table></figure><a id="more"></a>]]></content>
     
@@ -536,8 +536,8 @@
   
   <entry>
     <title>网易云音乐歌词转换</title>
-    <link href="https://veltlion.github.io/2016-06-30.%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E6%AD%8C%E8%AF%8D%E8%BD%AC%E6%8D%A2/"/>
-    <id>https://veltlion.github.io/2016-06-30.网易云音乐歌词转换/</id>
+    <link href="https://veltlion.github.io/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E6%AD%8C%E8%AF%8D%E8%BD%AC%E6%8D%A2/"/>
+    <id>https://veltlion.github.io/网易云音乐歌词转换/</id>
     <published>2016-06-29T23:49:00.000Z</published>
     <updated>2018-02-28T21:05:16.083Z</updated>
     
@@ -561,32 +561,32 @@
   
   <entry>
     <title>Hexo 的 md 文件重命名</title>
-    <link href="https://veltlion.github.io/hexo-md-rename/"/>
-    <id>https://veltlion.github.io/hexo-md-rename/</id>
+    <link href="https://veltlion.github.io/hexo-%E7%9A%84-md-%E6%96%87%E4%BB%B6%E9%87%8D%E5%91%BD%E5%90%8D/"/>
+    <id>https://veltlion.github.io/hexo-的-md-文件重命名/</id>
     <published>2016-05-05T06:29:35.000Z</published>
-    <updated>2018-11-04T20:55:37.705Z</updated>
+    <updated>2018-11-04T21:37:37.265Z</updated>
     
-    <content type="html"><![CDATA[<p>　　换用 Hexo 之后发现 _post 目录里面乱乱的，比如从 WordPress 中导入的中文标题文章的文件名会变成乱乱的字符串，看着很难受。所以搞了个改名的脚本来重命名文件。<br>　　重命名之后的格式为<code>PO文日期.文章标题.md</code>，如果有注明<code>permalink</code>的话就是<code>PO文日期.文章标题.permalink.md</code>。<br><a id="more"></a>　　还有一件事很重要，就是<strong>不写 permalink 或没设置 config 里的 permalink 的话，Hexo 会用文件名做文章链接</strong>。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#保存系统默认的 IFS</span></span><br><span class="line">SAVEIFS=<span class="variable">$IFS</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#更改 IFS 为换行（用于处理文件名含有空格的文件</span></span><br><span class="line">IFS=$<span class="string">'\n'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> filename <span class="keyword">in</span> $(ls *.md)</span><br><span class="line">  <span class="keyword">do</span></span><br><span class="line">    <span class="comment">#标题（不想替换空格的话就删除“s/ //g;”。</span></span><br><span class="line">    title=$(grep <span class="string">"title: "</span> <span class="variable">$filename</span> | sed -n <span class="string">'1p'</span> | sed -e <span class="string">'s/.*: //g; s#/##g;s/ //g'</span>)</span><br><span class="line">    <span class="comment">#发文日期</span></span><br><span class="line">    date=$(grep <span class="string">"date: "</span> <span class="variable">$filename</span> | sed -n <span class="string">'1p'</span> | awk <span class="string">'&#123;printf $2&#125;'</span> )</span><br><span class="line">    <span class="comment">#permalink</span></span><br><span class="line">    link=$(grep <span class="string">"permalink: "</span> <span class="variable">$filename</span> | sed -n <span class="string">'1p'</span> | awk <span class="string">'&#123;printf $2&#125;'</span> )</span><br><span class="line">    <span class="comment">#新文件名</span></span><br><span class="line">    <span class="keyword">if</span> [ -z <span class="string">"<span class="variable">$link</span>"</span> ]; <span class="keyword">then</span></span><br><span class="line">        newname=<span class="string">"<span class="variable">$date</span>.<span class="variable">$title</span>"</span></span><br><span class="line">      <span class="keyword">else</span></span><br><span class="line">        newname=<span class="string">"<span class="variable">$date</span>.<span class="variable">$title</span>.<span class="variable">$link</span>"</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="variable">$filename</span> </span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line">    <span class="comment">#过滤掉名字正确的</span></span><br><span class="line">    <span class="keyword">if</span> [ <span class="string">"<span class="variable">$filename</span>"</span> != <span class="string">"<span class="variable">$newname</span>.md"</span> ]; <span class="keyword">then</span></span><br><span class="line">       <span class="comment">#开始改名</span></span><br><span class="line">       <span class="built_in">echo</span> <span class="string">"Rename <span class="variable">$filename</span> to <span class="variable">$newname</span>.md"</span></span><br><span class="line">       mv <span class="variable">$filename</span> <span class="variable">$newname</span>.md</span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#恢复 IFS</span></span><br><span class="line">IFS=<span class="variable">$SAVEIFS</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="keyword">done</span>!</span><br></pre></td></tr></table></figure><p><img src="/img/65.png" alt="计画通り"><br>这样就舒服好多了。</p>]]></content>
+    <content type="html"><![CDATA[<p>　　换用 Hexo 之后发现 <code>_post</code> 目录里面乱乱的，比如从 WordPress 中导入的中文标题文章的文件名会变成乱乱的字符串，看着很难受。所以搞了个改名的脚本来重命名文件。<br>　　重命名之后的格式为<code>PO文日期.文章标题.md</code>，如果文件内有注明<code>permalink</code>的话就是<code>PO文日期.文章标题.permalink.md</code>。<br><a id="more"></a>　　还有一件事很重要，就是<strong><code>_config.yml</code> 里面 <code>permalink:</code> 的 <code>:title</code> 指的是文件名，不是文章标题，文章标题是 <code>:post_title</code> </strong>。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#保存系统默认的 IFS</span></span><br><span class="line">SAVEIFS=<span class="variable">$IFS</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#更改 IFS 为换行（用于处理文件名含有空格的文件</span></span><br><span class="line">IFS=$<span class="string">'\n'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> filename <span class="keyword">in</span> $(ls *.md)</span><br><span class="line">  <span class="keyword">do</span></span><br><span class="line">    <span class="comment">#标题（不想替换空格的话就删除“s/ //g;”。</span></span><br><span class="line">    title=$(grep <span class="string">"title: "</span> <span class="variable">$filename</span> | sed -n <span class="string">'1p'</span> | sed -e <span class="string">'s/.*: //g; s#/##g;s/ //g'</span>)</span><br><span class="line">    <span class="comment">#发文日期</span></span><br><span class="line">    date=$(grep <span class="string">"date: "</span> <span class="variable">$filename</span> | sed -n <span class="string">'1p'</span> | awk <span class="string">'&#123;printf $2&#125;'</span> )</span><br><span class="line">    <span class="comment">#permalink</span></span><br><span class="line">    link=$(grep <span class="string">"permalink: "</span> <span class="variable">$filename</span> | sed -n <span class="string">'1p'</span> | awk <span class="string">'&#123;printf $2&#125;'</span> )</span><br><span class="line">    <span class="comment">#新文件名</span></span><br><span class="line">    <span class="keyword">if</span> [ -z <span class="string">"<span class="variable">$link</span>"</span> ]; <span class="keyword">then</span></span><br><span class="line">        <span class="comment">#="$title"</span></span><br><span class="line">        newname=<span class="string">"<span class="variable">$date</span>.<span class="variable">$title</span>"</span></span><br><span class="line">      <span class="keyword">else</span></span><br><span class="line">        <span class="comment">#newname="$title"</span></span><br><span class="line">        newname=<span class="string">"<span class="variable">$date</span>.<span class="variable">$title</span>.<span class="variable">$link</span>"</span></span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line">    <span class="comment">#过滤掉名字正确的</span></span><br><span class="line">    <span class="keyword">if</span> [ <span class="string">"<span class="variable">$filename</span>"</span> != <span class="string">"<span class="variable">$newname</span>.md"</span> ]; <span class="keyword">then</span></span><br><span class="line">       <span class="comment">#开始改名</span></span><br><span class="line">       <span class="built_in">echo</span> <span class="string">"Rename <span class="variable">$filename</span> to <span class="variable">$newname</span>.md"</span></span><br><span class="line">       mv <span class="variable">$filename</span> <span class="variable">$newname</span>.md</span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#恢复 IFS</span></span><br><span class="line">IFS=<span class="variable">$SAVEIFS</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="keyword">done</span>!</span><br></pre></td></tr></table></figure><p><img src="/img/65.png" alt="计画通り"><br>这样就舒服好多了。</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;　　换用 Hexo 之后发现 _post 目录里面乱乱的，比如从 WordPress 中导入的中文标题文章的文件名会变成乱乱的字符串，看着很难受。所以搞了个改名的脚本来重命名文件。&lt;br&gt;　　重命名之后的格式为&lt;code&gt;PO文日期.文章标题.md&lt;/code&gt;，如果有注明&lt;code&gt;permalink&lt;/code&gt;的话就是&lt;code&gt;PO文日期.文章标题.permalink.md&lt;/code&gt;。&lt;br&gt;
+      &lt;p&gt;　　换用 Hexo 之后发现 &lt;code&gt;_post&lt;/code&gt; 目录里面乱乱的，比如从 WordPress 中导入的中文标题文章的文件名会变成乱乱的字符串，看着很难受。所以搞了个改名的脚本来重命名文件。&lt;br&gt;　　重命名之后的格式为&lt;code&gt;PO文日期.文章标题.md&lt;/code&gt;，如果文件内有注明&lt;code&gt;permalink&lt;/code&gt;的话就是&lt;code&gt;PO文日期.文章标题.permalink.md&lt;/code&gt;。&lt;br&gt;
     
     </summary>
     
       <category term="瞎鼓捣" scheme="https://veltlion.github.io/categories/%E7%9E%8E%E9%BC%93%E6%8D%A3/"/>
     
     
-      <category term="Hexo" scheme="https://veltlion.github.io/tags/Hexo/"/>
-    
       <category term="重命名" scheme="https://veltlion.github.io/tags/%E9%87%8D%E5%91%BD%E5%90%8D/"/>
+    
+      <category term="Hexo" scheme="https://veltlion.github.io/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>向AUR提交软件包</title>
-    <link href="https://veltlion.github.io/submitting-packages-to-aur/"/>
-    <id>https://veltlion.github.io/submitting-packages-to-aur/</id>
+    <link href="https://veltlion.github.io/%E5%90%91aur%E6%8F%90%E4%BA%A4%E8%BD%AF%E4%BB%B6%E5%8C%85/"/>
+    <id>https://veltlion.github.io/向aur提交软件包/</id>
     <published>2016-04-02T10:26:39.000Z</published>
     <updated>2018-02-28T21:07:10.561Z</updated>
     
@@ -607,8 +607,8 @@
   
   <entry>
     <title>换用Hexo了</title>
-    <link href="https://veltlion.github.io/switch-to-hexo/"/>
-    <id>https://veltlion.github.io/switch-to-hexo/</id>
+    <link href="https://veltlion.github.io/%E6%8D%A2%E7%94%A8hexo%E4%BA%86/"/>
+    <id>https://veltlion.github.io/换用hexo了/</id>
     <published>2016-04-01T06:00:48.000Z</published>
     <updated>2018-02-28T21:07:51.057Z</updated>
     
@@ -629,8 +629,8 @@
   
   <entry>
     <title>联通 WO-36 光猫改桥接</title>
-    <link href="https://veltlion.github.io/2016-03-11.%E8%81%94%E9%80%9AWO-36%E5%85%89%E7%8C%AB%E6%94%B9%E6%A1%A5%E6%8E%A5/"/>
-    <id>https://veltlion.github.io/2016-03-11.联通WO-36光猫改桥接/</id>
+    <link href="https://veltlion.github.io/%E8%81%94%E9%80%9A-wo-36-%E5%85%89%E7%8C%AB%E6%94%B9%E6%A1%A5%E6%8E%A5/"/>
+    <id>https://veltlion.github.io/联通-wo-36-光猫改桥接/</id>
     <published>2016-03-11T11:24:00.000Z</published>
     <updated>2018-09-08T16:50:37.893Z</updated>
     
@@ -659,8 +659,8 @@
   
   <entry>
     <title>去除「十六夜のフォルトゥーナ」日本語版Windows判定</title>
-    <link href="https://veltlion.github.io/2015-07-12.%E5%8E%BB%E9%99%A4%E3%80%8C%E5%8D%81%E5%85%AD%E5%A4%9C%E3%81%AE%E3%83%95%E3%82%A9%E3%83%AB%E3%83%88%E3%82%A5%E3%83%BC%E3%83%8A%E3%80%8D%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88Windows%E5%88%A4%E5%AE%9A/"/>
-    <id>https://veltlion.github.io/2015-07-12.去除「十六夜のフォルトゥーナ」日本語版Windows判定/</id>
+    <link href="https://veltlion.github.io/%E5%8E%BB%E9%99%A4%E3%80%8C%E5%8D%81%E5%85%AD%E5%A4%9C%E3%81%AE%E3%83%95%E3%82%A9%E3%83%AB%E3%83%88%E3%82%A5%E3%83%BC%E3%83%8A%E3%80%8D%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88windows%E5%88%A4%E5%AE%9A/"/>
+    <id>https://veltlion.github.io/去除「十六夜のフォルトゥーナ」日本語版windows判定/</id>
     <published>2015-07-12T02:43:00.000Z</published>
     <updated>2018-09-08T16:50:51.854Z</updated>
     
@@ -681,8 +681,8 @@
   
   <entry>
     <title>博客从手机挪到VPS啦</title>
-    <link href="https://veltlion.github.io/2015-04-21.%E5%8D%9A%E5%AE%A2%E4%BB%8E%E6%89%8B%E6%9C%BA%E6%8C%AA%E5%88%B0VPS%E5%95%A6/"/>
-    <id>https://veltlion.github.io/2015-04-21.博客从手机挪到VPS啦/</id>
+    <link href="https://veltlion.github.io/%E5%8D%9A%E5%AE%A2%E4%BB%8E%E6%89%8B%E6%9C%BA%E6%8C%AA%E5%88%B0vps%E5%95%A6/"/>
+    <id>https://veltlion.github.io/博客从手机挪到vps啦/</id>
     <published>2015-04-21T03:32:06.000Z</published>
     <updated>2018-09-08T16:51:18.558Z</updated>
     
@@ -704,8 +704,8 @@
   
   <entry>
     <title>在 Android 手机上 chroot ArchLinux</title>
-    <link href="https://veltlion.github.io/chroot-archlinux-on-android/"/>
-    <id>https://veltlion.github.io/chroot-archlinux-on-android/</id>
+    <link href="https://veltlion.github.io/%E5%9C%A8-android-%E6%89%8B%E6%9C%BA%E4%B8%8A-chroot-archlinux/"/>
+    <id>https://veltlion.github.io/在-android-手机上-chroot-archlinux/</id>
     <published>2015-04-13T13:46:05.000Z</published>
     <updated>2018-04-06T18:55:58.000Z</updated>
     
@@ -728,10 +728,10 @@
   
   <entry>
     <title>そら…</title>
-    <link href="https://veltlion.github.io/2015-03-22.%E3%81%9D%E3%82%89%E2%80%A6/"/>
-    <id>https://veltlion.github.io/2015-03-22.そら…/</id>
+    <link href="https://veltlion.github.io/%E3%81%9D%E3%82%89%E2%80%A6/"/>
+    <id>https://veltlion.github.io/そら…/</id>
     <published>2015-03-22T10:38:21.000Z</published>
-    <updated>2018-03-01T14:46:13.126Z</updated>
+    <updated>2018-11-04T21:44:09.469Z</updated>
     
     <content type="html"><![CDATA[<p>瀨川空の幸せ…………<br>好想杀了右边那个<br><a id="more"></a><img src="/img/123.jpg" alt="心疼自己"></p>]]></content>
     
@@ -750,8 +750,8 @@
   
   <entry>
     <title>编译 Android 用的 redsocks</title>
-    <link href="https://veltlion.github.io/cross-compile-redsocks/"/>
-    <id>https://veltlion.github.io/cross-compile-redsocks/</id>
+    <link href="https://veltlion.github.io/%E7%BC%96%E8%AF%91-android-%E7%94%A8%E7%9A%84-redsocks/"/>
+    <id>https://veltlion.github.io/编译-android-用的-redsocks/</id>
     <published>2015-02-19T14:13:32.000Z</published>
     <updated>2018-04-06T18:59:17.000Z</updated>
     
@@ -776,8 +776,8 @@
   
   <entry>
     <title>Android全局HTTP(S)代理</title>
-    <link href="https://veltlion.github.io/android-global-http-proxy/"/>
-    <id>https://veltlion.github.io/android-global-http-proxy/</id>
+    <link href="https://veltlion.github.io/android%E5%85%A8%E5%B1%80http-s-%E4%BB%A3%E7%90%86/"/>
+    <id>https://veltlion.github.io/android全局http-s-代理/</id>
     <published>2015-01-18T15:49:03.000Z</published>
     <updated>2018-04-06T19:04:01.000Z</updated>
     
@@ -802,10 +802,10 @@
   
   <entry>
     <title>C语言求素数的几种方法</title>
-    <link href="https://veltlion.github.io/2015-01-08.C%E8%AF%AD%E8%A8%80%E6%B1%82%E7%B4%A0%E6%95%B0%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/"/>
-    <id>https://veltlion.github.io/2015-01-08.C语言求素数的几种方法/</id>
+    <link href="https://veltlion.github.io/c%E8%AF%AD%E8%A8%80%E6%B1%82%E7%B4%A0%E6%95%B0%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/"/>
+    <id>https://veltlion.github.io/c语言求素数的几种方法/</id>
     <published>2015-01-08T09:11:07.000Z</published>
-    <updated>2018-09-11T16:29:40.595Z</updated>
+    <updated>2018-11-04T21:43:06.910Z</updated>
     
     <content type="html"><![CDATA[<p>放弃了。。。<br><a id="more"></a><br>第一种<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">isPrime</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> knowPrimes[], <span class="keyword">int</span> numberOfKnowPrimes)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> ret = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">for</span> ( i=<span class="number">0</span>; i&lt;numberOfKnowPrimes; i++ )</span><br><span class="line">        <span class="keyword">if</span> ( x % knowPrimes[i] == <span class="number">0</span>) &#123;</span><br><span class="line">            ret = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">int</span> number = <span class="number">100</span>;</span><br><span class="line">    <span class="keyword">int</span> prime[number] = &#123;<span class="number">2</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> count = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">3</span>;</span><br><span class="line">    <span class="keyword">while</span> ( count&amp;lt;number ) &#123;</span><br><span class="line">        <span class="keyword">if</span> ( isPrime(i, prime, count) )</span><br><span class="line">            prime[count++] = i;</span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> ( i=<span class="number">0</span>; i &amp;lt; number; i++ ) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d"</span>, prime[i]);</span><br><span class="line">        <span class="keyword">if</span> ( (i+<span class="number">1</span>)%<span class="number">5</span> ) <span class="built_in">printf</span>(<span class="string">"\t"</span>);</span><br><span class="line">        <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>第二种<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">int</span> maxNumber = <span class="number">25</span>;</span><br><span class="line">    <span class="keyword">int</span> isPrime[maxNumber];</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">int</span> x;</span><br><span class="line">    <span class="keyword">for</span> ( i=<span class="number">0</span>; i&lt;maxNumber; i++ )</span><br><span class="line">        isPrime[i] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> ( x=<span class="number">2</span>; x&lt;;maxNumber; x++ )</span><br><span class="line">        <span class="keyword">if</span> ( isPrime[x] )</span><br><span class="line">            <span class="keyword">for</span> ( i=<span class="number">2</span>; i*x&lt;;maxNumber; i++ )</span><br><span class="line">                isPrime[i*x] = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> ( i=<span class="number">2</span>; i&lt;maxNumber; i++ )</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\t"</span>, i);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>第三种</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#includ <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">isPrime</span><span class="params">(<span class="keyword">int</span> x)</span></span>;</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">int</span> ret = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">if</span> ( x==<span class="number">1</span> || (x%<span class="number">2</span>==<span class="number">0</span> &amp;amp;&amp;amp; x!=<span class="number">2</span>) )</span><br><span class="line">        ret = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> ( i=<span class="number">3</span>; i&amp;lt;<span class="built_in">sqrt</span>(x); i+=<span class="number">2</span> )</span><br><span class="line">        <span class="keyword">if</span> ( x % i == <span class="number">0</span> ) &#123;</span><br><span class="line">            ret = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -822,8 +822,8 @@
   
   <entry>
     <title>逆序的三位数</title>
-    <link href="https://veltlion.github.io/2015-01-07.%E9%80%86%E5%BA%8F%E7%9A%84%E4%B8%89%E4%BD%8D%E6%95%B0/"/>
-    <id>https://veltlion.github.io/2015-01-07.逆序的三位数/</id>
+    <link href="https://veltlion.github.io/%E9%80%86%E5%BA%8F%E7%9A%84%E4%B8%89%E4%BD%8D%E6%95%B0/"/>
+    <id>https://veltlion.github.io/逆序的三位数/</id>
     <published>2015-01-07T08:30:32.000Z</published>
     <updated>2018-09-11T16:29:59.264Z</updated>
     
@@ -848,10 +848,10 @@
   
   <entry>
     <title>伪静态</title>
-    <link href="https://veltlion.github.io/2014-11-21.%E4%BC%AA%E9%9D%99%E6%80%81/"/>
-    <id>https://veltlion.github.io/2014-11-21.伪静态/</id>
+    <link href="https://veltlion.github.io/%E4%BC%AA%E9%9D%99%E6%80%81/"/>
+    <id>https://veltlion.github.io/伪静态/</id>
     <published>2014-11-20T21:26:58.000Z</published>
-    <updated>2018-05-11T07:10:34.140Z</updated>
+    <updated>2018-11-04T21:43:55.110Z</updated>
     
     <content type="html"><![CDATA[<p>鼓捣了一晚上，终于把 anmpp 的伪静态弄好了，过几天再申请个免费域名绑上。<br><a id="more"></a></p>]]></content>
     
@@ -870,8 +870,8 @@
   
   <entry>
     <title>Untitled（二）</title>
-    <link href="https://veltlion.github.io/2014-06-25.Untitled%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
-    <id>https://veltlion.github.io/2014-06-25.Untitled（二）/</id>
+    <link href="https://veltlion.github.io/untitled%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
+    <id>https://veltlion.github.io/untitled（二）/</id>
     <published>2014-06-25T14:25:47.000Z</published>
     <updated>2018-09-11T16:35:02.897Z</updated>
     
@@ -888,8 +888,8 @@
   
   <entry>
     <title>21</title>
-    <link href="https://veltlion.github.io/2014-06-24.21/"/>
-    <id>https://veltlion.github.io/2014-06-24.21/</id>
+    <link href="https://veltlion.github.io/21/"/>
+    <id>https://veltlion.github.io/21/</id>
     <published>2014-06-24T15:00:10.000Z</published>
     <updated>2018-09-11T16:40:07.210Z</updated>
     
@@ -910,8 +910,8 @@
   
   <entry>
     <title>18</title>
-    <link href="https://veltlion.github.io/2014-06-23.18/"/>
-    <id>https://veltlion.github.io/2014-06-23.18/</id>
+    <link href="https://veltlion.github.io/18/"/>
+    <id>https://veltlion.github.io/18/</id>
     <published>2014-06-23T07:28:07.000Z</published>
     <updated>2018-09-08T17:00:23.789Z</updated>
     
@@ -930,8 +930,8 @@
   
   <entry>
     <title>手滑把数据库删了☆</title>
-    <link href="https://veltlion.github.io/2014-06-21.%E6%89%8B%E6%BB%91%E6%8A%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E5%88%A0%E4%BA%86%E2%98%86/"/>
-    <id>https://veltlion.github.io/2014-06-21.手滑把数据库删了☆/</id>
+    <link href="https://veltlion.github.io/%E6%89%8B%E6%BB%91%E6%8A%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E5%88%A0%E4%BA%86%E2%98%86/"/>
+    <id>https://veltlion.github.io/手滑把数据库删了☆/</id>
     <published>2014-06-21T09:29:23.000Z</published>
     <updated>2018-09-11T16:39:17.378Z</updated>
     
@@ -952,8 +952,8 @@
   
   <entry>
     <title>Untitled</title>
-    <link href="https://veltlion.github.io/2014-06-21.Untitled/"/>
-    <id>https://veltlion.github.io/2014-06-21.Untitled/</id>
+    <link href="https://veltlion.github.io/untitled/"/>
+    <id>https://veltlion.github.io/untitled/</id>
     <published>2014-06-21T09:26:48.000Z</published>
     <updated>2018-09-11T16:35:42.225Z</updated>
     
