@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://veltlion.github.io/"/>
-  <updated>2018-06-19T10:00:06.271Z</updated>
+  <updated>2018-11-04T20:54:58.119Z</updated>
   <id>https://veltlion.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://veltlion.github.io/export-firefox-password/"/>
     <id>https://veltlion.github.io/export-firefox-password/</id>
     <published>2018-06-18T18:36:50.000Z</published>
-    <updated>2018-06-19T10:00:06.271Z</updated>
+    <updated>2018-11-04T20:54:58.119Z</updated>
     
     <content type="html"><![CDATA[<p>从 Firefox 导出密码有几个方法：</p><ol><li>扩展：<a href="https://addons.mozilla.org/firefox/addon/password-exporter" target="_blank" rel="noopener">Password Exporter</a></li><li>软件：<a href="https://github.com/Tiggerito/WebSiteAdvantage.KeePass.Firefox.Importer" target="_blank" rel="noopener">Firefox to KeePass Password Importer</a></li></ol><p>不过这两个导出之后中文用户名会变成乱码，所以换另一种方法。</p><ol start="3"><li>Chrome 大法<br>a. 首先，关闭我们的过气浏览器 Firefox ，然后打开先进的 Chrome 。<br>b. 在地址栏输入 <a href="chrome://settings/importData" target="_blank" rel="noopener">chrome://settings/importData</a> 回车，选择<code>Mozilla Firefox</code>，勾选<code>已保存的密码</code>，导入。<br>c. 打开 <a href="chrome://flags/#PasswordExport" target="_blank" rel="noopener">chrome://flags/#PasswordExport</a> ，选择<code>Enabled</code>。<br>d. 打开 <a href="chrome://settings/passwords" target="_blank" rel="noopener">chrome://settings/passwords</a> ，点击三点，导出密码。<br>e. 打开 KeePass ，文件，导入，选择<code>Google Chrome Passwords CSV</code>。</li></ol><p>怎么样，是不是很神奇？<br><a id="more"></a></p>]]></content>
     
@@ -51,8 +51,8 @@
   
   <entry>
     <title>唔…</title>
-    <link href="https://veltlion.github.io/23/"/>
-    <id>https://veltlion.github.io/23/</id>
+    <link href="https://veltlion.github.io/2018-03-14.%E5%94%94%E2%80%A6/"/>
+    <id>https://veltlion.github.io/2018-03-14.唔…/</id>
     <published>2018-03-13T22:42:00.000Z</published>
     <updated>2018-09-08T16:42:47.957Z</updated>
     
@@ -75,7 +75,7 @@
     <link href="https://veltlion.github.io/line-sticker-download/"/>
     <id>https://veltlion.github.io/line-sticker-download/</id>
     <published>2018-03-01T23:12:18.000Z</published>
-    <updated>2018-10-12T11:37:42.673Z</updated>
+    <updated>2018-11-04T20:49:02.843Z</updated>
     
     <content type="html"><![CDATA[<p>　　LINE 的贴图大部分都很可爱，很萌萌二次元，所以就想保存下来放到 QQ 、Telegram 上用。<br>　　一个一个的保存太麻烦，很久之前写了个 bash 脚本来下载。可是就在几月前，我那脚本和一百四十多小时的 BOTW 存档就因为 SSD 掉盘，被某东的小哥带走了。满满当当的 MLCSSD 就这么变成了空荡荡的 TLCSSD ……<br>　　不过这都是很久以前的事情了，今天我又碰到一套好看的贴图想存下来，就 Google 看看有没有更简单的保存方法，然后看到 GitHub 上面有个把 LINE 贴图转到 Telegram 的工具，看一下源码发现了 LINE 的贴图包下载链接，可以直接下载。明明商店页面的图片还要验 Referrer 的说…<a id="more"></a><br><code>https://sdl-stickershop.line.naver.jp/stickershop/v1/product/贴图ID/iphone/stickers@2x.zip</code><br>　　后来 Greasyfork 上的小伙伴说还有动图包的链接，可以下载到动图和声音文件。<br><code>https://sdl-stickershop.line.naver.jp/stickershop/v1/product/贴图ID/iphone/stickerpack@2x.zip</code><br>　　iphone 也可以换成 android ，不过 iphone 的图大，应该是画质更好吧。<br>　　但这样也要手动改 url 再粘贴回车，还是很麻烦。<br>　　想到用油猴子应该可以在页面上加个下载按钮，可是我之前没接触过 js ，甚至连 js 的全名都拼不全……<br>　　好在搜索引擎是万能的，帮我解决了这些问题。不过还是有一些地方不明白，好多东西真是用到的时候才觉得少啊，下面是成果。</p><p><center><img src="1.png" alt="截图" style="width: 600px !important"></center><br>　　下面是脚本内容，也可以去 <a href="https://greasyfork.org/scripts/39015-line-sticker-download" target="_blank" rel="noopener">Greasyfork</a> 安装。<br><figure class="highlight javascript"><figcaption><span>LINE Sticker Download.user.js</span><a href="https://veltlion.github.io/line-sticker-download/LINE%20Sticker%20Download.user.js">Install</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ==UserScript==</span></span><br><span class="line"><span class="comment">// @name               LINE Sticker Download</span></span><br><span class="line"><span class="comment">// @name:zh-CN         LINE Sticker Download</span></span><br><span class="line"><span class="comment">// @namespace          https://veltlion.github.io/line-sticker-download</span></span><br><span class="line"><span class="comment">// @include            https://store.line.me/stickershop/product/*</span></span><br><span class="line"><span class="comment">// @version            1.4.1</span></span><br><span class="line"><span class="comment">// @description        Add download button for line sticker store</span></span><br><span class="line"><span class="comment">// @description:zh-cn  在 LINE STORE Sticker 页面添加下载按钮</span></span><br><span class="line"><span class="comment">// @author             空</span></span><br><span class="line"><span class="comment">// @grant              GM_download</span></span><br><span class="line"><span class="comment">// ==/UserScript==</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> id = <span class="built_in">window</span>.location.pathname.replace(<span class="regexp">/[^\d]/g</span>, <span class="string">''</span>);</span><br><span class="line"><span class="keyword">var</span> link = <span class="string">'https://sdl-stickershop.line.naver.jp/stickershop/v1/product/'</span> + id + <span class="string">'/iphone/stickers@2x.zip'</span>;</span><br><span class="line"><span class="keyword">var</span> aslink = <span class="string">'https://sdl-stickershop.line.naver.jp/stickershop/v1/product/'</span> + id + <span class="string">'/iphone/stickerpack@2x.zip'</span>;</span><br><span class="line"><span class="keyword">if</span> ($(<span class="string">'span'</span>).hasClass(<span class="string">'MdIcoAni_b'</span>) || $(<span class="string">'span'</span>).hasClass(<span class="string">'MdIcoPlay_b'</span>) ||$(<span class="string">'span'</span>).hasClass(<span class="string">'MdIcoSound_b'</span>) ||</span><br><span class="line">    $(<span class="string">'span'</span>).hasClass(<span class="string">'MdIcoFlashAni_b'</span>) || $(<span class="string">'span'</span>).hasClass(<span class="string">'MdIcoFlash_b'</span>)) link = aslink;</span><br><span class="line"><span class="keyword">var</span> file = &#123; <span class="attr">url</span>: link, <span class="attr">name</span>: <span class="built_in">document</span>.title.replace(<span class="regexp">/(.+) (-|–) .+/g</span>, <span class="string">'$1'</span>) + <span class="string">'.zip'</span> &#125;;</span><br><span class="line"><span class="keyword">var</span> lang = navigator.language;</span><br><span class="line"><span class="keyword">var</span> btnstr = <span class="string">'Download'</span>;</span><br><span class="line"><span class="keyword">if</span> (lang.indexOf(<span class="string">'zh'</span>) &gt; <span class="number">-1</span>) btnstr = <span class="string">'下载'</span>;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> (lang.indexOf(<span class="string">'ja'</span>) &gt; <span class="number">-1</span>) btnstr = <span class="string">'ダウンロード'</span>;</span><br><span class="line"><span class="keyword">var</span> btn = <span class="string">'&lt;li class="mdCMN08Li" style="list-style-type: none"&gt;'</span></span><br><span class="line">        + <span class="string">'&lt;a class="MdBtn01 mdBtn01" id="download" style="background: #33b1ff"&gt;'</span></span><br><span class="line">        + <span class="string">'&lt;span class="mdBtn01Inner"&gt;'</span></span><br><span class="line">        + <span class="string">'&lt;span class="mdBtn01Txt"&gt;'</span> + btnstr + <span class="string">'&lt;/span&gt;'</span></span><br><span class="line">        + <span class="string">'&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;'</span>;</span><br><span class="line"><span class="keyword">if</span> ($(<span class="string">'div'</span>).hasClass(<span class="string">'mdCMN08Txt'</span>)) &#123;</span><br><span class="line">    $(<span class="string">'.mdCMN08Txt&gt;ul'</span>).find(<span class="string">'li:eq(0)'</span>).remove();</span><br><span class="line">    $(<span class="string">'.mdCMN08Ul'</span>).prepend(btn);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> ($(<span class="string">'div'</span>).hasClass(<span class="string">'mdMN05Btn'</span>)) &#123;</span><br><span class="line">    <span class="comment">//$('.MdBtn01').remove();</span></span><br><span class="line">    $(<span class="string">'.mdMN05Btn'</span>).prepend(btn);</span><br><span class="line">&#125;</span><br><span class="line">$(<span class="string">'body'</span>).on(<span class="string">'click'</span>, <span class="string">'#download'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> result = GM_download(file);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p><p>　　还有个歪果仁拉我进他们 LINE 转 Telegram 表情包的群，可是我鹰语和毛语本当苦手，看不懂他们说的话就退掉了，好多东西真是用到的时候才觉得少啊Orz…<br>　　不过这也都是没办法的事。<br><img src="21645952@2x.png" alt="LINE"></p>]]></content>
     
@@ -101,7 +101,7 @@
     <link href="https://veltlion.github.io/cross-compile-samba/"/>
     <id>https://veltlion.github.io/cross-compile-samba/</id>
     <published>2018-02-26T15:57:01.000Z</published>
-    <updated>2018-11-03T14:59:51.242Z</updated>
+    <updated>2018-11-04T20:54:40.334Z</updated>
     
     <content type="html"><![CDATA[<p>　　最近给机顶盒刷了第三方的 Android TV 7.1.2 ，系统不带 Samba 了，SambaDroid 也经常自己退出不太好用了，entware 里面的 smbd 也跑不起来，这就很难受。于是就想自己编译一个。（感觉最近都在搞这些东西。。。<br>　　正好看到有人做了 Samba4.1.5 的<a href="https://github.com/Jumbo88888/Samba" target="_blank" rel="noopener">编译脚本和补丁</a>，改改就能拿来用了。<br>　　如果用 WSL 的话一定要先去掉 $PATH 中 Windows 传进来的环境变量，不然碰到带空格的 Windows 变量会出错。<br><a id="more"></a>　　还有就是 <strong><font color="red">珍爱生命，不要用 WSL 编译任何东西，CPU 根本跑不满，浪费时间。</font></strong><br><figure class="highlight bash"><figcaption><span>auto.sh</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 第 42 行 </span></span><br><span class="line">    CC=aarch64-linux-gnu-gcc \</span><br><span class="line">       ./configure \</span><br><span class="line">       --host=aarch64-linux-gnu \</span><br><span class="line">       --build=x86_64-linux \</span><br><span class="line"></span><br><span class="line"><span class="comment"># 第 103 行开始直到 make</span></span><br><span class="line">    CC=aarch64-linux-gnu-gcc AR=aarch64-linux-gnu-ar LD=aarch64-linux-gnu-ld \</span><br><span class="line">        CPP=aarch64-linux-gnu-cpp RANLIB=aarch64-linux-gnu-gcc-ranlib  \</span><br><span class="line">        CFLAGS=<span class="string">"-I<span class="variable">$PYTHON_OBJ</span>/include/python2.7 -I<span class="variable">$SAMBA</span>/lib/talloc/ -I<span class="variable">$SAMBA</span>/lib/tevent \</span></span><br><span class="line"><span class="string">                -I<span class="variable">$SAMBA</span>/lib/tdb/include -I<span class="variable">$SAMBA</span>/lib/ldb/include/ \</span></span><br><span class="line"><span class="string">                -I<span class="variable">$SAMBA</span>/lib/ldb/ -I<span class="variable">$SAMBA</span>/source3/include/autoconf/ \</span></span><br><span class="line"><span class="string">                -march=armv8-a+crypto+crc -mtune=cortex-a53"</span> \</span><br><span class="line">        LDFLAGS=<span class="string">"-Wl,-dynamic-linker,/system/samba/glibc/ld-linux-aarch64.so.1 -Wl,-rpath,/system/samba/glibc"</span> \</span><br><span class="line">        LIBDIR=<span class="string">"-L<span class="variable">$PYTHON_OBJ</span>/lib/"</span> \</span><br><span class="line">        python_LDFLAGS=<span class="string">"-L<span class="variable">$PYTHON_OBJ</span>/lib/ -lpython2.7"</span> \</span><br><span class="line">        python_LIBDIR=<span class="string">"<span class="variable">$PYTHON_OBJ</span>/lib/"</span> \</span><br><span class="line">        ./buildtools/bin/waf \</span><br><span class="line">        configure \</span><br><span class="line">        --cross-compile --cross-answers=arm.txt --hostcc=gcc \</span><br><span class="line">        --without-acl-support --without-ad-dc --without-ads --without-ldap \</span><br><span class="line">        --without-pam --without-pie --without-fam --without-dmapi --without-profiling-data \</span><br><span class="line">        --without-winbind --without-regedit --without-automount --without-utmp \</span><br><span class="line">        --without-dnsupdate --without-cluster-support \</span><br><span class="line">        --<span class="built_in">disable</span>-cups --<span class="built_in">disable</span>-iprint \</span><br><span class="line">        --<span class="built_in">disable</span>-gnutls --<span class="built_in">disable</span>-glusterfs --<span class="built_in">disable</span>-avahi \</span><br><span class="line">        --<span class="built_in">enable</span>-selftest \</span><br><span class="line">        --<span class="built_in">builtin</span>-libraries=talloc,pytalloc-util \</span><br><span class="line">        --bundled-libraries=talloc,pytalloc-util,tdb,tevent,ldb \</span><br><span class="line">        --prefix=/system/samba \</span><br><span class="line"></span><br><span class="line">    make</span><br><span class="line"></span><br><span class="line"><span class="comment"># --with-aio-support \</span></span><br></pre></td></tr></table></figure></p><p>　　试过静态编译，可照着<a href="https://lists.samba.org/archive/samba/2017-September/211110.html" target="_blank" rel="noopener">这个</a>加了选项后编译出来还是 dynamically linked ，后来换成动态的了。<br>　　动态编译的话要在 CFLAGS 里加 <code>-Wl,-dynamic-linker,/path/to/xx.so</code> 和 <code>-Wl,-rpath,/path/to/xxdir</code> ，不然会 <code>No such file or directory</code> 。<br>　　<code>march</code> 和 <code>mtune</code> 可以在目标机器上用 <code>gcc -c -Q -march=native --help=target | grep -E &#39;march=|mtune=&#39;</code> 获取。<br>　　还有就是 <code>--enable-debug</code> 和 <code>--enable-selftest</code> 。有这两个的话万一出错会报错报的很仔细，没有的话直接中断编译除了 error 什么也不留下。<br>　　编译出来的加上编译器的 C 库有一百二十多兆字节，感觉有点太大了，我看 SambaDroid 里面的只有 8 MiB…因为 /data 空间很宝贵，我把东西都放到 /system/samba 里面了。<br>　　还有要手动在 /etc 建个 passwd 文件。<br><figure class="highlight c"><figcaption><span>/etc/passwd</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">root:x:<span class="number">0</span>:<span class="number">0</span>:root::/system/bin/sh</span><br><span class="line">miu:x:<span class="number">0</span>:<span class="number">0</span>:root::/system/bin/sh</span><br><span class="line">nobody:x:<span class="number">9999</span>:<span class="number">9999</span></span><br></pre></td></tr></table></figure></p><p>添加用户设置密码<br><code>/system/samba/bin/smbpasswd -a miu</code></p><p>配置文件<br><figure class="highlight nginx"><figcaption><span>/system/samba/etc/smb.conf</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line"><span class="attribute">guest</span> ok = <span class="literal">no</span></span><br><span class="line">interfaces = wlan0 <span class="number">192.168.1.13</span>/<span class="number">24</span></span><br><span class="line">workgroup = WORKGROUP</span><br><span class="line">server string = miu</span><br><span class="line">netbios name = miu</span><br><span class="line">security = user</span><br><span class="line">guest account = nobody</span><br><span class="line">map to guest = Bad User</span><br><span class="line">[miu]</span><br><span class="line">comment = Android /storage/emulated/<span class="number">0</span></span><br><span class="line">path = /storage/emulated/<span class="number">0</span></span><br><span class="line">read only = <span class="literal">no</span></span><br><span class="line">writable = <span class="literal">yes</span></span><br><span class="line">guest ok = <span class="literal">no</span></span><br><span class="line"></span><br><span class="line">[nyanpass]</span><br><span class="line">path = /storage/AA667397667362CD</span><br><span class="line">read only = <span class="literal">no</span></span><br><span class="line">writable = <span class="literal">yes</span></span><br><span class="line">guest ok = <span class="literal">no</span></span><br></pre></td></tr></table></figure></p><p>然后再写个脚本开机自动启动。<br><figure class="highlight bash"><figcaption><span>/etc/init.d/99smbd.sh</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> TMPDIR=/data/<span class="built_in">local</span>/tmp</span><br><span class="line">/system/bin/mount -o rw,remount /system</span><br><span class="line">/system/samba/sbin/smbd -D</span><br><span class="line">/system/samba/sbin/nmbd -D</span><br></pre></td></tr></table></figure></p><p>脚本开机启动的时候要指定下 <code>TMPDIR</code> ，不然设置开机启动后连接不上，会报错<code>canonicalize_connect_path failed for service IPC$, path /tmp</code> 。</p><p>编译完成的<a href="https://yadi.sk/d/BnAdR4zZ3Xzwv7" target="_blank" rel="noopener">文件</a>，默认用户名是 <code>miu</code> ，默认密码是 <code>1234</code> 。</p>]]></content>
     
@@ -126,8 +126,8 @@
   
   <entry>
     <title>蛋炒饭</title>
-    <link href="https://veltlion.github.io/%E8%9B%8B%E7%82%92%E9%A5%AD/"/>
-    <id>https://veltlion.github.io/蛋炒饭/</id>
+    <link href="https://veltlion.github.io/2018-01-10.%E8%9B%8B%E7%82%92%E9%A5%AD/"/>
+    <id>https://veltlion.github.io/2018-01-10.蛋炒饭/</id>
     <published>2018-01-10T12:25:00.000Z</published>
     <updated>2018-10-11T00:11:59.000Z</updated>
     
@@ -151,7 +151,7 @@
     <link href="https://veltlion.github.io/cross-compile-aria2/"/>
     <id>https://veltlion.github.io/cross-compile-aria2/</id>
     <published>2017-12-07T08:51:04.000Z</published>
-    <updated>2018-11-03T14:49:44.317Z</updated>
+    <updated>2018-11-04T20:52:44.378Z</updated>
     
     <content type="html"><![CDATA[<p>　　从官网下的 Aria2 放机顶盒里一直打不开，提示 <code>aria2c: not executable: 32-bit ELF file</code> ，再加上官方的 Aria2 有连接数限制。所以就想自己编译个试试。<br>　　机顶盒是 S912 的，Win10 的 WSL 挺方便的，直接装 <code>aarch64-linux-gnu</code> 编译器静态编译。<br><a id="more"></a></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install gcc-aarch64-linux-gnu g++-aarch64-linux-gnu pkg-config-aarch64-linux-gnu</span><br><span class="line"><span class="comment"># 因为脚本写有些东西要放在编译器目录里，所以再 </span></span><br><span class="line">sudo chown <span class="variable">$UID</span> -R /usr/aarch64-linux-gnu</span><br><span class="line"><span class="comment"># 库目录的权限</span></span><br><span class="line">sudo mkdir -p /opt/aria2-arm</span><br><span class="line">sudo chown <span class="variable">$UID</span> /opt/aria2-arm</span><br></pre></td></tr></table></figure><p>有人写了静态交叉编译<a href="https://github.com/q3aql/aria2-static-builds" target="_blank" rel="noopener">脚本</a>，改改就能用了。</p><p>修改的部分<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 注释掉 TOOL_BIN_DIR 和 PATH</span></span><br><span class="line">ARCH=<span class="string">"aarch64"</span></span><br><span class="line">HOST=<span class="string">"aarch64-linux-gnu"</span></span><br><span class="line">PREFIX=<span class="string">"/opt/aria2-arm/build_libs"</span></span><br><span class="line">LOCAL_DIR=<span class="string">"/opt/aria2-arm/build_libs"</span></span><br><span class="line"><span class="comment"># march 和 mtune 可以在盒子里用 `gcc -c -Q -march=native --help=target | grep -E 'march=|mtune='` 获取。</span></span><br><span class="line">CFLAGS=<span class="string">"-march=armv8-a+crypto+crc -mtune=cortex-a53"</span></span><br><span class="line">DEST=<span class="string">"/usr/aarch64-linux-gnu"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 把 linux-armv4 改成 linux-aarch64 。</span></span><br></pre></td></tr></table></figure></p><p><code>aria2-arm-rbpi-gnu-linux-cross-config</code>里面加上去除 Aria2 最大连接数限制的补丁。</p><figure class="highlight bash"><figcaption><span>aria2-arm-rbpi-gnu-linux-cross-config</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https://aur.archlinux.org/cgit/aur.git/plain/aria2-fast.patch?h=aria2-fast -O aria2-fast.patch</span><br><span class="line">patch -Np1 &lt; aria2-fast.patch</span><br></pre></td></tr></table></figure><p>执行完脚本再 make、strip 就完了。<br>不过编译完之后放机顶盒里面还是打不开，又换别的编译器编译了几次，还是不行，这就很神奇。<br>到最后本萌妹惊讶的发现，盒子上面的 aria2c 和本地的大小不一样……<br>最后检查了 FileZilla 设置才发现传输类型是自动选择，改成二进制再传一遍，<br>就可以跑了……<br>就可以跑了……<br>就可以跑了……<br>当时我就这个表情。<img src="/img/34.png" alt="这个表情"><br>我浪费了这么多时间就是因为这个！？</p>]]></content>
     
@@ -176,8 +176,8 @@
   
   <entry>
     <title>真好看啊</title>
-    <link href="https://veltlion.github.io/%E7%9C%9F%E5%A5%BD%E7%9C%8B%E5%95%8A/"/>
-    <id>https://veltlion.github.io/真好看啊/</id>
+    <link href="https://veltlion.github.io/2017-10-08.%E7%9C%9F%E5%A5%BD%E7%9C%8B%E5%95%8A/"/>
+    <id>https://veltlion.github.io/2017-10-08.真好看啊/</id>
     <published>2017-10-08T04:08:00.000Z</published>
     <updated>2018-03-01T15:30:00.274Z</updated>
     
@@ -216,11 +216,11 @@
     
       <category term="机顶盒" scheme="https://veltlion.github.io/tags/%E6%9C%BA%E9%A1%B6%E7%9B%92/"/>
     
-      <category term="S912" scheme="https://veltlion.github.io/tags/S912/"/>
-    
       <category term="H7四代" scheme="https://veltlion.github.io/tags/H7%E5%9B%9B%E4%BB%A3/"/>
     
       <category term="ROOT" scheme="https://veltlion.github.io/tags/ROOT/"/>
+    
+      <category term="S912" scheme="https://veltlion.github.io/tags/S912/"/>
     
       <category term="LibreELEC" scheme="https://veltlion.github.io/tags/LibreELEC/"/>
     
@@ -254,8 +254,8 @@
   
   <entry>
     <title>多说转 Disqus 的坑</title>
-    <link href="https://veltlion.github.io/%E5%A4%9A%E8%AF%B4%E8%BD%ACDisqus%E7%9A%84%E5%9D%91/"/>
-    <id>https://veltlion.github.io/多说转Disqus的坑/</id>
+    <link href="https://veltlion.github.io/2017-06-17.%E5%A4%9A%E8%AF%B4%E8%BD%ACDisqus%E7%9A%84%E5%9D%91/"/>
+    <id>https://veltlion.github.io/2017-06-17.多说转Disqus的坑/</id>
     <published>2017-06-16T22:20:57.000Z</published>
     <updated>2018-09-08T16:40:47.126Z</updated>
     
@@ -290,18 +290,18 @@
     
       <category term="机顶盒" scheme="https://veltlion.github.io/tags/%E6%9C%BA%E9%A1%B6%E7%9B%92/"/>
     
-      <category term="S912" scheme="https://veltlion.github.io/tags/S912/"/>
-    
       <category term="H7四代" scheme="https://veltlion.github.io/tags/H7%E5%9B%9B%E4%BB%A3/"/>
     
       <category term="ROOT" scheme="https://veltlion.github.io/tags/ROOT/"/>
+    
+      <category term="S912" scheme="https://veltlion.github.io/tags/S912/"/>
     
   </entry>
   
   <entry>
     <title>入了个x1s的手柄</title>
-    <link href="https://veltlion.github.io/%E5%85%A5%E4%BA%86%E4%B8%AA%20x1s%20%E7%9A%84%E6%89%8B%E6%9F%84/"/>
-    <id>https://veltlion.github.io/入了个 x1s 的手柄/</id>
+    <link href="https://veltlion.github.io/2017-03-05.%E5%85%A5%E4%BA%86%E4%B8%AAx1s%E7%9A%84%E6%89%8B%E6%9F%84/"/>
+    <id>https://veltlion.github.io/2017-03-05.入了个x1s的手柄/</id>
     <published>2017-03-04T19:15:00.000Z</published>
     <updated>2018-11-03T13:36:46.772Z</updated>
     
@@ -322,8 +322,8 @@
   
   <entry>
     <title>又把手机震动摔坏了…</title>
-    <link href="https://veltlion.github.io/%E5%8F%88%E6%8A%8A%E6%89%8B%E6%9C%BA%E9%9C%87%E5%8A%A8%E6%91%94%E5%9D%8F%E4%BA%86%E2%80%A6/"/>
-    <id>https://veltlion.github.io/又把手机震动摔坏了…/</id>
+    <link href="https://veltlion.github.io/2016-12-25.%E5%8F%88%E6%8A%8A%E6%89%8B%E6%9C%BA%E9%9C%87%E5%8A%A8%E6%91%94%E5%9D%8F%E4%BA%86%E2%80%A6/"/>
+    <id>https://veltlion.github.io/2016-12-25.又把手机震动摔坏了…/</id>
     <published>2016-12-24T18:36:00.000Z</published>
     <updated>2018-09-08T16:46:45.150Z</updated>
     
@@ -344,8 +344,8 @@
   
   <entry>
     <title>笔记</title>
-    <link href="https://veltlion.github.io/%E6%A0%87%E6%97%A5%E5%88%9D%E7%BA%A7%E7%AC%AC%E4%B8%80%E5%8D%95%E5%85%83/"/>
-    <id>https://veltlion.github.io/标日初级第一单元/</id>
+    <link href="https://veltlion.github.io/2016-10-21.%E7%AC%94%E8%AE%B0/"/>
+    <id>https://veltlion.github.io/2016-10-21.笔记/</id>
     <published>2016-10-21T13:55:00.000Z</published>
     <updated>2018-09-11T16:32:20.684Z</updated>
     
@@ -366,8 +366,8 @@
   
   <entry>
     <title>小猫</title>
-    <link href="https://veltlion.github.io/%E5%B0%8F%E7%8C%AB/"/>
-    <id>https://veltlion.github.io/小猫/</id>
+    <link href="https://veltlion.github.io/2016-10-09.%E5%B0%8F%E7%8C%AB/"/>
+    <id>https://veltlion.github.io/2016-10-09.小猫/</id>
     <published>2016-10-09T14:57:00.000Z</published>
     <updated>2018-02-28T18:13:42.640Z</updated>
     
@@ -386,8 +386,8 @@
   
   <entry>
     <title>要断网了</title>
-    <link href="https://veltlion.github.io/%E8%A6%81%E6%96%AD%E7%BD%91%E4%BA%86/"/>
-    <id>https://veltlion.github.io/要断网了/</id>
+    <link href="https://veltlion.github.io/2016-10-05.%E8%A6%81%E6%96%AD%E7%BD%91%E4%BA%86/"/>
+    <id>https://veltlion.github.io/2016-10-05.要断网了/</id>
     <published>2016-10-05T08:43:00.000Z</published>
     <updated>2018-09-08T16:47:17.974Z</updated>
     
@@ -433,8 +433,8 @@
   
   <entry>
     <title>看书的笔记</title>
-    <link href="https://veltlion.github.io/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    <id>https://veltlion.github.io/读书笔记/</id>
+    <link href="https://veltlion.github.io/2016-08-29.%E7%9C%8B%E4%B9%A6%E7%9A%84%E7%AC%94%E8%AE%B0/"/>
+    <id>https://veltlion.github.io/2016-08-29.看书的笔记/</id>
     <published>2016-08-28T17:29:00.000Z</published>
     <updated>2018-09-11T16:30:25.484Z</updated>
     
@@ -456,8 +456,8 @@
   
   <entry>
     <title>把键盘洗坏了…</title>
-    <link href="https://veltlion.github.io/%E6%8A%8A%E9%94%AE%E7%9B%98%E6%B4%97%E5%9D%8F%E4%BA%86%E2%80%A6/"/>
-    <id>https://veltlion.github.io/把键盘洗坏了…/</id>
+    <link href="https://veltlion.github.io/2016-08-21.%E6%8A%8A%E9%94%AE%E7%9B%98%E6%B4%97%E5%9D%8F%E4%BA%86%E2%80%A6/"/>
+    <id>https://veltlion.github.io/2016-08-21.把键盘洗坏了…/</id>
     <published>2016-08-21T14:47:47.000Z</published>
     <updated>2018-10-11T00:08:35.000Z</updated>
     
@@ -507,8 +507,8 @@
   
   <entry>
     <title>Android 6.0 之后 wap 接入点不能解析 DNS 的解决方法</title>
-    <link href="https://veltlion.github.io/android-wap-apn-dns/"/>
-    <id>https://veltlion.github.io/android-wap-apn-dns/</id>
+    <link href="https://veltlion.github.io/2016-08-09.Android6.0%E4%B9%8B%E5%90%8Ewap%E6%8E%A5%E5%85%A5%E7%82%B9%E4%B8%8D%E8%83%BD%E8%A7%A3%E6%9E%90DNS%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
+    <id>https://veltlion.github.io/2016-08-09.Android6.0之后wap接入点不能解析DNS的解决方法/</id>
     <published>2016-08-09T13:21:00.000Z</published>
     <updated>2018-09-08T16:49:40.630Z</updated>
     
@@ -536,8 +536,8 @@
   
   <entry>
     <title>网易云音乐歌词转换</title>
-    <link href="https://veltlion.github.io/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E6%AD%8C%E8%AF%8D%E8%BD%AC%E6%8D%A2/"/>
-    <id>https://veltlion.github.io/网易云音乐歌词转换/</id>
+    <link href="https://veltlion.github.io/2016-06-30.%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E6%AD%8C%E8%AF%8D%E8%BD%AC%E6%8D%A2/"/>
+    <id>https://veltlion.github.io/2016-06-30.网易云音乐歌词转换/</id>
     <published>2016-06-29T23:49:00.000Z</published>
     <updated>2018-02-28T21:05:16.083Z</updated>
     
@@ -564,22 +564,22 @@
     <link href="https://veltlion.github.io/hexo-md-rename/"/>
     <id>https://veltlion.github.io/hexo-md-rename/</id>
     <published>2016-05-05T06:29:35.000Z</published>
-    <updated>2018-06-08T22:19:32.000Z</updated>
+    <updated>2018-11-04T20:55:37.705Z</updated>
     
-    <content type="html"><![CDATA[<p>　　换用 Hexo 之后发现 _post 目录里面乱乱的，比如从 WordPress 中导入的中文标题文章的文件名会变成乱乱的字符串，看着很难受。所以搞了个改名的脚本来重命名文件。<br>　　重命名之后的格式为<code>文章标题.md</code>，如果有注明<code>permalink</code>的话就是<code>PO文日期-文章标题-permalink.md</code>。<br><a id="more"></a>　　还有一件事很重要，就是<strong>不写 permalink 或没设置 config 里的 permalink 的话，Hexo 会用文件名做文章链接</strong>。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#保存系统默认的 IFS</span></span><br><span class="line">SAVEIFS=<span class="variable">$IFS</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#更改 IFS 为换行（用于处理文件名含有空格的文件</span></span><br><span class="line">IFS=$(<span class="built_in">echo</span> -en <span class="string">"\n\b"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> filename <span class="keyword">in</span> $(ls *.md)</span><br><span class="line">  <span class="keyword">do</span></span><br><span class="line">    <span class="comment">#标题</span></span><br><span class="line">    title=$(grep <span class="string">"title: "</span> <span class="variable">$filename</span> | sed -n <span class="string">'1p'</span> | sed -e <span class="string">'s/.*: //g ; s/ /_/g ; s/?//g'</span>)</span><br><span class="line">    <span class="comment">#发文日期</span></span><br><span class="line">    date=$(grep <span class="string">"date: "</span> <span class="variable">$filename</span> | sed -n <span class="string">'1p'</span> | awk <span class="string">'&#123;printf $2&#125;'</span> )</span><br><span class="line">    <span class="comment">#permalink</span></span><br><span class="line">    link=$(grep <span class="string">"permalink: "</span> <span class="variable">$filename</span> | sed -n <span class="string">'1p'</span> | awk <span class="string">'&#123;printf $2&#125;'</span> )</span><br><span class="line">    <span class="comment">#新文件名</span></span><br><span class="line">    <span class="keyword">if</span> [ -z <span class="string">"<span class="variable">$link</span>"</span> ]; <span class="keyword">then</span></span><br><span class="line">        <span class="comment">#newname="$date.$title"</span></span><br><span class="line">        newname=<span class="string">"<span class="variable">$title</span>"</span></span><br><span class="line">      <span class="keyword">else</span></span><br><span class="line">        newname=<span class="string">"<span class="variable">$date</span>-<span class="variable">$title</span>-<span class="variable">$link</span>"</span></span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line">    <span class="comment">#过滤掉名字正确的</span></span><br><span class="line">    <span class="keyword">if</span> [ <span class="string">"<span class="variable">$filename</span>"</span> != <span class="string">"<span class="variable">$newname</span>.md"</span> ]; <span class="keyword">then</span></span><br><span class="line">       <span class="comment">#开始改名</span></span><br><span class="line">       <span class="built_in">echo</span> <span class="string">"Rename <span class="variable">$filename</span> to <span class="variable">$newname</span>.md"</span></span><br><span class="line">       mv <span class="variable">$filename</span> <span class="variable">$newname</span>.md</span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#恢复 IFS</span></span><br><span class="line">IFS=<span class="variable">$SAVEIFS</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="keyword">done</span>!</span><br></pre></td></tr></table></figure></p><p><img src="/img/65.png" alt="计画通り"><br>这样就舒服好多了。</p>]]></content>
+    <content type="html"><![CDATA[<p>　　换用 Hexo 之后发现 _post 目录里面乱乱的，比如从 WordPress 中导入的中文标题文章的文件名会变成乱乱的字符串，看着很难受。所以搞了个改名的脚本来重命名文件。<br>　　重命名之后的格式为<code>PO文日期.文章标题.md</code>，如果有注明<code>permalink</code>的话就是<code>PO文日期.文章标题.permalink.md</code>。<br><a id="more"></a>　　还有一件事很重要，就是<strong>不写 permalink 或没设置 config 里的 permalink 的话，Hexo 会用文件名做文章链接</strong>。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#保存系统默认的 IFS</span></span><br><span class="line">SAVEIFS=<span class="variable">$IFS</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#更改 IFS 为换行（用于处理文件名含有空格的文件</span></span><br><span class="line">IFS=$<span class="string">'\n'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> filename <span class="keyword">in</span> $(ls *.md)</span><br><span class="line">  <span class="keyword">do</span></span><br><span class="line">    <span class="comment">#标题（不想替换空格的话就删除“s/ //g;”。</span></span><br><span class="line">    title=$(grep <span class="string">"title: "</span> <span class="variable">$filename</span> | sed -n <span class="string">'1p'</span> | sed -e <span class="string">'s/.*: //g; s#/##g;s/ //g'</span>)</span><br><span class="line">    <span class="comment">#发文日期</span></span><br><span class="line">    date=$(grep <span class="string">"date: "</span> <span class="variable">$filename</span> | sed -n <span class="string">'1p'</span> | awk <span class="string">'&#123;printf $2&#125;'</span> )</span><br><span class="line">    <span class="comment">#permalink</span></span><br><span class="line">    link=$(grep <span class="string">"permalink: "</span> <span class="variable">$filename</span> | sed -n <span class="string">'1p'</span> | awk <span class="string">'&#123;printf $2&#125;'</span> )</span><br><span class="line">    <span class="comment">#新文件名</span></span><br><span class="line">    <span class="keyword">if</span> [ -z <span class="string">"<span class="variable">$link</span>"</span> ]; <span class="keyword">then</span></span><br><span class="line">        newname=<span class="string">"<span class="variable">$date</span>.<span class="variable">$title</span>"</span></span><br><span class="line">      <span class="keyword">else</span></span><br><span class="line">        newname=<span class="string">"<span class="variable">$date</span>.<span class="variable">$title</span>.<span class="variable">$link</span>"</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="variable">$filename</span> </span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line">    <span class="comment">#过滤掉名字正确的</span></span><br><span class="line">    <span class="keyword">if</span> [ <span class="string">"<span class="variable">$filename</span>"</span> != <span class="string">"<span class="variable">$newname</span>.md"</span> ]; <span class="keyword">then</span></span><br><span class="line">       <span class="comment">#开始改名</span></span><br><span class="line">       <span class="built_in">echo</span> <span class="string">"Rename <span class="variable">$filename</span> to <span class="variable">$newname</span>.md"</span></span><br><span class="line">       mv <span class="variable">$filename</span> <span class="variable">$newname</span>.md</span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#恢复 IFS</span></span><br><span class="line">IFS=<span class="variable">$SAVEIFS</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="keyword">done</span>!</span><br></pre></td></tr></table></figure><p><img src="/img/65.png" alt="计画通り"><br>这样就舒服好多了。</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;　　换用 Hexo 之后发现 _post 目录里面乱乱的，比如从 WordPress 中导入的中文标题文章的文件名会变成乱乱的字符串，看着很难受。所以搞了个改名的脚本来重命名文件。&lt;br&gt;　　重命名之后的格式为&lt;code&gt;文章标题.md&lt;/code&gt;，如果有注明&lt;code&gt;permalink&lt;/code&gt;的话就是&lt;code&gt;PO文日期-文章标题-permalink.md&lt;/code&gt;。&lt;br&gt;
+      &lt;p&gt;　　换用 Hexo 之后发现 _post 目录里面乱乱的，比如从 WordPress 中导入的中文标题文章的文件名会变成乱乱的字符串，看着很难受。所以搞了个改名的脚本来重命名文件。&lt;br&gt;　　重命名之后的格式为&lt;code&gt;PO文日期.文章标题.md&lt;/code&gt;，如果有注明&lt;code&gt;permalink&lt;/code&gt;的话就是&lt;code&gt;PO文日期.文章标题.permalink.md&lt;/code&gt;。&lt;br&gt;
     
     </summary>
     
       <category term="瞎鼓捣" scheme="https://veltlion.github.io/categories/%E7%9E%8E%E9%BC%93%E6%8D%A3/"/>
     
     
-      <category term="重命名" scheme="https://veltlion.github.io/tags/%E9%87%8D%E5%91%BD%E5%90%8D/"/>
-    
       <category term="Hexo" scheme="https://veltlion.github.io/tags/Hexo/"/>
+    
+      <category term="重命名" scheme="https://veltlion.github.io/tags/%E9%87%8D%E5%91%BD%E5%90%8D/"/>
     
   </entry>
   
@@ -629,8 +629,8 @@
   
   <entry>
     <title>联通 WO-36 光猫改桥接</title>
-    <link href="https://veltlion.github.io/%E8%81%94%E9%80%9AWO-36%E5%85%89%E7%8C%AB%E6%94%B9%E6%A1%A5%E6%8E%A5/"/>
-    <id>https://veltlion.github.io/联通WO-36光猫改桥接/</id>
+    <link href="https://veltlion.github.io/2016-03-11.%E8%81%94%E9%80%9AWO-36%E5%85%89%E7%8C%AB%E6%94%B9%E6%A1%A5%E6%8E%A5/"/>
+    <id>https://veltlion.github.io/2016-03-11.联通WO-36光猫改桥接/</id>
     <published>2016-03-11T11:24:00.000Z</published>
     <updated>2018-09-08T16:50:37.893Z</updated>
     
@@ -659,8 +659,8 @@
   
   <entry>
     <title>去除「十六夜のフォルトゥーナ」日本語版Windows判定</title>
-    <link href="https://veltlion.github.io/%E5%8E%BB%E9%99%A4%E3%80%8C%E5%8D%81%E5%85%AD%E5%A4%9C%E3%81%AE%E3%83%95%E3%82%A9%E3%83%AB%E3%83%88%E3%82%A5%E3%83%BC%E3%83%8A%E3%80%8D%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88Windows%E5%88%A4%E5%AE%9A/"/>
-    <id>https://veltlion.github.io/去除「十六夜のフォルトゥーナ」日本語版Windows判定/</id>
+    <link href="https://veltlion.github.io/2015-07-12.%E5%8E%BB%E9%99%A4%E3%80%8C%E5%8D%81%E5%85%AD%E5%A4%9C%E3%81%AE%E3%83%95%E3%82%A9%E3%83%AB%E3%83%88%E3%82%A5%E3%83%BC%E3%83%8A%E3%80%8D%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88Windows%E5%88%A4%E5%AE%9A/"/>
+    <id>https://veltlion.github.io/2015-07-12.去除「十六夜のフォルトゥーナ」日本語版Windows判定/</id>
     <published>2015-07-12T02:43:00.000Z</published>
     <updated>2018-09-08T16:50:51.854Z</updated>
     
@@ -681,8 +681,8 @@
   
   <entry>
     <title>博客从手机挪到VPS啦</title>
-    <link href="https://veltlion.github.io/%E5%8D%9A%E5%AE%A2%E4%BB%8E%E6%89%8B%E6%9C%BA%E6%8C%AA%E5%88%B0VPS%E5%95%A6/"/>
-    <id>https://veltlion.github.io/博客从手机挪到VPS啦/</id>
+    <link href="https://veltlion.github.io/2015-04-21.%E5%8D%9A%E5%AE%A2%E4%BB%8E%E6%89%8B%E6%9C%BA%E6%8C%AA%E5%88%B0VPS%E5%95%A6/"/>
+    <id>https://veltlion.github.io/2015-04-21.博客从手机挪到VPS啦/</id>
     <published>2015-04-21T03:32:06.000Z</published>
     <updated>2018-09-08T16:51:18.558Z</updated>
     
@@ -728,8 +728,8 @@
   
   <entry>
     <title>そら…</title>
-    <link href="https://veltlion.github.io/sora%E2%80%A6/"/>
-    <id>https://veltlion.github.io/sora…/</id>
+    <link href="https://veltlion.github.io/2015-03-22.%E3%81%9D%E3%82%89%E2%80%A6/"/>
+    <id>https://veltlion.github.io/2015-03-22.そら…/</id>
     <published>2015-03-22T10:38:21.000Z</published>
     <updated>2018-03-01T14:46:13.126Z</updated>
     
@@ -802,8 +802,8 @@
   
   <entry>
     <title>C语言求素数的几种方法</title>
-    <link href="https://veltlion.github.io/CPrime/"/>
-    <id>https://veltlion.github.io/CPrime/</id>
+    <link href="https://veltlion.github.io/2015-01-08.C%E8%AF%AD%E8%A8%80%E6%B1%82%E7%B4%A0%E6%95%B0%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/"/>
+    <id>https://veltlion.github.io/2015-01-08.C语言求素数的几种方法/</id>
     <published>2015-01-08T09:11:07.000Z</published>
     <updated>2018-09-11T16:29:40.595Z</updated>
     
@@ -822,8 +822,8 @@
   
   <entry>
     <title>逆序的三位数</title>
-    <link href="https://veltlion.github.io/%E9%80%86%E5%BA%8F%E7%9A%84%E4%B8%89%E4%BD%8D%E6%95%B0/"/>
-    <id>https://veltlion.github.io/逆序的三位数/</id>
+    <link href="https://veltlion.github.io/2015-01-07.%E9%80%86%E5%BA%8F%E7%9A%84%E4%B8%89%E4%BD%8D%E6%95%B0/"/>
+    <id>https://veltlion.github.io/2015-01-07.逆序的三位数/</id>
     <published>2015-01-07T08:30:32.000Z</published>
     <updated>2018-09-11T16:29:59.264Z</updated>
     
@@ -848,8 +848,8 @@
   
   <entry>
     <title>伪静态</title>
-    <link href="https://veltlion.github.io/rewrite/"/>
-    <id>https://veltlion.github.io/rewrite/</id>
+    <link href="https://veltlion.github.io/2014-11-21.%E4%BC%AA%E9%9D%99%E6%80%81/"/>
+    <id>https://veltlion.github.io/2014-11-21.伪静态/</id>
     <published>2014-11-20T21:26:58.000Z</published>
     <updated>2018-05-11T07:10:34.140Z</updated>
     
@@ -870,8 +870,8 @@
   
   <entry>
     <title>Untitled（二）</title>
-    <link href="https://veltlion.github.io/untitled2/"/>
-    <id>https://veltlion.github.io/untitled2/</id>
+    <link href="https://veltlion.github.io/2014-06-25.Untitled%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
+    <id>https://veltlion.github.io/2014-06-25.Untitled（二）/</id>
     <published>2014-06-25T14:25:47.000Z</published>
     <updated>2018-09-11T16:35:02.897Z</updated>
     
@@ -888,8 +888,8 @@
   
   <entry>
     <title>21</title>
-    <link href="https://veltlion.github.io/21/"/>
-    <id>https://veltlion.github.io/21/</id>
+    <link href="https://veltlion.github.io/2014-06-24.21/"/>
+    <id>https://veltlion.github.io/2014-06-24.21/</id>
     <published>2014-06-24T15:00:10.000Z</published>
     <updated>2018-09-11T16:40:07.210Z</updated>
     
@@ -910,8 +910,8 @@
   
   <entry>
     <title>18</title>
-    <link href="https://veltlion.github.io/18/"/>
-    <id>https://veltlion.github.io/18/</id>
+    <link href="https://veltlion.github.io/2014-06-23.18/"/>
+    <id>https://veltlion.github.io/2014-06-23.18/</id>
     <published>2014-06-23T07:28:07.000Z</published>
     <updated>2018-09-08T17:00:23.789Z</updated>
     
@@ -930,8 +930,8 @@
   
   <entry>
     <title>手滑把数据库删了☆</title>
-    <link href="https://veltlion.github.io/%E6%89%8B%E6%BB%91%E6%8A%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E5%88%A0%E4%BA%86%E2%98%86/"/>
-    <id>https://veltlion.github.io/手滑把数据库删了☆/</id>
+    <link href="https://veltlion.github.io/2014-06-21.%E6%89%8B%E6%BB%91%E6%8A%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E5%88%A0%E4%BA%86%E2%98%86/"/>
+    <id>https://veltlion.github.io/2014-06-21.手滑把数据库删了☆/</id>
     <published>2014-06-21T09:29:23.000Z</published>
     <updated>2018-09-11T16:39:17.378Z</updated>
     
@@ -952,8 +952,8 @@
   
   <entry>
     <title>Untitled</title>
-    <link href="https://veltlion.github.io/untitled%20/"/>
-    <id>https://veltlion.github.io/untitled /</id>
+    <link href="https://veltlion.github.io/2014-06-21.Untitled/"/>
+    <id>https://veltlion.github.io/2014-06-21.Untitled/</id>
     <published>2014-06-21T09:26:48.000Z</published>
     <updated>2018-09-11T16:35:42.225Z</updated>
     

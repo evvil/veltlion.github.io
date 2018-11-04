@@ -8,6 +8,46 @@
     </url>
 
     <url>
+        <loc>https://veltlion.github.io/hexo-md-rename/</loc>
+        <lastmod>2018-11-04T20:55:37.705Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/export-firefox-password/</loc>
+        <lastmod>2018-11-04T20:54:58.119Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/cross-compile-samba/</loc>
+        <lastmod>2018-11-04T20:54:40.334Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/cross-compile-aria2/</loc>
+        <lastmod>2018-11-04T20:52:44.378Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/line-sticker-download/</loc>
+        <lastmod>2018-11-04T20:49:02.843Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://veltlion.github.io/flash-h7-4/</loc>
         <lastmod>2018-11-04T15:30:02.543Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -16,23 +56,7 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/cross-compile-samba/</loc>
-        <lastmod>2018-11-03T14:59:51.242Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://veltlion.github.io/cross-compile-aria2/</loc>
-        <lastmod>2018-11-03T14:49:44.317Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://veltlion.github.io/%E5%85%A5%E4%BA%86%E4%B8%AA%20x1s%20%E7%9A%84%E6%89%8B%E6%9F%84/</loc>
+        <loc>https://veltlion.github.io/2017-03-05.%E5%85%A5%E4%BA%86%E4%B8%AAx1s%E7%9A%84%E6%89%8B%E6%9F%84/</loc>
         <lastmod>2018-11-03T13:36:46.772Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -48,15 +72,7 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/line-sticker-download/</loc>
-        <lastmod>2018-10-12T11:37:42.673Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://veltlion.github.io/%E8%9B%8B%E7%82%92%E9%A5%AD/</loc>
+        <loc>https://veltlion.github.io/2018-01-10.%E8%9B%8B%E7%82%92%E9%A5%AD/</loc>
         <lastmod>2018-10-11T00:11:59.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -64,7 +80,7 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/%E6%8A%8A%E9%94%AE%E7%9B%98%E6%B4%97%E5%9D%8F%E4%BA%86%E2%80%A6/</loc>
+        <loc>https://veltlion.github.io/2016-08-21.%E6%8A%8A%E9%94%AE%E7%9B%98%E6%B4%97%E5%9D%8F%E4%BA%86%E2%80%A6/</loc>
         <lastmod>2018-10-11T00:08:35.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -72,7 +88,7 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/21/</loc>
+        <loc>https://veltlion.github.io/2014-06-24.21/</loc>
         <lastmod>2018-09-11T16:40:07.210Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -80,7 +96,7 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/%E6%89%8B%E6%BB%91%E6%8A%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E5%88%A0%E4%BA%86%E2%98%86/</loc>
+        <loc>https://veltlion.github.io/2014-06-21.%E6%89%8B%E6%BB%91%E6%8A%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E5%88%A0%E4%BA%86%E2%98%86/</loc>
         <lastmod>2018-09-11T16:39:17.378Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -88,7 +104,7 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/%E6%A0%87%E6%97%A5%E5%88%9D%E7%BA%A7%E7%AC%AC%E4%B8%80%E5%8D%95%E5%85%83/</loc>
+        <loc>https://veltlion.github.io/2016-10-21.%E7%AC%94%E8%AE%B0/</loc>
         <lastmod>2018-09-11T16:32:20.684Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -96,7 +112,7 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
+        <loc>https://veltlion.github.io/2016-08-29.%E7%9C%8B%E4%B9%A6%E7%9A%84%E7%AC%94%E8%AE%B0/</loc>
         <lastmod>2018-09-11T16:30:25.484Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -104,7 +120,7 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/%E9%80%86%E5%BA%8F%E7%9A%84%E4%B8%89%E4%BD%8D%E6%95%B0/</loc>
+        <loc>https://veltlion.github.io/2015-01-07.%E9%80%86%E5%BA%8F%E7%9A%84%E4%B8%89%E4%BD%8D%E6%95%B0/</loc>
         <lastmod>2018-09-11T16:29:59.264Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -112,7 +128,7 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/CPrime/</loc>
+        <loc>https://veltlion.github.io/2015-01-08.C%E8%AF%AD%E8%A8%80%E6%B1%82%E7%B4%A0%E6%95%B0%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/</loc>
         <lastmod>2018-09-11T16:29:40.595Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -120,7 +136,7 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/18/</loc>
+        <loc>https://veltlion.github.io/2014-06-23.18/</loc>
         <lastmod>2018-09-08T17:00:23.789Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -128,7 +144,7 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/%E5%8D%9A%E5%AE%A2%E4%BB%8E%E6%89%8B%E6%9C%BA%E6%8C%AA%E5%88%B0VPS%E5%95%A6/</loc>
+        <loc>https://veltlion.github.io/2015-04-21.%E5%8D%9A%E5%AE%A2%E4%BB%8E%E6%89%8B%E6%9C%BA%E6%8C%AA%E5%88%B0VPS%E5%95%A6/</loc>
         <lastmod>2018-09-08T16:51:18.558Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -136,7 +152,7 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/%E5%8E%BB%E9%99%A4%E3%80%8C%E5%8D%81%E5%85%AD%E5%A4%9C%E3%81%AE%E3%83%95%E3%82%A9%E3%83%AB%E3%83%88%E3%82%A5%E3%83%BC%E3%83%8A%E3%80%8D%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88Windows%E5%88%A4%E5%AE%9A/</loc>
+        <loc>https://veltlion.github.io/2015-07-12.%E5%8E%BB%E9%99%A4%E3%80%8C%E5%8D%81%E5%85%AD%E5%A4%9C%E3%81%AE%E3%83%95%E3%82%A9%E3%83%AB%E3%83%88%E3%82%A5%E3%83%BC%E3%83%8A%E3%80%8D%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88Windows%E5%88%A4%E5%AE%9A/</loc>
         <lastmod>2018-09-08T16:50:51.854Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -144,7 +160,7 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/%E8%81%94%E9%80%9AWO-36%E5%85%89%E7%8C%AB%E6%94%B9%E6%A1%A5%E6%8E%A5/</loc>
+        <loc>https://veltlion.github.io/2016-03-11.%E8%81%94%E9%80%9AWO-36%E5%85%89%E7%8C%AB%E6%94%B9%E6%A1%A5%E6%8E%A5/</loc>
         <lastmod>2018-09-08T16:50:37.893Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -152,7 +168,7 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/android-wap-apn-dns/</loc>
+        <loc>https://veltlion.github.io/2016-08-09.Android6.0%E4%B9%8B%E5%90%8Ewap%E6%8E%A5%E5%85%A5%E7%82%B9%E4%B8%8D%E8%83%BD%E8%A7%A3%E6%9E%90DNS%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</loc>
         <lastmod>2018-09-08T16:49:40.630Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -168,7 +184,7 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/%E8%A6%81%E6%96%AD%E7%BD%91%E4%BA%86/</loc>
+        <loc>https://veltlion.github.io/2016-10-05.%E8%A6%81%E6%96%AD%E7%BD%91%E4%BA%86/</loc>
         <lastmod>2018-09-08T16:47:17.974Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -176,7 +192,7 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/%E5%8F%88%E6%8A%8A%E6%89%8B%E6%9C%BA%E9%9C%87%E5%8A%A8%E6%91%94%E5%9D%8F%E4%BA%86%E2%80%A6/</loc>
+        <loc>https://veltlion.github.io/2016-12-25.%E5%8F%88%E6%8A%8A%E6%89%8B%E6%9C%BA%E9%9C%87%E5%8A%A8%E6%91%94%E5%9D%8F%E4%BA%86%E2%80%A6/</loc>
         <lastmod>2018-09-08T16:46:45.150Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -184,7 +200,7 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/23/</loc>
+        <loc>https://veltlion.github.io/2018-03-14.%E5%94%94%E2%80%A6/</loc>
         <lastmod>2018-09-08T16:42:47.957Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -192,16 +208,8 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/%E5%A4%9A%E8%AF%B4%E8%BD%ACDisqus%E7%9A%84%E5%9D%91/</loc>
+        <loc>https://veltlion.github.io/2017-06-17.%E5%A4%9A%E8%AF%B4%E8%BD%ACDisqus%E7%9A%84%E5%9D%91/</loc>
         <lastmod>2018-09-08T16:40:47.126Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://veltlion.github.io/export-firefox-password/</loc>
-        <lastmod>2018-06-19T10:00:06.271Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -216,14 +224,6 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/hexo-md-rename/</loc>
-        <lastmod>2018-06-08T22:19:32.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://veltlion.github.io/hexo-on-android/</loc>
         <lastmod>2018-05-17T18:24:51.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -232,7 +232,7 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/rewrite/</loc>
+        <loc>https://veltlion.github.io/2014-11-21.%E4%BC%AA%E9%9D%99%E6%80%81/</loc>
         <lastmod>2018-05-11T07:10:34.140Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -264,7 +264,7 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/%E7%9C%9F%E5%A5%BD%E7%9C%8B%E5%95%8A/</loc>
+        <loc>https://veltlion.github.io/2017-10-08.%E7%9C%9F%E5%A5%BD%E7%9C%8B%E5%95%8A/</loc>
         <lastmod>2018-03-01T15:30:00.274Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -272,7 +272,7 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/sora%E2%80%A6/</loc>
+        <loc>https://veltlion.github.io/2015-03-22.%E3%81%9D%E3%82%89%E2%80%A6/</loc>
         <lastmod>2018-03-01T14:46:13.126Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -296,7 +296,7 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E6%AD%8C%E8%AF%8D%E8%BD%AC%E6%8D%A2/</loc>
+        <loc>https://veltlion.github.io/2016-06-30.%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E6%AD%8C%E8%AF%8D%E8%BD%AC%E6%8D%A2/</loc>
         <lastmod>2018-02-28T21:05:16.083Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -304,7 +304,7 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/%E5%B0%8F%E7%8C%AB/</loc>
+        <loc>https://veltlion.github.io/2016-10-09.%E5%B0%8F%E7%8C%AB/</loc>
         <lastmod>2018-02-28T18:13:42.640Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
