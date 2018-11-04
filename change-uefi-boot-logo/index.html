@@ -1,0 +1,564 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="空">
+    <title>修改 AMI BIOS 的启动 LOGO - 空</title>
+    <meta name="author" content="空">
+    
+    
+        <link rel="icon" href="https://veltlion.github.io/assets/images/favicon.ico">
+    
+    
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+    
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"空","sameAs":["mailto:&#115;&#111;&#114;&#97;&#64;&#108;&#105;&#118;&#101;&#46;&#106;&#112;","https://twitter.com/yume1001","https://t.me/soratan"],"image":"avatar.png"},"articleBody":"　　MSI 主板的启动图片看腻了，想换一个，可找了好多替换工具都换不到启动图。　　后来用 UEFIExtract 直接把 BIOS 全部解包，找到了图片位置。　　刷修改过的 BIOS 有可能把主板变砖。上次搞坏过一次，还好主板有 JSPI1 接口，在某宝买了个编程器刷好了。\n准备需要用到 UEFITool 和 UEFIExtract 、修图软件。\n修改BIOS解包用 UEFIExtract 解开 BIOS文件。UEFIExtract BIOSfile all\n找图打开解完后的文件夹，搜索 body.bin 。搜索完 Ctrl+A 全选这些搜索结果，拖到改名工具里面，扩展名改成 jpg 。改完把搜索结果显示为大图标，向下滚动，就很容易找到图片文件。然后发现能改的不止 LOGO 。找到后查看文件路径中的 GUID ，GUID 有两串，要后面的。可以把图片拖出来并改成前面的复制的名字备用。用文本编辑器或是十六进制编辑器打开这些图片查看文件头，把图片改回它本来的扩展名。（文件头对照，可以用 Ctrl+F 搜索。）像这种就是 JPG/JFIF 的。\n改图查看图片详细信息，把自己的图改成和BIOS里面那张一样格式、差不多大小的。如果文件太大了保存的时候会报错，所以不用太担心图片太大把 BIOS 改坏。UEFI 启动图的高度最好不要太高，不然会被 Windows 的圆圈盖住。我的启动选单背景图只有改成 1024x768 分辨率才能正常显示，其他的图片倒是没问题。还有就是有的 BIOS 只认 JFIF 文件头的图片，Photoshop CC 保存的 JPG 不带 JFIF 文件头，可换用 CS4 。\n替换改完图片之后用 UEFITool 打开BIOS文件，Ctrl+F 搜索要替换的图片的 GIUD 。展开到 Raw section 右键选择 Extract body… 保存成 jpg 看下是不是要改的那张图。是的话再右键选择 Replace body… 替换成自己改的图片。\n保存替换完 Ctrl+S 保存 BIOS 。如果保存的时候出错了，有可能是图片文件太大了，存小点试试。\n刷入最后刷进主板。\n改好的图LEGACY开机LOGO\n启动选单\nUEFI开机LOGO\n实际效果\n","dateCreated":"2017-09-25T14:50:34+08:00","dateModified":"2018-06-19T03:54:36+08:00","datePublished":"2017-09-25T14:50:34+08:00","description":"　　MSI 主板的启动图片看腻了，想换一个，可找了好多替换工具都换不到启动图。　　后来用 UEFIExtract 直接把 BIOS 全部解包，找到了图片位置。　　刷修改过的 BIOS 有可能把主板变砖。上次搞坏过一次，还好主板有 JSPI1 接口，在某宝买了个编程器刷好了。","headline":"修改 AMI BIOS 的启动 LOGO","image":["c08legacy开机logo.jpg"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://veltlion.github.io/change-uefi-boot-logo/"},"publisher":{"@type":"Organization","name":"空","sameAs":["mailto:&#115;&#111;&#114;&#97;&#64;&#108;&#105;&#118;&#101;&#46;&#106;&#112;","https://twitter.com/yume1001","https://t.me/soratan"],"image":"avatar.png","logo":{"@type":"ImageObject","url":"avatar.png"}},"url":"https://veltlion.github.io/change-uefi-boot-logo/","keywords":"BIOS, AMI, LOGO","thumbnailUrl":"c08legacy开机logo.jpg"}</script>
+    <meta name="description" content="MSI 主板的启动图片看腻了，想换一个，可找了好多替换工具都换不到启动图。　　后来用 UEFIExtract 直接把 BIOS 全部解包，找到了图片位置。　　刷修改过的 BIOS 有可能把主板变砖。上次搞坏过一次，还好主板有 JSPI1 接口，在某宝买了个编程器刷好了。">
+<meta name="keywords" content="BIOS,AMI,LOGO">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="修改 AMI BIOS 的启动 LOGO">
+<meta property="og:url" content="https://veltlion.github.io/change-uefi-boot-logo/index.html">
+<meta property="og:site_name" content="空">
+<meta property="og:description" content="MSI 主板的启动图片看腻了，想换一个，可找了好多替换工具都换不到启动图。　　后来用 UEFIExtract 直接把 BIOS 全部解包，找到了图片位置。　　刷修改过的 BIOS 有可能把主板变砖。上次搞坏过一次，还好主板有 JSPI1 接口，在某宝买了个编程器刷好了。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://veltlion.github.io/change-uefi-boot-logo/c01搜索.png">
+<meta property="og:image" content="https://veltlion.github.io/change-uefi-boot-logo/c02改名.png">
+<meta property="og:image" content="https://veltlion.github.io/change-uefi-boot-logo/c03找图.png">
+<meta property="og:image" content="https://veltlion.github.io/change-uefi-boot-logo/c04复制ID.png">
+<meta property="og:image" content="https://veltlion.github.io/change-uefi-boot-logo/c05文件头.png">
+<meta property="og:image" content="https://veltlion.github.io/change-uefi-boot-logo/c06搜索GUID.png">
+<meta property="og:image" content="https://veltlion.github.io/change-uefi-boot-logo/c07替换.png">
+<meta property="og:image" content="https://veltlion.github.io/change-uefi-boot-logo/c08legacy开机logo.jpg">
+<meta property="og:image" content="https://veltlion.github.io/change-uefi-boot-logo/c09启动选单.jfif">
+<meta property="og:image" content="https://veltlion.github.io/change-uefi-boot-logo/c10uefi开机logo1.jpg">
+<meta property="og:image" content="https://veltlion.github.io/change-uefi-boot-logo/c11uefi开机logo2.jpg">
+<meta property="og:image" content="https://veltlion.github.io/change-uefi-boot-logo/c11uefi开机logo3.jpg">
+<meta property="og:image" content="https://veltlion.github.io/change-uefi-boot-logo/c12uefi开机图1.jpg">
+<meta property="og:image" content="https://veltlion.github.io/change-uefi-boot-logo/c13uefi开机图2.jpg">
+<meta property="og:updated_time" content="2018-06-18T19:54:36.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="修改 AMI BIOS 的启动 LOGO">
+<meta name="twitter:description" content="MSI 主板的启动图片看腻了，想换一个，可找了好多替换工具都换不到启动图。　　后来用 UEFIExtract 直接把 BIOS 全部解包，找到了图片位置。　　刷修改过的 BIOS 有可能把主板变砖。上次搞坏过一次，还好主板有 JSPI1 接口，在某宝买了个编程器刷好了。">
+<meta name="twitter:image" content="https://veltlion.github.io/change-uefi-boot-logo/c01搜索.png">
+<meta name="twitter:creator" content="@yume1001">
+    
+    
+        
+    
+    
+        <meta property="og:image" content="https://veltlion.github.io/assets/images/avatar.png"/>
+    
+    
+        <meta property="og:image" content="https://veltlion.github.io/change-uefi-boot-logo/c08legacy开机logo.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="https://veltlion.github.io/change-uefi-boot-logo/c08legacy开机logo.jpg" />
+    
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-q5gyp41mydv21foxq3qnhhksiajld8kdceohbyl8igf5bl5wvojk5yamro6w.min.css">
+    <!--STYLES END-->
+    
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-106826273-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+        
+            
+        
+    
+
+<header id="header" data-behavior="2">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a class="header-title-link" href="/ ">空</a>
+    </div>
+    
+        
+            <a class="header-right-picture " href="#about">
+        
+        
+            <img class="header-picture" src="/assets/images/avatar.png" alt="作者的图片">
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="2">
+    <div class="sidebar-container">
+        
+            <div class="sidebar-profile">
+                <a href="/#about">
+                    <img class="sidebar-profile-picture" src="/assets/images/avatar.png" alt="作者的图片">
+                </a>
+                <h4 class="sidebar-profile-name">空</h4>
+                
+                    <h5 class="sidebar-profile-bio"><p>author.bio</p>
+</h5>
+                
+            </div>
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/ " title="首页">
+                    
+                        <i class="sidebar-button-icon far fa-circle" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">首页</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/all-archives" title="归档">
+                    
+                        <i class="sidebar-button-icon fas fa-bars" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">归档</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/all-categories" title="分类">
+                    
+                        <i class="sidebar-button-icon fa fa-bookmark" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">分类</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/all-tags" title="标签">
+                    
+                        <i class="sidebar-button-icon far fa-star" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">标签</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/about" title="关于">
+                    
+                        <i class="sidebar-button-icon fas fa-info" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">关于</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="mailto:&#115;&#111;&#114;&#97;&#64;&#108;&#105;&#118;&#101;&#46;&#106;&#112;" target="_blank" rel="noopener" title="Email">
+                    
+                        <i class="sidebar-button-icon fa fa-envelope" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Email</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="https://twitter.com/yume1001" target="_blank" rel="noopener" title="Twitter">
+                    
+                        <i class="sidebar-button-icon fab fa-twitter" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Twitter</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="https://t.me/soratan" target="_blank" rel="noopener" title="Telegram">
+                    
+                        <i class="sidebar-button-icon fab fa-telegram-plane" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Telegram</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/atom.xml" title="RSS">
+                    
+                        <i class="sidebar-button-icon fa fa-rss" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/links" title="Links">
+                    
+                        <i class="sidebar-button-icon fas fa-link" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Links</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+            <div id="main" data-behavior="2"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post">
+    
+    
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title">
+            修改 AMI BIOS 的启动 LOGO
+        </h1>
+    
+    
+        <div class="post-meta">
+    <time datetime="2017-09-25T14:50:34+08:00">
+	
+		    2017年09月25日
+    	
+    </time>
+    
+        <span>发布在 </span>
+        
+    <a class="category-link" href="/categories/瞎鼓捣/">瞎鼓捣</a>
+
+
+    
+</div>
+
+    
+</div>
+
+    
+    <div class="post-content markdown">
+        <div class="main-content-wrap">
+            <p>　　MSI 主板的启动图片看腻了，想换一个，可找了好多替换工具都换不到启动图。<br>　　后来用 UEFIExtract 直接把 BIOS 全部解包，找到了图片位置。<br>　　刷修改过的 BIOS 有可能把主板变砖。上次搞坏过一次，还好主板有 JSPI1 接口，在某宝买了个编程器刷好了。<br><a id="more"></a></p><h1 id="table-of-contents">目录</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#准备"><span class="toc-text">准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改BIOS"><span class="toc-text">修改BIOS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#解包"><span class="toc-text">解包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#找图"><span class="toc-text">找图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#改图"><span class="toc-text">改图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#替换"><span class="toc-text">替换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#保存"><span class="toc-text">保存</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#刷入"><span class="toc-text">刷入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#改好的图"><span class="toc-text">改好的图</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#LEGACY开机LOGO"><span class="toc-text">LEGACY开机LOGO</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#启动选单"><span class="toc-text">启动选单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UEFI开机LOGO"><span class="toc-text">UEFI开机LOGO</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实际效果"><span class="toc-text">实际效果</span></a></li></ol><p></p>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>需要用到 <a href="https://github.com/LongSoft/UEFITool/releases" target="_blank" rel="noopener">UEFITool 和 UEFIExtract</a> 、修图软件。</p>
+<h2 id="修改BIOS"><a href="#修改BIOS" class="headerlink" title="修改BIOS"></a>修改BIOS</h2><h3 id="解包"><a href="#解包" class="headerlink" title="解包"></a>解包</h3><p>用 UEFIExtract 解开 BIOS文件。<br><code>UEFIExtract BIOSfile all</code></p>
+<h3 id="找图"><a href="#找图" class="headerlink" title="找图"></a>找图</h3><p>打开解完后的文件夹，搜索 body.bin 。<br><img src="c01搜索.png" alt="搜索"><br>搜索完 <code>Ctrl+A</code> 全选这些搜索结果，拖到改名工具里面，扩展名改成 jpg 。<br><img src="c02改名.png" alt="改名"><br>改完把搜索结果显示为大图标，向下滚动，就很容易找到图片文件。<br>然后发现能改的不止 LOGO 。<br><img src="c03找图.png" alt="找图"><br>找到后查看文件路径中的 GUID ，GUID 有两串，要后面的。<br><img src="c04复制ID.png" alt="复制ID"><br>可以把图片拖出来并改成前面的复制的名字备用。<br>用文本编辑器或是十六进制编辑器打开这些图片查看文件头，把图片改回它本来的扩展名。（<a href="http://www.garykessler.net/library/file_sigs.html" target="_blank" rel="noopener">文件头对照</a>，可以用 <code>Ctrl+F</code> 搜索。）<br><img src="c05文件头.png" alt="文件头"><br>像这种就是 JPG/JFIF 的。</p>
+<h3 id="改图"><a href="#改图" class="headerlink" title="改图"></a>改图</h3><p>查看图片详细信息，把自己的图改成和BIOS里面那张一样格式、差不多大小的。如果文件太大了保存的时候会报错，所以不用太担心图片太大把 BIOS 改坏。<br>UEFI 启动图的高度最好不要太高，不然会被 Windows 的圆圈盖住。<br>我的启动选单背景图只有改成 1024x768 分辨率才能正常显示，其他的图片倒是没问题。<br>还有就是有的 BIOS 只认 JFIF 文件头的图片，Photoshop CC 保存的 JPG 不带 JFIF 文件头，可换用 CS4 。</p>
+<h3 id="替换"><a href="#替换" class="headerlink" title="替换"></a>替换</h3><p>改完图片之后用 UEFITool 打开BIOS文件，<code>Ctrl+F</code> 搜索要替换的图片的 GIUD 。<br><img src="c06搜索GUID.png" alt="搜索GUID"><br>展开到 Raw section 右键选择 Extract body… 保存成 jpg 看下是不是要改的那张图。<br>是的话再右键选择 Replace body… 替换成自己改的图片。<br><img src="c07替换.png" alt="替换"></p>
+<h3 id="保存"><a href="#保存" class="headerlink" title="保存"></a>保存</h3><p>替换完 <code>Ctrl+S</code> 保存 BIOS 。<br>如果保存的时候出错了，有可能是图片文件太大了，存小点试试。</p>
+<h2 id="刷入"><a href="#刷入" class="headerlink" title="刷入"></a>刷入</h2><p>最后刷进主板。</p>
+<h2 id="改好的图"><a href="#改好的图" class="headerlink" title="改好的图"></a>改好的图</h2><h3 id="LEGACY开机LOGO"><a href="#LEGACY开机LOGO" class="headerlink" title="LEGACY开机LOGO"></a>LEGACY开机LOGO</h3><p><img src="c08legacy开机logo.jpg" alt="LEGACY开机LOGO"></p>
+<h3 id="启动选单"><a href="#启动选单" class="headerlink" title="启动选单"></a>启动选单</h3><p><img src="c09启动选单.jfif" alt="启动选单"></p>
+<h3 id="UEFI开机LOGO"><a href="#UEFI开机LOGO" class="headerlink" title="UEFI开机LOGO"></a>UEFI开机LOGO</h3><p><img src="c10uefi开机logo1.jpg" alt="UEFI开机LOGO"><br><img src="c11uefi开机logo2.jpg" alt="UEFI开机LOGO"><br><img src="c11uefi开机logo3.jpg" alt="UEFI开机LOGO"></p>
+<h2 id="实际效果"><a href="#实际效果" class="headerlink" title="实际效果"></a>实际效果</h2><p><img src="c12uefi开机图1.jpg" alt="UEFI开机"><br><img src="c13uefi开机图2.jpg" alt="UEFI开机"></p>
+
+            
+
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">标签</span><br>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/AMI/">AMI</a> <a class="tag tag--primary tag--small t-link" href="/tags/BIOS/">BIOS</a> <a class="tag tag--primary tag--small t-link" href="/tags/LOGO/">LOGO</a>
+
+            </div>
+        
+        
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/flash-h7-4/" data-tooltip="给海美迪 H7 四代刷第三方固件" aria-label="上一篇: 给海美迪 H7 四代刷第三方固件">
+                
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/多说转Disqus的坑/" data-tooltip="多说转 Disqus 的坑" aria-label="下一篇: 多说转 Disqus 的坑">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://veltlion.github.io/change-uefi-boot-logo/" data-tooltip="分享到 Twitter">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://veltlion.github.io/change-uefi-boot-logo/" data-tooltip="分享到 Google+">
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?&amp;title=https://veltlion.github.io/change-uefi-boot-logo/" data-tooltip="分享到 Weibo">
+                    <i class="fab fa-weibo" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+                <li class="post-action">
+                    <a class="post-action-btn btn btn--default" href="#comments">
+                         <i class="fa fa-comment"></i>
+                    </a>
+                </li>
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#table-of-contents" aria-label="目录">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+        
+            
+                <div id="comments"></div>
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2018 空. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="2">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/flash-h7-4/" data-tooltip="给海美迪 H7 四代刷第三方固件" aria-label="上一篇: 给海美迪 H7 四代刷第三方固件">
+                
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/多说转Disqus的坑/" data-tooltip="多说转 Disqus 的坑" aria-label="下一篇: 多说转 Disqus 的坑">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://veltlion.github.io/change-uefi-boot-logo/" data-tooltip="分享到 Twitter">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://veltlion.github.io/change-uefi-boot-logo/" data-tooltip="分享到 Google+">
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?&amp;title=https://veltlion.github.io/change-uefi-boot-logo/" data-tooltip="分享到 Weibo">
+                    <i class="fab fa-weibo" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+                <li class="post-action">
+                    <a class="post-action-btn btn btn--default" href="#comments">
+                         <i class="fa fa-comment"></i>
+                    </a>
+                </li>
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#table-of-contents" aria-label="目录">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="2">
+    <i id="btn-close-shareoptions" class="fa fa-times"></i>
+    <ul class="share-options">
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://veltlion.github.io/change-uefi-boot-logo/">
+                    <i class="fab fa-twitter" aria-hidden="true"></i><span>分享到 Twitter</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://veltlion.github.io/change-uefi-boot-logo/">
+                    <i class="fab fa-google-plus" aria-hidden="true"></i><span>分享到 Google+</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="http://service.weibo.com/share/share.php?&amp;title=https://veltlion.github.io/change-uefi-boot-logo/">
+                    <i class="fab fa-weibo" aria-hidden="true"></i><span>分享到 Weibo</span>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-times"></i>
+        </div>
+        
+            <img id="about-card-picture" src="/assets/images/avatar.png" alt="作者的图片">
+        
+            <h4 id="about-card-name">空</h4>
+        
+            <div id="about-card-bio"><p>author.bio</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br>
+                <p>author.job</p>
+
+            </div>
+        
+        
+            <div id="about-card-location">
+                <i class="fa fa-map-marker-alt"></i>
+                <br>
+                test
+            </div>
+        
+    </div>
+</div>
+
+        
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+        <!--SCRIPTS-->
+<script src="/assets/js/script-tzrybri9dq9kqb3c9293hhrcnban9piwdsez1hk3l89bvpjv2cx35v9pqnop.min.js"></script>
+<!--SCRIPTS END-->
+
+    
+        <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+        <script src="/assets/js/Valine.min.js"></script>
+        <script>
+            new Valine({
+                av: AV,
+                el: '#comments',
+                notify:'false', 
+                verify:'false', 
+                appId:'4PRFCeNilpABAutJlqdmectP-gzGzoHsz',
+                appKey:'X2snnlim2EiRUn2OcbXkPreB',
+                placeholder:'',
+                path:window.location.pathname, 
+                avatar:'mp' 
+            });
+        </script>
+     
+
+
+
+    </body>
+</html>

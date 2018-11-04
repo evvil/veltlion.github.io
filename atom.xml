@@ -18,8 +18,8 @@
   
   <entry>
     <title>导出 Firefox 密码到 KeePass</title>
-    <link href="https://veltlion.github.io/%E5%AF%BC%E5%87%BA-firefox-%E5%AF%86%E7%A0%81%E5%88%B0-keepass/"/>
-    <id>https://veltlion.github.io/导出-firefox-密码到-keepass/</id>
+    <link href="https://veltlion.github.io/export-firefox-password/"/>
+    <id>https://veltlion.github.io/export-firefox-password/</id>
     <published>2018-06-18T18:36:50.000Z</published>
     <updated>2018-11-04T20:54:58.119Z</updated>
     
@@ -51,8 +51,8 @@
   
   <entry>
     <title>唔…</title>
-    <link href="https://veltlion.github.io/%E5%94%94%E2%80%A6/"/>
-    <id>https://veltlion.github.io/唔…/</id>
+    <link href="https://veltlion.github.io/23/"/>
+    <id>https://veltlion.github.io/23/</id>
     <published>2018-03-13T22:42:00.000Z</published>
     <updated>2018-11-04T21:42:01.094Z</updated>
     
@@ -98,8 +98,8 @@
   
   <entry>
     <title>编译 Samba 笔记</title>
-    <link href="https://veltlion.github.io/%E7%BC%96%E8%AF%91-samba-%E7%AC%94%E8%AE%B0/"/>
-    <id>https://veltlion.github.io/编译-samba-笔记/</id>
+    <link href="https://veltlion.github.io/cross-compile-samba/"/>
+    <id>https://veltlion.github.io/cross-compile-samba/</id>
     <published>2018-02-26T15:57:01.000Z</published>
     <updated>2018-11-04T20:54:40.334Z</updated>
     
@@ -148,8 +148,8 @@
   
   <entry>
     <title>编译 Aria2 笔记</title>
-    <link href="https://veltlion.github.io/%E7%BC%96%E8%AF%91-aria2-%E7%AC%94%E8%AE%B0/"/>
-    <id>https://veltlion.github.io/编译-aria2-笔记/</id>
+    <link href="https://veltlion.github.io/cross-compile-aria2/"/>
+    <id>https://veltlion.github.io/cross-compile-aria2/</id>
     <published>2017-12-07T08:51:04.000Z</published>
     <updated>2018-11-04T20:52:44.378Z</updated>
     
@@ -196,8 +196,8 @@
   
   <entry>
     <title>给海美迪 H7 四代刷第三方固件</title>
-    <link href="https://veltlion.github.io/%E7%BB%99%E6%B5%B7%E7%BE%8E%E8%BF%AA-h7-%E5%9B%9B%E4%BB%A3%E5%88%B7%E7%AC%AC%E4%B8%89%E6%96%B9%E5%9B%BA%E4%BB%B6/"/>
-    <id>https://veltlion.github.io/给海美迪-h7-四代刷第三方固件/</id>
+    <link href="https://veltlion.github.io/flash-h7-4/"/>
+    <id>https://veltlion.github.io/flash-h7-4/</id>
     <published>2017-09-26T08:06:12.000Z</published>
     <updated>2018-11-04T15:30:02.543Z</updated>
     
@@ -228,8 +228,8 @@
   
   <entry>
     <title>修改 AMI BIOS 的启动 LOGO</title>
-    <link href="https://veltlion.github.io/%E4%BF%AE%E6%94%B9-ami-bios-%E7%9A%84%E5%90%AF%E5%8A%A8-logo/"/>
-    <id>https://veltlion.github.io/修改-ami-bios-的启动-logo/</id>
+    <link href="https://veltlion.github.io/change-uefi-boot-logo/"/>
+    <id>https://veltlion.github.io/change-uefi-boot-logo/</id>
     <published>2017-09-25T06:50:34.000Z</published>
     <updated>2018-06-18T19:54:36.000Z</updated>
     
@@ -254,8 +254,8 @@
   
   <entry>
     <title>多说转 Disqus 的坑</title>
-    <link href="https://veltlion.github.io/%E5%A4%9A%E8%AF%B4%E8%BD%AC-disqus-%E7%9A%84%E5%9D%91/"/>
-    <id>https://veltlion.github.io/多说转-disqus-的坑/</id>
+    <link href="https://veltlion.github.io/%E5%A4%9A%E8%AF%B4%E8%BD%ACDisqus%E7%9A%84%E5%9D%91/"/>
+    <id>https://veltlion.github.io/多说转Disqus的坑/</id>
     <published>2017-06-16T22:20:57.000Z</published>
     <updated>2018-09-08T16:40:47.126Z</updated>
     
@@ -272,8 +272,8 @@
   
   <entry>
     <title>ROOT 海美迪 H7 四代</title>
-    <link href="https://veltlion.github.io/root-%E6%B5%B7%E7%BE%8E%E8%BF%AA-h7-%E5%9B%9B%E4%BB%A3/"/>
-    <id>https://veltlion.github.io/root-海美迪-h7-四代/</id>
+    <link href="https://veltlion.github.io/ttl-root-h7-4/"/>
+    <id>https://veltlion.github.io/ttl-root-h7-4/</id>
     <published>2017-04-26T17:45:00.000Z</published>
     <updated>2018-11-02T18:52:52.652Z</updated>
     
@@ -300,8 +300,8 @@
   
   <entry>
     <title>入了个 x1s 的手柄</title>
-    <link href="https://veltlion.github.io/%E5%85%A5%E4%BA%86%E4%B8%AA-x1s-%E7%9A%84%E6%89%8B%E6%9F%84/"/>
-    <id>https://veltlion.github.io/入了个-x1s-的手柄/</id>
+    <link href="https://veltlion.github.io/%E5%85%A5%E4%BA%86%E4%B8%AA%20x1s%20%E7%9A%84%E6%89%8B%E6%9F%84/"/>
+    <id>https://veltlion.github.io/入了个 x1s 的手柄/</id>
     <published>2017-03-04T19:15:00.000Z</published>
     <updated>2018-11-04T21:46:11.198Z</updated>
     
@@ -406,8 +406,8 @@
   
   <entry>
     <title>在 Android 手机上面更新 Hexo 博客</title>
-    <link href="https://veltlion.github.io/%E5%9C%A8-android-%E6%89%8B%E6%9C%BA%E4%B8%8A%E9%9D%A2%E6%9B%B4%E6%96%B0-hexo-%E5%8D%9A%E5%AE%A2/"/>
-    <id>https://veltlion.github.io/在-android-手机上面更新-hexo-博客/</id>
+    <link href="https://veltlion.github.io/hexo-on-android/"/>
+    <id>https://veltlion.github.io/hexo-on-android/</id>
     <published>2016-09-06T14:45:00.000Z</published>
     <updated>2018-05-17T18:24:51.000Z</updated>
     
@@ -478,8 +478,8 @@
   
   <entry>
     <title>USB 网络共享</title>
-    <link href="https://veltlion.github.io/usb-%E7%BD%91%E7%BB%9C%E5%85%B1%E4%BA%AB/"/>
-    <id>https://veltlion.github.io/usb-网络共享/</id>
+    <link href="https://veltlion.github.io/fix-usb-tethering-on-windows/"/>
+    <id>https://veltlion.github.io/fix-usb-tethering-on-windows/</id>
     <published>2016-08-14T11:53:00.000Z</published>
     <updated>2018-09-08T16:48:17.558Z</updated>
     
@@ -507,8 +507,8 @@
   
   <entry>
     <title>Android 6.0 之后 wap 接入点不能解析 DNS 的解决方法</title>
-    <link href="https://veltlion.github.io/android-6-0-%E4%B9%8B%E5%90%8E-wap-%E6%8E%A5%E5%85%A5%E7%82%B9%E4%B8%8D%E8%83%BD%E8%A7%A3%E6%9E%90-dns-%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
-    <id>https://veltlion.github.io/android-6-0-之后-wap-接入点不能解析-dns-的解决方法/</id>
+    <link href="https://veltlion.github.io/android-wap-apn-dns/"/>
+    <id>https://veltlion.github.io/android-wap-apn-dns/</id>
     <published>2016-08-09T13:21:00.000Z</published>
     <updated>2018-11-04T21:42:35.622Z</updated>
     
@@ -561,8 +561,8 @@
   
   <entry>
     <title>Hexo 的 md 文件重命名</title>
-    <link href="https://veltlion.github.io/hexo-%E7%9A%84-md-%E6%96%87%E4%BB%B6%E9%87%8D%E5%91%BD%E5%90%8D/"/>
-    <id>https://veltlion.github.io/hexo-的-md-文件重命名/</id>
+    <link href="https://veltlion.github.io/hexo-md-rename/"/>
+    <id>https://veltlion.github.io/hexo-md-rename/</id>
     <published>2016-05-05T06:29:35.000Z</published>
     <updated>2018-11-04T21:37:37.265Z</updated>
     
@@ -585,8 +585,8 @@
   
   <entry>
     <title>向AUR提交软件包</title>
-    <link href="https://veltlion.github.io/%E5%90%91aur%E6%8F%90%E4%BA%A4%E8%BD%AF%E4%BB%B6%E5%8C%85/"/>
-    <id>https://veltlion.github.io/向aur提交软件包/</id>
+    <link href="https://veltlion.github.io/submitting-packages-to-aur/"/>
+    <id>https://veltlion.github.io/submitting-packages-to-aur/</id>
     <published>2016-04-02T10:26:39.000Z</published>
     <updated>2018-02-28T21:07:10.561Z</updated>
     
@@ -607,8 +607,8 @@
   
   <entry>
     <title>换用Hexo了</title>
-    <link href="https://veltlion.github.io/%E6%8D%A2%E7%94%A8hexo%E4%BA%86/"/>
-    <id>https://veltlion.github.io/换用hexo了/</id>
+    <link href="https://veltlion.github.io/switch-to-hexo/"/>
+    <id>https://veltlion.github.io/switch-to-hexo/</id>
     <published>2016-04-01T06:00:48.000Z</published>
     <updated>2018-02-28T21:07:51.057Z</updated>
     
@@ -629,8 +629,8 @@
   
   <entry>
     <title>联通 WO-36 光猫改桥接</title>
-    <link href="https://veltlion.github.io/%E8%81%94%E9%80%9A-wo-36-%E5%85%89%E7%8C%AB%E6%94%B9%E6%A1%A5%E6%8E%A5/"/>
-    <id>https://veltlion.github.io/联通-wo-36-光猫改桥接/</id>
+    <link href="https://veltlion.github.io/%E8%81%94%E9%80%9AWO-36%E5%85%89%E7%8C%AB%E6%94%B9%E6%A1%A5%E6%8E%A5/"/>
+    <id>https://veltlion.github.io/联通WO-36光猫改桥接/</id>
     <published>2016-03-11T11:24:00.000Z</published>
     <updated>2018-09-08T16:50:37.893Z</updated>
     
@@ -659,8 +659,8 @@
   
   <entry>
     <title>去除「十六夜のフォルトゥーナ」日本語版Windows判定</title>
-    <link href="https://veltlion.github.io/%E5%8E%BB%E9%99%A4%E3%80%8C%E5%8D%81%E5%85%AD%E5%A4%9C%E3%81%AE%E3%83%95%E3%82%A9%E3%83%AB%E3%83%88%E3%82%A5%E3%83%BC%E3%83%8A%E3%80%8D%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88windows%E5%88%A4%E5%AE%9A/"/>
-    <id>https://veltlion.github.io/去除「十六夜のフォルトゥーナ」日本語版windows判定/</id>
+    <link href="https://veltlion.github.io/%E5%8E%BB%E9%99%A4%E3%80%8C%E5%8D%81%E5%85%AD%E5%A4%9C%E3%81%AE%E3%83%95%E3%82%A9%E3%83%AB%E3%83%88%E3%82%A5%E3%83%BC%E3%83%8A%E3%80%8D%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88Windows%E5%88%A4%E5%AE%9A/"/>
+    <id>https://veltlion.github.io/去除「十六夜のフォルトゥーナ」日本語版Windows判定/</id>
     <published>2015-07-12T02:43:00.000Z</published>
     <updated>2018-09-08T16:50:51.854Z</updated>
     
@@ -681,8 +681,8 @@
   
   <entry>
     <title>博客从手机挪到VPS啦</title>
-    <link href="https://veltlion.github.io/%E5%8D%9A%E5%AE%A2%E4%BB%8E%E6%89%8B%E6%9C%BA%E6%8C%AA%E5%88%B0vps%E5%95%A6/"/>
-    <id>https://veltlion.github.io/博客从手机挪到vps啦/</id>
+    <link href="https://veltlion.github.io/%E5%8D%9A%E5%AE%A2%E4%BB%8E%E6%89%8B%E6%9C%BA%E6%8C%AA%E5%88%B0VPS%E5%95%A6/"/>
+    <id>https://veltlion.github.io/博客从手机挪到VPS啦/</id>
     <published>2015-04-21T03:32:06.000Z</published>
     <updated>2018-09-08T16:51:18.558Z</updated>
     
@@ -704,8 +704,8 @@
   
   <entry>
     <title>在 Android 手机上 chroot ArchLinux</title>
-    <link href="https://veltlion.github.io/%E5%9C%A8-android-%E6%89%8B%E6%9C%BA%E4%B8%8A-chroot-archlinux/"/>
-    <id>https://veltlion.github.io/在-android-手机上-chroot-archlinux/</id>
+    <link href="https://veltlion.github.io/chroot-archlinux-on-android/"/>
+    <id>https://veltlion.github.io/chroot-archlinux-on-android/</id>
     <published>2015-04-13T13:46:05.000Z</published>
     <updated>2018-04-06T18:55:58.000Z</updated>
     
@@ -728,8 +728,8 @@
   
   <entry>
     <title>そら…</title>
-    <link href="https://veltlion.github.io/%E3%81%9D%E3%82%89%E2%80%A6/"/>
-    <id>https://veltlion.github.io/そら…/</id>
+    <link href="https://veltlion.github.io/sora%E2%80%A6/"/>
+    <id>https://veltlion.github.io/sora…/</id>
     <published>2015-03-22T10:38:21.000Z</published>
     <updated>2018-11-04T21:44:09.469Z</updated>
     
@@ -750,8 +750,8 @@
   
   <entry>
     <title>编译 Android 用的 redsocks</title>
-    <link href="https://veltlion.github.io/%E7%BC%96%E8%AF%91-android-%E7%94%A8%E7%9A%84-redsocks/"/>
-    <id>https://veltlion.github.io/编译-android-用的-redsocks/</id>
+    <link href="https://veltlion.github.io/cross-compile-redsocks/"/>
+    <id>https://veltlion.github.io/cross-compile-redsocks/</id>
     <published>2015-02-19T14:13:32.000Z</published>
     <updated>2018-04-06T18:59:17.000Z</updated>
     
@@ -776,8 +776,8 @@
   
   <entry>
     <title>Android全局HTTP(S)代理</title>
-    <link href="https://veltlion.github.io/android%E5%85%A8%E5%B1%80http-s-%E4%BB%A3%E7%90%86/"/>
-    <id>https://veltlion.github.io/android全局http-s-代理/</id>
+    <link href="https://veltlion.github.io/android-global-http-proxy/"/>
+    <id>https://veltlion.github.io/android-global-http-proxy/</id>
     <published>2015-01-18T15:49:03.000Z</published>
     <updated>2018-04-06T19:04:01.000Z</updated>
     
@@ -802,8 +802,8 @@
   
   <entry>
     <title>C语言求素数的几种方法</title>
-    <link href="https://veltlion.github.io/c%E8%AF%AD%E8%A8%80%E6%B1%82%E7%B4%A0%E6%95%B0%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/"/>
-    <id>https://veltlion.github.io/c语言求素数的几种方法/</id>
+    <link href="https://veltlion.github.io/CPrime/"/>
+    <id>https://veltlion.github.io/CPrime/</id>
     <published>2015-01-08T09:11:07.000Z</published>
     <updated>2018-11-04T21:43:06.910Z</updated>
     
@@ -848,8 +848,8 @@
   
   <entry>
     <title>伪静态</title>
-    <link href="https://veltlion.github.io/%E4%BC%AA%E9%9D%99%E6%80%81/"/>
-    <id>https://veltlion.github.io/伪静态/</id>
+    <link href="https://veltlion.github.io/rewrite/"/>
+    <id>https://veltlion.github.io/rewrite/</id>
     <published>2014-11-20T21:26:58.000Z</published>
     <updated>2018-11-04T21:43:55.110Z</updated>
     
@@ -870,8 +870,8 @@
   
   <entry>
     <title>Untitled（二）</title>
-    <link href="https://veltlion.github.io/untitled%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
-    <id>https://veltlion.github.io/untitled（二）/</id>
+    <link href="https://veltlion.github.io/untitled2/"/>
+    <id>https://veltlion.github.io/untitled2/</id>
     <published>2014-06-25T14:25:47.000Z</published>
     <updated>2018-09-11T16:35:02.897Z</updated>
     
@@ -952,8 +952,8 @@
   
   <entry>
     <title>Untitled</title>
-    <link href="https://veltlion.github.io/untitled/"/>
-    <id>https://veltlion.github.io/untitled/</id>
+    <link href="https://veltlion.github.io/untitled%20/"/>
+    <id>https://veltlion.github.io/untitled /</id>
     <published>2014-06-21T09:26:48.000Z</published>
     <updated>2018-09-11T16:35:42.225Z</updated>
     
