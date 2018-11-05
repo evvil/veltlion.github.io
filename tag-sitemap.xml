@@ -3,20 +3,6 @@
 
 
     <url>
-        <loc>https://veltlion.github.io/tags/firefox/</loc>
-        <lastmod>2018-11-04T22:16:26.495Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://veltlion.github.io/tags/keepass/</loc>
-        <lastmod>2018-11-04T22:16:26.495Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://veltlion.github.io/tags/AUR/</loc>
         <lastmod>2018-11-04T22:16:26.591Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -214,14 +200,28 @@
 
     <url>
         <loc>https://veltlion.github.io/tags/Hexo/</loc>
-        <lastmod>2018-11-04T22:53:51.107Z</lastmod>
+        <lastmod>2018-11-05T12:54:40.652Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://veltlion.github.io/tags/%E9%87%8D%E5%91%BD%E5%90%8D/</loc>
-        <lastmod>2018-11-04T22:53:51.107Z</lastmod>
+        <lastmod>2018-11-05T12:54:40.652Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/tags/firefox/</loc>
+        <lastmod>2018-11-05T13:54:51.497Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/tags/keepass/</loc>
+        <lastmod>2018-11-05T13:54:51.497Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
