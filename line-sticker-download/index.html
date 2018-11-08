@@ -15,7 +15,7 @@
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"空","sameAs":["mailto:&#115;&#111;&#114;&#97;&#64;&#108;&#105;&#118;&#101;&#46;&#106;&#112;","https://twitter.com/yume1001","https://t.me/soratan"],"image":"avatar.png"},"articleBody":"　　LINE 的贴图大部分都很可爱，很萌萌二次元，所以就想保存下来放到 QQ 、Telegram 上用。　　一个一个的保存太麻烦，很久之前写了个 bash 脚本来下载。可是就在几月前，我那脚本和一百四十多小时的 BOTW 存档就因为 SSD 掉盘，被某东的小哥带走了。满满当当的 MLCSSD 就这么变成了空荡荡的 TLCSSD ……　　不过这都是很久以前的事情了，今天我又碰到一套好看的贴图想存下来，就 Google 看看有没有更简单的保存方法，然后看到 GitHub 上面有个把 LINE 贴图转到 Telegram 的工具，看一下源码发现了 LINE 的贴图包下载链接，可以直接下载。明明商店页面的图片还要验 Referrer 的说…https://sdl-stickershop.line.naver.jp/stickershop/v1/product/贴图ID/iphone/stickers@2x.zip　　后来 Greasyfork 上的小伙伴说还有动图包的链接，可以下载到动图和声音文件。https://sdl-stickershop.line.naver.jp/stickershop/v1/product/贴图ID/iphone/stickerpack@2x.zip　　iphone 也可以换成 android ，不过 iphone 的图大，应该是画质更好吧。　　但这样也要手动改 url 再粘贴回车，还是很麻烦。　　想到用油猴子应该可以在页面上加个下载按钮，可是我之前没接触过 js ，甚至连 js 的全名都拼不全……　　好在搜索引擎是万能的，帮我解决了这些问题。不过还是有一些地方不明白，好多东西真是用到的时候才觉得少啊，下面是成果。\n　　下面是脚本内容，也可以去 Greasyfork 安装。LINE Sticker Download.user.jsInstall1234567891011121314151617181920212223242526272829303132333435363738// ==UserScript==// @name               LINE Sticker Download// @name:zh-CN         LINE Sticker Download// @namespace          https://veltlion.github.io/line-sticker-download// @include            https://store.line.me/stickershop/product/*// @version            1.4.1// @description        Add download button for line sticker store// @description:zh-cn  在 LINE STORE Sticker 页面添加下载按钮// @author             空// @grant              GM_download// ==/UserScript==var id = window.location.pathname.replace(/[^\\d]/g, '');var link = 'https://sdl-stickershop.line.naver.jp/stickershop/v1/product/' + id + '/iphone/stickers@2x.zip';var aslink = 'https://sdl-stickershop.line.naver.jp/stickershop/v1/product/' + id + '/iphone/stickerpack@2x.zip';if ($('span').hasClass('MdIcoAni_b') || $('span').hasClass('MdIcoPlay_b') ||$('span').hasClass('MdIcoSound_b') ||    $('span').hasClass('MdIcoFlashAni_b') || $('span').hasClass('MdIcoFlash_b')) link = aslink;var file = &#123; url: link, name: document.title.replace(/(.+) (-|–) .+/g, '$1') + '.zip' &#125;;var lang = navigator.language;var btnstr = 'Download';if (lang.indexOf('zh') &gt; -1) btnstr = '下载';else if (lang.indexOf('ja') &gt; -1) btnstr = 'ダウンロード';var btn = '&lt;li class=\"mdCMN08Li\" style=\"list-style-type: none\"&gt;'        + '&lt;a class=\"MdBtn01 mdBtn01\" id=\"download\" style=\"background: #33b1ff\"&gt;'        + '&lt;span class=\"mdBtn01Inner\"&gt;'        + '&lt;span class=\"mdBtn01Txt\"&gt;' + btnstr + '&lt;/span&gt;'        + '&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;';if ($('div').hasClass('mdCMN08Txt')) &#123;    $('.mdCMN08Txt&gt;ul').find('li:eq(0)').remove();    $('.mdCMN08Ul').prepend(btn);&#125;else if ($('div').hasClass('mdMN05Btn')) &#123;    //$('.MdBtn01').remove();    $('.mdMN05Btn').prepend(btn);&#125;$('body').on('click', '#download', function()&#123;    var result = GM_download(file);&#125;);\n　　还有个歪果仁拉我进他们 LINE 转 Telegram 表情包的群，可是我鹰语和毛语本当苦手，看不懂他们说的话就退掉了，好多东西真是用到的时候才觉得少啊Orz…　　不过这也都是没办法的事。\n","dateCreated":"2018-03-02T07:12:18+08:00","dateModified":"2018-11-05T06:19:39+08:00","datePublished":"2018-03-02T07:12:18+08:00","description":"　　LINE 的贴图大部分都很可爱，很萌萌二次元，所以就想保存下来放到 QQ 、Telegram 上用。　　一个一个的保存太麻烦，很久之前写了个 bash 脚本来下载。可是就在几月前，我那脚本和一百四十多小时的 BOTW 存档就因为 SSD 掉盘，被某东的小哥带走了。满满当当的 MLCSSD 就这么变成了空荡荡的 TLCSSD ……　　不过这都是很久以前的事情了，今天我又碰到一套好看的贴图想存下来，就 Google 看看有没有更简单的保存方法，然后看到 GitHub 上面有个把 LINE 贴图转到 Telegram 的工具，看一下源码发现了 LINE 的贴图包下载链接，可以直接下载。明明商店页面的图片还要验 Referrer 的说…","headline":"LINE Sticker Download","image":["21645952@2x.png"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://veltlion.github.io/line-sticker-download/"},"publisher":{"@type":"Organization","name":"空","sameAs":["mailto:&#115;&#111;&#114;&#97;&#64;&#108;&#105;&#118;&#101;&#46;&#106;&#112;","https://twitter.com/yume1001","https://t.me/soratan"],"image":"avatar.png","logo":{"@type":"ImageObject","url":"avatar.png"}},"url":"https://veltlion.github.io/line-sticker-download/","keywords":"LINE, Sticker, 油猴","thumbnailUrl":"21645952@2x.png"}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"空","sameAs":["mailto:&#115;&#111;&#114;&#97;&#64;&#108;&#105;&#118;&#101;&#46;&#106;&#112;","https://twitter.com/yume1001","https://t.me/soratan"],"image":"avatar.jpg"},"articleBody":"　　LINE 的贴图大部分都很可爱，很萌萌二次元，所以就想保存下来放到 QQ 、Telegram 上用。　　一个一个的保存太麻烦，很久之前写了个 bash 脚本来下载。可是就在几月前，我那脚本和一百四十多小时的 BOTW 存档就因为 SSD 掉盘，被某东的小哥带走了。满满当当的 MLCSSD 就这么变成了空荡荡的 TLCSSD ……　　不过这都是很久以前的事情了，今天我又碰到一套好看的贴图想存下来，就 Google 看看有没有更简单的保存方法，然后看到 GitHub 上面有个把 LINE 贴图转到 Telegram 的工具，看一下源码发现了 LINE 的贴图包下载链接，可以直接下载。明明商店页面的图片还要验 Referrer 的说…https://sdl-stickershop.line.naver.jp/stickershop/v1/product/贴图ID/iphone/stickers@2x.zip　　后来 Greasyfork 上的小伙伴说还有动图包的链接，可以下载到动图和声音文件。https://sdl-stickershop.line.naver.jp/stickershop/v1/product/贴图ID/iphone/stickerpack@2x.zip　　iphone 也可以换成 android ，不过 iphone 的图大，应该是画质更好吧。　　但这样也要手动改 url 再粘贴回车，还是很麻烦。　　想到用油猴子应该可以在页面上加个下载按钮，可是我之前没接触过 js ，甚至连 js 的全名都拼不全……　　好在搜索引擎是万能的，帮我解决了这些问题。不过还是有一些地方不明白，好多东西真是用到的时候才觉得少啊，下面是成果。\n　　下面是脚本内容，也可以去 Greasyfork 安装。LINE Sticker Download.user.jsInstall1234567891011121314151617181920212223242526272829303132333435363738// ==UserScript==// @name               LINE Sticker Download// @name:zh-CN         LINE Sticker Download// @namespace          https://veltlion.github.io/line-sticker-download// @include            https://store.line.me/stickershop/product/*// @version            1.4.1// @description        Add download button for line sticker store// @description:zh-cn  在 LINE STORE Sticker 页面添加下载按钮// @author             空// @grant              GM_download// ==/UserScript==var id = window.location.pathname.replace(/[^\\d]/g, '');var link = 'https://sdl-stickershop.line.naver.jp/stickershop/v1/product/' + id + '/iphone/stickers@2x.zip';var aslink = 'https://sdl-stickershop.line.naver.jp/stickershop/v1/product/' + id + '/iphone/stickerpack@2x.zip';if ($('span').hasClass('MdIcoAni_b') || $('span').hasClass('MdIcoPlay_b') ||$('span').hasClass('MdIcoSound_b') ||    $('span').hasClass('MdIcoFlashAni_b') || $('span').hasClass('MdIcoFlash_b')) link = aslink;var file = &#123; url: link, name: document.title.replace(/(.+) (-|–) .+/g, '$1') + '.zip' &#125;;var lang = navigator.language;var btnstr = 'Download';if (lang.indexOf('zh') &gt; -1) btnstr = '下载';else if (lang.indexOf('ja') &gt; -1) btnstr = 'ダウンロード';var btn = '&lt;li class=\"mdCMN08Li\" style=\"list-style-type: none\"&gt;'        + '&lt;a class=\"MdBtn01 mdBtn01\" id=\"download\" style=\"background: #33b1ff\"&gt;'        + '&lt;span class=\"mdBtn01Inner\"&gt;'        + '&lt;span class=\"mdBtn01Txt\"&gt;' + btnstr + '&lt;/span&gt;'        + '&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;';if ($('div').hasClass('mdCMN08Txt')) &#123;    $('.mdCMN08Txt&gt;ul').find('li:eq(0)').remove();    $('.mdCMN08Ul').prepend(btn);&#125;else if ($('div').hasClass('mdMN05Btn')) &#123;    //$('.MdBtn01').remove();    $('.mdMN05Btn').prepend(btn);&#125;$('body').on('click', '#download', function()&#123;    var result = GM_download(file);&#125;);\n　　还有个歪果仁拉我进他们 LINE 转 Telegram 表情包的群，可是我鹰语和毛语本当苦手，看不懂他们说的话就退掉了，好多东西真是用到的时候才觉得少啊Orz…　　不过这也都是没办法的事。\n","dateCreated":"2018-03-02T07:12:18+08:00","dateModified":"2018-11-05T06:19:39+08:00","datePublished":"2018-03-02T07:12:18+08:00","description":"　　LINE 的贴图大部分都很可爱，很萌萌二次元，所以就想保存下来放到 QQ 、Telegram 上用。　　一个一个的保存太麻烦，很久之前写了个 bash 脚本来下载。可是就在几月前，我那脚本和一百四十多小时的 BOTW 存档就因为 SSD 掉盘，被某东的小哥带走了。满满当当的 MLCSSD 就这么变成了空荡荡的 TLCSSD ……　　不过这都是很久以前的事情了，今天我又碰到一套好看的贴图想存下来，就 Google 看看有没有更简单的保存方法，然后看到 GitHub 上面有个把 LINE 贴图转到 Telegram 的工具，看一下源码发现了 LINE 的贴图包下载链接，可以直接下载。明明商店页面的图片还要验 Referrer 的说…","headline":"LINE Sticker Download","image":["21645952@2x.png"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://veltlion.github.io/line-sticker-download/"},"publisher":{"@type":"Organization","name":"空","sameAs":["mailto:&#115;&#111;&#114;&#97;&#64;&#108;&#105;&#118;&#101;&#46;&#106;&#112;","https://twitter.com/yume1001","https://t.me/soratan"],"image":"avatar.jpg","logo":{"@type":"ImageObject","url":"avatar.jpg"}},"url":"https://veltlion.github.io/line-sticker-download/","keywords":"LINE, Sticker, 油猴","thumbnailUrl":"21645952@2x.png"}</script>
     <meta name="description" content="LINE 的贴图大部分都很可爱，很萌萌二次元，所以就想保存下来放到 QQ 、Telegram 上用。　　一个一个的保存太麻烦，很久之前写了个 bash 脚本来下载。可是就在几月前，我那脚本和一百四十多小时的 BOTW 存档就因为 SSD 掉盘，被某东的小哥带走了。满满当当的 MLCSSD 就这么变成了空荡荡的 TLCSSD ……　　不过这都是很久以前的事情了，今天我又碰到一套好看的贴图想存下来">
 <meta name="keywords" content="LINE,Sticker,油猴">
 <meta property="og:type" content="blog">
@@ -37,7 +37,7 @@
         
     
     
-        <meta property="og:image" content="https://veltlion.github.io/assets/images/avatar.png"/>
+        <meta property="og:image" content="https://veltlion.github.io/assets/images/avatar.jpg"/>
     
     
         <meta property="og:image" content="https://veltlion.github.io/line-sticker-download/21645952@2x.png"/>
@@ -74,7 +74,7 @@
             <a class="header-right-picture " href="#about">
         
         
-            <img class="header-picture" src="/assets/images/avatar.png" alt="作者的图片">
+            <img class="header-picture" src="/assets/images/avatar.jpg" alt="作者的图片">
         
         </a>
     
@@ -92,7 +92,7 @@
         
             <div class="sidebar-profile">
                 <a href="/#about">
-                    <img class="sidebar-profile-picture" src="/assets/images/avatar.png" alt="作者的图片">
+                    <img class="sidebar-profile-picture" src="/assets/images/avatar.jpg" alt="作者的图片">
                 </a>
                 <h4 class="sidebar-profile-name">空</h4>
                 
@@ -278,7 +278,7 @@
     </nav>
     <ul class="post-actions post-action-share">
         <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
                 <i class="fa fa-share-alt" aria-hidden="true"></i>
             </a>
         </li>
@@ -318,7 +318,7 @@
         
         <li class="post-action">
             
-                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
             
                 <i class="fa fa-list" aria-hidden="true"></i>
             </a>
@@ -372,7 +372,7 @@
     </nav>
     <ul class="post-actions post-action-share">
         <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Diesen Beitrag teilen">
                 <i class="fa fa-share-alt" aria-hidden="true"></i>
             </a>
         </li>
@@ -412,7 +412,7 @@
         
         <li class="post-action">
             
-                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
             
                 <i class="fa fa-list" aria-hidden="true"></i>
             </a>
@@ -468,7 +468,7 @@
             <i class="fa fa-times"></i>
         </div>
         
-            <img id="about-card-picture" src="/assets/images/avatar.png" alt="作者的图片">
+            <img id="about-card-picture" src="/assets/images/avatar.jpg" alt="作者的图片">
         
             <h4 id="about-card-name">空</h4>
         

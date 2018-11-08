@@ -157,20 +157,6 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/tags/Hexo/</loc>
-        <lastmod>2018-11-05T12:54:40.652Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://veltlion.github.io/tags/%E9%87%8D%E5%91%BD%E5%90%8D/</loc>
-        <lastmod>2018-11-05T12:54:40.652Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://veltlion.github.io/tags/firefox/</loc>
         <lastmod>2018-11-05T13:54:51.497Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -222,6 +208,20 @@
     <url>
         <loc>https://veltlion.github.io/tags/LibreELEC/</loc>
         <lastmod>2018-11-05T23:50:30.052Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/tags/Hexo/</loc>
+        <lastmod>2018-11-08T00:20:37.332Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/tags/%E9%87%8D%E5%91%BD%E5%90%8D/</loc>
+        <lastmod>2018-11-08T00:20:37.332Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
