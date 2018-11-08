@@ -8,6 +8,14 @@
     </url>
 
     <url>
+        <loc>https://veltlion.github.io/%E8%9B%8B%E7%82%92%E9%A5%AD/</loc>
+        <lastmod>2018-11-08T01:21:39.623Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://veltlion.github.io/hexo-md-rename/</loc>
         <lastmod>2018-11-08T00:27:49.530Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -138,14 +146,6 @@
     <url>
         <loc>https://veltlion.github.io/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
         <lastmod>2018-11-04T22:22:23.822Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://veltlion.github.io/%E8%9B%8B%E7%82%92%E9%A5%AD/</loc>
-        <lastmod>2018-11-04T22:22:00.343Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
