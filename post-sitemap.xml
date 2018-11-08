@@ -8,6 +8,14 @@
     </url>
 
     <url>
+        <loc>https://veltlion.github.io/flash-h7-4/</loc>
+        <lastmod>2018-11-08T12:35:39.144Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://veltlion.github.io/%E8%9B%8B%E7%82%92%E9%A5%AD/</loc>
         <lastmod>2018-11-08T01:21:39.623Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -18,14 +26,6 @@
     <url>
         <loc>https://veltlion.github.io/hexo-md-rename/</loc>
         <lastmod>2018-11-08T00:27:49.530Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://veltlion.github.io/flash-h7-4/</loc>
-        <lastmod>2018-11-05T23:50:30.052Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
