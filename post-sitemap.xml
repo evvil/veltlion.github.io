@@ -9,7 +9,15 @@
 
     <url>
         <loc>https://veltlion.github.io/flash-h7-4/</loc>
-        <lastmod>2018-11-08T17:02:46.770Z</lastmod>
+        <lastmod>2018-11-10T10:22:55.574Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://veltlion.github.io/line-sticker-download/</loc>
+        <lastmod>2018-11-10T10:19:49.533Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -202,14 +210,6 @@
     <url>
         <loc>https://veltlion.github.io/rewrite/</loc>
         <lastmod>2018-11-04T22:19:51.031Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://veltlion.github.io/line-sticker-download/</loc>
-        <lastmod>2018-11-04T22:19:39.239Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
