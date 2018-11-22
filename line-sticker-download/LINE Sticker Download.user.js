@@ -16,10 +16,11 @@ var aslink = 'https://sdl-stickershop.line.naver.jp/stickershop/v1/product/' + i
 if ($('span').hasClass('MdIcoAni_b') || $('span').hasClass('MdIcoPlay_b') ||$('span').hasClass('MdIcoSound_b') ||
     $('span').hasClass('MdIcoFlashAni_b') || $('span').hasClass('MdIcoFlash_b')) link = aslink;
 var file = { url: link, name: document.title.replace(/(.+) (-|–) .+/g, '$1') + '.zip' };
-var lang = navigator.language;
+//var lang = navigator.language;
+var lang = document.documentElement.lang;
 var btnstr = 'Download';
 if (lang.indexOf('zh') > -1) btnstr = '下载';
-else if (lang.indexOf('ja') > -1) btnstr = 'ダウンロード';
+else if (lang.indexOf('ja') > -1) btnstr = 'ダウンロードする';
 var btn = '<li class="mdCMN08Li" style="list-style-type: none">'
         + '<a class="MdBtn01 mdBtn01" id="download" style="background: #33b1ff">'
         + '<span class="mdBtn01Inner">'
