@@ -19,8 +19,8 @@ var file = { url: link, name: document.title.replace(/(.+) (-|–) .+/g, '$1') +
 //var lang = navigator.language;
 var lang = document.documentElement.lang;
 var btnstr = 'Download';
-if (lang.indexOf('zh') > -1) btnstr = '下载';
-else if (lang.indexOf('ja') > -1) btnstr = 'ダウンロードする';
+if (! lang.indexOf('zh')) btnstr = '下载';
+else if (! lang.indexOf('ja')) btnstr = 'ダウンロードする';
 var btn = '<li class="mdCMN08Li" style="list-style-type: none">'
         + '<a class="MdBtn01 mdBtn01" id="download" style="background: #33b1ff">'
         + '<span class="mdBtn01Inner">'
