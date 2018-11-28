@@ -178,13 +178,6 @@
     </url>
 
     <url>
-        <loc>https://veltlion.github.io/tags/S912/</loc>
-        <lastmod>2018-11-24T14:55:06.736Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://veltlion.github.io/tags/H7%E5%9B%9B%E4%BB%A3/</loc>
         <lastmod>2018-11-24T14:55:06.736Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -199,6 +192,13 @@
     </url>
 
     <url>
+        <loc>https://veltlion.github.io/tags/S912/</loc>
+        <lastmod>2018-11-24T14:55:06.736Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://veltlion.github.io/tags/LibreELEC/</loc>
         <lastmod>2018-11-24T14:55:06.736Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -207,21 +207,21 @@
 
     <url>
         <loc>https://veltlion.github.io/tags/LINE/</loc>
-        <lastmod>2018-11-28T01:03:43.411Z</lastmod>
+        <lastmod>2018-11-28T05:32:50.534Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://veltlion.github.io/tags/Sticker/</loc>
-        <lastmod>2018-11-28T01:03:43.411Z</lastmod>
+        <lastmod>2018-11-28T05:32:50.534Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://veltlion.github.io/tags/%E6%B2%B9%E7%8C%B4/</loc>
-        <lastmod>2018-11-28T01:03:43.411Z</lastmod>
+        <lastmod>2018-11-28T05:32:50.534Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
